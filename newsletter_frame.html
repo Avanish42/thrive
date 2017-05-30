@@ -1,0 +1,162 @@
+<!--Zoho  Web-Optin Form Starts Here-->
+<!--    INTEGRATE GOOGLE FONTS  -->
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+<link href="https://campaigns.zoho.com/css/ui.theme.css" rel="stylesheet" type="text/css" />
+<link href="https://campaigns.zoho.com/css/ui.datepicker.css" rel="stylesheet" type="text/css" />
+<link href="https://campaigns.zoho.com/css/ui.core.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://campaigns.zoho.com/js/jquery-1.11.0.min.js"></script>
+<script type='text/javascript' src='https://campaigns.zoho.com/js/jquery-migrate-1.2.1.min.js'></script>
+<script type="text/javascript" src='https://campaigns.zoho.com/js/ui.datepicker.js'  charset="utf-8"></script>
+<script type="text/javascript" src="https://campaigns.zoho.com/js/jquery.form.js"></script>
+<script type="text/javascript" src="https://campaigns.zoho.com/js/optin_min.js"></script>
+<script src="js/terms.js"></script>
+<link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+<script type="text/javascript">
+        
+var $ZC = jQuery.noConflict();
+var trackingText='ZCFORMVIEW';
+$ZC(document).ready( function($) {
+$ZC("#zc_trackCode").val(trackingText);
+	$ZC("#fieldBorder").val($ZC("[changeItem='SIGNUP_FORM_FIELD']").css("border-color"));
+	_setOptin(false,function(th){
+	/*Before submit, if you want to trigger your event, "include your code here"*/
+});
+
+/*Load Captcha For this*/ 
+ loadCaptcha('https://campaigns.zoho.com/campaigns/CaptchaVerify.zc?mode=generate');
+
+ /*Tracking Enabled*/ 
+ trackSignupEvent(trackingText);
+ });
+</script>
+
+<meta content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<div id="customForm">
+	<div name="SIGNUP_PAGE" id="SIGNUP_PAGE" style="background-color: transparent; margine:0px; padding: 0px;">
+		
+		
+		<div id="signupMainDiv" style="margin: 0px auto; width: 100%;" signupform="" changeid="SIGNUPFORM" changename="SIGNUPFORM">
+			<div>
+				<div style="position:relative;top: 30px;">
+					<div id="Zc_SignupSuccess" style="display:none;position:absolute;margin-left:4%;width:90%;background-color: white; padding: 3px; border: 3px solid rgb(194, 225, 154);  margin-top: 10px;margin-bottom:10px; ">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+							<tbody>
+								<tr>
+									<td width="10%">
+										<img class="successicon" src="https://campaigns.zoho.com/images/challangeiconenable.jpg" align="absmiddle">
+									</td>
+									<td>
+										<span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;">&nbsp;&nbsp;Thank you for Signing Up</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<form method="POST" id="zcampaignOptinForm" style="margin:0px;" action="https://zc1.maillist-manage.com/campaigns/weboptin.zc" target="_zcSignup">
+						
+<!--                        <div style="display:none;background-color:#FFEBE8;padding:10px 10px; color:#d20000; font-size:11px; margin:10px 0px;border:solid 1px #ffd9d3; margin-top:20px;" id="errorMsgDiv">&nbsp;&nbsp;Please correct the marked field(s) below</div>-->
+                        <div>
+                            <div style="font-size:12px; color:#333;font-family:Arial, Helvetica, sans-serif; margin-top:10px;">
+                                <table width=100%>
+                                    <tr>
+                                        <td>
+                                            <div style="padding:10px 0px 10px 0px;">
+                                                <div style="">
+                                                    <p style="font-family: 'Amatic SC', cursive;color: #4e0475;font-size: 2.5vw;padding:0px;margin:0px;font-weight: bold;">first name*</p>
+                                                    <input style="font-family: 'Lato', sans-serif; color: grey; font-size: 1.5vw; padding: 2.2% 0% 2.2% 2%; width: 100%; border: 0px; margin: 2% 0% 2% 0%;outline: none;" maxlength="100" placeholder="First Name" name="FIRSTNAME" changeitem="SIGNUP_FORM_FIELD" type="text" class="placeholder">&nbsp;
+                                                    <span style="display:none" id="dt_FIRSTNAME">1,false,1,First Name,2</span>
+                                                </div>
+
+                                                <div style="clear:both"></div>
+
+                                            </div>
+                                        </td>
+                                        <td width=20px></td>
+                                        <td>
+                                            <div style="padding:10px 0px 10px 0px;">
+                                                <div style="">
+                                                    <p style="font-family: 'Amatic SC', cursive;color: #4e0475;font-size: 2.5vw;padding:0px;margin:0px;font-weight: bold;">last name</p>
+                                                    <input style="font-family: 'Lato', sans-serif; color: grey; font-size: 1.5vw; padding: 2.2% 0% 2.2% 2%; width: 100%; border: 0px; margin: 2% 0% 2% 0%;outline: none;" maxlength="100" placeholder="Last Name" name="LASTNAME" changeitem="SIGNUP_FORM_FIELD" type="text" class="placeholder">&nbsp;
+                                                    <span style="display:none" id="dt_LASTNAME">1,false,1,Last Name,2</span>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div style="padding:10px 0px 10px 0px;">
+                                                <div style="">
+                                                    <p style="font-family: 'Amatic SC', cursive;color: #4e0475;font-size: 2.5vw;padding:0px;margin:0px;font-weight: bold;">email*</p>
+                                                    <input style="font-family: 'Lato', sans-serif; color: grey; font-size: 1.5vw; padding: 2.2% 0% 2.2% 2%; width: 100%; border: 0px; margin: 2% 0% 2% 0%;outline: none;" maxlength="100" placeholder="Contact Email" name="CONTACT_EMAIL" changeitem="SIGNUP_FORM_FIELD" type="text" class="placeholder">&nbsp;
+                                                    <span style="display:none" id="dt_CONTACT_EMAIL">1,true,6,Contact Email,2</span>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                        </td>
+                                        <td width=20px></td>
+                                        <td>
+                                            <div style="padding:10px 0px 10px 0px;">
+                                                <div style="">
+                                                    <p style="font-family: 'Amatic SC', cursive;color: #4e0475;font-size: 2.5vw;padding:0px;margin:0px;font-weight: bold;">country*</p>
+                                                    <input style="font-family: 'Lato', sans-serif; color: grey; font-size: 1.5vw; padding: 2.2% 0% 2.2% 2%; width: 100%; border: 0px; margin: 2% 0% 2% 0%;outline: none;" maxlength="100" placeholder="Country" name="COUNTRY" changeitem="SIGNUP_FORM_FIELD" type="text" class="placeholder">&nbsp;
+                                                    <span style="display:none" id="dt_COUNTRY">1,false,1,Country,2</span>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                
+                                
+                                
+                                
+                                </table>
+                            </div><!-- Captcha for Signup -->
+                            <div style="padding:10px 0px 10px 0px; display:none" id="captcha" name="captchaContainer">
+                                <div style="">
+                                    <div style="width:97%;  min-width:170px; margin-top:5px;">
+                                        <img src="//campaigns.zoho.com/images/refresh_icon.png" style="cursor: pointer;float:right" onclick="loadCaptcha('',this);">
+                                        <div id="captchaDiv" captcha="true" name="" style="height:60px;padding: 20px;background:#fff;border: 1px solid rgb(222, 222, 222);"></div>
+                                    </div>
+                                    <input id="captchaText" changeitem="SIGNUP_FORM_FIELD" placeholder="Captcha" style="margin-top: 5px; height: 28px; padding: 2px; width: 97%; color: rgb(68, 68, 68); background-color: rgb(255, 255, 255); text-indent: 5px; box-sizing: border-box; font-size: 12px; border: 1px solid rgb(222, 222, 222);" maxlength="100" type="text" class="placeholder">&nbsp;<span name="SIGNUP_REQUIRED" style="color: rgb(180, 0, 0); font-size: 11px;">*</span></div><div style="clear:both"></div></div><!-- Captcha for Signup End--><!-- Other Lists Subscription Start-->
+
+                            <div style="padding:10px; text-align:left; width:12`%">
+                                <button style="border:none;background-color:transparent; outline:none" action="Save" id="zcWebOptin" name="SIGNUP_SUBMIT_BUTTON" changetype="SIGNUP_SUBMIT_BUTTON_TEXT"><img src="https://thriivedev.firebaseapp.com/images/submit-button.png" width="100%";></button>
+<!--										<input value="Join Now" style="cursor: pointer; -webkit-appearance: none; outline: none medium; text-align: center; background-color: rgb(84, 35, 117); color: rgb(255, 255, 255); font-size: 14px; font-family: Helvetica; border: 1px solid rgb(159, 159, 159); padding: 5px 15px; background-position: 50% 100%; background-repeat: repeat no-repeat;" type="button">-->
+                            </div>
+                        </div>
+						<!-- Do not edit the below Zoho Campaigns hidden tags -->
+						<input type="hidden" id="fieldBorder" value="rgb(222, 222, 222)">
+						<input type="hidden" name="zc_trackCode" id="zc_trackCode" value="" onload="">
+						<input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+						<input type="hidden" id="lD" name="lD" value="1355e7c7b1b440b1">
+						<input type="hidden" name="emailReportId" id="emailReportId" value="">
+						<input type="hidden" name="zx" id="cmpZuid" value="126043418">
+						<input type="hidden" name="zcvers" value="2.0">
+						<input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
+						<input type="hidden" id="mode" name="mode" value="OptinCreateView">
+						<input type="hidden" id="zcld" name="zcld" value="1355e7c7b1b440b1">
+						<input type="hidden" id="document_domain" value="zoho.com">
+						<input type="hidden" id="zc_Url" value="zc1.maillist-manage.com">
+						<input type="hidden" id="zc_formIx" name="zc_formIx" value="f8cc7aa6a173692c4fb8c81d75075e40f3bdc592841c5fa4"><!-- End of the campaigns hidden tags -->
+				</form>
+			</div>
+			<div style="margin: 0px auto;margin-top:20px;text-align:left;display:none" name="SIGNUPFORM" id="privacyNotes" identity="privacyNotes">
+				<span>Note: It is our responsibility to protect your privacy and we guarantee that your email address will be completely confidential.</span>
+			</div>
+		</div>
+	</div>
+	<img src="https://zc1.maillist-manage.com/images/spacer.gif" onload="referenceSetter(this)" id="refImage" style="display:none;">
+</div>
+<div id="zcOptinOverLay" oncontextmenu="return false" style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;"></div>
+<div id="zcOptinSuccessPopup" style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
+	<span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;" id="closeSuccess">
+		<img src="https://campaigns.zoho.com/images/videoclose.png">
+	</span>
+	<div id="zcOptinSuccessPanel"></div>
+</div>
+
+<!--Zoho  Web-Optin Form Ends Here-->

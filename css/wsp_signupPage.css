@@ -1,0 +1,64 @@
+body{
+    font-size: 1.2vw;
+    font-family: 'Lato', sans-serif;
+    color: #333
+}
+.rightDiv{
+    visibility: hidden;
+}
+.videoDIv{
+    width: 60%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.wsp_formLink,
+.wsp_signupPageContent,
+.thriive_definition {
+    font-size: 1.2vw;
+    margin-top: 5%;
+}
+
+.wsp_formLink {
+    padding: 4% 2% 4% 2%;
+}
+
+.link {
+    font-size: 18px;
+    color: #4e0475;
+    
+}
+
+.header {
+    font-size: 1.5vw;
+    color: #4e0475;
+    font-weight: bold;
+    margin: 1% 0% 1% 0% ;
+}
+
+.presentation {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+ @media (max-width: 736px) {
+    
+    .wsp_formLink,
+    .wsp_signupPageContent,
+    .thriive_definition{
+        font-size: 2.5vw;
+    }
+     .header {
+         font-size: 3vw;
+     }
+     .videoDIv{
+        width: 80%;
+     }
+     .presentation {
+         width: 80%;
+     }
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/account_Page.css">
+        <link rel="stylesheet" href="css/accountOverView.css"> <!--styles for Our Story Page-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | Delete Account </title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script>
+            var deleteAccountFlag="No";
+        </script>
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("");
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+         <section class="menuSection">
+            <!---------- WEBSITE HEADER  ---------->
+            <script>
+                display_header_2();
+                check_authentication();
+            </script>
+        </section> <!--End of Body Section-->
+            
+        
+            
+            
+            <!----------------------------- PILLAR SECTION ------------------------------->
+            <section class="totalBodySection">
+                
+                 <div class="div_displayTable cancle">
+                    <h3 class="MainHeading">delete account</h3>
+                     <div style="width:20%; margin:auto"> <img src="images/Warning.png" width="100%"></div>
+                     <p class="newsletterText">
+                        We are sorry to hear you would like to delete your account !
+                     </p>
+                     <p class="newsletterText"> Once you delete your account, you will not be able to retrieve your account data and preferences. 
+                         
+                         <br><br>Make sure you are sure this is what you need</p>
+                     
+                    <div class="radioButton">
+                        <img id="yes" src="images/attachments/radioButton.png" width="100%" onclick="deleteAccountTerms();"> 
+                    </div>
+                     <span class="newsletterText" style="color:#4e0475"> I have read & understand the consequences of deleting account.</span>
+                     <p id="errorMSG" style="color:red;"></p>
+                </div>
+                
+                <div class="div_displayTable">
+                <div class="div_displayTable" style="margin-bottom:5%">
+                    <textarea id="texArea" rows="4" cols="50" placeholder="Let us know what went wrong"></textarea>
+                </div>
+                  <div id="cancle"><img src="images/cancle.png" width="100%"></div>
+                  <div onclick="openUserDetails()"; id="delete"><img src="images/Delete.png" width="100%" ></div>
+                </div>
+                
+            </section>
+        
+        <div id="myModal_delete" class="modal_Delete">
+        <!-- Modal content -->
+          <div class="modal-content_Delete other_Pagess_body_Backgruond">
+
+            <span id="closeButton_delete" class="close_model_Delete" onclick="closeUserDetails();">&times;</span>
+              <section class="signIn_section">
+                    <!--USER SIGN IN SECTION-->
+
+                        <div id="loginModule">
+                            <div> <!--E-MAIL DIV-->
+                                <p>Please Reauthenticate</p>
+                                <input class="signIn_input" id="UserId" type="email" placeholder="Enter your e-mail" readonly>
+                            </div>
+
+                            <div style="position: relative; margin-bottom:5%"> <!--PASSWORD DIV-->
+                                <input class="signIn_input" id="UserPassword" type="password" placeholder="Password" onblur="validatePasswordAsUser()">
+                                <img id="PW_Eye" class="pw_icon" src="images/PW_Eye.png" onclick="showPassword()">
+                            </div>
+
+                             <div id="btnLogin"  class="btn btn-action">
+                                <button class="buttonStyles" type="button" id="btnLoginAsUser" onclick="deleteAccountPermanently()">
+                                    <img src="images/submit-button.png" width="100%">
+                                </button>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
+            
+            
+            
+        <!--FOOTER SECTION-->
+        <script>
+           display_footer();
+        </script>
+        
+        <script>
+            function openUserDetails(){
+                if(deleteAccountFlag=="Yes"){
+                    document.getElementById("myModal_delete").style.display="block";
+                    var user = firebase.auth().currentUser;
+                    document.getElementById("UserId").value=user.email;
+                    
+                }else{
+                    document.getElementById("errorMSG").innerHTML="Please read and accept for the consequences of deleting account";
+                }
+                    
+            }   
+            
+            function closeUserDetails(){
+                document.getElementById("myModal_delete").style.display="none"
+            }
+            
+            //TO CHANGE RAIO BUTTONS
+            function deleteAccountTerms (){
+                var yes =document.getElementById("yes")
+                yes.setAttribute("src", "images/radioButton-2.png");
+                deleteAccountFlag="Yes";
+                document.getElementById("errorMSG").innerHTML="";
+            }
+            
+            function deleteAccountPermanently(){
+                var password = document.getElementById("UserPassword").value
+                if(password!=""){
+                    var user = firebase.auth().currentUser;
+                    var userid = document.getElementById("UserId").value;
+                    var loggedinUser=user.email;
+                    if(userid===loggedinUser){ //Check if logged in user and entered user id is same
+                        var cred = firebase.auth.EmailAuthProvider.credential(
+                            userid,
+                            password
+                        );//creating credential variable
+
+                        //Reauthenticating User
+                        user.reauthenticate(cred).then(function() {
+                          // User re-authenticated. Deleting Account Permanently
+                            user.delete().then(function() {
+                              // User deleted
+                                alert("Your Account is Deleted!");
+                            }, function(error) {
+                              // An error happened.
+                                alert("Unable to Delete Account! Contact Thriive Customer Care");
+                            });
+                        }, function(error) {
+                          // An error happened
+                            alert("Authentication Failed");
+                        });
+                    }else{
+                        alert("Unknown Error");
+                    }
+                }else{
+                    alert("Enter Password");
+                }
+            }
+        </script>
+		
+    </body>
+</html>

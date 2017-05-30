@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!--    INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/wsp_styles.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <!--    HOME PAGE TITLE  -->
+    <title>THRIIVE | TESTIMONIALS </title>
+<!--    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>-->
+    <script src="js/app.js"></script>
+    <!--    INCLUDING JAVASCRIPT-->
+    <style>
+        .menu_itmes a {
+            text-decoration: none;
+            color: #fff;
+        }
+        #welcome_text{
+            color: #4e0475;
+        }
+        label{
+            color: #4e0475;
+        }
+        #adduserDiv{
+		display: block;
+	}
+    </style>
+	 <script>
+        check_authentication(" ");
+    </script>
+</head>
+
+<body class="body_Backgruond">
+    <section class="totalBodySection">
+        <section id="header">
+            <div class="maindiv">
+                <!--TOGGLE BUTTON DIV-->
+                <div class="leftDiv">
+                    <a style="cursor:pointer" class="anchorTagButton"><img src="images/menuIcon_2.png" alt="menueIcon" width="70%" onclick="menu_list()"></a>
+                </div>
+                <!--MENU-->
+                <!--LOGO DIV-->
+                <div class="MidleDiv">
+                    <a style="cursor:pointer" href="dashboard.html"><img id="logo_image" src="images/Logo.png" alt="Thriive Logo" width="75%" onclick=""></a>
+                </div>
+                <!--EMPTY DIV DIV-->
+                <div class="rightDiv">
+                    <p onclick="logout_user()" style="cursor:pointer;">logout</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="mainbar">
+        <h3 id="adduserDiv" class="pannelDiv">
+                    <ul>
+                        <a style="cursor:pointer" ><li id="addtext" class="activeText">received</li></a>
+                        <a style="cursor:pointer"> <li id="listtext" class="listText">fallow ups</li></a>
+                    </ul>
+        </h3> 
+    </section>
+    
+        <h3 class="headding">WSP REGISTRATIONS</h3>
+    <section style="margin:5% 10% 0% 10% ">
+        <table style="width:100%;  border-collapse: collapse;text-align:center">
+            <tr style="bgcolor:#000">
+                <th>Name </th>
+                <th class="date">Phone </th>
+                <th>email </th>
+                <th class="date">City </th>
+                <th class="date">Date Received </th>
+                <th class="SNo">Options </th>
+            </tr>
+
+            <tr>
+                <td>WSP Name</td>
+                <td class="date">9999999999</td>
+                <td>test@thriive.in</td>
+                <td class="date">City Name</td>
+                <td class="date">DD-MM-YYYY</td>
+                <td class="SNo"><i class="fa fa-check" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp; <i class="fa fa-times" aria-hidden="true"></i></td>
+            </tr>
+
+        </table>
+    </section>
+</body>
+
+</html>

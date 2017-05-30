@@ -1,0 +1,693 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--To remove Phone No link in HEDGE Brouser-->
+    <meta name="format-detection" content="telephone=no">
+    
+    <!--ADDING FAVICON-->
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+
+    <!--<script>include_firebase();</script>-->
+    
+    <!--INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/index.css"> <!--styles for Home Pase -->
+    <link rel="stylesheet" href="css/styles_global.css"> <!--Global Defined Styles-->
+    <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"><!--Styles for Footer, Headder and Testmoniels-->
+    <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+    <link rel="stylesheet" href="css/style_for_newsletter_subscription.css">
+    
+    <!-- NEWSLETTER SUBSCRIPTION CSS -->
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    
+    <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+    
+    <!--HOME PAGE TITLE  -->
+    <title>THRIIVE | HOME</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    
+    <!--INCLUDING FIREBASE FILES -->
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    
+    <!--INCLUDING JAVASCRIPT-->
+    <script src="js/global_modules.js"></script><!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+    <script src="js/Event_Calender_index.js"></script><!-- Including calendar js file  -->
+    <script type="text/javascript" src="js/JavaScriptFor_ThriiveWorld.js"></script><!-- Including thriive world js file  -->
+    <script src="js/JavaScriptFor_Desktop.js"></script>
+    <script src="js/script_menu.js"></script><!-- MENU JAVA SCRIPT  -->
+    
+    <!--<script src="js/signup-user.js"></script>-->
+    <link rel="stylesheet" href="css/login.css"> <!--Styles for Footer, Headder and Testmoniels-->
+    <script src="js/login.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    <script type="application/javascript" src="js/app.js"></script>
+    <script type="text/javascript">
+        var appMaster = {
+
+
+        owlCarousel: function() {
+            var owl = $("#owl-screenshots");
+
+            owl.owlCarousel({
+                pagination: false,
+                 nav: true,
+  navText: ["<img src='images/Next-1B.png'>","<img src='images/Next-1A.png'>"],
+                items:4,
+                 margin:10,
+                autoWidth:true,
+                });
+
+            $(".owl-next").click(function() {
+                owl.trigger('owl.next');
+            });
+
+            $(".owl-prev").click(function() {
+                owl.trigger('owl.prev');
+            });
+        },
+
+
+    };
+      $(document).ready(function(){
+        var wrapper = $('.tile__media');
+        var running = null;
+        wrapper.hover(
+    function() {
+        var e = $(this);
+     
+        running = setInterval(function() {
+            var c = e.find('.active');
+            var n = c.next();
+            
+            if (!n.length) {
+                n = e.children().first();
+            }
+            
+            c.removeClass('active');
+            n.addClass('active');    
+        }, 3000);
+    },
+    function() {
+        var x = $(this);
+                x.find('img').removeClass('active');      
+                x.find('img:first').addClass('active');
+        clearInterval(running);
+        running = null;
+    
+    }
+);
+                    appMaster.owlCarousel();
+      })  ;
+    </script>
+    <style>
+    @media screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2){
+    .healer_Name{color: green;}
+}
+
+.tile__media {
+    position: relative;
+    height: 200px;
+    margin-bottom: 250px;
+}
+
+.tile__media img {
+    opacity: 0;
+    position: absolute;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.tile__media img.active {
+    opacity: 1;
+}
+
+    .modal-video {
+        display: none;
+        background: black;
+    }
+.owl-prev {
+    position: absolute;
+    top: 400;
+    left: -44px;
+    }
+.owl-next {
+    position: absolute;
+    top: 400;
+    right: -63px;
+}
+    .modal-video h1 {
+        color: white;
+        opacity: 0.7;
+    }
+
+    .modal-video h1:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+        .owl-item:first-child {
+  margin-left: 0;
+}    
+    .row__inner {
+        -webkit-transition: 450ms -webkit-transform;
+        transition: 450ms -webkit-transform;
+        transition: 450ms transform;
+        transition: 450ms transform, 450ms -webkit-transform;
+        font-size: 0;
+        white-space: nowrap;
+        margin: 70.3125px 0;
+        padding-bottom: 10px;
+    }
+    
+    .row__inner {
+        -webkit-transition: 450ms -webkit-transform;
+        transition: 450ms -webkit-transform;
+        transition: 450ms transform;
+        transition: 450ms transform, 450ms -webkit-transform;
+        font-size: 0;
+        white-space: nowrap;
+        margin: 70.3125px 0;
+        padding-bottom: 10px;
+    }
+    
+    .tile {
+        position: relative;
+        display: inline-block;
+        /*width: 500px;*/
+        /*height: 140.625px;*/*/
+        margin-right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        -webkit-transition: 450ms all;
+        transition: 450ms all;
+        -webkit-transform-origin: center left;
+        transform-origin: center left;
+    }
+    
+    .tile__img {
+        width: 250px;
+        height: 140.625px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    
+ .tile__details {
+    position: absolute;
+    bottom: 0;
+    left: 160px;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    opacity: 0;
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-transition: 450ms opacity;
+    transition: 450ms opacity;
+}   
+    .tile__details:after,
+    .tile__details:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: #000;
+    }
+    
+    .tile__details:after {
+        margin-top: -25px;
+        margin-left: -25px;
+        width: 50px;
+        height: 50px;
+        border: 3px solid #ecf0f1;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    
+   .tile__details:before {
+    content: '▶';
+    left: 0;
+    width: 100%;
+    font-size: 30px;
+    margin-left: -10px;
+    margin-top: -22px;
+    text-align: center;
+    z-index: 2;
+}
+    
+    .tile:hover .tile__details {
+        opacity: 1;
+    }
+    
+    .tile__title {
+        position: absolute;
+        bottom: 80px;
+        color: white;
+        padding: 10px;
+    }
+    
+    .row__inner:hover {
+        -webkit-transform: translate3d(-62.5px, 0, 0);
+        transform: translate3d(-62.5px, 0, 0);
+    }
+    
+    .row__inner:hover .tile {
+        opacity: 0.3;
+    }
+    
+    .row__inner:hover .tile:hover {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    
+    .tile:hover ~ .tile {
+        -webkit-transform: translate3d(125px, 0, 0);
+        transform: translate3d(125px, 0, 0);
+    }
+    
+    .transition {
+        -webkit-transform: scale(1.6);
+        -moz-transform: scale(1.6);
+        -o-transform: scale(1.6);
+        transform: scale(1.6);
+    }
+    
+    img {
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+    }
+    </style>
+           
+  
+
+</head>
+
+<body class="homePageBackground">
+   
+    <script>    
+        display_menu();
+        Set_Menu_HeightAndWidth();
+    </script>
+    <!---------- WEBSITE HEADER (MENU BUTTON, LOGO, SEARCH & SIGN IN LINKS)  ---------->
+    <section  class="menuSection">
+        <script>
+            display_header_2();
+        </script>
+    </section>
+    <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+    <section class="totalBodySection">
+        <!---------- HERO IMAGE AND BUTTON TO NAVIGATE TO NEXT SECTION (BELOW HERO IMAGE) ---------->
+        <section id="NavigateSection_Desktop"> <img src="images/Balloon-2.png" alt="sign-icon" width="100%">
+                <a href="#ThriivePillarsSection_Desktop">
+                    <div class="down_button"> <img src="images/Down-2.png" alt="Down Button" width="100%"> </div>
+                </a>
+        </section>
+        
+        <!---------- HEALING / SEEKERS / BEGINNERS SECTION FOR DESKTOP -------->
+        <section id="healerSection">
+            
+            <div class="div_displayTable">
+                <!--   PREVIOUS BUTTON  -->
+                <div id="HealerPreviousButton">
+                    <a style="cursor:pointer"><img src="images/Next-1B.png" width="100%"  onclick="healer_Next_img(-1)"> </a>
+                </div>
+                
+                <!--   PILLAR BLOCK 1  -->
+                <div id="HealerImage_1" class="healer_Div" onclick="activateWSPsignup();">
+                     <a href="wsp_signupPage.html"><img src="images/healers.png" alt="healer" width="100%"> </a>
+                    <div class="healer_Name">Healer <br><span> Register NOW</span> </div>
+                </div>
+                
+                
+                <!--   PILLAR BLOCK 2  -->
+                <div id="HealerImage_2" class="healer_Div">
+                    <a href="therapy.html"> <img src="images/seekers.png" alt="Seeker" width="100%"> </a>
+                    <div class="healer_Name">Seeker <br><span>Find Your Cure </span></div>
+                </div>
+                
+                
+                <!--   PILLAR BLOCK 3  -->
+                <div id="HealerImage_3" class="healer_Div">
+                    <a href="thriive_world.html"> <img src="images/explorer.png" alt="Explorer" width="100%"></a>
+                    <div class="healer_Name"> Explorer<br><span> Discover Our Library </span></div>
+                </div>
+                
+                <!--   NEXT BUTTON  -->
+                <div id="HealerNextButton">
+                    <a style="cursor:pointer"><img src="images/Next-1A.png" width="100%"  onclick="healer_Next_img(1)"></a>
+                </div>
+            </div>
+        </section>
+        
+        <!--VIDEO SECTION-->
+        <section>
+            <div class="VideoDiv">
+            <video width="100%" controls controlsList="nodownload">
+                <source src="http://mailer.thriive.in/flyer/form-1/images/WSP-VIDEO.mp4" type="video/mp4">
+            </video>
+            </div>
+            
+        
+        </section>
+        
+        
+        <!----------  EVENT CALENDAR SECTION FOR DESKTOP  -------->
+        <section id="EventCalendarSection_Desktop">
+            <h1 class="MainHeading" style="margin-bottom:8%"><a class="MainHeading" href="whatsHappening.html"> EVENT CALENDAR</a> </h1>
+            <!-- EVENT CALENDAR HEADING  -->
+            <h2 class="EventSubHeading"><span id="currentMonths"></span></h2>
+            <!-- EVENT CALENDAR SUB HEADING (MONTH & YEAR)  -->
+            <div class="div_displayTable" id="">
+               <!--PREVIOUS BUTTON-->
+                <div class="EC_PreviousButton">
+                    <a style="cursor:pointer"> <img id="prev" src="images/Next-1B.png" width="100%" onclick="imgSlide(-1)"> </a>
+                </div>
+                <div id="events_desktop"></div>
+                <div id="events_mobile"></div>
+                <script>
+                    displayEvents();
+                </script>
+                <!--   NEXT BUTTON  -->
+                <div class="EC_NextButton">
+                    <a style="cursor:pointer"> <img id="next" src="images/Next-1A.png" width="100%" onclick="imgSlide(1)"> </a>
+                </div>
+            </div>
+        </section>
+        
+        <!---------- SIGN UP FOR THE THRIIVE NEWSLETTER SECTION  ---------->
+        <section id="NewsLetters_Desktop" style="text-align:center;">
+            <div class="panel">
+                <div style="padding:7% 5.5% 0% 5.5%;">
+                    <a href="news_letters.html"> <img class="newsletter" src="images/Newsletter.png" alt="Sign Up for Thriive" style="width:100%;"> </a>
+                </div>
+            </div>
+        </section>
+        <!--******* SIGN UP FOR THE THRIIVE NEWSLETTER SECTION FORM MOBILE  *******-->
+        <section id="NewsLetters_Mobile" style="text-align:center;">
+            <div class="panel">
+                <div style="padding:7% 5.5% 0% 5.5%;">
+                    <a href="news_letters.html"> <img class="newsletter" src="images/Newsletter.png" alt="Sign Up for Thriive" style="width:100%;"> </a>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        <!--*** THRIIVE WORLD SECTION ***-->
+        
+            <section>
+                <div class="row">
+                    <div class="col-md-2 hidden-xs">
+                        <span class="owl-prev"><img width="40px" height="40px" src="images/Next-1B.png"></img></span>
+                    </div>
+                    <div class="col-md-8"></div>
+                    <div class="col-md-2 hidden-xs">
+                        <span class="owl-next"><img width="40px" height="40px" src="images/Next-1A.png"></img></span>
+                    </div>
+                </div>
+                <h1 class="MainHeading" style="margin:5% 0% 0% 0%"><a class="MainHeading" href="thriive_world.html"> thriive world </a></h1>
+				<h1 class="TW_SubHeadding "> Free Audio, Videos & Articles </h1>
+                    
+                   <div id="owl-screenshots" class="owl-carousel row__inner">
+                <div class="tile goplay">
+                    <div class="tile__media">
+                        <img class="active" src="images/videoImages/06.jpg" alt="">
+                        <img src="images/videoImages/10.jpg" alt="">
+                        <img src="images/videoImages/11.jpg" alt="">
+                        <img src="images/videoImages/12.jpg" alt="">
+
+                        </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tile goplay">
+                    <div class="tile__media"><img class="active" src="images/videoImages/06.jpg" alt="">
+                                                <img src="images/videoImages/15.jpg" alt="">
+                        <img src="images/videoImages/01.jpg" alt="">
+                        <img src="images/videoImages/04.jpg" alt="">
+
+
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tile goplay">
+                    <div class="tile__media"><img class="active" src="images/videoImages/06.jpg" alt="">
+                             <img src="images/videoImages/13.jpg" alt="">
+                        <img src="images/videoImages/02.jpg" alt="">
+                        <img src="images/videoImages/05.jpg" alt="">                        
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+                <div class="tile goplay">
+                    <div class="tile__media"><img class="active" src="images/videoImages/06.jpg" alt="">
+                         <img src="images/videoImages/06.jpg" alt="">
+                        <img src="images/videoImages/08.jpg" alt="">
+                        <img src="images/videoImages/07.jpg" alt="">
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile__media"><img class="active" src="images/videoImages/06.jpg" alt="">
+ <img src="images/videoImages/17.jpg" alt="">
+                        <img src="images/videoImages/14.jpg" alt="">
+                        <img src="images/videoImages/11.jpg" alt="">
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile__media"><img class="active" src="images/videoImages/06.jpg" alt="">
+                         <img src="images/videoImages/13.jpg" alt="">
+                        <img src="images/videoImages/02.jpg" alt="">
+                        <img src="images/videoImages/05.jpg" alt=""> 
+                    </div>
+                    <div class="tile__details">
+                        <div class="tile__title">
+                            Top Gear
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+
+
+							</section>
+        
+        <script>
+            displayVideos();
+        </script>
+        <!---------- THRIIVE TALKS SECTION FOR DESKTOP  ---------->
+        <section>
+            <h1 class="MainHeading"><a class="MainHeading" href="http://thriivein.blogspot.in/2016/11/the-hidden-signs-symbolism-behind.html" target="_blank">THRIIVE TALKS</a></h1><!-- MAIN HEADING  -->
+            
+            <div class="div_displayTable">
+                <div class="TT_LeftSideIcon"> <img src="images/ThriveTalks_BG_Let_Img.png" style="width:50%;"> </div>
+                
+                <!--  THRIIVE TALKS BLOCK - 1 -->
+                <div class="ThriiveTalksDiv_1" > <a id="blog1" href="" target="_blank"><h3 class="TT_1_Text_A" id="ThriiveTalks_Block1_text_A"><span id="desc1"></span> </h3>
+                        <h3 class="TT_1_Text_B" id="ThriiveTalks_Block1_text_B"><span id="blogauthor1"></span></h3></a> 
+                </div>
+                
+                <!--  THRIIVE TALKS BLOCK - 2 -->
+                <div class="ThriiveTalksDiv_2" > <a id="blog2" href="" target="_blank"><h3 class="TT_2_Text_A" id="ThriiveTalks_Block2_text_A"><span id="desc2"></span></h3>
+                        <h3 class="TT_2_Text_B" id="ThriiveTalks_Block2_text_B"><span id="blogauthor2"></span></h3></a> 
+                </div>
+                
+                <!--  THRIIVE TALKS BLOCK - 3 -->
+                <div  class="ThriiveTalksDiv_3" > <a id="blog3" href="" target="_blank"><h3 class="TT_3_Text_A" id="ThriiveTalks_Block3_text_A"><span id="desc3"></span></h3>
+                        <h3 class="TT_3_Text_B" id="ThriiveTalks_Block3_text_B"><span id="blogauthor3"></span></h3></a>
+                </div>
+                <div class="TT_RightSideIcon"> <img src="images/ThriveTalks_BG_Right_Img.png" width="40%"> </div>
+            </div>
+        </section>
+        <script>
+            appendthriivetalkvalues();
+        </script>
+        
+        <!---------- THRIIVE PILLARS SECTION FOR DESKTOP -------->
+        <section id="ThriivePillarsSection_Desktop">
+            <h1 class="MainHeading"> <a class="MainHeading" href="ourstory.html">THRIIVE PILLARS</a></h1><!-- MAIN HEADING -->
+            
+            <div class="div_displayTable">
+                <!--   PREVIOUS BUTTON  -->
+                <div id="PillarPreviousButton">
+                    <a style="cursor:pointer"><img src="images/Next-1B.png" width="50%"> </a>
+                </div>
+                
+                <!--   PILLAR BLOCK 1  -->
+                <div id="ThriivePillarImage_1">
+                    <a href="ourstory.html#aboutPatriji"> <img src="images/Patriji.png" alt="Patriji" width="100%"> </a>
+                    <div class="ThriivePillarName">brahmarshi&nbsp;patriji </div>
+                </div>
+                
+                <!--   EMPTY DIV FOR SPACE OPTIMIZATION  -->
+                <div class="PillarEmptyDiv"> </div>
+                
+                <!--   PILLAR BLOCK 2  -->
+                <div id="ThriivePillarImage_2">
+                    <a href="ourstory.html#aboutNewton"> <img src="images/Netwon.png" alt="Dr Newton and Dr Lakshmi" width="100%"> </a>
+                    <div class="ThriivePillarName">dr.&nbsp;newton &nbsp;&amp; dr. lakshmi</div>
+                </div>
+                
+                <!--   EMPTY DIV FOR SPACE OPTIMIZATION  -->
+                <div class="PillarEmptyDiv"> </div>
+                
+                <!--   PILLAR BLOCK 3  -->
+                <div id="ThriivePillarImage_3">
+                    <a href="ourstory.html#aboutShreans"> <img src="images/Shreyans.png" alt="Shreans Daga" width="100%"></a>
+                    <div class="ThriivePillarName">SHREANS DAGA</div>
+                </div>
+                
+                <!--   NEXT BUTTON  -->
+                <div id="PillarNextButton">
+                    <a style="cursor:pointer"><img src="images/Next-1A.png" width="50%"></a>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- ********* THRIIVE PILLARS SECTION FOR MOBILE ********* -->
+        <section id="ThriivePillarsSection_Mobile">
+            <h1 class="MainHeading">THRIIVE PILLARS</h1>
+            <!-- MAIN HEADING -->
+            <div class="div_displayTable">
+                <!--   PREVIOUS BUTTON  -->
+                <div id="PillarPreviousButton_Mobile">
+                    <a style="cursor:pointer"><img src="images/Next-1B.png" width="100%" onclick="Pillar_Next_img(-1)"></a>
+                </div>
+                <!--   PILLAR BLOCK 1  -->
+                <div class="ThriivePillar_Mobile_Div animate_right">
+                    <a href="ourstory.html#aboutPatriji_M"> <img src="images/Patriji.png" alt="Patriji" width="100%"> </a>
+                    <div class="ThriivePillarName">brahmarshi&nbsp;patriji </div>
+                </div>
+                <!--   PILLAR BLOCK 2  -->
+                <div class="ThriivePillar_Mobile_Div animate_right">
+                    <a href="ourstory.html#aboutNewton_M"> <img src="images/Netwon.png" alt="Dr Newton and Dr Lakshmi" width="100%"> </a>
+                    <div class="ThriivePillarName">dr.&nbsp;newton &nbsp;& dr. lakshmi</div>
+                </div>
+                <!--   PILLAR BLOCK 3  -->
+                <div class="ThriivePillar_Mobile_Div animate_right">
+                     <a href="ourstory.html#aboutShreans_M"> <img src="images/Shreyans.png" alt="Shreans Daga" width="100%"></a>
+                    <div class="ThriivePillarName">shreans daga</div>
+                </div>
+                <!--   NEXT BUTTON  -->
+                <div id="PillarNextButton_Mobile">
+                    <a style="cursor:pointer"><img src="images/Next-1A.png" width="100%" onclick="Pillar_Next_img(1)"></a>
+                </div>
+            </div>
+        </section>
+        
+        
+        <script>
+            Pillar_Mobile_showDivs(1);
+        </script>
+        
+       
+        <!---------- TESTIMONIAL SECTION  ---------->
+        <section id="TestimonialSection_Desktop">
+            <div class="testimonial"> <img src="images/Testimonial.png" width="100%;" style="margin:auto">
+                <div id="thriivequotes"></div>
+            </div>
+            <script>
+                display_testimonial('home');
+            </script>
+        </section>
+        
+    </section>
+    
+    <!--TERMS AND CONDITIONS SECTION-->
+    <script>
+        display_termsAndConditions();
+    </script>
+    
+    <!--FOOTER SECTION-->
+    <script style="margin-top:20%">
+        display_footer();
+    </script>
+    
+    <script src="js/calendarScripts.js"></script>
+ <script>
+        check_authentication();
+    </script>
+    
+    
+<!--  FUNCTION FOR IDENTIFY THE MOBILE DEVISE -->
+    
+<!--
+    <script>
+    
+        var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+           document.getElementById("ThriivePillarsSection_Desktop").style.display="none";
+        },
+            
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+            alert("BlackBerry");
+        },
+            
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            alert("iPhone");
+        },
+            
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+            alert("Opera");
+        },
+            
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+            alert("IEMobile");
+        },
+            
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }};
+        
+    </script>
+-->
+    
+</body>
+
+</html>

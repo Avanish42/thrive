@@ -1,0 +1,229 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/thriive_world.css"> <!--styles for Thriive World Pase -->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | WORLD</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+		<script type="text/javascript" src="js/thriive_world.js"></script> <!-- Including thriive world js file  -->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        <!--  CALLING JAVASCRIPT FUNCTIONS TO INVOKE RESPONSIVE DESIGN  -->
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu();
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+        <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+ 
+            <!---------- HERO IMAGE AND BUTTON TO NAVIGATE TO NEXT SECTION (BELOW HERO IMAGE) ---------->
+            <section id="NavigateSection_Desktop">
+                <img src="images/thriive-world.png" alt="sign-icon" width="100%">
+            </section>
+            
+            
+        <!--*** THRIIVE WORLD SECTION ***-->
+        
+        <section>
+				<h1 class="tagLine"> Transcend the Ordinary with this treasure trove of wisdom talks, guided meditations and soulful music. </h1>
+				<h1 class="MainHeading" style="text-align:left;margin:5% 0% 3% 7%"> wisdom videos / audios </h1>
+            
+				<div class="div_displayTable">
+                    
+					<!--PREVIOUS BUTTON-->
+					<div class="TW_PreviousButton">
+						 <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%" onclick="callcarousel(-1)">
+					</div>
+                    <div id="thriiveworld_desktop">
+                    
+                    
+                    </div>
+					<!--   NEXT BUTTON  -->
+					<div class="TW_NextButton">
+						 <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" onclick="callcarousel(1)"> 
+					</div>
+				</div>
+			</section>
+         <script>
+            displayVideos();
+        </script>
+			
+            <!---------- THRIIVE AUDIO FOR DESKTOP---------->
+           <section>
+				<h1 class="MainHeading"	 style="text-align:left;margin:5% 0% 3% 7%"> thriive music </h1>
+				<!-- MAIN HEADING  -->
+				<!--SET NO-1-->
+				<div class="div_displayTable">
+					<!--PREVIOUS BUTTON-->
+					<div class="audioPreviousButton">
+						<a style="cursor:pointer"> <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%"> </a>
+					</div>
+                    
+                    <!--AUDIO DIV - 1 -->
+                    <div class="audioDiv">
+                        <div class="audioBlog_1" id="audioDiv1">
+                           <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300292135&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                        </div>
+                           <h3 class="TW_Caption">  thriive music-1 </h3>
+                           <h3 class="TW_SubCaption"> Sub caption </h3>
+                    </div>
+                    
+                    
+                    <!--AUDIO DIV - 2 -->
+                    <div class="audioDiv" id="audioDiv2">
+                        <div class="audioBlog_2">
+                            <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300292135&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                        </div>
+                        <h3 class="TW_Caption">  thriive music-1 </h3>
+                        <h3 class="TW_SubCaption"> Sub caption </h3>
+					</div>
+                    
+                    
+                    <!--AUDIO DIV - 3 -->
+                    <div class="audioDiv" id="audioDiv3">
+                        <div class="audioBlog_3">
+                            <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300292135&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                        </div>
+                        
+                        <h3 class="TW_Caption">  thriive music-1 </h3>
+                        <h3 class="TW_SubCaption"> Sub caption </h3>
+					</div>
+					<script>
+//						displayVideos();
+					</script>
+                    
+					<!--   NEXT BUTTON  -->
+					<div class="audioNextButton">
+						<a style="cursor:pointer"> <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" > </a>
+					</div>
+				</div>
+			</section>
+            
+             <!---------- GUIDED MEDITATION---------->
+           <section>
+				<h1 class="MainHeading"	 style="text-align:left;margin:5% 0% 3% 7%"> GUIDED MEDITATION</h1>
+				<!-- MAIN HEADING  -->
+				<!--SET NO-1-->
+				<div class="div_displayTable">
+					<!--PREVIOUS BUTTON-->
+					<div class="GMPreviousButton">
+						<a style="cursor:pointer"> <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%"> </a>
+					</div>
+					<div class="GudideMeditationDiv_1" style="margin-left:1%">
+						<div class="videoBlog_1">
+							<iframe src="https://www.youtube.com/embed/bmeSZr2k-vU" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<h3 class="meditationSubject">14 min. Establish <br>Connection Meditation</h3>
+						<h4 class="meditationBy"> <span style="color:323232"> By </span> Rae Chandran</h4>
+						<h4 class="meditationDetalis">lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum <br> dolor sit lorem ipsum dolor sit lorem...</h4>
+					</div>
+					
+					<div class="GudideMeditationDiv_2" style="margin:0% 3% 0% 3%">
+						<div class="videoBlog_2">
+							<iframe src="https://www.youtube.com/embed/3EeGu39iV7o" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<h3 class="meditationSubject">14 min. Establish <br>Connection Meditation</h3>
+						<h4 class="meditationBy"> <span style="color:323232"> By </span> Rae Chandran</h4>
+						<h4 class="meditationDetalis">lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum <br> dolor sit lorem ipsum dolor sit lorem...</h4>
+					</div>
+					
+					<div class="GudideMeditationDiv_3">
+						<div class="videoBlog_3">
+							<iframe src="https://www.youtube.com/embed/UqDkDi9GJB8" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<h3 class="meditationSubject">14 min. Establish <br>Connection Meditation</h3>
+						<h4 class="meditationBy"> <span style="color:323232"> By </span> Rae Chandran</h4>
+						<h4 class="meditationDetalis">lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum <br> dolor sit lorem ipsum dolor sit lorem...</h4>
+					</div>
+					<script>
+						displayVideos();
+					</script>
+					<!--   NEXT BUTTON  -->
+					<div class="GMNextButton">
+						<a style="cursor:pointer"> <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" > </a>
+					</div>
+				</div>
+			</section>
+            
+            <!---------- THRIIVE TALKS SECTION FOR DESKTOP  ---------->
+        <section style="margin-bottom:5%">
+            <h1 class="MainHeading"  style="text-align:left;margin:5% 0% 3% 8%">THRIIVE TALKS</h1><!-- MAIN HEADING  -->
+            
+            <div class="div_displayTable">
+                <div class="TT_LeftSideIcon"> <img src="images/ThriveTalks_BG_Let_Img.png" style="width:50%;"> </div>
+                
+                <!--  THRIIVE TALKS BLOCK - 1 -->
+                <div class="ThriiveTalksDiv_1" > <a id="blog1" href="" target="_blank"><h3 class="TT_1_Text_A" id="ThriiveTalks_Block1_text_A"><span id="desc1"></span> </h3>
+                        <h3 class="TT_1_Text_B" id="ThriiveTalks_Block1_text_B"><span id="blogauthor1"></span></h3></a> 
+                </div>
+                
+                <!--  THRIIVE TALKS BLOCK - 2 -->
+                <div class="ThriiveTalksDiv_2" > <a id="blog2" href="" target="_blank"><h3 class="TT_2_Text_A" id="ThriiveTalks_Block2_text_A"><span id="desc2"></span></h3>
+                        <h3 class="TT_2_Text_B" id="ThriiveTalks_Block2_text_B"><span id="blogauthor2"></span></h3></a> 
+                </div>
+                
+                <!--  THRIIVE TALKS BLOCK - 3 -->
+                <div  class="ThriiveTalksDiv_3" > <a id="blog3" href="" target="_blank"><h3 class="TT_3_Text_A" id="ThriiveTalks_Block3_text_A"><span id="desc3"></span></h3>
+                        <h3 class="TT_3_Text_B" id="ThriiveTalks_Block3_text_B"><span id="blogauthor3"></span></h3></a>
+                </div>
+                <div class="TT_RightSideIcon"> <img src="images/ThriveTalks_BG_Right_Img.png" width="40%"> </div>
+            </div>
+        </section>
+        <script>
+            appendthriivetalkvalues();
+        </script>
+        </section>
+        
+        <!--FOOTER SECTION-->
+        <script style="margin-top:20%">
+           	display_footer();
+			footerItemSize();
+        </script>
+        
+<!--        <script src="js/calendarScripts.js"> </script>-->
+        
+    </body>
+</html>

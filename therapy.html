@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/therapy.css"> <!--styles for Therapy Pase-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sacramento&amp;subset=latin-ext" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | THERAPY PAGE_GRID VIEW</title> 
+		 
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+        <script src="js/therapies.js"> </script>
+<script>
+	function changePage() {
+		var elem = document.getElementById('therapyOrPractitioner').value;
+		if (elem == 'therapies') {}
+		else if (elem == 'practitioners') {
+			window.location.assign("practitioners.html");
+		}
+	}
+</script>
+        
+	</head>
+
+    <body class="other_Pagess_body_Backgruond">
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("therapy");
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+      <section class=menuSection>
+               
+            <script>
+                display_header_2();
+            </script>
+            
+        </section>
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+            <!---------- SECTION FOR WEBSITE HEADER  ---------->
+         
+            <section>
+                <div style="text-aligh:center; vartical-aligh:middle; padding:5% 15% 0% 15%">
+                    <img src="images/theraphy/hand.png" width="100%;">
+                </div>
+                
+                <!--DROPDOWN BUTTON (it's not visable in desktop devises)-->
+                 <div class="dropdownButton">
+                    <a href="#"><img id="OurStory_dropDownButton" src="images/Down.png" alt="Down Button" width="100%"> </a>
+                </div>
+                
+            </section>
+            
+            
+            <!----------------------------- PRACTITIONER SECTION  ------------------------------->
+            <section style="margin:5% 0% 5% 0%">
+                
+                     <!--THERAPIES HEADING-->
+                    <div class="div_displayTable">
+                            <h3 class="MainHeading">therapies</h3>
+                            <h3 class="tagLine">Everyone has a question. Here’s your answer. <br>Discover the largest bank of holistic therapies, healers and alternative solutions to any unresolved condition.</h3>
+                        <!--GRID VIEW BUTTON-->
+                        <!--<div class="gridview" id="gridview" onclick="forListView();"></div>-->
+                        <!--LIST VIEW BUTTON-->
+                        <!--<div class="listview" id="listview" onclick="forGridView();"> </div>-->
+                    </div>
+                
+        <!-------------------------- PRACTITIONER SECTION BUTTONS -------------------------->
+        <div class="searchMailDiv">
+            <div class="CityDiv">
+             <input type="text" name="q" placeholder="City" />
+            </div>
+            <div class="serchDiv">
+                <input type="text" name="q" placeholder="search... here" />
+            </div>
+        </div>
+                
+            </section>
+            <div class="div_displayTable">
+                <div class="headding_div">
+                    <h3 class="pageTitle_text" id="selectedcategory">Quantum Energy Healing</h3> 
+                </div>
+            </div>
+             <!-------------------------- DESKTOP (THERAPIES GRID VIEW)  -------------------------->
+            <section id="therapy_Grid_View_Desktop" class="div_displayTable">
+                
+             
+                <script>
+                    displayModalities_grid('Quantum Energy Healing');
+                </script>
+                
+            </section>
+			
+			
+			<!--*********** (LIST VIEW) DESKTOP ***********-->
+			
+<!--
+			<section id="therapy_List_View_Desktop">
+                <script>
+                    displayModalities_list('Quantum Energy Healing');
+                </script>
+            </section>
+-->
+            
+            
+         
+            
+            
+            <!-- ************************** -->
+            <!--HTML CODE FOR MOBILE DEVICE -->
+            <!-- ************************** -->
+            
+            
+            <!-- *********  SECTION FOR MOBILE ********* -->
+            
+            <section id="therapy_Grid_View_Mobile">
+                <script>
+                    displayModalities_grid_mobile('Quantum Energy Healing');
+                </script>
+                
+            </section>
+			
+<!--
+			 <section id="therapy_List_View_Mobile">
+             <script>
+                    displayModalities_list_mobile('category1');
+            </script>
+                
+            </section>
+-->
+            
+            
+             <!---------- TESTIMONIAL SECTION  ---------->
+			<section id="TestimonialSection_Desktop">
+				<div class="testimonial">
+					<img src="images/Testimonial.png" width="100%;" style="margin:auto">
+					<div id="thriivequotes"></div>
+				</div>
+				<script>
+				 	display_testimonial('home');
+				</script>
+            </section>
+            
+           
+            
+        </section>
+
+        <!--FOOTER SECTION-->
+        <script>
+           display_footer();
+        </script>
+
+    </body>
+</html>

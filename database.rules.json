@@ -1,0 +1,50 @@
+{
+  "rules": {
+    "careers": {
+      ".read": true,
+      ".write": true
+    },
+    "contact": {
+      ".read": true,
+      ".write": true
+    },
+    "quotes": {
+      ".read": true,
+      ".write": true
+    },
+    "therapies": {
+      "ailments": {
+        ".read": true,
+        ".write": true
+      },
+      "modalities": {
+        ".read": true,
+        ".write": true
+      },
+      "practitioner": {
+        ".read": true,
+        ".write": true
+      }
+    },
+    "thriivetalks": {
+      ".read": true,
+      ".write": true
+    },
+    "thriiveworld": {
+      ".read": true,
+      ".write": true
+    },
+    "users": {
+      ".read": true,
+      ".write": true
+    },
+    "whatshappening": {
+      ".read": true,
+      ".write": true
+    },
+    "wsppreregistrstions": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}

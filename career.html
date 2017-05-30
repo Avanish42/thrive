@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">   
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css"> <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/career.css"> <!--styles for Connect Page-->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        
+        <!--  EMAIL SCRIPT  -->
+        <script type="text/javascript" src="js/careers.js"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+           (function(){
+//              emailjs.init("user_SFNy7URi1ghfvN7FeiR0P"); //FREE
+              emailjs.init("user_QNqqA1kV3TPZZRVdm21yD"); //Thriive
+           })();
+        </script>
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | CONNECT</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+       
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu();
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+          <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+            <!--    MAIN BODY SECTION TO SET THE BODY MARGIN TO 7%  -->
+            <section class="MainBodySection">
+                <div style="text-align:center;" id="SuccessMessageDiv">
+                    <img src="images/thank_you.png" width="100%"><br>
+                    <p id="SuccessMessage">you have successfully submitted your query.<br>our representative will contact you shortly</p>
+                </div>
+                
+                <!---------- SECTION FOR CAREER CONTENT  ---------->
+                <div id="WantToWorkWithUs" class="row">
+                      <h3 class="career-heading">want to work with us</h3>  
+                      <p class="career-description">Hey you! We're always on the lookout for new people like you. You're cool, You're smart, and ofcourse you know how to figure things out. Creativity is collaboration and we're always eager to meet talented people who think outside the box. Take a look at the current opening below</p>
+                </div>
+                
+                <div id="OtherDetails" class="row">
+                    <div class="Vacancy_left">
+                        <h3 class="sample-heading">content writer</h3>
+                        <p class="sample-description">lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit</p>
+                    </div>
+                    <div class="Vacancy_Right">
+                        <h3 class="sample-heading">account manager </h3>
+                        <p class="sample-description">lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+                <!---------- SECTION FOR FORM  ---------->
+                <section class="CareerForm">
+                     <div id=Career_Form>
+<!--                       <form name="form" onsubmit="return Careervalidate();" method="get" action=''>-->
+                           <!---------- FORM LEFTSIDE SECTION  ---------->
+                            <div id="Career_FormLeftSide">
+                                <div>
+                                    <label>first name*</label><br>
+                                    <input class="Career_input" type="text" name="firstname" id="CareerFirstname">
+                                    <p id="Career_Firstname_error" class="error"></p>
+                                </div>
+                                <div>
+                                    <label>last name</label><br>
+                                    <input class="Career_input" type="text" name="lastname" id="CareerLastname">
+                                    <p id="Career_Lastname_error" class="error"></p>
+                                </div>
+                                <div>
+                                    <label>e-mail*</label><br>
+                                    <input class="Career_input" type="email" name="email" id="CareerEmail">
+                                    <p id="Career_Email_error" class="error"></p>
+                                </div> 
+                            </div>
+
+                            <!---------- FORM RIGHTSIDE SECTION  ---------->
+                            <div id="Career_FormRightSide">
+                                <div>
+                                    <label>Message</label><br>
+                                    <textarea class="Career-message-textarea" rows="7" cols="70" name="comment" id="Careertextarea"></textarea>
+                                     <p id="Career_textarea_error" class="error"></p>
+                                </div>
+                            </div>
+                          
+                         <!--</form>-->
+                    </div>
+                    
+                        <div id="career_SubmitButton_left" onclick="return Careervalidate()">
+                            <img src="images/submit-button.png">
+                        </div>
+<!--
+                    <div id="career_SubmitButton_right" onclick="return Careervalidate()">
+                        <img src="images/submit-button.png" width="100%">
+                    </div>
+-->
+                </section>
+            </section>
+            
+        </section>
+        
+        <!--FOOTER SECTION-->
+        <script>
+           display_footer();
+        </script>
+        
+    
+
+    </body>
+</html>

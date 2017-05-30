@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/accountOverView.css"> <!--styles for Our Story Page-->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | Edit Details </title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script src="js/menuPages.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("");
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+         <section class="menuSection">
+            <!---------- WEBSITE HEADER  ---------->
+            <script>
+                display_header_2();
+                check_authentication();
+            </script>
+        </section> <!--End of Body Section-->
+            <section class="totalBodySection">
+                <div class="div_displayTable">
+                    <h3 class="MainHeading">address options </h3>
+                    <div id="name"></div>
+                    <script>
+                        displayAddresses();
+                    </script>
+<!--
+                    <div class="address_div">
+                        <div class="address_div_boarder">
+                            <div class="menueBar">
+                                <h3 class="menuText">Home</h3>
+                            </div>
+                            <li>Name : <span>Ayyappa Pindi</span> </li>
+                            <li>Address : <span>Banshankari</span></li>
+                            <li>City : <span>Bengaluru</span> </li>
+                            <li>Landmark : <span>Temple</span> </li>
+                            <li>State : <span>Karnataka</span></li>
+                            <li>Pin Code : <span> 560061</span></li>
+                            <li>Phone : <span>99008 13813</span> </li>
+                        </div>
+                         
+                        <div class="save">
+                            <img src="images/edit.png" width="100%">
+                        </div>
+                        <div class="save">
+                            <img src="images/Delete.png" width="100%">
+                        </div>
+                    </div>
+-->
+                     
+                     
+                     <!--ADD NEW ADDRESS FORM-->
+                     
+                    <div class="div_displayTable">
+                            <p id="add_new_address_success_p"></p>
+                        <div id="add_new_address_div" class="address_div">
+                            <div style="width:100%;  border: .2vw solid #b9b9b9;">
+                                <div class="menueBar">
+                                    <h3 class="menuText">Add New Address</h3>
+                                </div>
+                                <li>Name : <span><input id="newName" class="AddressDetailsForm" type="text"></span> </li>
+                                <li>Address : <span><input id="newAddress" class="AddressDetailsForm" type="text"></span></li>
+                                <li>City: <span><input id="newCity" class="AddressDetailsForm" type="text"></span> </li>
+                                <li>Landmark : <span><input id="newLandmark" class="AddressDetailsForm" type="text"></span> </li>
+                                <li>State : <span><input id="newState" class="AddressDetailsForm" type="text"></span></li>
+                                <li>Pin Code : <span> <input id="newPinCode" class="AddressDetailsForm" type="text"></span></li>
+                                <li>Phone : <span><input id="newPhone" class="AddressDetailsForm" type="text" ></span> </li>
+                                <li>Address Type : <span><input id="newAddressType" class="AddressDetailsForm" type="text"></span><p id="newAddressTypeErr" class="menuPageErrorMsg"></p> </li>
+                            </div>
+
+                            <div class="edit_Details" onclick="addNewAddress()">
+                                <img src="images/save.png" width="100%">
+                            </div>
+                        </div>
+
+                    </div>
+                     
+                     
+                </div>
+                
+                
+
+            </section>
+            
+                <!--TERMS AND CONDITIONS SECTION-->
+    <script>
+        display_termsAndConditions();
+    </script>
+            <!--FOOTER SECTION-->
+            <script>
+               display_footer();
+            </script>
+		
+    </body>
+</html>

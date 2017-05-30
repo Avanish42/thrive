@@ -1,0 +1,112 @@
+@media (min-width: 737px) {
+
+.Next_Previous_Button_M{
+    display: none;
+}
+}
+
+.Next_Previous_Button {
+    display: inline-table;
+    width: 4%;
+    cursor: pointer;
+}
+
+
+
+.NewsLetterDesktop{
+    display: inline-table;
+    width: 98%
+}
+
+#Next_button_D{
+    float: right;
+    vertical-align: bottom;
+    margin-top: 18%;
+}
+#Previous_button_D{
+    float: left;
+    vertical-align: bottom;
+    margin-top: 18%;
+}
+
+.NesLetterBlock-1,
+.NesLetterBlock-2,
+.NesLetterBlock-3 {
+    width: 22vw;
+    display: inline-table;
+    text-align: center;
+    margin-bottom: 10%
+}
+
+.NewsLetterDiv {
+    display: inline-table;
+    width: 20vw;
+    height: 31vw;
+    background: url(../images/News_Letter_baground.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    padding: 2% 3% 0% 4%;
+}
+
+.NesLetterBlock-2 {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.Newsletter_Title {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #4e0454;
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin: 0;
+}
+
+.Newsletter_sub_Title {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 2%;
+    margin: 0;
+}
+
+@media (max-width: 736px) {
+    
+    .NewsLetterDesktop{
+        width: 83%
+    }
+    .Next_Previous_Button {
+        display: none
+    }
+    .Next_Previous_Button_M {
+        width: 8%;
+        display: inline-table;
+        cursor: pointer;
+    }
+    .NesLetterBlock-1,
+    .NesLetterBlock-2,
+    .NesLetterBlock-3 {
+        width: 55vw;
+        margin-left: 6.5%
+    }
+    .NesLetterBlock-2,
+    .NesLetterBlock-3 {
+        display: none;
+    }
+    .NewsLetterDiv {
+        width: 50vw;
+        height: 51vw;
+        padding: 2% 3% 5% 4%;
+    }
+    .Newsletter_Title {
+        font-size: 5vw;
+    }
+    .Newsletter_sub_Title {
+        font-size: 3vw
+    }
+}

@@ -1,0 +1,399 @@
+/*******VIDEO SECTION*******/
+/*/-------------------------------/*/
+
+
+
+.TW_PreviousButton,
+.TW_NextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    transform: translateY(-10%);
+    cursor: pointer;
+        
+}
+
+
+.PlayButton{
+    background: url(../images/PlayButton.png) no-repeat center;
+    background-size: cover;
+    width: 3.5vw;
+    height: 3.5vw;
+    margin: auto;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    z-index: 100;
+    margin-top: 60%
+}
+
+.PlayButton:hover{
+    background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+    height: 3.5vw;
+     -webkit-transition: all .5s ease-in-out;
+     z-index: 100;
+}
+
+.vide_Div:hover .PlayButton{
+    opacity: 1;
+     z-index: 100;
+     -webkit-transition: all 1s ease-in-out;
+}
+
+
+
+
+
+
+.ThriiveWorld_VideoDiv:hover .videoBlog_afterHover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);   
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+
+
+
+
+
+
+.vide_Div:hover .TW_Caption,
+.vide_Div:hover .TW_SubCaption {
+    display: none;
+}
+.vide_Div:hover .TW_CaptionAfterHover,
+.vide_Div:hover .TW_SubCaptionAfterHover {
+    display: block;
+}
+
+    /*--------------------------------------------*/
+    /* -----VIDEO SECTION FOR MOBILE-----*/
+    /*--------------------------------------------*/
+
+.vide_Div{
+	width: 15vw;
+    height: 22.5vw;
+	position: relative;
+	overflow: hidden;
+    display: inline-table;
+    cursor: pointer;
+    -webkit-transition: all 1s ease-in-out;
+     
+}
+
+.video_Div_set{
+    width:49%;
+    display:inline-table;
+    text-align:center;
+    margin-bottom: 5%
+}
+
+#vide_1{
+    background: url(../images/videoImages/09.jpg) no-repeat center; 
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    
+}
+#vide_2{
+     background: url(../images/videoImages/10.jpg) no-repeat center; 
+    background-size: cover;
+       -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    margin-left: 7%;
+    margin-right: -4%
+    
+}
+#vide_3{
+     background: url(../images/videoImages/11.jpg) no-repeat center; 
+    background-size: cover;
+       -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    margin-left: -4%
+    
+}
+#vide_4{
+     background: url(../images/videoImages/12.jpg) no-repeat center; 
+    background-size: cover;
+       -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    margin-left: 7%;
+    
+}
+
+.vide_Div img{
+    opacity: 0;
+}
+.vide_Div:hover img{
+    opacity: 1;
+    -webkit-transition: all 2s ease-in-out;
+    
+}
+
+.vide_Div:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);   
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 1s ease-in-out;
+    
+}
+.vide_Div img{
+    width: 100%;
+	position: absolute;
+	-webkit-animation: showMe 5s linear infinite 0s forwards;
+	-moz-animation: showMe 5s linear infinite 0s forwards;
+	-o-animation: showMe 5s linear infinite 0s forwards;
+	-ms-animation: showMe 5s linear infinite 0s forwards;
+	animation: showMe 5s linear infinite 0s forwards;
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+	animation-play-state: paused;
+    margin-left: -50%;
+    
+}
+
+
+.vide_Div img:nth-child(0){
+	z-index: 6;
+}
+.vide_Div img:nth-child(1){
+    -webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	-ms-animation-delay: 1s;
+	animation-delay: 1s;
+	z-index: 5;
+}
+
+.vide_Div img:nth-child(2){
+    -webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	-o-animation-delay: 2s;
+	-ms-animation-delay: 2s;
+	animation-delay: 2s;
+	z-index: 4;
+}
+
+.vide_Div img:nth-child(3){
+    -webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	-o-animation-delay: 3s;
+	-ms-animation-delay: 3s;
+	animation-delay: 3s;
+	z-index: 3;
+}
+
+.vide_Div img:nth-child(4){
+    -webkit-animation-delay: 4s;
+	-moz-animation-delay: 4s;
+	-o-animation-delay: 4s;
+	-ms-animation-delay: 4s;
+	animation-delay: 4s;
+	z-index: 2;
+}
+
+.vide_Div:hover img{
+	-webkit-animation-play-state: running;
+	-moz-animation-play-state: running;
+	-o-animation-play-state: running;
+	-ms-animation-play-state: running;
+	animation-play-state: running;
+/*    width: 150%;*/
+}
+
+.hs-overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: .6;
+	z-index: 500;
+	pointer-events: none;
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	-ms-transition: all 1s linear;
+	transition: all 1s linear;
+}
+
+.TW_Caption{
+	position: absolute;
+	width: 15vw;
+    bottom: 0;
+	font-size: 1.5vw;
+	text-align: center;
+    background-color: #000;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    color: #fff;
+    font-weight: 900;
+    padding: 1% 1% 9% 1%;
+       -webkit-transition: all 1s ease-in-out;
+    margin-left: -50%;
+}
+
+.TW_SubCaption{
+	position: absolute;
+	width: 15vw;
+    bottom: 0;
+	font-size: 1vw;
+	text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    padding: 1% 1% 2% 1%;
+    -webkit-transition: all 1s ease-in-out;
+    margin-left: -50%;
+}
+
+
+.TW_CaptionAfterHover{
+	position: absolute;
+	width: 15vw;
+    bottom: 0;
+	font-size: 1.2vw;
+	text-align: center;
+    background-color: #000;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    padding: 1% 1% 9% 1%;
+    display: none;
+       -webkit-transition: all 1s ease-in-out;
+}
+
+.TW_SubCaptionAfterHover{
+	position: absolute;
+	width: 15vw;
+    bottom: 0;
+	font-size: 1vw;
+	text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    padding: 1% 1% 2% 1%;
+    display: none;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+
+
+
+
+@-webkit-keyframes showMe {
+    0% { visibility: visible; z-index: 100; }
+    100% { visibility: hidden; z-index: 0; }
+}
+
+@-moz-keyframes showMe {
+    0% { visibility: visible; z-index: 100; }
+    100% { visibility: hidden; z-index: 0; }
+}
+
+@-o-keyframes showMe {
+    0% { visibility: visible; z-index: 100; }
+    100% { visibility: hidden; z-index: 0; }
+}
+
+@-ms-keyframes showMe {
+    0% { visibility: visible; z-index: 100; }
+    100% { visibility: hidden; z-index: 0; }
+}
+
+@keyframes showMe {
+    0% { visibility: visible; z-index: 100; }
+    100% { visibility: hidden; z-index: 0; }
+}
+
+
+
+@media (max-width: 736px) {
+    
+.TW_PreviousButton,
+.TW_NextButton {
+    width: 8%;
+    display: table-cell;
+    transform: translateY(0%)
+        
+}
+    
+.vide_Div{
+	width: 28vw;
+    height: 42vw;
+    margin-bottom: 5%;
+    margin-left: 5.5%;
+     
+}
+    .video_Div_set{
+        width: 100%
+    }
+    
+    
+#vide_1,
+#vide_2,
+#vide_3,
+#vide_4{
+    margin:1%; 
+}
+    
+    
+    
+.TW_Caption{
+	width: 28vw;
+	font-size: 3vw;
+    padding: 1% 1% 9% 1%;
+}
+
+.TW_SubCaption{
+	width: 28vw;
+    bottom: 0;
+	font-size: 2vw;
+    padding: 1% 1% 2% 1%;
+}
+
+
+.TW_CaptionAfterHover{
+	width: 28vw;
+	font-size: 2.2vw;
+    padding: 1% 1% 9% 1%;
+    display: none;
+}
+
+.TW_SubCaptionAfterHover{
+	width: 28vw;
+	font-size: 2vw;
+    padding: 1% 1% 2% 1%;
+    display: none;
+}
+    
+    
+.PlayButton{
+    background: url(../images/PlayButton-2.png) no-repeat center;
+    background-size: cover;
+    width: 5.5vw;
+    height: 5.5vw;
+    opacity: 1;
+    z-index: 150;
+    margin-top: 60%
+}
+
+
+    
+    
+.TW_SubHeadding {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 4%;
+    margin-top: 0%
+    
+}
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+         <meta name="robots" content="noindex, nofollow">
+           
+         <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+         
+         <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        
+        <!--STYLE SHEETS INCLUDING  -->
+        <link rel="stylesheet" href="css/styles_global.css"> <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/tribe.css"> <!-- Styles for Tribe  -->
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+         
+         <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+         
+             <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+
+        <!--    INTEGRATE GOOGLE FONTS   -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | TRIBE </title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script src="js/tribe.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+          <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+        <!--MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+             <!--MAIN SLIDE MENU-->
+			<script>
+				display_menu("tribe");
+				Set_Menu_HeightAndWidth();
+			</script>
+        
+      
+        <!---------TRIBE IMAGE-------------->
+        <div class="tribe_menu">
+            <img src="images/tribe/Hands.png" width="85%">
+			<div class="div_displayTable">
+					<a href="">
+						<div class="downarrow">
+                         	<img src="images/Down-2.png" alt="Down Button" width="100%">
+						</div>
+                    </a>
+				</div>
+        </div>
+        
+		
+        <div class="global_ambassadors">GLOBAL AMBASSADORS</div>
+        <P class="global_ambassadors_text"> Meet our Masters: Global leaders in the World of Light, and Staunch Supporters of Thriive across the seven seas.</P>
+        
+        <!---------GLOBAL AMBASSADORS SECTION FIRST ROW-------------->
+			
+			<div class="div_displayTable">
+				
+				<!--PREVIOUS BUTTON-->
+				<div class="previous"><img src="images/Next-1B.png" width="100%" onclick="global_ambassador_navigations(-1)"></div>
+				<!--NEXT BUTTON-->
+				<div class="next"><img src="images/Next-1A.png" width="100%" onclick="global_ambassador_navigations(1)"></div>
+                
+                
+				<!--KAYA & CHRISTIANE-->
+				<div class="tribe_speaker_Div firstDiv" onclick="displayChristian();">
+					<a href="global_ambassador.html?id=christian"><div class="Befor_Hover">
+							<img src="images/tribe/kaya&christiane-muller-2.png" width="80%">
+						<h4 class="ambassador_name">KAYA &amp; CHRISTIANE MULLER</h4>
+						<div class="Vector_Smart_Object_1">
+							<img src="images/tribe/Vector_Smart_Object_1.png" width="100%">
+						</div>
+					</div></a>
+					
+				</div>
+				
+				<!--JASMUHEEN-->
+				<div class="tribe_speaker_Div" onclick="displayJasmoheen();">
+                    <a href="global_ambassador.html?id=jasmuheen">
+					<div class="Befor_Hover">
+							<img src="images/tribe/jasmuheen-2.png" width="80%">
+						<h4 class="ambassador_name">JASMUHEEN</h4>
+						<div class="Vector_Smart_Object_1">
+							<img src="images/tribe/Vector_Smart_Object_1.png" width="100%">
+						</div>
+                        </div>	</a>	
+					
+				</div>
+				
+				<!--ILONA SELKE -->
+				<div class="tribe_speaker_Div" onclick="displayIlona();">
+					<a href="global_ambassador.html?id=ilona"><div class="Befor_Hover">
+							<img src="images/tribe/ilonaselke&donParis-2.png" width="80%">
+						<h4 class="ambassador_name">ILONA SELKE &amp; DON PARIS</h4>
+						<div class="Vector_Smart_Object_1">
+							<img src="images/tribe/Vector_Smart_Object_1.png" width="100%">
+						</div>
+					</div></a>		
+					
+				</div>
+				
+				<!--JUDI SATORI -->
+				<div class="tribe_speaker_Div" onclick="displayJudi();">
+					<a href="global_ambassador.html?id=judi"><div class="Befor_Hover">
+							<img src="images/tribe/judi-satori-2.png" width="80%">
+						<h4 class="ambassador_name">JUDI SATORI</h4>
+						<div class="Vector_Smart_Object_1">
+							<img src="images/tribe/Vector_Smart_Object_1.png" width="100%">
+						</div>
+					</div>	</a>	
+					
+				</div>
+				
+				<!--ALEX ORBITO-->
+				<div class="tribe_speaker_Div secondDiv" onclick="displayAlex();">
+					<a href="global_ambassador.html?id=alex"><div class="Befor_Hover">
+							<img src="images/tribe/alexOrbito-2.png" width="80%">
+						<h4 class="ambassador_name">ALEX ORBITO</h4>
+						<div class="Vector_Smart_Object_1">
+							<img src="images/tribe/Vector_Smart_Object_1.png" width="100%">
+						</div>
+					</div></a>
+					
+				</div>
+				
+				<!--RAE CHANDRAN-->
+				<div class="tribe_speaker_Div" onclick="displayRaechandran();">
+					<a href="global_ambassador.html?id=raechandran"><div class="Befor_Hover">
+							<img src="images/tribe/raeChandran-2.png" width="80%">
+						<h4 class="ambassador_name">RAE CHANDRAN</h4>
+						<div class="Vector_Smart_Object_1">
+							<img src="images/tribe/Vector_Smart_Object_1.png" width="100%">
+						</div>
+					</div>	</a>	
+					
+				</div>
+				
+				<!--ERIK BERGLUND-->
+				<div class="tribe_speaker_Div" onclick="displayErik();">
+					<a href="global_ambassador.html?id=erik"><div class="Befor_Hover">
+							<img src="images/tribe/Erik-Berglund-2.png" width="80%">
+						<h4 class="ambassador_name">ERIK BERGLUND</h4>
+						<div class="Vector_Smart_Object_1">
+							<img src="images/tribe/Vector_Smart_Object_1.png" width="100%">
+						</div>
+					</div></a>		
+					
+				</div>
+			</div>
+			
+			   <!------------   FRIENDS OF THRRIVE  ------------->
+		<section style="display:none">
+			<div class="global_ambassadors">friends of thriive</div>
+			<p class="global_ambassadors_text">People who have made a mark on the global scale. Our supporters across the seven seas!</p>
+		
+			
+			<div class="div_displayTable">
+				
+					<!--PREVIOUS BUTTON-->
+					<div class="previous"><img src="images/Next-1B.png" width="100%"  onclick="thrrive_friends_navigations(-1)"></div>
+					<!--NEXT BUTTON-->
+					<div class="next"><img src="images/Next-1A.png" width="100%"  onclick="thrrive_friends_navigations(1)"> </div>
+					
+					<!--SATYA HINDUJA-->
+					<div class="tribe_friend_Div firstDiv">
+						<div class="Befor_Hover">
+								<img src="images/tribe/satya-hinduja.png" width="80%">
+							<h4 class="ambassador_name">SATYA HINDUJA</h4>
+							<div class="Vector_Smart_Object_1">
+								<img src="images/tribe/Vector_Smart_Object_1.png" width="100%">
+							</div>
+						</div>		
+
+						<div class="After_Hover friends_mobile">
+							<img src="images/tribe/satya-hinduja-2.png" width="80%">
+							<h4 class="ambassador_name">SATYA HINDUJA</h4>
+							<div class="Vector_Smart_Object_1">
+								<img src="images/tribe/Vector_Smart_Object_2.png" width="100%">
+							</div>
+							<span class="about_global_ambassador_speaker">Satya Hinduja’s beginnings are seeded into the rich heritage of India’s west coast, sprouting and taking root in Mumbai’s thriving Bollywood scene, earning her a solid foundation and respect for music on a technical level. The next 12 years would see a great transformation in Satya, not only as a musical artist, but at an even deeper spiritual level. Whatever medium she presents, within lies a message for the soul.
+							</span>
+							
+							<h4> <span class="knowMore">to know more visit</span> <br> 
+                                <a href="http://www.satyahinduja.com" target="_blank"  class="speaker_website">www.satyahinduja.com</a></h4>
+							
+							<div class="vector_3">
+								<img src="images/tribe/Vector_Smart_Object_3A.png" width="100%">
+							</div>
+						</div>
+                        <br>
+					</div>
+				
+					<!--JASMUHEEN-->
+					<div class="tribe_friend_Div">
+						<div class="Befor_Hover">
+								<img src="images/tribe/jasmuheen.png" width="80%">
+							<h4 class="ambassador_name">JASMUHEEN</h4>
+							<div class="Vector_Smart_Object_1">
+								<img src="images/tribe/Vector_Smart_Object_1.png" width="100%">
+							</div>
+						</div>		
+
+						<div class="After_Hover friends_mobile">
+							<img src="images/tribe/jasmuheen-2.png" width="80%">
+							<h4 class="ambassador_name">JASMUHEEN</h4>
+							<div class="Vector_Smart_Object_1">
+								<img src="images/tribe/Vector_Smart_Object_2.png" width="100%">
+							</div>
+							<span class="about_global_ambassador_speaker">A meditator for over 42 years, the lifetime President of the GCSS in India, specializes in deep inner plane journeys using the alchemical meditative process to allow people to merge even deeper with their own enlightened nature.  Spreading her knowledge over 33 countries, with 38 books in 18 languages, Jasmuheen attracts people with her sense of humour and her simple yet powerful techniques that transforms all aspects of people lives!
+							</span>
+							
+							<h4> <span class="knowMore">to know more visit</span>  <br>
+								<a href="http://www.jasmuheen.com" target="_blank"  class="speaker_website">www.jasmuheen.com</a></h4>
+							
+							<div class="vector_3">
+								<img src="images/tribe/Vector_Smart_Object_3A.png" width="100%">
+							</div>
+							
+						</div>	
+					</div>
+				</div>
+		</section>
+ 
+        <!------------   THRIIVE PATNERS SECTION  DESKTOP  ------------->
+        <section>
+			<div class="global_ambassadors">partners</div>
+            <p class="global_ambassadors_text"> Our sister organisations: Spreading the message of love, light and healing over two decades.</p>
+            <div style="width:40%; margin:auto">
+            <a href="http://www.pyramidvalley.org" target="_blank"><img src="images/tribe/PVI_Logo.png" class="PVI_Logo">    </a>
+            <a href="http://pssmovement.org/" target="_blank"><img src="images/tribe/PSSM_Logo.png" class="PSSM_Logo"></a>
+            <a href="http://www.luglobal.org" target="_blank"><img src="images/tribe/LU_logo-2.png" class="LU_logo"></a>
+            </div>
+        </section>
+        
+        </section>
+        <!--FOOTER SECTION-->
+        <div style="margin-top:5%">
+            <script>
+               display_footer();
+            </script>
+        </div>
+
+
+
+</body>
+
+</html>

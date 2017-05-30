@@ -1,0 +1,115 @@
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">   
+        
+        <!--    INCLUDING FIREBASE FILES -->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css"> <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/netFlix.css"> <!--styles for Connect Page-->
+
+        
+
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | Net Flix</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection" style="margin:10% 0% 10% 0% ">
+            
+        <div class="div_displayTable">
+                
+            <div class="video_Div1">
+                <div class="slides_BG1">
+                  <img src="images/videoImages/13.jpg">
+                </div>  
+                <div class="slides1">
+                  <img src="images/videoImages/14.jpg">
+                  <img src="images/videoImages/15.jpg">
+                  <img src="images/videoImages/16.jpg">
+                </div>
+                <div class="PlayButton"></div>   
+                <div class="Info_Div">
+                    <span class="BeforeText">BeforText</span>
+                    <span class="AfterText">AfterText</span>
+                </div>
+            </div>
+                  
+            <div class="video_Div1">
+                <div class="slides_BG1">
+                  <img src="images/videoImages/13.jpg">
+                </div>  
+                <div class="slides1">
+                  <img src="images/videoImages/14.jpg">
+                  <img src="images/videoImages/15.jpg">
+                  <img src="images/videoImages/16.jpg">
+                </div>
+                <div class="PlayButton"></div>   
+                <div class="Info_Div">
+                    <span class="BeforeText">BeforText</span>
+                    <span class="AfterText">AfterText</span>
+                </div>
+            </div>
+            
+        </div>
+            
+        </section>
+        
+        
+<script>
+    function nextSlide() {
+	if (typeof $ == "undefined") var $ = function(sel) { return document.querySelector(sel); }	
+	$(".slides").appendChild($(".slides img:first-child"));
+}
+setInterval(nextSlide, 3000)
+    
+    function nextSlide1() {
+        if (typeof $ == "undefined") var $ = function(sel) { return document.querySelector(sel); }	
+        $(".slides1").appendChild($(".slides1 img:first-child"));
+    }
+    
+    function nextSlide2() {
+        if (typeof $ == "undefined") var $ = function(sel) { return document.querySelector(sel); }	
+        $(".slides2").appendChild($(".slides2 img:first-child"));
+    }
+    
+    function nextSlide3() {
+        if (typeof $ == "undefined") var $ = function(sel) { return document.querySelector(sel); }	
+        $(".slides3").appendChild($(".slides3 img:first-child"));
+    }
+    
+    function nextSlide4() {
+        if (typeof $ == "undefined") var $ = function(sel) { return document.querySelector(sel); }	
+        $(".slides4").appendChild($(".slides4 img:first-child"));
+    }
+    
+        setInterval(nextSlide1, 3000);
+        setInterval(nextSlide2, 3000);
+        setInterval(nextSlide3, 3000);
+        setInterval(nextSlide4, 3000);
+</script>
+        
+    
+
+    </body>
+</html>

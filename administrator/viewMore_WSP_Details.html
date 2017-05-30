@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!--    PAGE TITLE  -->
+    <title>THRIIVE | WSP Full Details  </title>
+    <!--    INCLUDING CSS FILES-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/wsp_styles.css">
+    <link rel="stylesheet" href="css/wsp_fallowup.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <script src="js/wspViewMoreDetails.js" type="text/javascript"></script>
+	 <script>
+        check_authentication(" ");
+    </script>
+</head>
+<body class="body_Backgruond">
+    <section class="totalBodySection">
+        <!--PERSONAL DETAILS WSP FORM -1-->
+        <section id=wspDetails>
+            <!--PERSONAL DETAILS-->
+            <div class="div_displayTable"> 
+                <h3 class="wsp_heading" id="firstname"></h3>
+                <div class="wsp_leftDiv">
+                    <p class="wsp_details">Package : <input class="inputBodx" type="text" readonly id="packageSelected"> </p>
+                    <p class="wsp_details">Renewal Date : <input class="inputBodx" type="date" readonly id="RenewalDate">  </p>
+                    <p class="wsp_details">city : <input class="inputBodx" type="text" readonly id="city"> </p>
+                    <p class="wsp_details">address : <input class="inputBodx" type="text" readonly id="address"> </p>
+                    <p class="wsp_details">e-mail : <input class="inputBodx" type="email" readonly id="email"> </p>
+                    <p class="wsp_details">website : <input class="inputBodx" type="text" readonly id="website"> </p>
+                    <p class="wsp_details">contact number : <input class="inputBodx" type="number" readonly id="phone"> </p>
+                    <p class="wsp_details">date of birth : <input class="inputBodx" type="date" readonly id="dob">  </p>
+                    <p class="wsp_details">age : <input class="inputBodx" type="number" readonly id="age">  </p>
+                    <p class="wsp_details">gender : <input class="inputBodx" type="text" readonly id="gender">  </p>
+                </div>
+                <div class="wsp_rightDiv"> 
+                    <p class="wsp_details">facebook : <input class="inputBodx" type="text" readonly id="facebook"> </p>
+                    <p class="wsp_details">twitter : <input class="inputBodx" type="text" readonly id="twitter"> </p>
+                    <p class="wsp_details">g+ : <input class="inputBodx" type="text" readonly id="gPlus">  </p>
+                    <p class="wsp_details">youtube : <input class="inputBodx" type="text" readonly id="Youtube">  </p>
+                    <p class="wsp_details">about yourself : <textarea class="textArea" type="textarea" rows="20" cols="40" readonly id="aboutYourSelf"></textarea>  </p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="div_displayTable">
+                <div class="wsp_leftDiv">
+                    <p class="wsp_details">modality-1 : <input class="inputBodx" type="text" readonly id="m1"> </p>
+                    <p class="wsp_details">modality-2 : <input class="inputBodx" type="text" readonly id="m2"> </p>
+                    <p class="wsp_details">modality-3 : <input class="inputBodx" type="text" readonly id="m3"> </p>
+                    <p class="wsp_details">modality-4 : <input class="inputBodx" type="text" readonly id="m4"> </p>
+                    <p class="wsp_details">other modality : <input class="inputBodx" type="text" readonly id="other"> </p>
+                    <p class="wsp_details">Over all experience : <input class="inputBodx" type="number" readonly id="overall_exp"> </p>
+                    <p class="wsp_details">details of degree obtained /<br>courses attended/ <br>undertaken and <br>relevant certifications : <input class="inputBodx" type="text" readonly id="courseDetails"> </p>
+                    <p class="wsp_details">primary career : <input class="inputBodx" type="text" readonly id="selectedPrimaryCareer"> </p>
+                </div>
+                <div class="wsp_rightDiv">
+                    <p class="wsp_details">experience(yrs) : <input class="inputBodx" type="number" readonly id="m1exp"> </p>
+                    <p class="wsp_details">experience(yrs) : <input class="inputBodx" type="number" readonly id="m2exp"> </p>
+                    <p class="wsp_details">experience(yrs) : <input class="inputBodx" type="number" readonly id="m3exp"> </p>
+                    <p class="wsp_details">experience(yrs) : <input class="inputBodx" type="number" readonly id="m4exp"> </p>
+                    <p class="wsp_details">experience(yrs) : <input class="inputBodx" type="number" readonly id="otherexp"> </p>
+                    <p class="wsp_details">hourly session charges<br> (inr) : <input class="inputBodx" type="number" readonly id="charges"> </p>
+                    <p class="wsp_details">best modality : <input class="inputBodx" type="text" readonly id="bestModality"> </p>
+                    <p class="wsp_details">what else he do: <input class="inputBodx" type="text" readonly id="otherCareer"> </p>
+                </div>
+            </div>
+        </section>
+        
+        <!--WSP FORM - 2 DETAILS-->
+        <section id=wspForm_2_Details>
+             <div class="div_displayTable">
+                 <div class="wsp_leftDiv">
+                      
+                      <p class="wsp_details">brief description of <br>your work as a wsp : <input class="inputBodx" type="text" readonly id="description"> </p>
+                      <p class="wsp_details">any experience in <br>spiritual counseling : <input class="inputBodx" type="text" readonly id="experienceInCounseling"> </p>
+                      <p class="wsp_details">list any workshops <br> conducted by you : <input class="inputBodx" type="text" readonly id="workshops_conducted"> </p>
+                      <p class="wsp_details">working with any <br> spiritual organization : <input class="inputBodx" type="text" readonly id="spiritual_organization"> </p>
+                      <p class="wsp_details">ecific challenges faced : <input class="inputBodx" type="text" readonly id="challenges"> </p>
+                      <p class="wsp_details">certificates : <input class="inputBodx" type="text" readonly id="certificates_url"> </p>
+                      <p class="wsp_details">address proof : <input class="inputBodx" type="text" readonly id="address_proof_url"></p>
+                      <p class="wsp_details">what event in your life <br>awakened : <input class="inputBodx" type="text" readonly id="awaken_spiritual_event"> </p>
+                      <p class="wsp_details">personal philosophy : <input class="inputBodx" type="text" readonly id="personal_philosophy"> </p>
+                      <p class="wsp_details">best healing : <input class="inputBodx" type="text" readonly id="best_result"> </p>
+                 </div>
+                 <div class="wsp_rightDiv">
+                    
+                    <p class="wsp_details">1st referal name : <input class="inputBodx" type="text" readonly id="ref1Name"></p>
+                    <p class="wsp_details">1st referal email : <input class="inputBodx" type="email" readonly id="ref1Email"></p>
+                    <p class="wsp_details">2nd referal name : <input class="inputBodx" type="text" readonly id="ref2Name">  </p>
+                    <p class="wsp_details">2nd referal email : <input class="inputBodx" type="email" readonly id="ref2Email">  </p>
+                    <p class="wsp_details">3rd referal name : <input class="inputBodx" type="text" readonly id="ref3Name">  </p>
+                    <p class="wsp_details">3rd referal email : <input class="inputBodx" type="email" readonly id="ref3Email">  </p>
+                    <p class="wsp_details">any civil/criminal <br> litigation  : <input class="inputBodx" type="text" readonly id="litigation">  </p>
+                    <p class="wsp_details">identity proof : <input class="inputBodx" type="text" readonly id="identity_proof_url">  </p>
+                    <p class="wsp_details">degrees : <input class="inputBodx" type="text" readonly id="degrees_proof_url">  </p>
+                    <p class="wsp_details">holistic healing : <input class="inputBodx" type="text" readonly id="holistic_career">  </p>
+                    <p class="wsp_details">inspiring spiritual guides<br> /masters / gurus : <input class="inputBodx" type="text" readonly id="influential_gurus">  </p>
+                    <p class="wsp_details">influenced : <input class="inputBodx" type="text" readonly id="influenced_books">  </p>
+                     
+                 </div>
+            </div>
+        </section>
+        <br>
+        
+        <!--PAYMENT DETAILS-->
+        <section id="paymentDetails">
+            <div class="div_displayTable">
+                <div class="wsp_leftDiv">
+                    <p class="wsp_details">Payment Status : <input class="inputBodx" type="text" readonly id="">  </p>
+                    <p class="wsp_details">Total Payment : <input class="inputBodx" type="number" readonly id="">  </p>
+                </div>
+            </div>
+        
+        </section>
+
+        <script>
+			fetchdata("firstname");
+			fetchdata("city");
+			fetchdata("address");
+			fetchdata("email");
+			fetchdata("website");
+			fetchdata("phone");
+			fetchdata("dob");
+			fetchdata("age");
+			fetchdata("gender");
+			fetchdata("facebook");
+			fetchdata("twitter");
+			fetchdata("gPlus");
+			fetchdata("Youtube");
+			fetchdata("aboutYourSelf");
+			fetchdata("m1");
+			fetchdata("m2");
+			fetchdata("m3");
+			fetchdata("m4");
+			fetchdata("other");
+			fetchdata("overall_exp");
+			fetchdata("courseDetails");
+			fetchdata("selectedPrimaryCareer");
+			fetchdata("m1exp");
+			fetchdata("m2exp");
+			fetchdata("m3exp");
+			fetchdata("m4exp");
+			fetchdata("otherexp");
+			fetchdata("charges");
+			fetchdata("bestModality");
+			fetchdata("otherCareer");
+			
+			fetchdata("description");
+			fetchdata("experienceInCounseling");
+			fetchdata("workshops_conducted");
+			fetchdata("spiritual_organization");
+			fetchdata("challenges");
+			fetchdata("certificates_url");
+			fetchdata("address_proof_url");
+			fetchdata("awaken_spiritual_event");
+			fetchdata("personal_philosophy");
+			fetchdata("best_result");
+			fetchdata("ref1Name");
+			fetchdata("ref1Email");
+			fetchdata("ref2Name");
+			fetchdata("ref2Email");
+			fetchdata("ref3Name");
+			fetchdata("ref3Email");
+			fetchdata("litigation");
+			fetchdata("identity_proof_url");
+			fetchdata("degrees_proof_url");
+			fetchdata("holistic_career");
+			fetchdata("influential_gurus");
+			fetchdata("influenced_books");
+			
+			fetchdata("packageSelected");
+			
+			
+//			fetchdata("m1exp");
+//			fetchdata("m2exp");
+//			fetchdata("m3exp");
+//			fetchdata("m4exp");
+//			fetchdata("otherexp");
+//			fetchdata("charges");
+//			fetchdata("bestModality");
+//			fetchdata("otherCareer");
+	
+		</script>
+
+    </section>
+</body>
+
+</html>

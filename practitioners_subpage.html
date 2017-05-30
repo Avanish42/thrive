@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/practitioners_SubPage.css">  <!--styles for Grid View Page-->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sacramento&amp;subset=latin-ext" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | </title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+         <script src="js/practitionersubpage.js"></script>
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script>settitle("name");
+    //    alert(title);
+        </script>
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu();
+            Set_Menu_HeightAndWidth();
+        </script>
+            
+        <!---------- SECTION FOR WEBSITE HEADER  ---------->
+       <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+            
+            <section>
+                <div style="text-aligh:center; vartical-aligh:middle; padding:2% 0% 2% 5%; display:table; width:100% ">
+<!--                    <img src="images/theraphy/practitioner_img.png" width="100%;">-->
+                    <div style="width:65%; display:inline-table">
+                        
+                        <h3 class="practitoner_quote">
+                            “I <span class="practitoner_Sub_quote"> have </span>&nbsp;discovered 
+                            <span class="practitoner_Sub_quote"> me &  </span> 
+                            <br> I love 
+                            <span class="practitoner_Sub_quote"> being </span> &nbsp; me!” 
+                            <br><span class="practitoner_Name" id="name"></span>
+                        </h3>
+                    </div>
+                    <div class="practitioner_Img_Background">
+                        <img src="" width="80%" id="img">
+                    </div>
+                    
+                    <script>fetchdata('name');
+                        fetchdata('img');
+                    </script>
+                </div>
+                
+                <!--DROPDOWN BUTTON (it's not visable in desktop devises)-->
+<!--
+                 <div class="dropdownButton">
+                    <a href="#"><img id="OurStory_dropDownButton" src="images/Down.png" alt="Down Button" width="100%"> </a>
+                </div>
+-->
+            </section>
+            
+            
+                
+            
+             <!-------------------------- ABOUT PRACTITIONE SECTION -------------------------->
+            <section id="practitoner_Subpage_desktop">
+                
+                <div class="div_displayTable" style="padding: 5% 6% 0% 0%; width:100%;">
+                    
+                    <div class="Practitoner_SubPage_Left_Module">
+                        <h3 class="practitionerSubpage_text"> about <span id="speaker"></span></h3>
+                        <h3 class="practitioner_Subpage_content" id="about">
+                        </h3>
+                    </div> 
+                    <script>
+                        fetchdata('speaker');
+                        fetchdata('about');
+                    </script>
+                    <div class="Practitoner_SubPage_Right_Module">
+                        <h3 class="right_Module_heading">Contact Number</h3>
+                        <h3 class="right_Module_text" id="contact"></h3>
+                        
+                        <h3 class="right_Module_heading">E-mail / Website</h3>
+                        <h3 class="right_Module_text"><a style="color:#333333" href="#" id="email"> </a> <br>
+                       <a style="color:#333333" href="" id="website" target="_blank"></a></h3>
+                        <script>
+                            fetchdata('contact');
+                            fetchdata('email');
+                            fetchdata('website');
+                        </script>
+                             <!-- THRIIVE SOCIAL BLOCK -->
+                        <div class="practitoners_socialMedia">
+                            <div style="display:inline-table; width:100%"> 
+                                <a href="#" target="_blank"> <img  src="images/SocialMedia_F.png" style="width:15%;  display:inline-table "> </a>
+                                <a href="#" target="_blank"> <img  src="images/SocialMedia_T.png" style="width:15%;  display:inline-table "> </a>
+                                <a href="#" target="_blank"> <img  src="images/SocialMedia_I.png" style="width:15%;  display:inline-table "> </a>
+                                <a href="#" target="_blank"> <img  src="images/SocialMedia_B.png" style="width:15%;  display:inline-table "> </a>
+                                <a href="#" target="_blank"> <img  src="images/SocialMedia_M.png" style="width:15%;  display:inline-table "> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <section id="about_geetha_images_desktop"> 
+                
+                        <h3 class="practitionerSubpage_text" style="margin-left:5%">therapies offers</h3>
+                    <div class="div_displayTable" style="padding: 0% 0% 0% 0%; width:100%;">
+
+                        <div class="previousButton">
+                        <img src="images/Next-1B.png" width="100%">
+                        </div>
+
+                        <div id="therapiesoffer">
+<!--
+                        <div class="therapies">    
+                        <div class="therapy_offers_img1"> 
+                            <img src="images/theraphy/Reiki.png" style="width:100%;">
+                            <h3 class="therapy_offers_text">Reki <br> Healing</h3>
+                        </div>
+
+
+                        <div class="therapy_offers_img2"> 
+                            <img src="images/theraphy/Pranic.png" style="width:100%;">
+                            <h3 class="therapy_offers_text">Pranic <br> Healing</h3>
+                        </div>
+
+
+                        <div class="therapy_offers_img3"> 
+                            <img src="images/theraphy/Craniosacral.png" style="width:100%;">
+                            <h3 class="therapy_offers_text">Craniosacral <br> Therapy</h3>
+                        </div>
+
+
+                        <div class="therapy_offers_img4"> 
+                            <img src="images/theraphy/Craniosacral.png" style="width:100%;">
+                            <h3 class="therapy_offers_text">Craniosacral <br> Therapy</h3>
+                        </div>
+
+                        <div class="therapy_offers_img5"> 
+                            <img src="images/theraphy/Reiki.png" style="width:100%;">
+                            <h3 class="therapy_offers_text">Reki <br> Healing</h3>
+                        </div>
+                        </div>
+-->
+                         </div>
+                        <div class="nextButton">
+                        <img src="images/Next-1A.png" width="100%">
+                        </div>
+                    </div>
+                </section>
+            
+            </section>
+            
+             <!--YOU MAY ALSO LIKE AND FREE DOWNLOADS SECTION-->
+                <section id="event_Section_desktop">
+                    <div  class="div_displayTable">
+                        <div style="display:inline-table; width:67%;">
+                            
+                            <h3 class="practitionerSubpage_text" style="margin-left:8%"> upcoming events / workshops</h3>
+                            
+                                 <br><br>
+                                 <div  class="div_displayTable" id="individualevents">
+                                 <!--   EVENT-1  -->
+<!--                                    <script>displayIndividualevents();</script>-->
+                                </div>
+                        </div>
+
+                        <div style="display:table-cell; width:30%;float:right">
+                                
+                        </div>
+                    </div>
+            </section>
+
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <!--                                                                                  HTML CODE FOR MOBILE DEVICE                                                                      -->
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+             <section id="about_geetha_images_Mobile"> 
+                
+                    <div class="div_displayTable" style="padding: 0% 0% 0% 0%; width:100%;">
+
+                        <h3 class="practitionerSubpage_text" style="margin-left:5%"> about geeta bhansali</h3>
+
+                        <img class="leftNavigationabout" src="images/Next-1B.png">
+
+                        <div class="therapy_offers_img" style="margin-left:3%"> 
+                            <img src="images/theraphy/Reiki.png" style="width:100%;">
+                            <h3 class="therapy_offers_text">Reki <br> Healing</h3>
+                        </div>
+
+
+                        <div class="therapy_offers_img"> 
+                            <img src="images/theraphy/Pranic.png" style="width:100%;">
+                            <h3 class="therapy_offers_text">Pranic <br> Healing</h3>
+                        </div>
+
+
+                        <div class="therapy_offers_img"> 
+                            <img src="images/theraphy/Craniosacral.png" style="width:100%;">
+                            <h3 class="therapy_offers_text">Craniosacral<br> Therapy</h3>
+                        </div>
+
+                        <img class="rightNavigationabout" src="images/Next-1A.png">
+                    </div>
+                </section>
+            
+            
+            <section id="event_Section_Mobile">
+                    <div  class="div_displayTable">
+                        <div style="display:inline-table; width:100%;">
+                            
+                            <h3 class="practitionerSubpage_text" style="margin-left:5%"> upcoming events / workshops</h3>
+                            
+                                 <div  class="div_displayTable">
+                                     
+                                      <img src="images/Next-1B.png" style="width:8%; margin-top:14%; float:left">
+                                     
+                                 <!--   EVENT-1  -->
+                                    <div class="practitioner_subpage_image_div">
+                                        <a href="#"> <img id="#" src="images/whats_happning/Event-1.png" alt="roots to wings"  width="100%"> </a>
+                                        <div class="event_Image_SubPage_Info"> 21 - 22 <br> NOV </div>
+                                        <h3 class="Event_Caption_SubPage">roots to wings</h3>
+                                        <h3 class="Event_SubCaption_subPage"> By Geeta Bhansali</h3>
+                                    </div>
+
+                                    <!--   EVENT-2  -->    
+                                    <div class="practitioner_subpage_image_div" style="margin-left:3%;">
+                                        <a href="#"> <img id="#" src="images/whats_happning/Event-2.png" alt="roots to wings"  width="100%"> </a>
+                                        <div class="event_Image_SubPage_Info"> 24 <br> NOV </div>
+                                        <h3 class="Event_Caption_SubPage">dna level 2</h3>
+                                        <h3 class="Event_SubCaption_subPage"> By Rae Chandran</h3>
+                                    </div>
+                                     
+                                     <img src="images/Next-1A.png" style="width:8%; margin-top:14%; float:right">
+                                     
+                                </div>
+                        </div>
+                    </div>
+            </section>
+            
+            
+			<section id="TestimonialSection_Desktop">
+				<div class="testimonial">
+					<img src="images/Testimonial.png" width="100%;" style="margin:auto">
+					<div id="thriivequotes"></div>
+				</div>
+				<script>
+				 	display_testimonial('home');
+				</script>
+            </section>
+            
+            
+        </section>
+        
+        
+        
+        <!--FOOTER SECTION-->
+        <script>
+           display_footer();
+        </script>
+        
+        
+
+    </body>
+</html>

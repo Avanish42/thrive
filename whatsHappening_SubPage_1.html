@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+  
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/whatsHappening_SubPage.css">  <!--styles for Whats Happening Page-->
+        <link rel="stylesheet" href="css/style_menu.css">  <!--styles for Whats Happening Page-->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+
+
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | WHATS HAPPENING </title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+        <script src="js/whatshappeningsubpage.js"> </script>
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=390900267960918";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+         <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu();
+            Set_Menu_HeightAndWidth();
+        </script>
+        <section class=menuSection>
+            <script>
+                display_header_2();
+            </script>
+        </section>
+        
+            <!----------------------------- PRACTITIONER SECTION  ------------------------------->
+            <section class="totalBodySection" id="topview"> <!--START OF BODY RIGHT & LEFT PADDING-->
+                
+            <!--WHAT HAPPENING SUB PAGE BODY CONTENT-->
+                <div class="div_displayTable"; style="margin-bottom:%; margin-top:3%">
+                <div class="MainHeading" style="font-weight:bold;margin-bottom:10%">
+                    <div id="title"></div>    
+                </div>
+                    <script>
+                        fetchdata('title');
+                    </script>
+                <div class="left_Module_WHSubpage"> 
+                    <div>
+                        <h3 class="Whats_Happening_Body_Heading">overview</h3>
+                        <h3 class="Whats_Happening_Body_content" id="overview"> </h3>
+                    </div>
+                    <script>
+                            fetchdata('overview');
+                    </script>
+                    <div> 
+                        <h3 class="Whats_Happening_Body_Heading">schedule</h3> <br>
+                        <h3 class="Whats_Happening_Body_Subcontent" id="fromdate"></h3>
+                    </div> 
+                    <script>
+                            fetchdata('fromdate');
+                    </script>
+                    <div> 
+                        <h3 class="Whats_Happening_Body_Heading">about the practitioner</h3>
+                        <h3 class="Whats_Happening_Body_content"> <span  class="Whats_Happening_Body_Subcontent" id="speaker"> </span> <br><span id="aboutthepractitioner"></span>
+                        </h3>
+                    </div>
+                    <script>
+                            fetchdata('speaker');
+                            fetchdata('aboutthepractitioner');
+                    </script>
+                    <div> 
+                        <h3 class="Whats_Happening_Body_Heading">about the organisation</h3>
+                        <h3 class="Whats_Happening_Body_content" id="abouttheorg">
+<!--
+                            <a class="organisation_WebSIte" href="#"> info@reikihealing.co.in</a> &nbsp; &nbsp;| &nbsp;&nbsp; 
+                            <a class="organisation_WebSIte" href="#">www.reikihealing.co.in </a>
+-->
+                        </h3>
+                    </div>
+                    <script>
+                            fetchdata('abouttheorg');
+                    </script>
+                    <div class="Navigations_WHPage_Desktop"> 
+                            <h3 class="Whats_Happening_Body_Heading">previous workshop</h3>
+                            <img src="images/Next-2B.png" style="width:7%; margin: 0% 0% 0% 3%;cursor:pointer; " onclick="prevevent()">
+                            <img src="images/Next-2A.png" width="7%" onclick="nextevent();" style="cursor:pointer;">
+                            <h3 class="Whats_Happening_Body_Heading"> &nbsp; next workshop</h3>
+                    </div>
+                </div>
+                    
+                    <!----------------    RIGHT MODULE    ---------------->
+                    
+                    <div class="Right_Module_WHSubpage">
+                        <!--   FREE DOWNLOAD AUDIO  -->
+                        <a href="#"> <iframe id="promourl" src="" alt="roots to wings"> </iframe></a>
+                        <h3 class="Whats_Happening_Body_Heading">workshop details <br>
+                         venue</h3> <br>
+                        <h3 class="Whats_Happening_Body_Subcontent" id="venue"> </h3><br>
+                        <h3 class="Whats_Happening_Body_Heading" > fees</h3><br>
+                        <h3 class="Whats_Happening_Body_Subcontent" id="fee"> </h3> <br>
+                        <h3 class="Whats_Happening_Body_Heading"> rsvp </h3> <br>
+                        <h3 class="Whats_Happening_Body_Subcontent">
+                            <span id="name"> </span><br><span id="mobileno"></span> <br>
+                            <span id="email"></span> 
+                        </h3>
+                        <script>
+                            fetchdata('promourl');
+                            fetchdata('venue');
+                            fetchdata('fee');
+                            fetchrsvpdata('name');
+                            fetchrsvpdata('mobileno');
+                            fetchrsvpdata('email');
+                        </script>
+                        
+                        <div id="enroolButton"><a href="payubiz.html" id="enroll"><img src="images/theraphy/enroli.png" ></a></div>
+                        
+                    <!-- THRIIVE SOCIAL BLOCK -->
+                    <div class="socialMedia_WHSubpage">
+                        <div style="display:inline-table; width:100%"> 
+                        <h3 class="Whats_Happening_Body_Heading">SHARE THIS EVENT</h3> <br> 
+                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                            <div class="fb-share-button" id="facebook" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true"><a id="facebookshare" class="fb-xfbml-parse-ignore" target="_blank" href=""><img src="images/SocialMedia_F.png" class="social_icons"  width="35%"></a></div>
+                            
+                           <div class="socialMediaDiv"><a class="a2a_button_twitter"><img src="images/SocialMedia_T.png" class="social_icons"  width="50%"></a></div>
+                           <div class="socialMediaDiv"><a class="a2a_button_google_gmail"><img src="images/SocialMedia_M.png" class="social_icons" width="50%"></a></div>
+<!--                        <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>-->
+                       <script>
+                            var id=getUrlVars()['id'];
+                        document.getElementById('facebook').setAttribute('data-href','https://thriivebeta.in/whatsHappening_SubPage_1.html?id='+id);    
+                        document.getElementById('facebookshare').setAttribute('href','https://www.facebook.com/sharer/sharer.php?u=https://thriivebeta.in/whatsHappening_SubPage_1.html?id='+id+'&amp;src=sdkpreparse');    
+                        </script>
+                        <script>
+                        var a2a_config = a2a_config || {};
+                        a2a_config.linkurl = "";
+                        </script>
+                        <script async src="js/page.js"></script>
+<!--
+                        <script>
+                        document.getElementById('shareBtn').onclick = function() {
+                        var id=getUrlVars()['id'];    
+                          FB.ui({
+                            method: 'share',
+                            display: 'popup',
+                            href: 'https://thriivebeta.in',
+                          }, function(response){});
+                        }
+                        </script>
+-->
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--YOU MAY ALSO LIKE AND FREE DOWNLOADS SECTION-->
+                <section>
+                    <div  class="div_displayTable">
+                        <div class="left_Module_WHSubpage"> 
+                            
+                            <div class="Navigations_WHPage_Mobile"> 
+                                <h3 class="Whats_Happening_Body_Heading">previous workshop</h3>
+                                <img src="images/Next-2B.png" style="width:7%; margin: 0% 0% 0% 3%;" onclick="prevevent();">
+                                <img src="images/Next-2A.png" width="7%" onclick="nextevent();">
+                                <h3 class="Whats_Happening_Body_Heading"> &nbsp; next workshop</h3>
+                            </div>
+                            
+                                <h3 class="Whats_Happening_Body_Heading">you may also like</h3>
+                                 <br><br>
+                             
+                                 <div  class="div_displayTable" id="youmayalsolike">
+                                    <!--   PREVIOUS BUTTON (Its hided in Desktop Devices)  -->
+                                    <div  class="Event_SubPage_PreviouButton" style="margin-left:-5%">
+                                        <a href="#"><img src="images/Next-1B.png" width="100%"> </a>
+                                    </div>
+                                    <div id="">
+                                     <script>youMayAlsoLike();</script>
+                                     </div>                                  
+                                     <!--   NEXT BUTTON (Its hided in Desktop Devices)  -->
+                                    <div class="Event_SubPage_NextButton">
+                                        <a href="#"><img src="images/Next-1A.png" width="100%"> </a>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="Right_Module_WHSubpage">
+                                <h3 class="Whats_Happening_Body_Heading" style="margin-bottom:16%">free downloads</h3>
+                                <div class="FreeDownload_Section"> 
+                                <!--   FREE DOWNLOAD AUDIO  -->
+                                <a href="#"> <img id="Free_Audio" src="images/whats_happning/Free_Downlad.png" alt="roots to wings"  width="100%"> </a>
+                                <h3 class="Event_Block_1_Left_Caption">jikeden reiki</h3>
+                                <h3 class="Event_Block_Left_SubCaption"> By Rae Chandran</h3>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+                </div>
+        </section>
+
+            
+        <!---------- TESTIMONIAL SECTION  ---------->
+			<section id="TestimonialSection_Desktop">
+				<div class="testimonial">
+					<img src="images/Testimonial.png" width="100%;" style="margin:auto">
+					<div id="thriivequotes"></div>
+				</div>
+				<script>
+				 	display_testimonial('home');
+				</script>
+            </section>
+        
+        <!--FOOTER SECTION-->
+        <script>
+           display_footer();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,379 @@
+    #MenuDiv {
+       display: table;
+       overflow: hidden;
+   }
+
+    #LeftSideMenu {
+        display: table-cell;
+        background-color: #4E0475;
+        padding-top: 2%;
+        left: 0px;
+        vertical-align: top;
+    }
+
+    #RightSideMenu {
+        display: table-cell;
+        background-image: url(../images/menu-bg.jpg);
+        padding-top: 2%;
+    }
+
+    .menu_itmes {
+        padding-top: 4%;
+        padding-bottom: 4%;
+        font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+        color: #fff;
+        font-size: 2.5vw;
+        padding-left: 10%;
+        line-height: 45%;
+        font-weight: bold;
+    }
+
+    .menu_itmes:hover {
+        background-color: #f2f2f2;
+        color: #4E0475;
+    }
+
+    #thriive_world_sub_menu {
+        background-color: #fff;
+        color: #4E0475;
+    }
+
+    .homeButton {
+        width: 10%;
+        display: inline-table;
+        float: right;
+        margin-top: -8%;
+        margin-right: 5%
+    }
+
+    .homeButton:hover {
+        filter: invert(10%);
+    }
+
+    #plusButton,
+    #minusButton {
+        width: 2.5vw;
+        height: 2.5vw;
+        border-radius: 45%;
+        color: #fff;
+        float: right;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 5%;
+        margin-top: -2%;
+        display: none
+    }
+
+    #thriive_world_gallery_div,
+    #thriive_world_gmeditation_div,
+    #thriive_world_thriive_talks_div,
+    #thriive_world_newsletter_div {
+        color: #4E0475;
+        padding-left: 20%;
+        font-size: 1.7vw !important;
+        font-weight: bold;
+    }
+
+    #thriive_world_gallery_div:hover,
+    #thriive_world_gmeditation_div:hover,
+    #thriive_world_thriive_talks_div:hover,
+    #thriive_world_newsletter_div:hover {
+        background-color: #4E0475;
+        color: #fff;
+    }
+
+    #thriive_world_sub_menu:hover {
+        color: #4E0475;
+        background-color: #fff;
+    }
+
+    #thriive_world_sub_menu {
+        display: none;
+    }
+
+	.submenu-fadein{-webkit-animation:fading 0.8s;animation:fading 0.8s}
+	@-webkit-keyframes fading{0%{opacity:0}100%{opacity:1}}
+	@keyframes fading{0%{opacity:0}100%{opacity:1}}
+
+    .active {
+        background-color: #f2f2f2;
+        color: #4E0475;
+    }
+
+    .active_highlight {
+        background-color: #f2f2f2;
+        color: #4E0475;
+    }
+
+    .signupnewsletter {
+        margin-top: 2%;
+        padding-left: 10%;
+        width: 70%
+    }
+
+    .signUpButtons {
+        width: 9vw;
+        display: inline-table;
+        margin: 2% 0% 1% 10%;
+        cursor: pointer;
+    }
+
+    .signUpButtons:hover img {
+        filter: contrast(110%) brightness(110%);
+    }
+
+    .close {
+        padding-left: 10%;
+        margin-top: 5%;
+        width: 1.8vw;
+    }
+
+    .close:hover {
+        opacity: .8;
+    }
+
+    #menu_close_Img {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .terms {
+        color: #fff;
+        margin-left: 12%;
+        cursor: pointer;
+        font-size: 1.1vw;
+    }
+
+    .terms:hover {
+        color: #f2d0ff;
+    }
+
+    .signUpButtons {
+        width: 9vw;
+        display: inline-table;
+        margin: 2% 0% 1% 10%;
+        cursor: pointer;
+    }    
+
+/*CSS FOR TABS DEVICES    */
+/*
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px),
+    @media only screen and (max-device-width: 480px){
+*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    #RightSideMenu {
+        /*visibility: hidden;*/
+        display: none;
+    }
+
+    #LeftSideMenu {
+        display: inline-block;
+        background-color: #4E0475;
+        padding-top: 2%;
+        left: 0px;
+        vertical-align: top;
+        text-align: center;
+        overflow: scroll;
+    }
+
+    .menu_itmes {
+        display: block;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        color: #fff;
+        font-size: 4vw;
+        padding-left: 0%;
+        line-height: 80%;
+    }
+
+    .menu_itmes:hover {
+        background-color: #fff;
+        display: block;
+        color: #4E0475;
+    }
+
+    #thriive_world_gallery_div,
+    #thriive_world_gmeditation_div,
+    #thriive_world_thriive_talks_div,
+    #thriive_world_newsletter_div {
+        color: #4E0475;
+        padding-left: 0%;
+        font-size: 2.8vw !important;
+    }
+    
+    #plusButton,
+    #minusButton {
+        width: 4vw;
+        height: 4vw;
+        color: #fff;
+        float: right;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 9%;
+        margin-top: -5.8%;
+        display: block
+    }
+    
+    #minusButton {
+        display: none;
+    }
+
+    .active {
+        color: #4E0475;
+        font-size: 4vw;
+    }
+
+    .active_highlight {
+        color: #4E0475;
+    }
+
+    #signupNewsLetterImg {
+        width: 40%;
+    }
+
+    #menu_close_Img {
+        width: 220%;
+    }
+
+    .homeButton {
+        width: 6%;
+        margin-top: -6.5%;
+        margin-right: 8%
+    }
+    
+    .signUpButtons {
+        width: 15vw;
+        margin: 2% 0% 1% 8%;
+    }
+    
+      .terms {
+        color: #fff;
+        cursor: pointer;
+        font-size: 2.2vw;
+    }
+
+    }
+
+
+
+    
+/******CSS FOR MOBILE DEVICES******/
+
+@media (min-width: 310px) and (max-width: 768px) {
+    
+    #RightSideMenu {
+        /*visibility: hidden;*/
+        display: none;
+        }
+
+    #LeftSideMenu {
+        display: inline-table;
+        background-color: #4E0475;
+        padding-top: 2%;
+        left: 0px;
+        height: 100%;
+        bottom: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .menu_itmes {
+        padding-top: 1.5%;
+        padding-bottom: 1.5%;
+        color: #fff;
+        font-size: 6vw;
+        padding-left: 0%;
+        line-height: 130%;
+        padding-left: 10%;
+    }
+    
+    .menu_itmes:hover{
+        padding-top: 1.5%;
+        padding-bottom: 1.5%;
+        color: #fff;
+        font-size: 6vw;
+        padding-left: 0%;
+        line-height: 130%;
+        padding-left: 10%;
+    }
+    
+    .menu_itmes:hover {
+        background-color: #fff;
+        color: #4E0475;
+    }
+
+    #thriive_world_gallery_div,
+    #thriive_world_gmeditation_div,
+    #thriive_world_thriive_talks_div,
+    #thriive_world_newsletter_div {
+        font-size: 4vw !important;
+    }
+    
+    #signupNewsLetterImg {
+        width: 40%;
+        }
+
+    #menu_close_Img {
+        width: 220%;
+        }
+
+    .active{
+        color: #4E0475;
+        font-size: 6vw;
+        }
+
+    .active_highlight {
+        color: #4E0475;
+        }
+
+    .homeButton {
+        width: 8%;
+        margin-top: -5%;
+        margin-right: 15%;
+    }
+
+    #plusButton {
+        display: block;
+        width: 7vw;
+        height: 7vw;
+        margin-right: 16%;
+        margin-top: -8%;
+    }
+
+    #minusButton {
+        display: none;
+        width: 7vw;
+        height: 7vw;
+        margin-right: 16%;
+        margin-top: -8%;
+    }
+
+    .signUpButtons {
+        width: 20vw;
+        display: inline-table;
+        margin: 2% 0% 1% 10%;
+    }
+
+    .terms{
+            font-size: 3.5vw;
+        }
+    
+}
+
+

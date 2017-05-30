@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<!--        ADDING FAVICON-->
+	<!--        <link rel="icon" href="favicon.ico" sizes="16x16">-->
+	<!--    INCLUDING FIREBASE FILES -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+	<script type="application/javascript" src="../js/app.js"></script>
+	<!--    INCLUDING CSS FILES-->
+	<link rel="stylesheet" href="css/wsp_form-1.css">
+	<!--styles for Connect Page-->
+	<!--    INTEGRATE GOOGLE FONTS  -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+	<!--    HOME PAGE TITLE  -->
+	<title>THRIIVE | WSP FORM -2</title>
+	<!--    INCLUDING JAVASCRIPT-->
+	<!--  EMAIL SCRIPT  -->
+	<script type="text/javascript" src="js/wsp_form-2.js"></script>
+	<style>
+		.leftDiv,
+		.rightDiv {
+			display: none;
+		}
+	</style>
+</head>
+ 
+<body class="other_Pagess_body_Backgruond">
+	<div class="logoDiv"><img src="images/Logo_2.png" width="100%"> </div>
+	<section class="totalBodySection">
+		<input type="hidden" id="name">
+		<input type="hidden" id="email">
+		<!--    MAIN BODY SECTION TO SET THE BODY MARGIN TO 7%  -->
+		<section class="MainBodySection">
+			<h3 class="MainHeading">Application Form for Wellness Service Providers (WSPs)</h3>
+			<h3 class="wspInfo">(Part - II)</h3>
+			<!---------- SECTION FOR FORM  ---------->
+			<h3 class=mandatory>*mandatory</h3>
+			<section>
+				<div id="FormLeftSide">
+					<div class="selectPic">
+						<label>Profile Pic* </label>
+						<br>
+						<input class="connect_input" type="file" name="profilePic" id="profilePic" accept="image/jpeg" onblur="selectProfilePic();">
+						<p id="profilePic_error" class="error"></p>
+					</div>
+					<div class="profilePic"> <img id="selectedImage" src="" width="100%" alt="Your Image"> </div>
+				</div>
+				<input type="hidden" id="memid">
+				<div id="FormRightSide">
+					<div class="selectPic">
+						<label>Signature* </label>
+						<br>
+						<input class="connect_input" type="file" name="signature" id="signature" accept="image/jpeg, image/png" onblur="selectSignature();">
+						<p id="signature_error" class="error"></p>
+					</div>
+					<div class="profilePic"> <img id="signatureImg" src="" width="100%" alt="Your Signature"> </div>
+				</div>
+			</section>
+			<section style="margin-top:22%;">
+				<div id="FormLeftSide">
+					<label>Select Package*</label>
+					<br>
+					<div class="dropdown" style="float:left">
+						<select class="dropdown_text" id="packageSelected" onblur="selectPackage();">
+							<option value="0">--select--</option>
+							<option value="Earth">Earth</option>
+							<option value="Water">Water</option>
+							<option value="Fire">Fire</option>
+						</select>
+					</div>
+					<p id="packageSelected_error" class="error"></p>
+					<label class="package"> <a href="images/Thriive-ProposedPackagesforWellnessServiceProviders-Final.pdf" target="_blank"> Click Here to see the Package Details </a></label>
+					<br>
+				</div>
+                <div id="FormRightSide">
+                    <label>Enter Your Pan Card Number*</label>
+                    <br>
+                    <input class="connect_input" type="text" name="panNumber" placeholder="Enter Your Pan Card Number" id="panNumber" onblur="panValidation();">
+				    <p id="panNumber_error" class="error"></p>
+                </div>
+				<input type="hidden" id="memid"> 
+            </section>
+			     <section class="ConnectForm">
+				<div id="Connect_Form">
+					<h3 class=detailsType style="margin-top:5%;">A. About your work as a WSP</h3>
+					<!---------- FORM LEFTSIDE SECTION  ---------->
+					<form>
+						<div id="FormLeftSide">
+							<!-- BRIEF DESCRIPTION -->
+							<div>
+								<label>BRIEF DESCRIPTION OF YOUR WORK AS A WSP*</label>
+								<br>
+								<textarea class="message-textarea" rows="14" cols="70" name="description" id="description" onblur="briefDescription();"></textarea>
+								<p id="description_error" class="error"></p>
+							</div>
+							<!-- EXPERIENCE IN SPIRITUAL COUNSELING -->
+							<div>
+								<label>ANY EXPERIENCE IN SPIRITUAL COUNSELING*</label>
+								<br>
+								<div class="dropdown">
+									<select id="experienceInCounseling" class="dropdown_text" onblur="spiritualCounseling();">
+										<option value="0">--Select--</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+								<p id="experience_error" class="error"></p>
+							</div>
+							<!-- WORKSHOP LIST CONDUCTED BY WSP -->
+							<div>
+								<label>LIST ANY WORKSHOPS CONDUCTED BY YOU</label>
+								<br>
+								<textarea class="message-textarea" rows="5" cols="70" name="workshops_conducted" id="workshops_conducted" onblur="workshopsConducted();"></textarea>
+								<p id="workshops_conducted_error" class="error"></p>
+							</div>
+							<!-- HAVE YOU WORKED OR CURRENTLY WORK WITH SPIRITUAL ORGANIZATION -->
+							<div>
+								<label>HAVE YOU WORKED OR CURRENTLY WORKING WITH ANY SPIRITUAL ORGANIZATION </label>
+								<br>
+								<textarea class="message-textarea" rows="5" cols="70" name="spiritual_organization" id="spiritual_organization" onblur="spiritualOrgination();"></textarea>
+								<p id="spiritual_organization_error" class="error"></p>
+							</div>
+							<!-- ANY SPECIFIC CHALLENGES FACED BY YOU -->
+							<div>
+								<label>ANY SPECIFIC CHALLENGES FACED BY YOU AS A WSP. IF ANY, HOW ARE YOU DEALING WITH IT*</label>
+								<br>
+								<textarea class="message-textarea" rows="5" cols="70" name="challenges" id="challenges" onblur="specificChallenges();"></textarea>
+								<p id="challenges_error" class="error"></p>
+							</div>
+						</div>
+						<!---------- FORM RIGHTSIDE SECTION  ---------->
+						<div id="FormRightSide">
+							<!--3 EXAMPLES OF HEALING SUCCESSESS -->
+							<!--EXAMPLE - 1 NAME-->
+							<div>
+								<label>REFER ANY THREE EXAMPLES OF HEALING SUCCESSES </label>
+								<br>
+								<label>1ST REFERRAL NAME*</label>
+								<br>
+								<input class="connect_input" type="text" name="ref1Name" placeholder="1st Referral Name" id="ref1Name">
+								<p id="ref1Name_error" class="error"></p>
+							</div>
+							<!-- EXAMPLE - 1 EMAIL -->
+							<div>
+								<label>EMAIL*</label>
+								<br>
+								<input class="connect_input" type="email" name="ref1Email" placeholder="1st Referral Email - test@example.com" id="ref1Email">
+								<p id="ref1Email_error" class="error"></p>
+							</div>
+							<br>
+							<!--EXAMPLE - 2 NAME-->
+							<div>
+								<label>2ND REFERRAL NAME*</label>
+								<br>
+								<input class="connect_input" type="text" name="ref2Name" placeholder="2nd Referral Name" id="ref2Name">
+								<p id="ref2Name_error" class="error"></p>
+							</div>
+							<!-- EXAMPLE - 2 EMAIL -->
+							<div>
+								<label>EMAIL*</label>
+								<br>
+								<input class="connect_input" type="email" name="ref2Email" placeholder="2nd Referral Email - test@example.com" id="ref2Email">
+								<p id="ref2Email_error" class="error"></p>
+							</div>
+							<br>
+							<!--EXAMPLE - 3 NAME-->
+							<div>
+								<label>3RD REFERRAL NAME *</label>
+								<br>
+								<input class="connect_input" type="text" name="ref3Name" placeholder="3rd Referral Name" id="ref3Name">
+								<p id="ref3Name_error" class="error"></p>
+							</div>
+							<!-- EXAMPLE - 3 EMAIL -->
+							<div>
+								<label>EMAIL*</label>
+								<br>
+								<input class="connect_input" type="email" name="ref3Email" placeholder="3rd Referral Email - test@example.com" id="ref3Email">
+								<p id="ref3Email_error" class="error"></p>
+							</div>
+							<br>
+							<!--PENDING LITIGATION -->
+							<div>
+								<label>IS THERE ANY PENDING CIVIL/CRIMINAL LITIGATION AGAINST YOU*</label>
+								<br>
+								<div class="dropdown">
+									<select name="litigation" class="dropdown_text" id="litigation" accept="image/jpeg" / onblur="civilcase();">
+										<option value="0">--Select--</option>
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>
+								<p id="litigation_error" class="error"></p>
+							</div>
+						</div>
+						<section style="clear:both">
+							<br>
+							<h3 class=detailsType>B. Your Degree, Courses &amp; Certifications</h3>
+							<label>ATTACH DOCUMENTARY PROOFS (PDF &amp; JPGS ALLOWED) </label>
+							<br>
+							<div id="FormLeftSide" style="clear:both">
+								<div>
+									<label>ADDRESS PROOF*</label>
+									<br>
+									<input class="connect_input" type="file" name="address_proof" id="address_proof"  onblur="addressProof()">
+									<p id="address_proof_error" class="error"></p>
+								</div>
+							</div>
+							<div id="FormRightSide">
+								<div>
+									<label>IDENTITY PROOF*</label>
+									<input class="connect_input" type="file" name="identity_proof" id="identity_proof"  onblur="identityProof()">
+									<p id="identity_proof_error" class="error"></p>
+								</div>
+							</div>
+							<div id="FormLeftSide" style="clear:both">
+								<div>
+									<label>CERTIFICATES </label>
+									<br>
+									<input class="connect_input" type="file" name="certificates" id="certificates">
+									<p id="certificates_error" class="error"></p>
+								</div>
+							</div>
+							<div id="FormRightSide">
+								<div>
+									<label>DEGREES </label>
+									<input class="connect_input" type="file" name="degrees_proof" id="degrees_proof">
+									<p id="degrees_error" class="error"></p>
+								</div>
+							</div>
+						</section>
+						<br>
+						<br>
+						<br>
+						<br>
+						<section style="clear:both">
+							<h3 class=detailsType>C. A BRIEF DESCRIPTION ABOUT YOURSELF/YOUR JOURNEY</h3>
+							<div id="FormLeftSide" style="clear:both">
+								<div>
+									<label>WHAT EVENT IN YOUR LIFE AWAKENED YOU TO THE SPIRITUAL WORLD </label>
+									<input class="connect_input" type="text" name="awaken_spiritual_event" id="awaken_spiritual_event" placeholder="Name of the event">
+									<p id="awaken_spiritual_event_error" class="error"></p>
+								</div>
+							</div>
+							<div id="FormRightSide">
+								<div>
+									<label>WHAT MADE YOU TURN TOWARDS A CAREER IN HOLISTIC HEALING</label>
+									<input class="connect_input" type="text" name="holistic_career" id="holistic_career" placeholder="Enter details">
+									<p id="holistic_career_error" class="error"></p>
+								</div>
+							</div>
+							<div id="FormLeftSide" style="clear:both">
+								<div>
+									<label>YOUR PERSONAL PHILOSOPHY ON SPIRITUALITY, ENERGY, HEALING AND CONSCIOUSNESS </label>
+									<textarea class="message-textarea" rows="8" cols="70" name="personal_philosophy" id="personal_philosophy"></textarea>
+									<p id="personal_philosophy_error" class="error"></p>
+								</div>
+							</div>
+							<div id="FormRightSide">
+								<div>
+									<label>INSPIRING SPIRITUAL GUIDES / MASTERS / GURUS YOU HAVE ENCOUNTERED IN YOUR JOURNEY</label>
+									<textarea class="message-textarea" rows="8" cols="70" name="influential_gurus" id="influential_gurus"></textarea>
+									<p id="influential_gurus_error" class="error"></p>
+								</div>
+							</div>
+							<div id="FormLeftSide" style="clear:both">
+								<div>
+									<label>WHAT AILMENTS HAVE YOU SEEN BEST RESULTS IN HEALING THROUGH THE MODALITIES YOU USE </label>
+									<textarea class="message-textarea" rows="8" cols="70" name="best_result" id="best_result"></textarea>
+									<p id="best_result_error" class="error"></p>
+								</div>
+							</div>
+							<div id="FormRightSide">
+								<div>
+									<label>BOOKS THAT HAVE INFLUENCED AND SHAPED YOU</label>
+									<textarea class="message-textarea" rows="11" cols="70" name="influenced_books" id="influenced_books"></textarea>
+									<p id="influenced_books_error" class="error"></p>
+								</div>
+							</div>
+							<section style="clear:both">
+								<!--  SUBMIT BUTTON  -->
+								<div id="ConnectSubmitButtonDiv"> <img id="ConnectSubmitButton" src="images/submit-button.png" width="100%" onclick="validateFields()"> <img id="processingbutton" src="images/processingButton.gif" width="100%" style="display:none;"> </div>
+							</section>
+						</section>
+					</form>
+				</div>
+			</section>
+		</section>
+	</section>
+	<!--FOOTER SECTION-->
+	<script>
+		getmemid();
+		fetchWspData();
+	</script>
+</body>
+
+</html>

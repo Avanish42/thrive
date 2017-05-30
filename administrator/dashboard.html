@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    
+    <!--    INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    
+    
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    
+    <!--    HOME PAGE TITLE  -->
+    <title>THRIIVE | DASHBOARD HOME PAGE </title>
+	
+    <!--    FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!--    INCLUDING JAVASCRIPT-->
+	<script src='ckeditor/ckeditor.js'></script>
+    <script src="js/dashboardfunctions.js"></script>
+    <style>
+        .menu_itmes a{
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+    <script>
+        check_authentication(" ");
+    </script>
+</head>
+    <body class="body_Backgruond">
+	<section class="totalBodySection">
+		<section id="header">
+			<div class="maindiv">
+				<!--TOGGLE BUTTON DIV-->
+				<div class="leftDiv">
+					<a style="cursor:pointer"  class="anchorTagButton"><img src="images/menuIcon_2.png" alt="menueIcon" width="70%" onclick="menu_list()"></a>
+				</div>
+				
+			<!--MENU-->
+			<div id="menu" class="overlay">
+				<div id="MenuDiv">
+					<div id="LeftSideMenu">
+						 <a style="cursor:pointer" ><div class="close"><img id="menu_close_Img" src="images/Close_Button.png" onclick="closemenu()"></div></a>
+						<br>
+						<br>
+						<div id="#" class="menu_itmes active" onclick="displayhome();">home</div>
+						<div id="#" class="menu_itmes"><a href="adddata.html?id=users">users</a></div>
+						<div id="#" class="menu_itmes">wsp registration</div>		
+                        <div id="#" class="menu_itmes"><a href="therapies_admin.html">therapists</a></div>
+                        <div id="#" class="menu_itmes"><a href="events_admin.html
+                            ">event calendar</a></div>
+                        <div id="#" class="menu_itmes"><a href="thriiveworld_admin.html">thriive world</a></div>		
+                        <div id="#" class="menu_itmes"><a href="articles_admin.html">thriive talks</a></div>	
+                        <div id="#" class="menu_itmes"><a href="quotes_admin.html">testimonials</a></div>
+                        <br>
+                        <div id="#" class="menu_itmes" onclick="logout_user()" style="cursor:pointer;">logout</div>
+					</div>
+				</div>
+			</div>
+				<!--
+                        onclick="hideicons('calendar');"
+                        onclick="hideicons('thriiveworld');"
+                        onclick="hideicons('thriivetalks');"
+                        onclick="hideicons('quotes');"
+                        onclick="hideicons('calendar');"
+                        onclick="hideicons('thriiveworld');"
+                        onclick="hideicons('thriivetalks');"
+                        onclick="hideicons('quotes');"
+                -->
+				<!--LOGO DIV-->
+				<div class="MidleDiv">
+					<a style="cursor:pointer"><img id="logo_image" src="images/Logo.png" alt="Thriive Logo" width="75%"  onclick="displayhome()"></a>
+				</div>
+				<!--EMPTY DIV DIV-->
+				<div class="rightDiv">
+				<p onclick="logout_user()" style="cursor:pointer;">logout</p>
+				</div>
+			</div>
+		</section>
+		</section>
+		
+		<section id=mainbar>
+			<h3 id="welcome_text"> welcome to admin </h3>
+		</section>
+		
+		<section id="dashboard_icons">
+			<section style="margin:0% 30% 0% 30% ">
+				<div class="icon_maindiv">
+					<div class="common icon_left_div">
+						<a style="cursor:pointer"><img src="images/01_home.png" width="100%">
+						<h3 class="icon_text">home</h3></a>
+					</div>
+
+					<div class="common icon_middle_div" onmouseover="showtext('text2');" onmouseout="hidetext('text2');" >
+						<a style="cursor:pointer"><img src="images/02_user.png" width="100%">
+						<h3 class="icon_text">users</h3></a>
+					</div>
+                    <div class="common icon_right_div" onmouseover="showtext('text8');" onmouseout="hidetext('text8');">
+						<a style="cursor:pointer" href="wspregistration_admin.html"><img src="images/02_user.png" width="100%">
+						<h3 class="icon_text">wsp registrations</h3></a>
+					</div>
+					
+				</div>
+			</section>
+
+			<section style="margin:0% 30% 0% 30% ">
+				<div class="icon_maindiv">
+                    <div class="common icon_left_div" onmouseover="showtext('text3');" onmouseout="hidetext('text3');" onclick="hideicons('therapy');">
+						<a style="cursor:pointer" href="therapies_admin.html"><img src="images/03_-therapists.png" width="100%">
+						<h3 class="icon_text">Modalities/<br>Practitioners</h3></a>
+					</div>
+					
+
+					<div class="common icon_middle_div">
+						<h3 id="text1">thriive controller</h3>
+						<h3 id="text2">users </h3>
+						<h3 id="text3">modalities/<br>Practitioners</h3>
+						<h3 id="text4">event calander</h3>
+						<h3 id="text5">thriive world</h3>
+						<h3 id="text6">thriive talks</h3>
+						<h3 id="text7">thriive quotes</h3>
+						<h3 id="text8">wsp registration</h3>
+					</div>
+                    <div class="common icon_right_div" onmouseover="showtext('text4');" onmouseout="hidetext('text4');" onclick="hideicons('calendar');">
+						<a style="cursor:pointer" href="events_admin.html"><img src="images/04_calander.png" width="100%">
+						<h3 class="icon_text">event calendar</h3></a>
+					</div>
+				</div>
+			</section>
+
+			<section style="margin:0% 30% 0% 30% ">
+				<div class="icon_maindiv">
+                    <div class="common icon_left_div" onmouseover="showtext('text5');" onmouseout="hidetext('text5');" onclick="hideicons('thriiveworld');">
+						<a style="cursor:pointer" href="thriiveworld_admin.html"><img src="images/05_thriive_World.png" width="100%">
+						<h3 class="icon_text">thriive world</h3></a>
+					</div>
+					<div class="common icon_middle_div" onmouseover="showtext('text6');" onmouseout="hidetext('text6');"  onclick="hideicons('thriivetalks');">
+						<a style="cursor:pointer" href="articles_admin.html"><img src="images/06_thriive_talks.png" width="100%">
+						<h3 class="icon_text">thriive talks</h3></a>
+					</div>
+
+					<div class="common icon_right_div" onmouseover="showtext('text7');" onmouseout="hidetext('text7');" >
+						<a style="cursor:pointer" href="quotes_admin.html"><img src="images/07_testimonials.png" width="100%">
+						<h3 class="icon_text">testimonials</h3></a>
+					</div>
+
+					
+				</div>
+			</section>
+		</section>
+		
+		<!--FORM SECTION-->
+		<section style="margin: 2% 20% 2%  20% ">
+			<div id="addform" style="display:none">
+				<form method="post">
+					
+					<!--USER DIV-->
+					<div id="user">
+							<!----- FIRST NAME ---->
+							<div style="width:97.7%">
+								<label  class="heading">email</label>
+								<br>
+								<input id="useremail" class="inputbox" type="email" name="email" placeholder="Enter User Email">
+							</div>
+							<!----- LAST NAME ---->
+							<div style="width:97.7%">
+								<label class="heading">password</label>
+								<br>
+								<input id="userpassword" class="inputbox" type="password" name="password" placeholder="Enter Password">
+							</div>
+							<!----- user ----->
+							<div style="width:100%">
+								<label class="heading">type of user</label>
+								<br>
+								<select class="inputbox" id="usertypeofUser">
+									<option selected value="user">User </option>
+									<option value='therapist'>Therapist </option>
+									<option value='admin'>Admin</option>
+								</select>
+							</div>
+					</div>
+					
+					<!--Admin USER DIV-->
+					<div id="adminuser">
+							<!----- FIRST NAME ---->
+							<div style="width:97.7%">
+								<label  class="heading">email</label>
+								<br>
+								<input id="adminemail" class="inputbox" type="email" name="email" placeholder="Enter User Email">
+							</div>
+							<!----- LAST NAME ---->
+							<div style="width:97.7%">
+								<label class="heading">password</label>
+								<br>
+								<input id="adminpassword" class="inputbox" type="password" name="password" placeholder="Enter Password">
+							</div>
+							<!----- user ----->
+							<div style="width:100%">
+								<label class="heading">type of user</label>
+								<br>
+								<select class="inputbox" id="admintypeofUser">
+									<option value="user">User </option>
+									<option value='therapist'>Therapist </option>
+									<option selected value='admin'>Admin</option>
+								</select>
+							</div>
+					</div>
+					
+					
+			<!--CALANDER DIV-->
+					<div id="calendar">
+						
+						<!----- TITTLE ---->
+						<div class="labletwodivs">
+							<label  class="heading">title</label>
+							<br>
+							<input id="calendartitle" class="inputbox" type="text" name="text" placeholder="Enter Title of the Event">
+						</div>
+						<!----- SPEAKER NAME ---->
+						<div class="labletwodivs">
+							<label class="heading">speaker</label>
+							<br>
+							<input id="calendarspeaker" class="inputbox" type="text" name="speaker" placeholder="Enter Speaker Name">
+						</div>
+
+						<!----- FROM DATE ---->
+						<div class="labletwodivs">
+							<label  class="heading">from date </label>
+							<br>
+							<input id="fromdate" class="inputbox" type="text" name="text" placeholder="mm/dd/yyyy">
+						</div>
+						<!----- TO DATE ---->
+						<div class="labletwodivs">
+							<label class="heading">to date</label>
+							<br>
+							<input id="todate" class="inputbox" type="text" name="date" placeholder="mm/dd/yyyy">
+						</div>
+
+						<!-----TIMING---->
+						<div class="labletwodivs">
+							<label  class="heading">timing </label>
+							<br>
+							<input id="calendartime" class="inputbox" type="text" name="time" placeholder="Enter Event Time">
+						</div>
+						<!----- FEE  ---->
+						<div class="labletwodivs">
+							<label class="heading">fee</label>
+							<br>
+							<input id="calendarfee" class="inputbox" type="text" name="fee" placeholder="Enter Amount">
+						</div>
+						<!----- ABOUT THE ORG  ---->
+						<div style="width:97.7%">
+							<label class="heading">about the organization</label>
+							<br>
+							 <textarea class="inputbox" rows="3" cols="70" name="about the org" id="calendarabouttheorg" placeholder="Enter Description about the Organization"></textarea>
+						</div>
+						<!----- ABOUT THE PRACTITIONER ---->
+						<div style="width:97.7%">
+							<label class="heading">about the practitioner</label>
+							<br>
+							 <textarea class="inputbox" rows="3" cols="70" name="about the org" id="calendaraboutthpractitioner" placeholder="Enter Practitioner Description"></textarea>
+						</div>
+						<!----- OVER VIEW ---->
+						<div style="width:97.7%">
+							<label class="heading">over view</label>
+							<br>
+							 <textarea class="inputbox" rows="3" cols="70" name="about the org" id="calendaroverview" placeholder="Over view About the event"></textarea>
+						</div>
+
+						<!-----VENUE---->
+						<div style="width:97.7%">
+							<label  class="heading">venue</label>
+							<br>
+							<input id="calendarvenue" class="inputbox" type="text" name="venue" placeholder="Enter the venue details">
+						</div>
+						<!----- PROMO URL  ---->
+						<div style="width:97.7%">
+							<label class="heading">promo url</label>
+							<br>
+							<input id="calendarpromourl" class="inputbox" type="text" name="promourl" placeholder="Enter Promo Url(it can be either video/audio/image)">
+						</div>
+
+						<!-----CONTACT NAME---->
+						<div class="labletwodivs">
+							<label  class="heading">contact name </label>
+							<br>
+							<input id="calendarcontactname" class="inputbox" type="text" name="contact name" placeholder="Provide contact person Name">
+						</div>
+							
+						<!----- CONTACT NO  ---->
+						<div class="labletwodivs">
+							<label class="heading">contact no:</label>
+							<br>
+							<input id="calendarcontactno" class="inputbox" type="text" name="contact no" placeholder="Provide contact Number">
+						</div>
+							<!----- EMAIL  ---->
+						<div style="width:97.7%">
+							<label class="heading">contact email:</label>
+							<br>
+							<input id="calendaremail" class="inputbox" type="email" name="email" placeholder="Email of the Contact Person">
+						</div>
+						
+					</div>
+                    
+                    <!----- therapy section -------->
+                    <div id="therapy">
+                        <div style="width:100%">
+							<label  class="heading">Therapy/practitioner:</label>
+							<br>
+                            <select id="therapies" class="inputbox" onchange="enableinnersections('therapies');">
+                                <option value="-">--select--</option>
+                                <option value="practitioner">Practitioner</option>
+                                <option value="modalities">Therapy</option>
+                            </select>
+<!--							<input id="practitionername" class="inputbox" type="text" name="text" placeholder="Enter name of the practitioner">-->
+						</div>
+                    </div>
+                    
+                    <!--Practioner DIV-->
+					<div id="practitioner">
+						<br>
+						<!----- TITTLE ---->
+						<div style="width:97.7%">
+							<label  class="heading">name:</label>
+							<br>
+							<input id="practitionername" class="inputbox" type="text" name="text" placeholder="Enter name of the practitioner">
+						</div>
+						<!----- SPEAKER NAME ---->
+						<div class="labletwodivs">
+							<label class="heading">contact no:</label>
+							<br>
+							<input id="practitionerphone" class="inputbox" type="text" name="contact no" placeholder="Enter contact Number">
+						</div>
+
+						<!----- FROM DATE ---->
+						<div class="labletwodivs">
+							<label  class="heading">email: </label>
+							<br>
+							<input id="practitioneremail" class="inputbox" type="email" name="text" placeholder="Enter practitioner email">
+						</div>
+						<!----- TO DATE ---->
+						<div class="labletwodivs">
+							<label class="heading">website name:</label>
+							<br>
+							<input id="website" class="inputbox" type="text" name="url" placeholder="Enter website url">
+						</div>
+
+						<!-----TIMING---->
+						<div class="labletwodivs">
+							<label  class="heading">location: </label>
+							<br>
+							<input id="location" class="inputbox" type="text" name="location" placeholder="practitioner location">
+						</div>
+					
+						<!----- ABOUT THE ORG  ---->
+						<div style="width:97.7%">
+							<label class="heading">modalities:</label>
+							<br>
+                            <div class="labletwodivs" style="width:48%">
+							 <input class="inputbox" name="modality1" id="modality1" placeholder="Enter modality">
+                            </div> 
+                            <div class="labletwodivs" style="width:48%">
+							 <input class="inputbox" name="modality2" id="modality2" placeholder="Enter modality">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="labletwodivs" style="width:48%">
+							 <input class="inputbox" name="modality3" id="modality3" placeholder="Enter modality">
+                            </div> 
+                            <div class="labletwodivs" style="width:48%">
+							 <input class="inputbox" name="modality4" id="modality4" placeholder="Enter modality">
+                            </div>    
+						</div>
+						<!----- ABOUT THE PRACTITIONER ---->
+						<div style="width:97.7%">
+							<label class="heading">referred by:</label>
+							<br>
+							 <input class="inputbox" name="referredby" id="referredby" placeholder="Enter Practitioner Description">
+						</div>
+						<!----- OVER VIEW ---->
+						<div style="width:97.7%">
+							<label class="heading">about practitioner</label>
+							<br>
+							 <textarea class="inputbox" rows="3" cols="70" name="about the practitioner" id="aboutpractitioner" placeholder="Description about practitioner"></textarea>
+						</div>						
+					</div>
+					
+                    
+                    <!--Practioner DIV-->
+					<div id="modalities">
+						<br>
+                        <!-- category -->
+                        <div style="width:100%">
+							<label  class="heading">Select category:</label>
+							<br>
+                            <select id="categeories" class="inputbox">
+                                <option value="-">--select--</option>
+<!--
+                                <option value="category1">category1</option>
+                                <option value="category2">category2</option>
+                                <option value="category3">category3</option>
+                                <option value="category4">category4</option>
+                                <option value="category5">category5</option>
+                                <option value="category6">category6</option> 
+-->
+                                <option value="Quantum Energy Healing">Quantum Energy Healing</option>
+                                    <option value="Yoga">Yoga</option>
+                                    <option value="Reading & Analysis">Reading &amp; Analysis</option>
+                                    <option value="Art Therapy">Art Therapy</option>
+                                    <option value="Hypnotherapy">Hypnotherapy</option>
+                                    <option value="Sound Healing">Sound Healing</option>
+                                    <option value="Natural remedies">Natural remedies</option>
+                                    <option value="Alternative Therapies">Alternative Therapies</option>
+                                    <option value="Body work">Body work</option>
+                                    <option value="Meditation">Meditation</option>
+                                    <option value="Chanting">Chanting</option>
+                                    <option value="Shamanism">Shamanism</option> 
+                                    <option value="Quantun Energy Healing & Medicine">Quantun Energy Healing &amp; Medicine</option>
+                                    <option value="Breath work">Breath work</option>
+                                    <option value="Behavioural Therapy">Behavioural Therapy</option>
+                                    <option value="Self-Healing">Self-Healing</option>
+                                    <option value="Counseling & Consulting">Counseling &amp; Consulting</option>
+                            </select>
+<!--							<input id="modalityname" class="inputbox" type="text" name="text" placeholder="enter modality name">-->
+						</div>
+						<!----- TITTLE ---->
+						<div style="width:97.7%">
+							<label  class="heading">name:</label>
+							<br>
+							<input id="modalityname" class="inputbox" type="text" name="text" placeholder="Enter modality name">
+						</div>
+						
+						
+						<!----- OVER VIEW ---->
+						<div style="width:97.7%">
+							<label class="heading">description:</label>
+							<br>
+							 <textarea class="inputbox" rows="3" cols="70" name="descriptionaboutmodality" id="modalitydesc" placeholder="Description about the modality"></textarea>
+						</div>
+                        
+                        <!----- ABOUT THE PRACTITIONER ---->
+						<div style="width:97.7%">
+							<label class="heading">duration:</label>
+							<br>
+							 <input class="inputbox" name="duration" id="duration" placeholder="Enter duration">
+						</div>
+                        
+                        <div style="width:97.7%">
+							<label class="heading">fee:</label>
+							<br>
+							 <input class="inputbox" name="fees" id="fees" placeholder="Enter fees for modality">
+						</div> 
+                        <div style="width:97.7%">
+							<label class="heading">requirements:</label>
+							<br>
+							 <input class="inputbox" name="requirements" id="requirements" placeholder="requirements to who can enroll">
+						</div>
+					</div>
+                    
+                    
+			        <!--THRIIVE WORLD-->
+					<div id="thriiveworld">
+						<!----- TITTLE ---->
+						<div class="labletwodivs">
+							<label  class="heading">title</label>
+							<br>
+							<input id="thriiveWorldtitle" class="inputbox" type="text" name="text" placeholder="Enter Title of the Media">
+						</div>
+						
+						<!----- SPEAKER NAME ---->
+						<div class="labletwodivs">
+							<label class="heading">speaker</label>
+							<br>
+							<input id="thriiveWorldSpeaker" class="inputbox" type="text" name="speaker" placeholder="Enter the Author Name">
+						</div>	
+						
+						<!----- URL ---->
+						<div class="labletwodivs">
+							<label  class="heading">url </label>
+							<br>
+							<input id="thriiveworldurl" class="inputbox" type="text" name="text" placeholder="Enter media url">
+						</div>
+						
+						<!----- DOWNLOAD URL ---->
+						<div class="labletwodivs">
+							<label class="heading">Description</label>
+							<br>
+							<input id="mediadescription" class="inputbox" type="text" name="download url" placeholder="Enter Description">
+						</div>
+                        <!----- DOWNLOAD URL ---->
+						<div style="width:97.7%">
+							<label class="heading">Image Thumbnail</label>
+							<br>
+							<input id="thumbnial" class="inputbox" type="text" name="thumbnail" placeholder="Enter Image url">
+						</div>
+						
+						<!----- TYPE OF FILE ----->
+						<div style="width:100%">
+							<label class="heading">type of file</label>
+							<br>
+							<select class="inputbox" id="thriiveworldtypeofFile">
+								<option selected value="audio">Audio</option>
+								<option value='video'>Video</option>
+							</select>
+						</div>
+					</div>
+					
+				<!--THRIIVE TALKS-->
+					<div id="thriivetalks">
+						<!----- TITTLE ---->
+                        <div style="width:100%">
+							<label class="heading">Article/Blog</label>
+							<br>
+							<select class="inputbox" id="thriivearticle" onchange="changearticleblog()">
+								<option selected value="article">Article</option>
+								<option value='blog'>Blog</option>
+							</select>
+						</div>
+                        
+						<div class="labletwodivs">
+							<label  class="heading">title</label>
+							<br>
+							<input id="thriivetalktitle" class="inputbox" type="text" name="text" placeholder="Enter title of the Blog">
+						</div>
+						
+						<!----- SPEAKER NAME ---->
+						<div class="labletwodivs">
+							<label class="heading">speaker</label>
+							<br>
+							<input id="thriivetalkSpeaker" class="inputbox" type="text" name="speaker" placeholder="Enter Blog Author">
+						</div>	
+                        <div style="width:97.7%" id="editor">
+                            <label class="heading">Description</label>
+                            <textarea id="htmleditor" style="background-color:transparent" style="width:97.7%"></textarea>
+							<script>
+                                CKEDITOR.replace( 'htmleditor' );
+                            </script>
+						</div>
+						<!----- URL ---->
+						<div style="width:97.7%" id="url">
+							<label  class="heading">url </label>
+							<br>
+							<input id="thriiveTalksurl" class="inputbox" type="text" name="text" placeholder="Blog Url Here">
+						</div>
+					</div>
+								
+				<!--QUOTES-->
+					<div id="quotes">
+						
+						<!----- TYPE OF QUOTES ----->
+						<div style="width:100%">
+							<label class="heading">quotes</label>
+							<br>
+							<select class="inputbox" id="quotepage">
+								<option selected value='home'>Home Page</option>
+								<option value='therapies'>Therapies Page</option>
+								<option value='thriiveworld'>Thriive World Page</option>
+								<option value='whatshappening'>What's Happening Page</option>
+							</select>
+						</div>
+						
+						<div style="width:97.7%">
+							<label class="heading">quote</label>
+							<br>
+							 <textarea class="inputbox" rows="3" cols="70" name="quote" id="quote" placeholder="Enter Quote Here"></textarea>
+						</div>
+						
+						<!----- SPEAKER NAME ---->
+						<div class="labletwodivs">
+							<label class="heading">speaker</label>
+							<br>
+							<input id="quoteSpeaker" class="inputbox" type="text" name="speaker" placeholder="Enter Quote By">
+						</div>	
+						
+						<!----- Place ---->
+						<div class="labletwodivs">
+							<label  class="heading">place</label>
+							<br>
+							<input id="quoteplace" class="inputbox" type="text" name="text" placeholder="Enter Title For the Quote">
+						</div>
+					</div>
+					<div style="width:15%; margin:2% 10%; 2% 0%; float:right" id="button">
+						<a style="cursor:pointer"> <img class="submit" src="images/submit-button.png" width="100%" onclick="submitvalues(this.id)"> </a>
+<!--					<input type="submit" value="Submit" class="submit" style="color:transparent; background: url(images/submit-button.png); width:8vw; height:3.3vw;background-color:transparent;border:0" onclick="submitvalues(this.id)"/>-->
+					</div>
+					
+					
+				</form>
+
+			</div>
+			<div id="successmsg" style="display:none;color:green;text-align:center;">
+			<h1 id="successtext">Form updated succesfully</h1>
+			</div>
+		</section>
+        
+        
+        <!-- Display existing data-->
+        <section style="margin: 2% 27% 2%  31% ">
+            <div id="displaylist" style="display:none">
+                <!--DISPLAY PRACTITIONERS OR THERAPIES SECTION-->
+                <div id="displaytherapy">
+                    <select id="displaytherapies" class="inputbox" onchange="displayinnersections();">
+                            <option value="-">--select--</option>
+                            <option value="practitioner">Practitioner</option>
+                            <option value="modalities">Therapy</option>
+                    </select>
+                </div>
+                </div>
+        </section>
+        <section>
+                <!--Display Practitioner Section-->
+            <div id="displaypractitioners" style="display:none">
+                <table id="practitionerTable" width="80%" style="margin-left:10%;margin-right:10%">
+                  <tr>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>M1</th>
+                    <th>M2</th>
+                    <th>M3</th>
+                    <th>M4</th>
+                    <th>Options</th>
+                  </tr>
+                </table>
+            </div>
+            <!--Display Therapies Section-->
+            <div id="displayalltherapies" style="display:none">
+                <table id="TherapyTable" width="80%" style="margin-left:10%;margin-right:10%">
+                  <tr>
+                    <th>Name</th>
+                    <th>duration</th>
+                    <th>fee</th>
+                    <th>Options</th>
+                  </tr>
+                </table>
+            </div>
+        </section>
+		<script>
+		</script>
+    </body>
+</html>
+

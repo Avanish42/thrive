@@ -1,0 +1,593 @@
+
+
+
+.row{
+    width: 100%;
+    display: table;
+    margin-top: 1%;
+}
+
+.radioButtons{
+    width: 3.5%;
+    display: inline-table;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.sign_User{
+    color: #4e0475;
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2vw;
+    font-weight: bold;
+    margin : 1% 1% ;
+    vertical-align: middle;
+    
+}
+
+#singupMessage{
+    display: none;
+}
+/*SIGN SECTION FOR MIDDLE ALIGN*/
+
+.signIn_section {
+	display: table;
+	width: 100%;
+    text-align: center;
+    
+}
+
+#form{
+    cursor: pointer;
+    color: #4e0475;
+}
+#form:hover{
+    color: #000;
+}
+
+
+/*USER SIGN IN*/
+
+.user_signIn {
+	display: inline-table;
+	width: 100%;
+	text-align: center;
+}
+
+
+/* SIGN HEADDER */
+.signIn_heading {
+	color: #4e0475;
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	text-align: center;
+	font-size: 3vw;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+
+/*USER ICON*/
+
+.singInUserIcon {
+	width: 10%;
+	margin: auto;
+    margin-top: -5%;
+}
+
+
+    /*TO CHANGE THE COLOR OF PLACE HOLDER*/
+ 
+ /* WebKit, Blink, Edge */
+ ::-webkit-input-placeholder {
+ 	color: #aaa;
+ }
+ 
+ /* Mozilla Firefox 4 to 18 */
+ :-moz-placeholder {
+ 	color: #aaa;
+ }
+ 
+ /* Mozilla Firefox 19+ */
+ ::-moz-placeholder {
+ 	color: #aaa;
+ }
+ 
+ /* Internet Explorer 10-11 */
+ :-ms-input-placeholder {
+ 	color: #aaa;
+ }
+
+/* SIGN IN INPUT*/
+.signIn_input {
+	color: #4e0475;
+	padding: 2% 0% 2% 3%;
+	font-size: 1.3vw;
+	border: none;
+	background-color: #fff;
+	margin-top: 3%;
+	font-family: 'Lato', sans-serif;
+    font-weight: normal;
+}
+
+#txtEmailAsUser,
+#txtPasswordAsUser,
+#txtPasswordAsPractitioner {
+	width: 60%;
+	padding: 2% 15% 2% 3% !important;
+    text-align: left
+}
+
+.signIn_input_error {
+	width: 50%;
+	padding: 3% 0% 3% 0%;
+    font-size: 1.3vw;
+	margin-top: 3%;
+	text-align: center;
+    border: 1px solid red;
+}
+
+.forgetPassword {
+	text-align: right;
+	margin-right: 11%;
+	font-size: 1.2vw;
+	color: #4e0475;
+    cursor: pointer;
+    float: right;
+    margin-top: 1%;
+}
+
+.pw_icon {
+	float: right;
+	position: absolute;
+	width: 6%;
+	margin: 5% 3% 0% -8%;
+    cursor: pointer;
+}
+
+.pw_icon:hover{
+    filter: brightness(70%)
+}
+
+
+/* SUBMIT MESSAGE STYLE*/
+
+#SubmitMessage {
+	text-align: center;
+	/*        display: none;*/
+	/*        color: #58595b;*/
+	font-family: 'Lato', sans-serif;
+	font-size: 1.1vw;
+	font-weight: 900;
+}
+
+.SubmitMessageSuccess {
+	color: GREEN;
+}
+
+.SubmitMessageError {
+	color: RED;
+	display: block;
+}
+
+
+/* LOG IN BUTTON STYLE */
+
+#btnLogin {
+	display: inline-table;
+	margin: auto;
+	margin: 4% 0% 1% 35%;
+	width: 20%;
+}
+
+.buttonStyles {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.buttonStyles:hover{
+    filter: brightness(140%)
+}
+
+.notyetSingIn {
+	font-family: 'Lato', sans-serif;
+	color: #58595b;
+	font-size: 1.1vw;
+    line-height: 150%
+}
+
+.signUpNow a {
+	font-family: 'Lato', sans-serif;
+	color: #4e0475;
+	font-size: 1.1vw;
+}
+
+.socialMediaDiv_1 {
+	display: table;
+	width: 25%;
+	margin: auto;
+}
+
+.socialMediaIcon {
+	display: inline-table;
+	width: 20%;
+    margin-left: 3%;
+}
+.socialMediaIcon:hover{
+    filter: brightness(130%)
+}
+
+#signin_tag{
+    cursor: pointer
+}
+
+/*MODAL POPUP PAGE */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+/*    overflow: auto;  */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    border: 1px solid #888;
+    width: 60%;
+    margin-top: 4%;
+    overflow:scroll;
+    max-height: 90%
+}
+
+/* The Close Button */
+.close_model {
+    color: #aaaaaa;
+    float: right;
+    font-size: 2.5vw;
+    font-weight: bold;
+    z-index: 100;
+    margin-right: 5%;
+    margin-top: 4%
+}
+
+.close_model:hover,
+.close_model:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#SigUpUserForm{
+    margin-bottom:0%;
+    display: none
+}
+    
+.wsp_alert{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    color: RED;
+    display: inline-table;
+    vertical-align: middle
+}
+
+.wsp_Successalert{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    color: GREEN;
+    display: inline-table;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: 16%;
+}
+
+
+/*------- STYLE FOR MOBILE DEVICE -------*/
+
+@media (max-width: 736px) {
+/* SIGN HEADDER */
+.signIn_heading {
+	font-size: 5vw;
+	font-weight: bolder;
+}
+
+.user_signIn {
+	width: 100%;
+	margin: auto;
+	border-right: none;
+	margin: 2% 0% 0% 2%;
+}
+    
+.radioButtons{
+    width: 6%;
+}
+
+.sign_User{
+    font-size: 3vw;
+    margin : 2% 2% ;
+    
+}
+
+.notyetSingIn,
+.signUpNow {
+	font-size: 2.5vw;
+	line-height: 200%
+}
+
+
+/* SIGN IN INPUT*/
+.signIn_input {
+	font-size: 3.3vw;
+	width: 80%;
+}
+
+#txtEmailAsUser,
+#txtPasswordAsUser,
+#txtPasswordAsPractitioner{
+	width: 80%;
+	padding: 3% 15% 3% 3% !important;
+    font-size: 2.5vw;
+}
+    
+.pw_icon {
+	width: 8%;
+	margin: 6.5% 10% 0% -12%;
+    cursor: pointer;
+}
+
+.forgetPassword{
+	margin-right:9%;
+	font-size:2.5vw;
+}
+.signUpNow a {
+font-size: 2.5vw;
+}
+    
+.socialMediaDiv_1 {
+	width: 50%;
+}
+
+.socialMediaIcon {
+	display: inline-table;
+	width: 20%;
+}
+    
+#btnLogin {
+	display: inline-table;
+	margin: 3% 0% 2% 0%;
+	width: 30%;
+}
+    
+    /* Modal Content */
+.modal-content {
+    margin: auto;
+    border: 1px solid #888;
+    width: 70%;
+    margin-top: 5%
+}
+    
+    /* The Close Button */
+.close_model {
+    font-size: 5vw;
+    margin-right: 8%
+}
+	
+}
+
+
+/*SIGN UP AS USER FORM*/
+  
+  .heading {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 2vw;
+      color: #4e0475;
+      float: left;
+  }
+  
+  .heading-2 {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 1.8vw;
+      color: #4e0475;
+      float: right;
+  }
+  
+  #SignupHeading {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.3vw;
+      clear: both;
+      color: #323232;
+  }
+  
+  .sm6_l {
+      width: 45%;
+      display: inline-table;
+      margin: 0% 0% 2% 0%
+  }
+  
+  .sm6_r {
+      width: 45%;
+      display: inline-table;
+      margin: 0% 0% 2% 5%
+  }
+  
+  .details {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 2vw;
+      color: #4e0475;
+      font-weight: bold;
+  }
+  /* SIGNUP FORM INPUT DETAILS */
+  
+  .SignupInput {
+      font-family: 'Lato', sans-serif;
+      color: grey;
+      font-size: 1.5vw;
+      padding-left: 3%;
+      padding: 2%;
+      width: 100%;
+      border: 0px;
+      margin-top: 1%;
+  }
+  
+  .error {
+      font-family: 'Areal';
+      color: RED;
+      text-align: right;
+      font-size: 1vw;
+      padding: 3px !important;
+      line-height: 100%;
+      margin: 0px;
+  }
+  
+  .accountCreationError {
+      font-family: 'Areal';
+      color: RED;
+      text-align: center;
+      font-size: 1vw;
+      padding: 3px !important;
+      line-height: 100%;
+      margin: 0px;
+      margin-bottom: 2%;
+  }
+  
+  .success {
+      font-family: 'Areal';
+      color: GREEN;
+      text-align: center;
+      font-size: 1vw;
+      padding: 3px !important;
+      line-height: 100%;
+      margin: 0px;
+      margin-bottom: 2%;
+  }
+  /* RADIO BUTTONS */
+  
+  .spRadioButton {
+      display: none !important;
+  }
+  
+  .spRadioButton:checked + label {
+      opacity: 1;
+  }
+  
+  .label_item {
+      opacity: 0.3;
+      cursor: pointer;
+      vertical-align: middle;
+      display: inline-table;
+  }
+  
+    .agree{
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 1.5vw;
+      color: #4e0475;
+      font-weight: bold;
+      transform: translateY(20%);
+      display: inline-table;
+  }  
+    .gender{
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 1.5vw;
+      color: #4e0475;
+      font-weight: bold;
+      transform: translateY(20%);
+      display: inline-table;
+      margin-left: -5%;
+  }
+  
+  .submitButton {
+      width: 100%;
+      cursor: pointer;
+  }
+
+#SignupSubmitButton{
+    cursor: pointer;
+}
+#SignupSubmitButton:hover{
+    filter: brightness(130%)
+}
+
+#iHaveAccount,
+#wsp_iHaveAccount{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    color: #aaa;
+    margin-top: -5%;
+    cursor: pointer;
+    display: inline-table;
+    margin-left: 5%;
+    vertical-align: middle
+}
+
+#iHaveAccount:hover,
+#wsp_iHaveAccount:hover{
+    color:#000
+}
+
+#singupMessage{
+    font-size: 1.3vw;
+    color: #aaa;
+}
+  
+  
+  @media (max-width: 736px) {
+      .heading {
+          font-size: 5vw
+      }
+      .heading-2 {
+          font-size: 4.5vw;
+      }
+      .sm6_l {
+          width: 100%
+      }
+      .sm6_r {
+          width: 100%;
+          margin-left: 0;
+      }
+      #SignupHeading {
+          font-size: 3vw;
+          
+      }
+      .details {
+          font-size: 4vw
+      }
+      .SignupInput {
+          font-size: 3vw;
+      }
+      .error,
+      .accountCreationError,
+      .success {
+          font-size: 1.8vw;
+      }
+      .gender {
+          font-size: 4vw;
+          margin-left: -10%;
+      }
+      .agree{
+          font-size: 4vw;
+      }
+      .submitButton {
+          width: 25%
+      }
+      
+    #iHaveAccount,
+    #wsp_iHaveAccount{
+          font-size: 2vw;
+          margin-top: -9%;
+          color: #a9a9a9
+      }
+  }
+

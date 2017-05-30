@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!--    INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/adddata.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <!--    HOME PAGE TITLE  -->
+    <title>THRIIVE | THRIIVE TALKS </title>
+    <!--    FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <script src="js/app.js"></script>
+    <!--    INCLUDING JAVASCRIPT-->
+    <script src='ckeditor/ckeditor.js'></script>
+    <script src="js/articles.js"></script>
+    <style>
+        .menu_itmes a {
+            text-decoration: none;
+            color: #fff;
+        }
+        #welcome_text{
+            color: #4e0475;
+        }
+        label{
+            color: #4e0475;
+        }
+        #adduserDiv{
+		display: block;
+	}
+    </style>
+    <script>
+        check_authentication(" ");
+    </script>
+</head>
+
+<body class="body_Backgruond">
+    <section class="totalBodySection">
+        <section id="header">
+            <div class="maindiv">
+                <!--TOGGLE BUTTON DIV-->
+                <div class="leftDiv">
+                    <a style="cursor:pointer" class="anchorTagButton"><img src="images/menuIcon_2.png" alt="menueIcon" width="70%" onclick="menu_list()"></a>
+                </div>
+                <!--MENU-->
+                <div id="menu" class="overlay">
+                    <div id="MenuDiv">
+                        <div id="LeftSideMenu">
+                            <a style="cursor:pointer">
+                                <div class="close"><img id="menu_close_Img" src="images/Close_Button.png" onclick="closemenu()"></div>
+                            </a>
+                            <br>
+                            <br>
+                            <div id="#" class="menu_itmes active" onclick="displayhome();">home</div>
+                            <div id="#" class="menu_itmes"><a href="adddata.html?id=users">users</a></div>
+                            <div id="#" class="menu_itmes" onclick="hideicons('therapy');"><a href="therapies_admin.html">therapists</a></div>
+                            <div id="#" class="menu_itmes" onclick="hideicons('calendar');"><a href="events_admin.html">event calendar</a></div>
+                            <div id="#" class="menu_itmes" onclick="hideicons('thriiveworld');"><a href="thriiveworld_admin.html">thriive world</a></div>
+                            <div id="#" class="menu_itmes" onclick="hideicons('thriivetalks');"><a href="articles_admin.html">thriive talks</a></div>
+                            <div id="#" class="menu_itmes"><a href="quotes_admin.html">quotes</a></div>
+                            <br>
+                            <div id="#" class="menu_itmes">admin user</div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                        onclick="hideicons('calendar');"
+                        onclick="hideicons('thriiveworld');"
+                        onclick="hideicons('thriivetalks');"
+                        onclick="hideicons('quotes');"
+                        onclick="hideicons('calendar');"
+                        onclick="hideicons('thriiveworld');"
+                        onclick="hideicons('thriivetalks');"
+                        onclick="hideicons('quotes');"
+                -->
+                <!--LOGO DIV-->
+                <div class="MidleDiv">
+                    <a style="cursor:pointer" href="dashboard.html"><img id="logo_image" src="images/Logo.png" alt="Thriive Logo" width="75%" onclick=""></a>
+                </div>
+                <!--EMPTY DIV DIV-->
+                <div class="rightDiv">
+                    <p onclick="logout_user()" style="cursor:pointer;">logout</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="mainbar">
+        <h3 id="adduserDiv" class="pannelDiv">
+                    <ul>
+                        <a style="cursor:pointer" ><li id="addtext" class="activeText">add</li></a>
+                        <a style="cursor:pointer"> <li id="listtext" class="listText">list</li></a>
+                    </ul>
+        </h3> 
+    </section>
+    <h3 id="welcome_text" class="heading">thriive talks</h3>
+    <script>
+        document.getElementById("listtext").setAttribute('onclick',"displayarticles()");
+        document.getElementById("addtext").setAttribute('onclick',"addrticles()");
+    </script>
+    <!--FORM SECTION-->
+    <section style="margin: 2% 20% 2%  20% ">
+        <div id="addform">
+            <!--THRIIVE TALKS-->
+            <section id="articles">
+                <div id="addartcile">
+                    <form>
+                        <!----- TITTLE ---->
+                        <div style="width:100%">
+                            <label class="heading">Article/Blog</label>
+                            <br>
+                            <select class="inputbox" id="thriivearticle" onchange="changearticleblog()">
+                                <option selected value="article">Article</option>
+                                <option value='blog'>Blog</option>
+                            </select>
+                        </div>
+                        <div class="labletwodivs">
+                            <label class="heading">title</label>
+                            <br>
+                            <input id="thriivetalktitle" class="inputbox" type="text" name="text" placeholder="Enter title of the Blog"> </div>
+                        <!----- SPEAKER NAME ---->
+                        <div class="labletwodivs">
+                            <label class="heading">speaker</label>
+                            <br>
+                            <input id="thriivetalkSpeaker" class="inputbox" type="text" name="speaker" placeholder="Enter Blog Author"> </div>
+                        <div style="width:97.7%" id="editor">
+                            <label class="heading">Description</label>
+                            <textarea id="htmleditor" style="background-color:transparent" style="width:97.7%"></textarea>
+                            <script>
+                                CKEDITOR.replace('htmleditor');
+                            </script>
+                        </div>
+                        <!----- URL ---->
+                        <div style="width:97.7%" id="url">
+                            <label class="heading">url </label>
+                            <br>
+                            <input id="thriiveTalksurl" class="inputbox" type="text" name="text" placeholder="Blog Url Here"> </div>
+                        <div style="width:15%; margin:2% 10%; 2% 0%; float:right" id="button">
+                            <a style="cursor:pointer"> <img class="submit" src="images/submit-button.png" width="100%" onclick="submitvalues();"> </a>
+                        </div>
+                    </form>
+                </div>
+                <div id="displayarticles" style="display:none">
+                    <section style="margin: 2% 2% 2%  2%">
+                        <div id="articlelist" style="display:block">
+                            <!--DISPLAY PRACTITIONERS OR THERAPIES SECTION-->
+                            <div id="displayarticle">
+                                <select id="displaysection" class="inputbox" onchange="displayinnersections();">
+                                    <option value="-">--select--</option>
+                                    <option value="articles">articles</option>
+                                    <option value="blogs">blogs</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <!--Display audio Section-->
+                        <div id="articledisplay" style="display:none">
+                            <table id="articleTable" width="80%" style="margin-left:10%;margin-right:10%">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>speaker</th>
+                                    <th>Options</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--Display video Section-->
+                        <div id="blogdisplay" style="display:none">
+                            <table id="blogTable" width="80%" style="margin-left:10%;margin-right:10%">
+                                <tr>
+                                    <th>Title</th>
+                                    <th>speaker</th>
+                                    <th>Options</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <div id="successmsg" style="display:none;color:green;text-align:center;">
+            <h1 id="successtext">Form updated succesfully</h1> </div>
+    </section>
+    <!-- Display existing data-->
+    <script>
+    </script>
+</body>
+
+</html>

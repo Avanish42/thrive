@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/whatsHappening.css">  <!--styles for Whats Happening Page-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <script src="js/signup-user.js"></script>
+<!--        <script src="js/login.js"></script>-->
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | WHATS HAPPENING </title> 
+		
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+        <script src="js/whatsHappening.js"> </script>
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("whatshappening");
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+         <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+            <!---------- SECTION FOR WEBSITE HEADER  ---------->
+            
+            <section>
+                <div class="div_displayTable">
+                    <a style="cursor:pointer">
+						<img id="whatHappeningPrevioustButton" src="images/Next-1B.png" width="45%"  onclick="event_Next_img(-1)">
+					</a> <!--PREVIOUS BUTTON-->
+                    <div id="calanderHeroSection">
+                        <img src="images/whats_happning/current_event.png" width="100%;"  class="allEvents">
+                        <img src="images/whats_happning/current_event%20-%20Copy.png" width="100%;"  class="allEvents" style="display:none">
+                    </div>  
+                    <a style="cursor:pointer">
+						<img id="whatHappeningNextButton" src="images/Next-1A.png" width="45%" onclick="event_Next_img(1)">
+					</a>      <!--NEXT BUTTON-->
+                </div>
+            </section>
+        </section> <!--END OF BODY RIGHT & LEFT PADDING-->
+            
+        <section id="event_calender_desktop">
+                
+                <div id="event_Calendar_Month_Section"> 
+                
+                    <!--PREVIOUS AND NEXT BUTTONS-->
+                    <div id="event_Calendar_Month_PreviousNextButtons"> 
+                        <a style="cursor:pointer">  <img id="monthPreviousButton" src="images/whats_happning/Event_Previous_Button.png" width="5%" onclick="previousMonth()">  </a>
+                        <a style="cursor:pointer"> <img  id="monthNextButton" src="images/whats_happning/Event_Next_Button.png" width="5%" onclick="nextMonth()"> </a>
+                        <div id="current-month_desktop"></div>  
+                    </div>
+                    
+                    <!--ALL DATES SECTION-->
+                    <div id="calendar"> 
+                        <!--PREVIOUS BUTTON DATE SECTION-->
+                            <div class="Date_previousButton" >
+                                <img id="datePreviousButton" src="images/whats_happning/Event_Previous_Button.png" width="100%" onclick="otherDays(-1);"> 
+                            </div>
+                        <div style="display:inline-table;width:80%;">
+                            <div class="calendar-events leftslide"  id="calendargroup1"> </div>
+                            <div class="calendar-events rightslide" id="calendargroup2"> </div>
+                        </div>
+						<!--NEXT BUTTON DATE SECTION-->
+                        <div class="Date_NextButton" >
+                            <img id="dateNextButton" src="images/whats_happning/Event_Next_Button.png" width="100%" onclick="otherDays(1);">
+                        </div>
+					</div>
+			</div>
+		</section>
+        
+        <section id="event_calendar_mobile">
+            <div id="event_Calendar_Month_Section"> 
+                
+                    <!--PREVIOUS AND NEXT BUTTONS-->
+                    <div id="event_Calendar_Month_PreviousNextButtons_mobile"> 
+                        <a style="cursor:pointer">  <img id="monthPreviousButton_mobile" src="images/whats_happning/Event_Previous_Button.png" width="5%" onclick="previousMonth()">  </a>
+                        <a style="cursor:pointer"> <img  id="monthNextButton_mobile" src="images/whats_happning/Event_Next_Button.png" width="5%" onclick="nextMonth()"> </a>
+                        <div id="current-month_mobile"></div>  
+                    </div>
+                    
+                    <!--ALL DATES SECTION-->
+                    <div id="calendar_mobile"> 
+                        <!--PREVIOUS BUTTON DATE SECTION-->
+                            <div class="Date_previousButton" >
+                                <img id="datePreviousButton_mobile" src="images/whats_happning/Event_Previous_Button.png" width="100%" onclick="otherDays_mobile(-1);"> 
+                            </div>
+                        <div style="display:inline-table;width:80%;">
+                            <div class="calendar-events_mobile leftslide"  id="calendargroupmobile1"> </div>
+                            <div class="calendar-events_mobile rightslide" id="calendargroupmobile2"> </div>
+                            <div class="calendar-events_mobile rightslide" id="calendargroupmobile3"> </div>
+                            <div class="calendar-events_mobile rightslide" id="calendargroupmobile4"> </div>
+                        </div>
+						<!--NEXT BUTTON DATE SECTION-->
+                        <div class="Date_NextButton" >
+                            <img id="dateNextButton_mobile" src="images/whats_happning/Event_Next_Button.png" width="100%" onclick="otherDays_mobile(1);">
+                        </div>
+					</div>
+			</div>
+        </section>
+        
+            <section class="totalBodySection"> <!--START OF BODY RIGHT & LEFT PADDING-->
+                <h3 class="tagLine">Check out what’s Hot in the world of Wellness Events, Workshops,Tours.</h3>
+<!--
+                <script>
+                    display_whatsHappeningButtons_Desktop();
+                </script>
+                
+                <section id="whatsHappening_Buttons_Mobile" style="margin-bottom:5%">
+                    <script>
+                        display_whatsHappeningButtons_Mobile();
+                    </script>
+                </section>
+-->
+                
+<!--                SERCH SECTION-->
+        <div class="searchMailDiv">
+            <div class="CityDiv">
+                <input type="text" name="q" placeholder="City" />
+            </div>
+            <div class="serchDiv">
+                <input type="text" name="q" placeholder="search... here" />
+            </div>
+        </div>
+            
+                <section id="WH_List_Dektop">
+                    <script>
+                        var currentdate=new Date();
+                        whatsahappening_list_desktop(currentdate.getMonth(),currentdate.getFullYear(),currentdate.getDate(),'completemonth');
+                    </script>
+                </section>
+             
+                
+                <!-------------------------- GRID VIEW -------------------------->
+                <section id="WH_Grid_Dektop">
+                    <script>
+                        var currentdate=new Date();
+                        whatsahappening_grid_desktop(currentdate.getMonth(),currentdate.getFullYear(),currentdate.getDate(),'completemonth');
+                    </script>
+                </section>
+        </section> <!--End of 7% margin to body-->
+            
+         <!---------- TESTIMONIAL SECTION  ---------->
+			<section id="TestimonialSection_Desktop">
+				<div class="testimonial">
+					<img src="images/Testimonial.png" width="100%;" style="margin:auto">
+					<div id="thriivequotes"></div>
+				</div>
+				<script>
+				 	display_testimonial('home');
+				</script>
+            </section>
+            
+        
+        <!--FOOTER SECTION-->
+        <script>
+           display_footer();
+        </script>
+    </body>
+</html>

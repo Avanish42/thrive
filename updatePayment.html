@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        <script>
+		//FUNCTION TO GET THE VALUES FROM THE URL
+		function getUrlVars() {
+		   var vars = {};
+		   var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+			   vars[key] = value;
+		   });
+		   return vars;
+		}
+		</script>
+		<script>
+//			function updatePayment(key,status){
+//				
+//			}
+		</script>
+       <script>
+			var name=getUrlVars()['name'];
+			var paystatus=getUrlVars()['paystatus'];
+			var txid=getUrlVars()['txid'];
+			var email=getUrlVars()['email'];
+			var amount=getUrlVars()['amount'];
+			var node=getUrlVars()['node'];
+		    var package=getUrlVars()['package'];
+		   	var ref = firebase.database().ref();
+				var wspPreRegistrations=ref.child("wsppreregistrstions");
+				if(paystatus=="SUCCESS"){
+				  wspPreRegistrations.child(node).update({
+					status: "Payment Success",
+					paymentReceivedOn: firebase.database.ServerValue.TIMESTAMP
+				});  
+				}else if(paystatus=="FAILURE"){
+					wspPreRegistrations.child(node).update({
+						status: "Payment Failure",
+						paymentReceivedOn: firebase.database.ServerValue.TIMESTAMP
+					}); 
+				}else{
+					wspPreRegistrations.child(node).update({
+						status: "Payment Pending",
+						paymentReceivedOn: firebase.database.ServerValue.TIMESTAMP
+					}); 
+				}
+		   setTimeout(function(){ 
+		  		 window.location.href="http://mailer.thriive.in/mail.php?template=PayStatus&name="+name+"&email="+email+"&node="+node+"&amount="+amount+"&package="+package+"&paystatus="+paystatus+"&txid="+txid;
+			}, 3000);
+		</script>
+		
+    </body>
+</html>
+

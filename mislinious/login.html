@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+        
+        <!--    SIGIN IN PAGE TITLE  -->
+        <title>THRIIVE | Login</title>
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css"> <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/login.css"> <!--Styles for Signin Page-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        
+        <script src="js/login.js"> </script> <!-- SIGN IN VALIDATIONS JAVA SCRIPT  -->
+        
+</head>
+<body>
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">signin</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content other_Pagess_body_Backgruond">
+        <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section> 
+      
+    <span class="close">&times;</span>
+    <section class="totalBodySection">
+      <section class="signIn_section">
+				
+            <!--USER SIGN IN SECTION-->    
+            <div class="user_signIn">
+			
+					<h2 class="signIn_heading">sign in as a user</h2>
+
+					<div class="singInUserIcon"> <img src="images/SignIn_User_Icon.png" width="100%"></div>
+                
+                <!--RADIO BUTTONS FOR USER AND PRACTITIONER-->
+                <div class="row">
+                    <div class="radioButtons">
+                        <img src="images/radioButton-2.png" id="userButton" width="100%" onclick="signintypeAsUser();">
+                    </div>      
+                        <span class="sign_User">  sign in as user</span>
+                    <div class="radioButtons">
+                        <img src="images/radioButton.png" id="PractitionerButton" width="100%" onclick="signintypeAsPractitioner();">
+                    </div>
+                   <span class="sign_User">  sign in as practitioner</span>
+                </div>
+                
+                <!--RADIO BUTTONS FOR USER AND PRACTITIONER-->
+                <div class="row" id="singupMessage">
+                    <p>Loram Ipsom Loram Ipsom Loram Ipsom Loram Ipsom</p>
+                </div>
+                
+                
+						<div> <!--E-MAIL DIV--> 
+							<input class="signIn_input" id="txtEmailAsUser" type="email" placeholder="enter your e-mail" onblur="validateEmailAsUser()">
+						</div> 
+
+						<div style="position: relative;"> <!--PASSWORD DIV-->
+							<input class="signIn_input" id="txtPasswordAsUser" type="password" placeholder="password" onblur="validatePasswordAsUser()">
+							<img id="PW_Eye" class="pw_icon" src="images/PW_Eye.png" onclick="showPassword('txtPasswordAsUser')">
+							<p class="forgetPassword">Forget Password ?</p>
+						</div>
+
+						 <div id="btnLogin"  class="btn btn-action">
+                                 <button class="buttonStyles" type="button" id="btnLoginAsUser" onclick="signInAsUser()">
+									<img src="images/submit-button.png" width="100%">
+							 </button>
+                        </div>
+                        <!--LOG IN-->
+
+						<div>
+							<h3 class="notyetSingIn"> Not yet signed in? <br> 
+							<span  class="signUpNow">  <a id="form" href="signup.html"> Sign Up Now </a> </span></h3>
+						</div>
+                        
+                        <!-- ERROR OR SUCCESS MESSAGE -->
+                        <div id="SubmitMessage"></div>
+                
+						<hr width="70%">
+
+					<div class="socialMediaDiv_1" id="socialMedia"> <!--SOCIAL MEDIA DIV-->
+						<div class="socialMediaIcon" style="cursor:pointer">
+                            <img id="gbtnLogin" src="images/SocialMedia_G.png" width="100%"  onclick="gLogin()">
+                        </div> <!--GOOGLE-->
+						<div class="socialMediaIcon" style="cursor:pointer">
+                            <img id="fbtnLogin" src="images/SocialMedia_F.png" width="100%" onclick="fLogin()">
+                        </div> <!--FACE BOOK-->
+					</div>
+            </div>
+                
+           
+				
+        </section>
+                
+        </section>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

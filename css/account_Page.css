@@ -1,0 +1,1212 @@
+/*    PROFILE MAIN DIV*/
+
+.profile_Div {
+    width: 65%;
+    display: table;
+    margin: 8% 0% 0% 10%
+}
+
+.accountheading {
+    font-family: 'Amatic SC', cursive;
+    color: #4e0475;
+    font-size: 3vw;
+    margin-left: 5%;
+}
+
+
+/*	IMAGE DIV STYLES*/
+.Img_Div {
+    width: 20%;
+    display: inline-table;
+    text-align: center;
+    vertical-align: top
+}
+
+
+/*	EDIT IMG TITLE*/
+.editimage {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3vw;
+    color: #4e0475;
+    cursor: pointer;
+}
+
+
+/*PROFILE PIC STYLES*/
+
+.profile_pic {
+    width: 100%;
+    background-color: #f3f3f3;
+    box-shadow: .3vw .3vw 0px #a7a7a7;
+}
+
+
+/*PROFILE NAME STYLES*/
+.profile_name {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    color: #4e0475;
+    font-size: 3vw;
+    margin: 0%;
+}
+
+
+/*CITY STYLES*/
+.city {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3vw;
+    color: #585858;
+    font-style: italic;
+    margin-top: 0%;
+}
+
+.e-mail {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5vw;
+    color: #4e0475;
+    margin-top: -7%;
+    font-weight: 900;
+}
+.Dob {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5vw;
+    color: #4e0475;
+    margin-top: -10%;
+    font-weight: 900;
+}
+
+.e-mail_id {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4vw;
+    color: #585858;
+    font-weight: normal;
+}
+
+.profile_info_div {
+    width: 0%;
+    display: inline-table;
+    margin-left: 5%
+}
+
+.discprition {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3vw;
+    color: #585858;
+    font-style: italic;
+    margin-top: -15%;
+    margin-left: 5%;
+}
+
+.edit_Profile_Button {
+    width: 13%;
+    display: inline-table;
+    float: right;
+    margin-right: 5%;
+    cursor: pointer;
+    clear: both;
+    margin-top: 1.5%;
+}
+
+/***PROFILE INFO FOR MOBILE***/
+
+@media (max-width: 736px) {
+    
+.profile_Div {
+    width: 80%;
+    display: table;
+}
+    
+    
+/*	IMAGE DIV STYLES*/
+.Img_Div {
+    width: 40%;
+    margin: auto;
+    margin-left: 30%
+}
+
+
+/*	EDIT IMG TITLE*/
+.editimage {
+    font-size: 3vw;
+}
+
+
+/*PROFILE PIC STYLES*/
+
+.profile_pic {
+    width: 100%;
+    box-shadow: .5vw .5vw 0px #a7a7a7;
+}
+    
+.profile_info_div {
+    width: 80%;
+    display: table;
+    text-align: center;
+    margin-left: 10%
+}
+    
+    
+/*PROFILE NAME STYLES*/
+.profile_name {
+    font-size: 6vw;
+    font-weight: 900;
+}
+
+
+/*CITY STYLES*/
+.city {
+    font-size: 3vw;
+    margin-top: -6%;
+    font-weight: normal;
+}
+
+.e-mail {
+    font-size: 5vw;
+}
+    
+.Dob {
+    font-size: 5vw;
+    margin-top: -15%
+}
+
+.e-mail_id {
+    font-size: 3vw;
+}
+    
+.edit_Profile_Button {
+    width: 30%;
+    margin: -8% 35% 10% 0% ;
+}
+    
+}
+
+
+/*--------------------------------------------*/
+/* -----THRIIVE WORLD SECTION FOR DESKTOP-----*/
+/*--------------------------------------------*/
+
+
+
+.TW_PreviousButton,
+.TW_NextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.TW_SubHeadding {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 4%;
+    margin-top: 0%
+}
+
+.video_set{
+    width: 50%;
+    display: inline-table;
+}
+.video_div {
+    width: 15vw;
+    height: 22.5vw;
+    display: inline-table;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video1{
+    margin-left: 2%
+}
+.video2{
+    margin-left: 8%
+}
+
+.video3{
+    margin-left: 0%
+}
+
+.video4{
+    margin-left: 8%
+}
+
+.slider {
+    width: 15vw;
+    height: 22.5vw;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide1 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide2 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide3 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .BG_slide {
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1,
+.slide2,
+.slide3 {
+    width: 100%;
+    display: none;
+    cursor: pointer;
+}
+
+.BG_slide {
+    width: 100%;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1 {
+    margin-top: -22.7vw;
+    animation: fade 8s infinite;
+    -webkit-animation: fade 8s infinite;
+}
+
+.slide2 {
+    margin-top: -22.5vw;
+    animation: fade2 8s infinite;
+    -webkit-animation: fade2 8s infinite;
+}
+
+.slide3 {
+    margin-top: -22.5vw;
+    animation: fade3 8s infinite;
+    -webkit-animation: fade3 8s infinite;
+} 
+    
+@keyframes fade{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+    
+@keyframes fade2{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+    
+@keyframes fade3{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+    
+.infoText {
+     width: 100%;
+     height: 4vw;
+     background-color: #4e0475;
+     text-align: center;
+     color: #fff;
+     padding-top: 3%;
+     margin-top: 61.6%;
+     -webkit-transition: all 1s ease-in-out;
+ }
+.infoText span{
+    width: 90%;
+    margin: auto;
+}
+ 
+ .PlayButton {
+     background: url(../images/PlayButton.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     margin: auto;
+     opacity: 0;
+     position: relative;
+     margin-top: -85%;
+     cursor: pointer;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .PlayButton:hover {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .video_div:hover .PlayButton {
+     opacity: .8
+ }
+ 
+ .video_div:hover .BeforeText {
+     display: none;
+ }
+ 
+ .video_div:hover .AfterText {
+     display: block;
+ }
+ 
+ .BeforeText {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.1vw;
+     
+}
+ 
+ .AfterText {
+    display: none;
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: .8vw;
+ }
+
+/*--------------------------------------------*/
+/* -----VIDEO SECTION FOR MOBILE-----*/
+/*--------------------------------------------*/
+
+
+@media (max-width: 736px) {
+    .TW_PreviousButton,
+    .TW_NextButton {
+         width: 8%;
+         display: table-cell;
+         transform: translateY(0%)
+ }
+ 
+ .TW_SubHeadding {
+     font-size: 2.5vw;
+     font-weight: 400;
+ }
+.video_set{
+    width: 100%;
+    display: inline-table;
+}
+
+    
+ .slider,
+ .video_div {
+     width: 29vw;
+     height: 45vw;
+     display: inline-table;
+ }
+    
+    .video_div:hover{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+        
+    }
+ 
+ .BG_slide {
+     width: 100%;
+ }
+ 
+ .slide1 {
+     margin-top: -43.2vw;
+     
+ }
+ 
+ .slide2 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .slide3 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .infoText {
+     padding-top: 8%;
+     margin-top: 48%;
+     height: 7vw;
+ }
+    
+ 
+ .PlayButton {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     opacity: 1;
+     width: 6vw;
+     height: 6vw;
+     margin-top: -75%;
+ }
+ 
+ .PlayButton:hover {
+     width: 6vw;
+     height: 6vw;
+     opacity: 1;
+ }
+    
+    .BeforeText {
+        font-size: 2.2vw;
+    }
+    
+    .AfterText {
+        font-size: 1.5vw;
+    }
+}
+    
+
+
+
+
+/*** AUDIO SECTION FOR DESKTOP ***/
+/*/-------------------------------/*/
+
+
+/*NEXT AND PREVIOUS BUTTONS*/
+
+.audioPreviousButton,
+.audioNextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    transform: translateY(-15%)
+}
+
+.audioDiv {
+    width: 30%;
+    display: inline-table;
+    text-align: center;
+    margin-left: 2.5%;
+}
+
+
+/*AUDIO BLOG-1*/
+
+.audioBlog_1 {
+    width: 21.5vw;
+    height: 14.2vw;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/W_AV_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1;
+}
+
+.audioBlog_2 {
+    width: 21.5vw;
+    height: 14.2vw;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/W_AV_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1%;
+}
+
+.audioBlog_3 {
+    width: 21.5vw;
+    height: 14.2vw;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/W_AV_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1;
+}
+
+.audioBlog_1 iframe,
+.audioBlog_2 iframe,
+.audioBlog_3 iframe {
+    width: 19vw;
+    height: 12.2vw;
+    margin-top: 5%
+}
+
+
+
+/* -----AUDIO SECTION FOR MOBILE-----*/
+/*--------------------------------------------*/
+@media (max-width: 736px) {
+    
+    .audioPreviousButton,
+    .audioNextButton {
+        width: 8%;
+    }
+    #audioDiv2,
+    #audioDiv3 {
+        display: none;
+    }
+    .audioDiv {
+        width: 80%;
+        margin-left: 11%
+    }
+    /*AUDIO BLOG-1*/
+    .audioBlog_1,
+    .audioBlog_2,
+    .audioBlog_3 {
+        width: 52vw;
+        height: 36vw;
+    }
+    .audioBlog_1 iframe {
+        width: 90%;
+        height: 30vw;
+    }
+}
+
+
+/******** EVENT SECTION FOR DESKTOP ********/
+
+/*NEXT AND PREVIOUS BUTTONS*/
+.eventPreviousButton,
+.eventNextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    transform: translateY(-12%)
+}
+
+.my_event_Block_1 {
+    width: 27%;
+    display: inline-table;
+    margin-left:4%;
+   
+}
+
+.my_event_Block_2 {
+    width: 27%;
+    display: inline-table;
+     margin:0% 6% 0% 6%;
+}
+
+.my_event_Block_3 {
+    width: 27%;
+    display: inline-table;
+/*    visibility: hidden;*/
+}
+
+/* STYLE FOR EVENT INFO */
+.event_Image_Info {
+    text-align: center;
+    font-size: 2.8vw;
+    color: #fff;
+    margin-top: -69%;
+    padding-bottom: 20%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+}
+
+/*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+
+.Event_Block_1_Left_Caption {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    color: #4e0475;
+    font-size: 3vw;
+    margin-top: 15%
+}
+
+/*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+.Event_Block_Left_SubCaption {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: -16%;
+    font-weight: 400;
+    color: #333333
+}
+
+/*EVENT SECTION FOR MOBILE*/
+@media (max-width: 736px) {
+  
+/*NEXT AND PREVIOUS BUTTONS*/
+.eventPreviousButton,
+.eventNextButton {
+    width: 8%;
+}
+    
+.my_event_Block_1 {
+    width: 40%;
+    display: inline-table;
+    margin-left:10%;
+   
+}
+
+.my_event_Block_2 {
+    width: 40%;
+}
+
+.my_event_Block_3 {
+     width: 40%;
+    display: none;
+}
+
+/* STYLE FOR EVENT INFO */
+.event_Image_Info {
+    text-align: center;
+    font-size: 3.8vw;
+    margin-top: -70%;
+}
+
+/*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+
+.Event_Block_1_Left_Caption {
+    color: #4e0475;
+    font-size: 4.5vw;
+    margin-top: 15%
+}
+
+/*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+.Event_Block_Left_SubCaption {
+    font-size: 2.5vw;
+}
+}
+
+/*---WSP SECTION STYLES---*/
+
+.wsp_inforBar{
+    width: 100%;
+    display: table;
+    background-color: #4e0475;
+    padding: .6%;
+    
+}
+
+.wsp_main_info{
+   font-family: 'Lato', sans-serif;
+    font-size: 1.1vw;
+    margin-left: 5%;
+    color: #fff;
+/*    color: #d78bff;*/
+}
+.wsp_rightDiv,
+.wsp_leftDiv{
+    width: 49%;
+    display: inline-table;
+}
+
+.wsp_heading{
+    font-family: 'Amatic SC',cursive;;
+    font-size: 3vw;
+    color: #4e0475;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+.wsp_details{
+    font-family: 'Amatic SC',cursive;;
+    font-size: 2vw;
+    color: #4e0475;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+.wsp_details span{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    color: #333;
+    font-weight: normal;
+    text-transform: none;
+}
+.modalityDiv{
+    width: 20%;
+    display: inline-table;
+    text-align: center;
+    cursor: pointer;
+    margin: 1% 2.51% 1% 2.51% ;
+}
+
+.infDiv{
+    width: 100%;
+    background-color: #4e0475;
+    color: #fff;
+    height: 3vw;
+    vertical-align: middle;
+    padding: 2% 0% 0% 0%;
+}
+
+.infDiv p{
+    font-size: 1vw;
+     font-family: 'Lato', sans-serif;
+    margin: 0
+    
+}
+/*
+#addModalities{
+    font-family: 'Amatic SC',cursive;;
+    font-size: 2vw;
+    color: #4e0475;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+*/
+
+
+/***** FOR MOZILLA BROUSERS *****/
+
+@-moz-document url-prefix() {
+    
+/*THRIIVE WISDOM VIDEOS / AUDIOS*/ .ThriiveWorldDiv_1 {
+    margin-left: 4.3%
+}
+
+.Download_Cloud {
+    margin: 0% 0% 0% 80%;
+}
+
+
+/*THRIIVE TALKS*/
+
+.ThriiveTalksDiv_1 {
+    width: 28%;
+    height: 20vw;
+    margin-left: -2%
+}
+
+.ThriiveTalksDiv_2 {
+    width: 27%;
+    height: 20vw;
+    display: inline-table;
+}
+
+.ThriiveTalksDiv_3 {
+    width: 22%;
+    height: 21vw;
+    padding: 0% 0% 0% 5%;
+    margin-right: -5%;
+}
+
+}
+
+/***** FOR HEAZE BROUSERS *****/
+
+@supports (-ms-ime-align:auto) {
+    
+    
+.TW_PreviousButton,
+.TW_NextButton {
+    transform: translateY(35%);
+}
+    
+}
+
+
+
+#UserId, #UserPassword {
+	width: 50%;
+	padding: 2% 15% 2% 3% !important;
+    text-align: left;
+}
+
+/**** FOR SAFARI ****/
+/*@media not all and (min-resolution:.001dpcm) { @media{
+}}*/
+    
+
+/*THERAPIES OFFERS*/
+
+@media (min-width: 737px) {
+
+    
+     #practitoner_Subpage_Moble{
+        display: none;
+    }
+    
+}
+   
+
+/* ------------------------           ------------------------ */
+/*                         PRACTITIONER SUB PAGE               */
+/* ------------------------           ------------------------ */
+    
+    /*PRACTITONERS QUOTE (inside GREEN color text)*/
+    .practitoner_quote{
+        font-family: 'Sacramento',cursive;
+        color:#96bb76;
+        font-size:4.55vw;
+        font-weight:200
+    }
+
+    
+    /*PRACTITONERS QUOTE (inside gray color text)*/
+    .practitoner_Sub_quote{
+        color:#333333;
+        font-family: 'Lato',sans-serif;
+        font-size:2.5vw;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    /*PRACTITONERS NAME*/
+    .practitoner_Name{
+        font-family: 'Amatic SC', cursive;
+        color:#96bb76;
+        font-size: 4vw;
+        font-weight:200;
+		text-transform: lowercase;
+    }   
+
+
+     /*BAKGOUND FOR PRACTITONERS IMAGE*/
+      .practitioner_Img_Background {
+        padding: 1.5% 2% 2% 2% ;
+        margin: auto;
+        background-size: 82% 98%;
+        background-image: url(../images/theraphy/practitioner_Bg.png);
+        background-repeat: no-repeat;
+        width:30%;
+        display:inline-table;
+        vertical-align: middle;
+        margin-top: 8%;
+        float: right;
+    }
+
+    .Practitoner_SubPage_Left_Module{
+        width:60%;
+        display:inline-table;
+        float:left
+        }
+
+    .Practitoner_SubPage_Right_Module{
+        width:30%;
+        display:table-cell;
+        float:right
+        }
+
+    /*HEADDING*/
+     .practitionerSubpage_text{
+        font-family: 'Amatic SC', cursive;
+        font-size: 3.6vw;
+        color: #4e0475;
+        margin-left: 8%;
+		 text-transform: lowercase;
+    }
+
+     /*RIGHT MODULE CONTENT*/
+    .practitioner_Subpage_content{
+        font-family: 'Lato',sans-serif;
+        font-size: 1.3vw;
+        color:#333333;
+        margin-top: -4%;
+        margin-left: 8%;
+        line-height: 180%;
+    }
+
+     /*RIGHT MODULE HEADDING (CONT & EMAIL)*/
+    .right_Module_heading{
+        font-size: 2vw;
+        font-family: 'Lato', sans-serif;
+        color: #4e0475;
+    }
+    
+    /*RIGHT MODULE INFO (CONT & EMAIL)*/
+    .right_Module_text{
+        font-size: 1.3vw;
+        font-family: 'Lato', sans-serif;
+        color: #333333;
+        text-decoration: none;
+        line-height: 180%;
+		font-weight: 800;
+    }
+
+    /*SOCILA MEDIA ICONS*/
+    .practitoners_socialMedia{
+        display:table;
+        width:100%;
+        margin-top:20%
+    }
+
+.previousButton{
+    width: 3.5%;
+    display: table-cell;
+    transform: translateY(-10%)
+}
+
+.nextButton{
+    width: 3.5%;
+    display: table-cell;
+    transform: translateY(-10%)
+}
+
+.leftNavigationabout{
+	width:8%;
+	margin-top:6.5%;
+	float:left;
+	display: inline-table;
+    cursor: pointer;
+	
+}
+
+.rightNavigationabout{
+	width:8%;
+	margin-top:6.5%;
+	float:right;
+	display: inline-table;
+    cursor: pointer;
+	
+}
+
+.therapies{
+    
+}
+    
+    /*ABOUT GEETA IMAGES*/
+    .therapy_offers_img1{
+        width:12%;
+        display:inline-table;
+        margin: 0% 1.2% 0% 1.2%;
+        text-align:center;
+        margin-left:4%
+    }
+    .therapy_offers_img2,
+    .therapy_offers_img3,
+    .therapy_offers_img4,
+    .therapy_offers_img5,
+    .therapy_offers_img6 {
+        width: 12%;
+        display: inline-table;
+        margin: 0% 2% 0% 2%;
+        text-align: center;
+    }
+
+    /*ABOUT CAPTIONS */
+    .therapy_offers_text{
+        font-family: 'Lato', sans-serif;
+        color: #8eb170;
+        font-size: 1.3vw;
+        margin-top: -1%;
+    }
+
+    
+    /*EVENT IMAGE DIV*/
+    .practitioner_subpage_image_div{
+         width:40%; 
+        text-align:center;
+        display:inline-table;
+        margin-left: 5%
+    }
+
+    /*  EVENT SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+    .Event_SubCaption_subPage {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size: 1.5vw;
+        color: #000;
+        margin-top: -15%;
+        font-weight: 400;
+    }
+
+
+    /* STYLE FOR EVENT INFO */
+    .event_Image_SubPage_Info{
+        text-align:center;
+        font-size:2.8vw;
+        color:#fff;
+        margin-top:-75%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+    }
+ .event_Image_SubPage_month{
+        text-align:center;
+        font-size:2.8vw;
+        color:#fff;
+        margin-top:-15%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .Event_Caption_SubPage {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 2.8vw;
+		text-transform: lowercase;
+        margin-top: 20%;
+    }
+
+    /***************** PRACTITONER SUB PAGE MOBILE DEVISE *****************/
+
+        
+@media (min-width: 736px) {
+        
+    #about_geetha_images_Mobile{
+            display: none;
+        } 
+    #event_Section_Mobile{
+            display: none;
+        }
+    }
+            
+@media (max-width: 736px) {
+        
+    #about_geetha_images_desktop{
+            display: none;
+        }      
+    #event_Section_desktop{
+            display: none;
+        }
+        
+    .Practitoner_SubPage_Left_Module{
+        width:90%;
+        display:inline-table;
+        float:left
+        }
+
+    .Practitoner_SubPage_Right_Module{
+        width:60%;
+        display:inline-table;
+        float:left;
+        margin-left: 6.8%;
+        }
+        
+        
+     .practitionerSubpage_text{
+        font-family: 'Amatic SC', cursive;
+        font-size: 5vw;
+        color: #4e0475;
+         margin-left: 8%;
+    }
+
+    .practitioner_Subpage_content{
+        font-family: 'Lato',sans-serif;
+        font-size: 2.05vw;
+        color:#333333;
+        margin-top: -4%;
+        margin-left: 8%;
+        line-height: 180%;
+    }
+
+    .right_Module_heading{
+        font-size: 2.35vw;
+        font-family: 'Lato', sans-serif;
+        color: #4e0475;
+    }
+    .right_Module_text{
+        font-size: 2.1vw;
+        font-family: 'Lato', sans-serif;
+        color: #333333;
+        text-decoration: none;
+        line-height: 180%
+    }
+        
+    /*SOCILA MEDIA ICONS*/
+    .practitoners_socialMedia{
+        display:table;
+        width:90%;
+        margin-top:10%
+    }
+            
+      
+    /*ABOUT GEETA IMAGES*/
+    .therapy_offers_img{
+        width:25%;
+        display:inline-table;
+        text-align:center;
+        vertical-align: top;
+    }
+            
+     /*ABOUT CAPTIONS */
+    .therapy_offers_text{
+        font-family: 'Lato', sans-serif;
+        color: #8eb170;
+        font-size: 2.5vw;
+        margin-top: -1%;
+    }
+    
+    /*  EVENT SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+    .Event_SubCaption_subPage {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size: 2.6vw;
+        color: #000;
+        margin-top: -15%;
+        font-weight: 400;
+    }
+
+
+    /* STYLE FOR EVENT INFO */
+    .event_Image_SubPage_Info{
+        text-align:center;
+        font-size:4vw;
+        color:#fff;
+        margin-top:-68%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+    }
+
+    .Event_Caption_SubPage {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 4vw;
+        margin-top: 12%;
+    }
+    
+    /*EVENT IMAGE DIV*/
+    .practitioner_subpage_image_div{
+         width:35%; 
+        text-align:center;
+        display:inline-table;
+        margin-left: 7%
+    }
+
+    }
+
+/***** FOR HEAZE BROUSERS *****/
+
+@supports (-ms-ime-align:auto) {
+    .footerDiv{
+        margin-top: 5%;
+    }
+
+.therapy_offers_img1 img,
+.therapy_offers_img2 img,
+.therapy_offers_img3 img,
+.therapy_offers_img4 img,
+.therapy_offers_img5 img,
+.therapy_offers_img6 img {
+        width: 100%
+    }
+    
+}
+
+
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+    
+.therapy_offers_img1 img,
+.therapy_offers_img2 img,
+.therapy_offers_img3 img,
+.therapy_offers_img4 img,
+.therapy_offers_img5 img,
+.therapy_offers_img6 img {
+        width: 100%
+    }
+    
+    
+    }}
+    

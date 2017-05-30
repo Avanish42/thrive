@@ -1,0 +1,252 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/thriive_world_gallery.css"> <!--styles for Audio Gallery Pase -->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sacramento&amp;subset=latin-ext" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE WORLD  |  GALLERY</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+		<script type="text/javascript" src="js/JavaScriptFor_ThriiveWorld.js"></script> <!-- Including thriive world js file  -->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        <!--  CALLING JAVASCRIPT FUNCTIONS TO INVOKE RESPONSIVE DESIGN  -->
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu();
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+         <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+        
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+ 
+            <!---------- HERO IMAGE AND BUTTON TO NAVIGATE TO NEXT SECTION (BELOW HERO IMAGE) ---------->
+            <section>
+				<h1 class="MainHeading" style="margin:5% 0% 0% 0%">thriive image gallery</h1>
+				<h3 class="subHeading" ></h3>
+				
+				<div class="div_displayTable">
+					<!--PREVIOUS BUTTON-->
+					<div id="TW_PreviousButton">
+						<a style="cursor:pointer"> <img  src="images/Next-1B.png" width="100%"> </a>
+					</div>
+					
+					<div class="galleryDiv_1" style="margin-left:1%;">
+						<div class="Img_backgroundDiv">
+							<img  class="Gallery_img" src="images/Gallery_img.jpg" width="95%">
+						</div>
+						<h3 class="TW_Caption" >9th gcss</h3>
+					</div>
+								
+					<div class="galleryDiv_2" style="margin:0% 5% 0% 6% ">
+						<div class="Img_backgroundDiv">
+							<img  class="Gallery_img" src="images/Gallery_img.jpg">
+						</div>
+						<h3 class="TW_Caption" >qem 2016</h3>
+					</div>
+								
+					<div class="galleryDiv_3"  style="margin:0% -2% 0% 0% ">
+						<div class="Img_backgroundDiv">
+							<img  class="Gallery_img" src="images/Gallery_img.jpg" width="95%">
+						</div>
+						<h3 class="TW_Caption" >pvi</h3>
+					</div>
+						
+					<!--   NEXT BUTTON  -->
+					<div id="TW_NextButton">
+						<a style="cursor:pointer"> <img  src="images/Next-1A.png" width="100%"> </a>
+					</div>
+				</div>
+				
+				
+				
+				<div class="galleryDetails">
+					<h4> lorem ipsum dolor sit lorem ipsum dolor sit.
+					lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor..</h4>
+				</div>
+				
+				<div class="socialMediaDiv_Thriive_world" style="margin-left: 5%;">
+					<div class="socialMediaDivIcon_Thriive_world">
+						<a href=""> <img src="images/SocialMedia_F.png" width="100%"> </a>
+					</div>
+					<div class="socialMediaDivIcon_Thriive_world">
+						<a href=""> <img src="images/SocialMedia_T.png" width="100%"> </a>
+					</div>
+					<div class="socialMediaDivIcon_Thriive_world">
+						<a href=""> <img src="images/SocialMedia_I.png" width="100%"> </a>
+					</div>
+					<div class="socialMediaDivIcon_Thriive_world">
+						<a href=""> <img src="images/SocialMedia_B.png" width="100%"> </a>
+					</div>
+					<div class="socialMediaDivIcon_Thriive_world">
+						<a href=""> <img src="images/SocialMedia_M.png" width="100%"> </a>
+					</div>
+				</div>
+            </section>
+			
+			<!---------- THRIIVE IMAGE GALLERY SECTION FOR DESKTOP---------->
+           <section class="div_displayTable">
+				<h1 class="MainHeading" style="text-align:left;margin:5% 0% 3% 5%">YOU MAY ALSO LIKE</h1>
+				<!-- MAIN HEADING  -->
+				<!--SET NO-1-->
+				<div class="div_displayTable">
+					<!--PREVIOUS BUTTON-->
+					<div id="TW_PreviousButton">
+						<a style="cursor:pointer"> <img  src="images/Next-1B.png" width="100%"> </a>
+					</div>
+					
+					<div class="galleryDiv_1" style="margin-left:1%;">
+						<div class="Img_backgroundDiv">
+							<img  class="Gallery_img" src="images/Gallery_img.jpg" width="95%">
+						</div>
+						<h3 class="TW_Caption" >EUROPE TOUR</h3>
+					</div>
+								
+					<div class="galleryDiv_2" style="margin:0% 5% 0% 6% ">
+						<div class="Img_backgroundDiv">
+							<img  class="Gallery_img" src="images/Gallery_img.jpg">
+						</div>
+						<h3 class="TW_Caption" >NEW MOON SESSION</h3>
+					</div>
+								
+					<div class="galleryDiv_3"  style="margin:0% -2% 0% 0% ">
+						<div class="Img_backgroundDiv">
+							<img  class="Gallery_img" src="images/Gallery_img.jpg" width="95%">
+						</div>
+						<h3 class="TW_Caption" >AWAKEN CENTER</h3>
+					</div>
+						
+					<!--   NEXT BUTTON  -->
+					<div id="TW_NextButton">
+						<a style="cursor:pointer"> <img  src="images/Next-1A.png" width="100%"> </a>
+					</div>
+				</div>
+			</section>
+			
+           <!---------- THRIIVE VIDEOS SECTION FOR DESKTOP---------->
+           <section class="div_displayTable">
+				<h1 class="MainHeading" style="text-align:left;margin:5% 0% 3% 5%">THRIIVE VIDEOS</h1>
+				<!-- MAIN HEADING  -->
+				<!--SET NO-1-->
+				<div class="div_displayTable">
+					<!--PREVIOUS BUTTON-->
+					<div id="TW_PreviousButton">
+						<a style="cursor:pointer"> <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%" onclick="callcarousel(-1)"> </a>
+					</div>
+					<div id="videos_desktop"></div>
+					<div id="videos_mobile"></div>
+					<script>
+						displayVideos();
+					</script>
+					<!--   NEXT BUTTON  -->
+					<div id="TW_NextButton">
+						<a style="cursor:pointer"> <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" onclick="callcarousel(1)"> </a>
+					</div>
+				</div>
+			</section>
+			
+			<!---------- THRIIVE AUDIO FOR DESKTOP---------->
+           <section>
+				<h1 class="MainHeading"	 style="text-align:left;margin:5% 0% 3% 5%"> THRIIVE AUDIOS </h1>
+				<!-- MAIN HEADING  -->
+				<!--SET NO-1-->
+				<div class="div_displayTable">
+					<!--PREVIOUS BUTTON-->
+					<div class="audioPreviousButton">
+						<a style="cursor:pointer"> <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%"> </a>
+					</div>
+					<div class="audioBlog_1">
+						<img src="images/AudioImg.jpg" width="100%">
+					</div>
+					<div class="audioBlog_2">
+						<img src="images/AudioImg.jpg" width="100%">
+					</div>
+					<div class="audioBlog_3">
+						<img src="images/AudioImg.jpg" width="100%">
+					</div>
+					<script>
+						displayVideos();
+					</script>
+					<!--   NEXT BUTTON  -->
+					<div class="audioNextButton">
+						<a style="cursor:pointer"> <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" > </a>
+					</div>
+				</div>
+			</section>
+			
+			
+			
+               
+           
+			
+            
+            
+            
+            <!-- ------------------------------------------------------------------------------------------------ -->
+            <!--                                HTML CODE FOR MOBILE DEVICE                                       -->
+            <!-- ------------------------------------------------------------------------------------------------ -->
+            
+			
+			<!---------- TESTIMONIAL SECTION  ---------->
+			<section id="TestimonialSection_Desktop">
+				<div class="testimonial">
+					<img src="images/Testimonial.png" width="100%;" style="margin:auto">
+					<div id="thriivequotes"></div>
+				</div>
+				<script>
+				 	display_testimonial('home');
+				</script>
+            </section>
+            
+        </section>
+        
+        <!--FOOTER SECTION-->
+        <script style="margin-top:20%">
+           	display_footer();
+			footerItemSize();
+        </script>
+        
+        <script src="js/calendarScripts.js"> </script>
+        
+    </body>
+</html>

@@ -1,0 +1,376 @@
+    .therapyTitleDiv {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .therapy_Icon {
+        text-align: center;
+        width: 60%;
+        margin: auto;
+    }
+    /* --------------  REIKI HEALING HEADING     --------------------*/
+
+    .therapy_heading {
+        font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+        color: #ffb814;
+        font-weight: bold;
+        font-size: 4vw;
+        margin: 0;
+    }
+
+
+    .therapy_info_div {
+        display: table;
+        width: 95%;
+        margin-left: 5%
+    }
+
+    .left_Side_div {
+        width: 60%;
+        display: inline-table;
+        margin-right: 5%;
+    }
+
+    .right_Side_DIv {
+        width: 30%;
+        display: inline-table;
+        margin-left: 5%;
+    }
+    /*    DESCRIPTION HEADING    */
+
+    .description_heading {
+        font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+        font-weight: bold;
+        font-size: 2.5vw;
+        color: #4e0475;
+    }
+
+    .about_therapy {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.5vw;
+        color: #414042;
+    }
+    /*    DURATION HEADING     */
+
+    .duration {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.3vw;
+        color: #4e0475;
+    }
+    /*    WEEKS        */
+
+    .weeks {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.3vw;
+        color: #414042;
+    }
+
+    .fees {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.5vw;
+        color: #4e0475;
+        font-weight: bold;
+    }
+    /*   LEVELS         */
+
+    .levels {
+        display: block;
+        font-family: 'Lato', sans-serif;
+        color: #414042;
+        font-size: 1.2vw;
+        font-weight: bold;
+        margin-top: -5%;
+    }
+    /*  REQUIREMENTS          */
+
+    .requirements {
+        font-family: 'Lato', sans-serif;
+        color: #414042;
+        font-size: 1.2vw;
+        font-weight: bold;
+        margin-top: -3%;
+    }
+
+    .enroll {
+        margin-top: 30%;
+        width: 50%;
+    }
+    /*  SOCIAL ICON  IMAGES        */
+    .therapy_Social_Media {
+        width: 5%;
+        float: right;
+        display: inline-table;
+        padding: .5%;
+        margin: 0% 1% 0% 0%;
+        cursor: pointer;
+    }
+
+.social_icons {
+     width: 20%;
+ }
+ 
+ .socialicons_div {
+     width: 50%;
+     display: inline-table;
+     float: right;
+ }
+ 
+ .TS_socialMediaDiv {
+     width: 8%;
+     margin-right: 2%;
+     float: right
+ }
+    /*   PREVIOUS THERAPY         */
+
+    .Other_therapy {
+        font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+        font-weight: bold;
+        font-size: 2vw;
+        color: #4e0475;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0% 0% 1% 0%;
+    }
+
+    .Other_therapy_buttons {
+        width: 3.5%;
+        transform: translateY(15%);
+        cursor: pointer;
+    }
+    /*  PRACTITIONER HEADING          */
+
+    .practitioner_heading {
+        font-family: 'Amatic SC', cursive;
+        font-weight: bold;
+        font-size: 2.5vw;
+        color: #4e0475;
+        margin-left: 0%;
+        float: left;
+        margin-right: 42%;
+        margin-left: 11.8%;
+    }
+    /******** THERAPIST INFORMATION ********/
+    /*NEXT AND PREVIOUS BUTTONS*/
+
+    .therapist_PreviousButton,
+    .therapist_NextButton {
+        width: 4%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    /*THERAPIST BLOG-1*/
+
+    .therapist_Blog_1,
+    .therapist_Blog_2,
+    .therapist_Blog_3 {
+        width: 28%;
+        display: inline-table;
+        vertical-align: middle;
+        padding: 1%;
+        margin: auto;
+        border: .15em solid black;
+        text-align: center;
+    }
+    /*THERAPIST BLOG-2*/
+
+    .therapist_Blog_1 {
+        margin-left: 1%;
+    }
+
+    .therapist_Blog_2 {
+        margin: 0% 3% 0% 3%
+    }
+    /*THERAPIST BLOG-3*/
+
+    .therapist_Blog_3 {
+        /*            visibility: hidden*/
+    }
+
+    .therapist_Name {
+        margin-left: 0%;
+        font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+        font-weight: bold;
+        color: #8eb170;
+        font-size: 2vw;
+        font-weight: bold;
+    }
+    /*  GEETA TEXT          */
+
+    .about_therapist {
+        font-family: 'Lato', sans-serif;
+        color: #414042;
+        font-size: 0.9vw;
+        font-weight: bold;
+        padding: 0;
+        margin-top: -10%;
+        font-style: italic;
+    }
+    /******** THERAPY GALLER  DESKTOP ********/
+    /*NEXT AND PREVIOUS BUTTONS*/
+
+    .gallery_PreviousButton,
+    .gallery_NextButton {
+        width: 4%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    /*AUDIO BLOG-1*/
+
+    .gallery_Blog_1,
+    .gallery_Blog_2,
+    .gallery_Blog_3 {
+        width: 28%;
+        display: inline-table;
+        vertical-align: middle;
+        background: url(../images/baground_2.png) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding: 1%;
+        margin: auto;
+        margin-left: 1%;
+    }
+    /*AUDIO BLOG-2*/
+
+    .gallery_Blog_2 {
+        margin: 0% 3% 0% 3%
+    }
+    /*--------     STYLES FOR MOBILE VERSION     -----------*/
+
+    @media (max-width: 736px) {
+        .therapy_Icon {
+            width: 80%;
+        }
+        .therapy_heading {
+            font-size: 6vw;
+            font-weight: bold;
+        }
+        .description_heading {
+            font-size: 5vw;
+        }
+        .about_therapy {
+            font-size: 2.8vw;
+        }
+        /*    DURATION HEADING     */
+        .duration {
+            font-size: 3vw;
+        }
+        .weeks {
+            font-size: 3vw;
+        }
+        .fees {
+            font-size: 3vw;
+        }
+        /*   LEVELS         */
+        .levels {
+            font-size: 2.5vw;
+            margin-top: -2%;
+        }
+        /*  REQUIREMENTS          */
+        .requirements {
+            font-size: 2.5vw;
+            margin-top: -3%;
+        }
+        .enroll {
+            margin-top: 5%;
+            width: 50%;
+        }
+      
+      
+      .TS_socialMediaDiv {
+          width: 12%;
+          margin-right: 4%;
+      }
+        .Other_therapy {
+            font-size: 4.5vw;
+            vertical-align: middle;
+        }
+        .Other_therapy_buttons {
+            width: 8.5%;
+            transform: translateY(25%);
+            cursor: pointer;
+        }
+        .therapist_PreviousButton,
+        .therapist_NextButton {
+            width: 8%;
+        }
+        /*THERAPIST BLOG-1*/
+        .therapist_Blog_1,
+        .therapist_Blog_2,
+        .therapist_Blog_3 {
+            width: 40%;
+            border: .15em solid black;
+            margin-left: 4%;
+            padding-bottom: 3%
+        }
+        /*THERAPIST BLOG-2*/
+        .therapist_Blog_2 {
+            margin-left: 6%;
+        }
+        /*THERAPIST BLOG-3*/
+        .therapist_Blog_3 {
+            display: none;
+        }
+        .therapist_Name {
+            font-size: 4vw;
+            margin: 0;
+        }
+        /*  GEETA TEXT          */
+        .about_therapist {
+            font-size: 1.5vw;
+            margin: 0
+        }
+        /******** THERAPY GALLER  DESKTOP ********/
+        /*NEXT AND PREVIOUS BUTTONS*/
+        .gallery_PreviousButton,
+        .gallery_NextButton {
+            width: 8%;
+        }
+        /*AUDIO BLOG-1*/
+        .gallery_Blog_1,
+        .gallery_Blog_2,
+        .gallery_Blog_3 {
+            width: 40%;
+            padding: 2;
+            margin-left: 4%;
+        }
+        /*AUDIO BLOG-2*/
+        .gallery_Blog_2 {
+            margin-left: 6%;
+        }
+        .gallery_Blog_2 {
+            display: none
+        }
+        }
+
+/***** FOR HEAZE BROUSERS *****/
+@supports (-ms-ime-align:auto) {
+    .therapist_Blog_1 img,
+    .therapist_Blog_2 img,
+    .therapist_Blog_3 img{
+        width: 100%;
+    }
+    
+    .footerDiv{
+        margin-top: 5%;
+    }
+}
+
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+        
+    .therapist_Blog_1 img,
+    .therapist_Blog_2 img,
+    .therapist_Blog_3 img{
+        width: 100%;
+    }
+        
+    }}

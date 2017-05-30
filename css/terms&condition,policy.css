@@ -1,0 +1,232 @@
+   .body_Bg {
+       margin: 3% 5% 3% 5%;
+       font-family: 'Lato', sans-serif;
+       padding: 3%;
+   }
+   
+   .logo_Div {
+       width: 8vw;
+       margin: auto;
+       cursor: pointer;
+   }
+   
+   .text {
+       font-size: 1.3vw;
+       color: #323232;
+       line-height: 170%;
+       margin-top: -3%;
+       text-align: justify;
+   }
+   
+   .linkText {
+       font-family: 'Lato', sans-serif;
+       font-size: 1.1vw;
+       color: #000;
+       font-weight: bold;
+   }   
+   .linkText:hover {
+       font-size: 1.1vw;
+       color: #4e0475;
+   }
+   
+   .Heading {
+       font-family: 'Amatic SC', cursive;
+       color: #4e0475;
+       font-size: 3vw;
+       font-weight: 900;
+       text-transform: lowercase;
+   }
+
+.higletText{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1vw;
+    color: #4e0475;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 170%
+    
+}
+.mainsection{
+    position:fixed;
+    margin: 0% 10% 0% 10%; 
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#terms_link{
+    
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+.termsmenu{
+    margin:4% 0% 4% 0%;
+    font-size:2.5vw; 
+    font-family: 'Amatic SC', cursive;
+    font-weight:bold; 
+    color: #4E0475;
+    font-size: 2vw;
+    text-align:left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.termsmenu:hover {
+    background-color: #4E0475;
+    color: #fff;
+}
+.terms_menu{
+    
+    background-color: #4E0475;
+    color: #fff;
+    display: block;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    list-style: none;
+    font-size: 2.1vw;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    line-height: 100%;
+    vertical-align: middle;
+    width: 80%;
+    font-weight:bold; 
+    }
+
+.termsclose{
+    color: #aaaaaa;
+    float: right;
+    font-size: 3vw;
+    font-weight: bold;
+    z-index:100;
+    margin-right: 5%;
+    margin-top: 4%;
+}
+.termsclose:hover{
+    color: black;
+    cursor: pointer;
+}
+.menu_terms{
+    position:fixed;
+    width:20%; 
+    padding-top:9%; 
+    height:100vh;
+    background-color:#fff;
+    border-right: 0.1px solid grey;
+    
+}
+
+
+/* -------------------------  BODY  ------------------------- */
+
+    /*BAKGOUND FOR HOME PAGE DESKTOP DEVISES*/
+      .homePageBackground {
+        padding: 0px;
+        margin: 0px;
+        background-image: url(../images/Backgorund_Home.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+ 
+    /*BAKGOUND FOR OTHER PAGES DESKTOP DEVISES*/
+    @media only screen and (max-width: 4560px) { 
+    .other_Pagess_body_Backgruond {
+        padding: 0px;
+        background-image: url(../images/EmailURLS/Backgorund_Other_Pages.jpg) !important;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        }  
+    }
+
+
+    /*  MARGIN FOR BODY */
+.totalBodySection{
+    width: 69%;
+    float: right;
+    margin: 0%;
+    overflow-y: scroll;
+    height: 100vh;
+    background-color: #fff;
+    padding-left: 3%;
+    padding-right: 3%;
+
+    text-align: justify;
+    
+    
+}
+
+    /*STYLE FOR MENU BAR*/
+    .menuSection{
+        margin: 0% 5% 0% 5%
+    }
+
+    /*  MAIN HEADINGS FOR ALL SECTIONS */
+    .MainHeading {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 3vw;
+		font-weight: 900;
+        text-transform: lowercase;
+}
+    
+    /*  REMOVE UNDERLINE FOR HYPERLINKED TEXT  */
+    a {
+       text-decoration: none;
+        font-style: normal;
+        color: #000;
+    }
+    
+    
+
+
+/*/==================== FOR MOBILE DEVICES ====================/*/
+
+    @media only screen and (max-width: 736px) {
+        
+    .menuSection{
+        margin: 0% 10% 0% 10%
+    }
+    
+    
+    /*  MAIN HEADINGS FOR ALL SECTIONS */
+    .MainHeading {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 6vw;
+        }
+        .text{
+            font-size: 3vw;
+        }
+        .termsmenu{
+            font-size: 3.5vw;
+        }
+        .terms_menu{
+            font-size: 3.5vw;
+        }
+        .linkText{
+            font-size: 3vw;
+        }
+        .linkText:hover{
+            color: #4e0475;
+            font-size: 3vw;
+        }
+        .Heading{
+            font-size: 4vw;
+        }
+        .higletText{
+            font-size: 2.5vw;
+        }
+}
+
+
+
+
+

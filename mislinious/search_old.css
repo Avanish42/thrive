@@ -1,0 +1,83 @@
+.rightDiv {
+    visibility: hidden;
+}
+
+.searchBarDiv {
+    width: 100%;
+    display: inline-table;
+    vertical-align: middle;
+}
+
+.searchIcon {
+    width: 4%;
+    display: inline-table;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: -4%;
+    vertical-align: middle;
+    padding-top: .3%;
+}
+
+.serchbar {
+    width: 98%;
+    height: 3.3vw;
+    padding-left: 3%;
+    font-size: 1.8vw;
+    color: gray;
+    border: 0;
+    border-radius: 2em;
+}
+
+.categoryMainDiv,
+#subMenu{
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 8%;
+    display: table;
+    text-align: center;
+}
+
+.categoryDiv {
+    width: 15%;
+    margin: auto;
+    margin-top: 2%;
+    display: inline-table;
+    text-align: center;
+    margin: 0% .8% 0% .8% ;
+}
+
+
+.categoryIcon{
+    width: 90%;
+}
+
+#subMenu{
+    display: none;
+}
+
+li{
+    display: inline;
+    margin: 3%;
+    text-align: center;
+     font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2vw;
+    color: #4e0475;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+li:hover{
+    text-decoration: underline;
+}
+
+.categoryName {
+    color: #4e0475;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 1.6vw;
+    font-weight: 900;
+    word-break: break-all;
+    margin: 0;
+}

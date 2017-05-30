@@ -1,0 +1,237 @@
+
+     /***ERO SECTION DESKTOP***/ 
+/*/-------------------------------/*/
+
+.mainVideoDivBg {
+    background: url(../images/audioDivBg_2.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 2.6% 1.5% 2.6% 1.5%;
+    height: 29vw;
+    width: 82.5%;
+    margin-left: 7.4%;
+}
+
+.subHeading {
+    color: #4e0475;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: -1;
+    ;
+}
+
+.audioDetails {
+    margin-left: 8.5%;
+    width: 83%;
+    font-family: 'Lato', sans-serif;
+    color: #5C5D5F;
+    font-size: 1.2vw;
+}
+
+.socialMediaDiv_GM {
+    width: 25%;
+    right: 0;
+    display: inline-table;
+    margin-left: 8.5%;
+}
+
+
+/******* HERO SECTION MOBILE *******/
+@media (max-width: 736px) {
+    .mainVideoDivBg {
+        width: 70vw;
+        height: 32vw;
+    }
+    .subHeading {
+        font-size: 3vw;
+    }
+    .audioDetails {
+        font-size: 2.5vw;
+        font-weight: normal;
+    }
+    .socialMediaDiv_GM {
+        width: 50%
+    }
+}
+
+    /*******VIDEO SECTION*******/
+/*/-------------------------------/*/
+
+
+.TW_PreviousButton,
+.TW_NextButton {
+    width: 4%;
+    display: table-cell;
+    transform: translateY(-21.5%);
+}
+
+.ThriiveWorldDiv_1 {
+    width: 24%;
+    display: inline-table;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #4e0475;
+     margin-left: 3.63%
+}
+
+.ThriiveWorldDiv_2 {
+    width: 24%;
+    display: inline-table;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #4e0475;
+    margin-left: 2%
+}
+
+.ThriiveWorldDiv_3 {
+    width: 24%;
+    display: inline-table;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #4e0475;
+    margin-left: 2%
+}
+
+.TW_Eye{
+    width: 89%;
+    margin-top: -61%;
+    position: relative;
+}
+
+
+/*VIDEO BLOG-1*/
+
+.videoBlog_1,
+.videoBlog_2,
+.videoBlog_3 {
+    width: 21vw;
+    background: url(../images/GM_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+}
+
+
+.videoBlog_1 iframe {
+    -webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+    position: relative;
+    width: 19.2vw;
+    height: 12.2vw;
+    padding: 2.2% 0.5% 1.5% 1.3%;
+    border-color: transparent;
+}
+
+.videoBlog_2 iframe {
+    -webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+    position: relative;
+    width: 19.2vw;
+    height: 12.2vw;
+    padding: 2.2% 0.5% 1.5% 1.3%;
+    border-color: transparent;
+}
+
+.videoBlog_3 iframe {
+    -webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+    position: relative;
+     width: 19.2vw;
+    height: 12.2vw;
+    padding: 2.2% 0.5% 1.5% 1.3%;
+    border-color: transparent;
+}
+
+.Download_Cloud {
+    width: 14%;
+    margin: 0% -75% 0% 0%;
+    cursor: pointer;
+}
+
+.ThriiveWorldDiv_1:hover .popupMsg{
+    visibility: visible;
+}
+
+.popupMsg{
+    font-size: 1vw;
+    margin: 0;
+    margin-top: -10%;
+    visibility: hidden;
+}
+
+
+.TW_Caption {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #4e0475;
+    font-size: 2.5vw;
+    font-weight: 900;
+    margin-top: 0
+}
+
+.TW_SubCaption {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    color: #000;
+    margin-top: -11%;
+    font-weight: 400;
+}
+
+
+    /*--------------------------------------------*/
+    /* -----VIDEO SECTION FOR MOBILE-----*/
+    /*--------------------------------------------*/
+@media (max-width: 736px) {
+    .TW_Caption {
+        font-size: 5.5vw;
+        margin-top: 2%;
+        font-weight: bold;
+    }
+    .TW_SubCaption {
+        font-size: 3vw;
+        color: #000;
+    }
+    /*VIDEO SECTION NEXT AND PREVIOUS BUTTONS*/
+    .TW_PreviousButton,
+    .TW_NextButton {
+        width: 8%;
+        transform: translateY(-25%);
+    }
+    .ThriiveWorldDiv_1,
+    .ThriiveWorldDiv_2,
+    .ThriiveWorldDiv_3 {
+        width: 55vw;
+        margin-left: 11%
+    }
+    /*VIDEO BLOG-1*/
+    .videoBlog_1,
+    .videoBlog_2,
+    .videoBlog_3 {
+        width: 52vw;
+        padding: 2% 1.5% 2% 1%;
+    }
+    .videoBlog_1 iframe,
+    .videoBlog_2 iframe,
+    .videoBlog_3 iframe {
+        width: 90%;
+        height: 30.5vw;
+        padding: 1% 1.5% 1% 1.5%;
+    }
+}
+
+
+/***** FOR MOZILLA BROUSERS *****/
+@-moz-document url-prefix() {
+    /*THRIIVE WISDOM VIDEOS / AUDIOS*/
+    .ThriiveWorldDiv_1 {
+        margin-left: 4.3%
+    }
+    .Download_Cloud {
+        margin: 0% 0% 0% 80%;
+    }
+}
+

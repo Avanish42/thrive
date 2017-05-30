@@ -1,0 +1,181 @@
+  .row {
+      width: 100%;
+      display: table;
+  }
+  
+  .heading {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 2vw;
+      color: #4e0475;
+      float: left;
+  }
+  
+  .heading-2 {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 1.8vw;
+      color: #4e0475;
+      float: right;
+  }
+  
+  #SignupHeading {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.5vw;
+      clear: both;
+      color: gray;
+  }
+  
+  .sm6_l {
+      width: 45%;
+      display: inline-table;
+      margin: 0% 0% 2% 0%
+  }
+  
+  .sm6_r {
+      width: 45%;
+      display: inline-table;
+      margin: 0% 0% 2% 5%
+  }
+  
+  .details {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 2vw;
+      color: #4e0475;
+      font-weight: bold;
+  }
+  /* SIGNUP FORM INPUT DETAILS */
+  
+  .SignupInput {
+      font-family: 'Lato', sans-serif;
+      color: grey;
+      font-size: 1.5vw;
+      padding-left: 3%;
+      padding: 2%;
+      width: 100%;
+      border: 0px;
+      margin-top: 1%;
+  }
+  
+  .error {
+      font-family: 'Areal';
+      color: RED;
+      text-align: right;
+      font-size: 1vw;
+      padding: 3px !important;
+      line-height: 100%;
+      margin: 0px;
+  }
+  
+  .accountCreationError {
+      font-family: 'Areal';
+      color: RED;
+      text-align: center;
+      font-size: 1vw;
+      padding: 3px !important;
+      line-height: 100%;
+      margin: 0px;
+      margin-bottom: 2%;
+  }
+  
+  .success {
+      font-family: 'Areal';
+      color: GREEN;
+      text-align: center;
+      font-size: 1vw;
+      padding: 3px !important;
+      line-height: 100%;
+      margin: 0px;
+      margin-bottom: 2%;
+  }
+  /* RADIO BUTTONS */
+  
+  .spRadioButton {
+      display: none !important;
+  }
+  
+  .spRadioButton:checked + label {
+      opacity: 1;
+  }
+  
+  .label_item {
+      opacity: 0.3;
+      cursor: pointer;
+      vertical-align: middle;
+      display: inline-table;
+  }
+  
+  .gender {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 1.5vw;
+      color: #4e0475;
+      font-weight: bold;
+      transform: translateY(20%);
+      display: inline-table
+  }
+  
+  .submitButton {
+      width: 12%;
+      cursor: pointer;
+      margin-bottom: 3%
+  }
+
+#iHaveAccount{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    color: #aaa;
+    margin-top: -5%;
+    cursor: pointer;
+    display: inline-table;
+    margin-left: 5%;
+    vertical-align: middle
+}
+
+#iHaveAccount:hover{
+    color:#000
+}
+  
+  
+  @media (max-width: 736px) {
+      .heading {
+          font-size: 5vw
+      }
+      .heading-2 {
+          font-size: 4.5vw;
+      }
+      .sm6_l {
+          width: 100%
+      }
+      .sm6_r {
+          width: 100%;
+          margin-left: 0;
+      }
+      #SignupHeading {
+          font-size: 3vw;
+      }
+      .details {
+          font-size: 4vw
+      }
+      .SignupInput {
+          font-size: 3vw;
+      }
+      .error,
+      .accountCreationError,
+      .success {
+          font-size: 1.2vw;
+      }
+      .gender {
+          font-size: 4vw;
+      }
+      .submitButton {
+          width: 25%
+      }
+      
+      #iHaveAccount{
+          font-size: 2vw;
+          margin-top: -9%;
+          color: #a9a9a9
+      }
+  }

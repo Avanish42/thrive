@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <!--        ADDING FAVICON-->
+    <link rel="icon" href="favicon.ico" sizes="16x16">    <!--    INCLUDING FIREBASE FILES -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>    
+    
+    <script type="application/javascript" src="js/app.js"></script>    <!--    INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/styles_global.css">    <!--Global Defined Styles-->
+    <link rel="stylesheet" href="css/style_for_footer_headder_tm.css">    <!--Styles for Footer, Headder and Testmoniels-->
+    <link rel="stylesheet" href="css/payubiz.css">    <!--styles for Connect Page-->
+    <link rel="stylesheet" href="css/style_menu.css">    <!-- MENU CSS  -->
+        <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+    
+    <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+    
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <!--    HOME PAGE TITLE  -->
+    <title>THRIIVE | PAYMENT GATEWAY</title>
+    <!--    INCLUDING JAVASCRIPT-->
+    <script src="js/JavaScriptFor_Desktop.js"></script>
+    <script src="js/global_modules.js"></script>    <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+    <script src="js/script_menu.js"></script>    <!-- MENU JAVA SCRIPT  -->
+    <!--  EMAIL SCRIPT  -->
+    <script type="text/javascript" src="js/payubiz.js"></script>
+</head>
+
+<body class="other_Pagess_body_Backgruond">
+    <!--MAIN SLIDE MENU-->
+    <script>
+        display_menu();
+        Set_Menu_HeightAndWidth();
+    </script>
+    
+       <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+    
+    
+    <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+    <section class="totalBodySection">
+        <!--    MAIN BODY SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="MainBodySection">
+            <!---------- SECTION FOR FORM  ---------->
+            <section class="ConnectForm">
+               <div>
+                <div class="payubizDiv" style="float:left;margin-right:60%"> <img src="images/payubiz.jpg" style="width:100%; border-radius:5px"> </div>
+                <div class="payubizDiv" style="float:left;"> Seats left:<span id="seatsleft"></span> </div>
+                </div>   
+                <div class="paymentDetails">
+                    <h4><b>Payment Details</b></h4>
+                    <h5 style="font-size:1.5vw">You are paying for <span id="title"></span></h5>
+                </div>
+                <script>
+                    fetchdata('seatsleft');
+                    fetchdata('title');
+                    fetchdata('amount');
+                </script>
+                <!---------- FORM LEFTSIDE SECTION  ---------->
+                <h4><b>Customer Details </b></h4>
+                <form action="http://payments.thriive.in/events/index.php" method="POST">
+                    <div class="inputDiv">
+                            <div class="details_div">
+                                <label>*Amount (INR) :</label>
+                            </div>
+                            <div class="input_div">
+                                <input class="payu_input" type="text" name="amount" id="amount" value="18000">
+                                <p id="amount_error" class="error"></p>
+                                <input type="hidden" id="paidfor" name="paidfor">
+                            </div>
+                        </div>
+                    <div class="inputDiv">
+                        <div class="details_div">
+                            <label>*Name :</label>
+                        </div>
+                        <div class="input_div">
+                            <input class="payu_input" type="text" name="name" id="Firstname">
+                            <p id="Firstname_error" class="error"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="inputDiv">
+                        <div class="details_div">
+                            <label class="details">*Mobile :</label>
+                        </div>
+                        <div class="input_div">
+                            <input class="payu_input" type="text" name="phone" id="Phoneno">
+                            <p id="Phoneno_error" class="error"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="inputDiv">
+                        <div class="details_div">
+                            <label class="details">*E-Mail :</label>
+                        </div>
+                        <div class="input_div">
+                            <input class="payu_input" type="email" name="email" id="Email">
+                            <p id="Email_error" class="error"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="inputDiv">
+                        <div class="details_div">
+                            <label class="details">*Address :</label>
+                        </div>
+                        <div class="input_div">
+                            <input class="payu_input" type="text" name="address" id="address">
+                            <p id="address_error" class="error"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="inputDiv">
+                        <div class="details_div">
+                            <label class="details">*City :</label>
+                        </div>
+                        <div class="input_div">
+                            <input class="payu_input" type="text" name="city" id="city">
+                            <p id="city_error" class="error"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="paymentDiv">
+                        <button type="submit" style="width:9vw;height:3vw; background-color:transparent; border:none;"><div class="submitButton" onclick="makePayment()"> <img src="images/makePayment.png" style="width:100%; border-radius:5px"> </div></button>
+                        <p class="terms">On clicking Make Payment button,
+                            <br>you agree for <a onclick="showTermsAndConditions();" style="color:#4e0475;font-weight:bold; cursor: pointer;">Terms &amp; Conditions</a> and will accept that payment will be sent to Thriive Art &amp; Soul LLP.
+                        </p>
+                    </div>
+                </form>
+                
+                <section class="TermsDiv" id="terms">
+                <section class="termsContent">
+                    <div id="closebutton" onclick="closeTermsAndConditions();"> <img src="images/close-button.png" width="100%"> </div>
+                    <h2 class="MainHeading" style="text-align:left; font-size:2.5vw">Terms of Use</h2>
+                    <p style="font-size:1.1vw;color:#323232;line-height:170%; margin-top:-3%">
+
+                        <a href="www.thriive.in" target="_blank">www.thriive.in </a> is owned and operated by Thriive Art & Soul LLP, a company incorporated under the laws of India. Your use of the Website and services and tools are governed by the following terms and conditions <b>("Terms of Use") </b> as applicable to the Website including the applicable policies which are incorporated herein by way of reference. If you transact on the Website, You shall be subject to the policies that are applicable to the Website for such transaction. By mere use of the Website, You shall be contracting with Thriive Art & Soul LLP and these terms and conditions including the policies constitute your binding obligations, with Thriive Art & Soul LLP. For the purpose of these Terms of Use, wherever the context so requires <b>"You" </b> or<b> "User" </b> shall mean any natural or legal person who has agreed to become a buyer on the Website by providing Registration Data while registering on the Website as Registered User using the computer systems.    <a href="www.thriive.in" target="_blank">www.thriive.in </a> allows the User to surf the Website or making purchases without registering on the Website. The term <b>"We"</b>, <b>"Us"</b>, <b>"Our"</b> shall mean Thriive Art & Soul LLP When You use any of the services provided by Us through the Website, including but not limited to, (e.g. Product Reviews, Seller Reviews), You will be subject to the rules, guidelines, policies, terms, and conditions applicable to such service, and they shall be deemed to be incorporated into this Terms of Use and shall be considered as part and parcel of this Terms of Use. We reserve the right, at our sole discretion, to change, modify, add or remove portions of these Terms of Use, at any time without any prior written notice to you. It is your responsibility to review these Terms of Use periodically for updates / changes. Your continued use of the Website following the posting of changes will mean that you accept and agree to the revisions. As long as you comply with these Terms of Use, We grant you a personal, non-exclusive, non-transferable, limited privilege to enter and use the Website. <br> <br>
+
+                        When You use any of the services provided by Us through the Website, including but not limited to, (e.g. Product Reviews, Seller Reviews), You will be subject to the rules, guidelines, policies, terms, and conditions applicable to such service, and they shall be deemed to be incorporated into this Terms of Use and shall be considered as part and parcel of this Terms of Use. We reserve the right, at our sole discretion, to change, modify, add or remove portions of these Terms of Use, at any time without any prior written notice to you. It is your responsibility to review these Terms of Use periodically for updates / changes. Your continued use of the Website following the posting of changes will mean that you accept and agree to the revisions. As long as you comply with these Terms of Use, We grant you a personal, non-exclusive, non-transferable, limited privilege to enter and use the Website.<br><br>
+
+                        ACCESSING, BROWSING OR OTHERWISE USING THE SITE INDICATES YOUR AGREEMENT TO ALL THE TERMS AND CONDITIONS UNDER THESE TERMS OF USE, SO PLEASE READ THE TERMS OF USE CAREFULLY BEFORE PROCEEDING.
+                    </p>
+
+                    <h2 class="MainHeading" style="text-align:left; font-size:2.5vw">Privacy Policy</h2>
+
+                   <p style="font-size:1.1vw;color:#323232;line-height:170%; margin-top:-3%">
+                    For us privacy for our valued customer is very important. We strongly believe that the personal information of our customers should not be shared with the third party without the prior consent or request from the customer. Privacy is the right of an individual and at Thriive Art & Soul LLP the information of the customer such as contact no., email, addresses etc is used only for the internal purpose and not for sale. Your contact information is stored in our database and is only used to contact you during the course of your stay with us for sharing the status of your room bookings with us and then after for announcement of our latest deals and news etc. We at Thriive Art & Soul LLP condemn the unauthorised reach and misuse and/or discloser of the personal information of the customer and we have strict guidelines and high security features to prevent the same. Any changes in our ‘Privacy Policy’ will be posted here on the website. <b>SECURE ONLINE PAYMENTS</b><br>The visitor on our website please take a note that your name, email address and other personal information submitted on our website may be stored with us and may also appear on the website. Like other platforms our server log files also receives general information such as IP address of the visitor, cookie etc. For the financial transactions by credit card Thriive Art & Soul LLP uses a 3rd party secure payment gateway provided by “PayU” and the credit card details are ‘not stored’ with Thriive Art & Soul LLP, instead the information is securely stored and encrypted with Visa/MasterCard. <b>Smart Cookies</b><br><br>
+
+                    We use 'Cookies' to keep track of your current shopping session to personalize your experience and so that you may retrieve your shopping cart at any time. 'Cookies' are tiny text files which our Website places on your computer's hard drive to store information about your shopping session and to identify your computer.
+                    </p>
+                   <h2 class="MainHeading" style="text-align:left; font-size:2.5vw">Return, Refund and Cancellation Policy</h2>
+                    <p style="font-size:1.1vw;color:#323232;line-height:170%; margin-top:-3%">
+                        We do not entertain Return, Refund and Cancellation in any Circumstances.
+                    <span id="closebutton2" onclick="closeTermsAndConditions();"> Close </span>
+                    </p>
+            </section>
+                
+            </section>
+            </section>
+        </section>
+    </section>
+    <!--FOOTER SECTION-->
+    <script>
+        display_footer();
+    </script>
+</body>
+
+</html>

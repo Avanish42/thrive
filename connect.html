@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css"> <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/connect.css"> <!--styles for Connect Page-->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | CONNECT</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        
+        <!--  EMAIL SCRIPT  -->
+        <script type="text/javascript" src="js/connect.js"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+           (function(){
+              emailjs.init("user_SFNy7URi1ghfvN7FeiR0P"); //FREE
+//              emailjs.init("user_QNqqA1kV3TPZZRVdm21yD"); //Thriive
+           })();
+        </script>
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu();
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+           <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+            
+            <!--    MAIN BODY SECTION TO SET THE BODY MARGIN TO 7%  -->
+            <section class="MainBodySection">
+                
+                <div style="text-align:center;" id="SuccessMessageDiv">
+                    <img src="images/thank_you.png" width="100%"><br>
+                    <p id="SuccessMessage">you have successfully submitted your query.<br>our representative will contact you shortly</p>
+                </div>
+                
+                <!---------- SECTION FOR GOOGLE MAP  ---------->
+                <div id="google_map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.510553843493!2d72.83697001490691!3d18.9972112871331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cef71c9789b3%3A0xc7999ce65f05da75!2sAshok+Towers+Home!5e0!3m2!1sen!2sin!4v1479218877564" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+                <!---------- SECTION FOR FORM  ---------->
+                     <h3 class=mandatory>*mandatory</h3>
+                <section class="ConnectForm">
+                     <div id=Connect_Form>
+                           <!---------- FORM LEFTSIDE SECTION  ---------->
+                         <form>
+                            <div id="FormLeftSide">
+                                <div>
+                                    <label>FIRST NAME*</label><br>
+                                    <input class="connect_input" type="text" name="firstname" id="Firstname">
+                                    <p id="Firstname_error" class="error"></p>
+                                </div>
+                                <div>
+                                    <label>LAST NAME</label><br>
+                                    <input class="connect_input" type="text" name="lastname" id="Lastname">
+                                    <p id="Lastname_error" class="error"></p>
+                                </div>
+                                <div>
+                                    <label>E-MAIL*</label><br>
+                                    <input class="connect_input" type="email" name="email" id="Email">
+                                    <p id="Email_error" class="error"></p>
+                                </div> 
+                                <div>
+                                    <label>PHONE NUMBER</label><br>
+                                    <input class="connect_input" type="text" name="phoneNumber" id="Phoneno">
+                                    <p id="Phoneno_error" class="error"></p>
+                                </div> 
+                            </div>
+
+                            <!---------- FORM RIGHTSIDE SECTION  ---------->
+                            <div id="FormRightSide">
+                                <div>
+                                    <label>MESSAGE*</label><br>
+                                    <textarea class="message-textarea" rows="7" cols="70" name="comment" id="textarea"></textarea>
+                                     <p id="textarea_error" class="error"></p>
+                                </div>
+                                <!--  SUBMIT BUTTON  -->
+                               <div id="ConnectSubmitButtonDiv">
+                                   <img id="ConnectSubmitButton" src="images/submit-button.png" width="100%" onclick="connectvalidate()" >
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </section>
+            </section>
+        </section>
+        
+        <!--FOOTER SECTION-->
+        <script>
+           display_footer();
+        </script>
+    </body>
+</html>

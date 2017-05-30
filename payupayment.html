@@ -1,0 +1,231 @@
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">    
+
+        <link rel="stylesheet" href="css/paymentConf.css">    
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | PAYMENT GATEWAY</title>
+        <script type="text/javascript" src="js/payupayment.js"></script>
+        <script>
+            var hash = '';
+
+            function submitPayuForm() {
+                if (hash == '') {
+                    return;
+                }
+                var payuForm = document.forms.payuForm;
+                payuForm.submit();
+            }
+        </script>
+    </head>
+
+    <body onload="submitPayuForm()" class="other_Pagess_body_Backgruond">
+     
+        <section class="totalBodySection">
+            <div style="width:10vw; margin:auto">
+                <img src="images/Logo_2.png" width="100%">
+            </div>
+            <!--    MAIN BODY SECTION TO SET THE BODY MARGIN TO 7%  -->
+            <section class="MainBodySection">
+                <!---------- SECTION FOR FORM  ---------->
+                <section class="ConnectForm">
+                    <div>
+                        <div class="payubizDiv" style="float:left;margin-right:60%">
+                            <img src="images/payubiz.jpg" style="width:100%; border-radius:5px"> 
+                        </div>
+                    </div>
+                    <form action="" method="post" name="payuForm">
+                        <input type="hidden" name="key" value="" readonly />
+                        <input type="hidden" name="hash" value="" readonly />
+                        <input type="hidden" name="txnid" value="" readonly />
+                        <input type="hidden" name="surl" value="http://payments.thriive.in/wspregistrations/Earth/response.php" readonly />
+                        <!--Please change this parameter value with your success page absolute url like http://mywebsite.com/response.php. -->
+                        <input type="hidden" name="furl" value="payments.thriive.in/wspregistrations/Earth/response.php" readonly />
+                        <!--Please change this parameter value with your failure page absolute url like http://mywebsite.com/response.php. -->
+                        
+                        <div class="paymentDetails">
+                            <h4><b>Confirm Your Payment Details</b></h4>
+                            <h5 style="font-size:1.5vw">You have choosen <span style="color:#3391CE;" id="packageSelected"></span> Plan</h5>
+                            <textarea name="productinfo" hidden="hidden" readonly></textarea>
+                            
+                            <div class="inputDiv">
+                                <div class="details_div">
+                                    <label>*Amount (INR) :</label>
+                                </div>
+                                <div class="input_div">
+                                    <input class="payu_input" name="amount" id="amount" value="" readonly />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!---------- FORM LEFTSIDE SECTION  ---------->
+                        <h4><b>Customer Details </b></h4>
+                        <div class="inputDiv">
+                            <div class="details_div">
+                                <label>*Name :</label>
+                            </div>
+                            <div class="input_div">
+                                <input class="payu_input" name="firstname" id="firstname" value="" readonly />
+                            </div>
+                        </div>
+                        
+                        <div class="inputDiv">
+                            <div class="details_div">
+                                <label class="details">*Mobile :</label>
+                            </div>
+                            <div class="input_div">
+                                <input class="payu_input" name="phone" id="phone" value="" readonly />
+                            </div>
+                        </div>
+                        
+                        <div class="inputDiv">
+                            <div class="details_div">
+                                <label class="details">*E-Mail :</label>
+                            </div>
+                            <div class="input_div">
+<!--                                <input class="payu_input" type="email" name="email" id="Email">-->
+                                <input class="payu_input" name="email" id="email" value="" readonly/>
+<!--                                <p id="Email_error" class="error"></p>-->
+                            </div>
+                        </div>
+                        
+                        <div class="inputDiv">
+                            <div class="details_div">
+                                <label class="details">*Address :</label>
+                            </div>
+                            <div class="input_div">
+                                <input class="payu_input" name="address1" id="address" value="" readonly />
+                            </div>
+                        </div>
+                        
+                        <div class="inputDiv">
+                            <div class="details_div">
+                                <label class="details">*City :</label>
+                            </div>
+                            <div class="input_div">
+                                <input class="payu_input" name="city" id="city" value="" readonly />
+<!--                                <p id="city_error" class="error"></p>-->
+                            </div>
+                        </div>
+                        
+                        <input name="lastname" id="lastname" value="" hidden="hidden" readonly />
+                        <input name="curl" value="" readonly hidden="hidden" /> <!-- Cancel URL -->
+                        
+                        <input name="address2" value="" hidden="hidden" readonly />
+                        
+                        <input name="state" value="" readonly hidden="hidden" />
+                        <input name="country" value="" hidden="hidden" readonly />
+                        <input name="zipcode" value="" hidden="hidden" readonly />
+                        <input name="udf1" value="" hidden="hidden" readonly />
+                        <input name="udf2" value="" hidden="hidden" readonly />
+                        <input name="udf3" value="" hidden="hidden" readonly />
+                        <input name="udf4" value="" hidden="hidden" readonly />
+                        <input name="udf5" value="" hidden="hidden" readonly />
+                        <input name="pg" value="" hidden="hidden" readonly />
+						
+						<div class="inputDiv agreeDiv">
+                        <input  name="agree" value="" type="radio">I accept the  <a href="" target="_blank" class="agreemet" id="agreement"> Agreement</a>
+						</div>
+                        <script>
+                            var wspid=getUrlVars()['nodeid'];
+                            var hreflink="http://thriive.in/agreement.html?id="+wspid;
+                            document.getElementById('agreement').setAttribute('href',hreflink);
+							callfetchdata();
+                        </script>
+                        <div class="paymentDiv">
+                                <div class="submitButton" onclick="makePayment()">
+                                    <button style="background-color:transparent; border:0;" type="submit">
+                                        <img src="images/makePayment.png" style="width:100%; border-radius:5px;">
+                                    </button>
+                                </div>
+                        </div>
+                    </form>
+                    <p class="terms">On clicking Make Payment button,
+                        <br>you agree for <a onclick="showTermsAndConditions();" style="color:#4e0475;font-weight:bold; cursor: pointer;">Terms &amp; Conditions</a> and will accept that payment will be sent to Thriive Art &amp; Soul LLP.
+                    </p>
+
+                    <div class="submitButton" onclick="location.assign('https://thriive.in');">
+                        <img src="images/cancel.png" style="width:40%; border-radius:5px;">
+                    </div>
+                    
+                    <section class="TermsDiv" id="terms">
+                        <section class="termsContent">
+                            <div id="closebutton" onclick="closeTermsAndConditions();">
+                                <img src="images/close-button.png" width="100%">
+                            </div>
+                            
+            <section class="body_Bg">
+                <h2 class="Heading" style="text-align:center">PAYMENT POLICY</h2>
+                <br>
+                <p class="text">
+                 Thriive Art & Soul LLP<b>("Thriive", "we", "us" or "our")</b> strives to ensure that every transaction you conduct with us, is in a safe and secure environment. We value the trust you place in us. Please read this document on payments and how we ensure security.
+                </p>
+                
+                <h3 class="subHeading">What are the payment options, which Thriiveprovides me?</h3>
+                <ul class="text">
+                    <li>At Thriive you can avail our services with any of the following options on our website, located at <a class="linkText" href="https://www.thriive.in/"> www.thriive.in </a></li>
+                    <li>Visa, MasterCard and American Express Credit Cards.</li>
+                    <li>Debit card for any bank supporting Visa and MasterCard</li>
+                    <li>We currently support Net banking for ___ banks including all major banks like ICICI, HDFC, Citibank, SBI, Axis etc.</li>
+                </ul>
+                <h3 class="subHeading">What should I keep handy for my online transaction?</h3>
+                <p class="text"> For Credit Cards, keep your card, which has the details of cardholder name, number, CVV and expiry date. Apart from this, you also need to have your 3D secure      password / OTP. For Debit Cards, keep your card, which has the details of cardholder name, number, CVV and expiry date. You will be redirected to the bank site for 3D secure authorization. So keep your OTP or IPIN handy as well.For Net Banking you need to keep your account number as well as your IPIN handy.
+                </p>
+                <h3 class="subHeading">Is it safe to use my credit card, debit card or net banking?</h3>
+                <p class="text">Absolutely. Shopping with Thriive is completely safe. Transactions with Thriive are via the payment gateway PayU, which is both VeriSign Secured® as well as PCI compliant. The VeriSign Secured® Seal is the most trusted security mark on the Internet. PCI stands for Payment Card Industry and PayU is compliant with the global information security standards defined for organizations, which handles cardholder information. Be assured that your card or account information is encrypted as it travels over the Internet, making it well and truly safe.
+                </p>
+                
+                <h3 class="subHeading">Does the Website store my card or account information? </h3>
+                <p class="text">The Website does not collect or store your account information at all. Your transaction is authorized at multiple points, first by PayU and subsequently by Visa/MasterCard/American Express/Banks directly without any information passing through us. However, we monitor and review transactions on an on-going basis, to identify potentially fraudulent situations and take immediate corrective steps to mitigate/limit any damage caused/likely to be caused from the same. </p>
+                   
+                <h3 class="subHeading">Will I be asked to share card information, account information or passwords over phone or email? </h3>
+                <p class="text">We will never request you to share any of your payment details over e-mail or over phone. </p> 
+                
+                <h3 class="subHeading"> What other things should I keep in mind during an online transaction?</h3>
+                <p class="text">During the payment process using net banking you may be redirected to your bank website. Once your transaction is completed, you will be brought back to the Website with your order details which you can keep a copy of.Never press the browser back button when the transaction is still currently being done. </p>
+                 
+                <h3 class="subHeading">How will transactions on Thriive appear on my Credit Card / Bank statements? </h3>
+                <p class="text">All transactions on the Website will be under the heading of "PayU Payments Pvt Ltd" or "_________" on your Credit Card / Bank statements. </p>
+                    
+                <h3 class="subHeading">What should I do if a transaction fails? </h3>
+                <p class="text">Transactions could fail due to multiple reasons. Please check for the following: Information passed on to payment gateway is accurate i.e.: account details, billing address, password (for net banking). Your Internet connection is not disrupted in the process. If your account has been debited after a payment failure, it will be rolled back within 21 working days. Please direct all questions and further clarifications regarding the above statement to <a class="linkText" 
+                href="mailto:connect@thriive.in">connect@thriive.in</a> </p>
+                
+                <h2 class="Heading" style="text-align:center">Refund Policy</h2>
+                
+                <p class="text"><b>Thriive Art & Soul LLP,</b> a Limited Liability Partnership, ("Thriive", "we", "us" or "our") has a strict <b>"No-Refund"</b> Policy. We are committed to providing you the requisite services, however the same shall not be refunded under any circumstances whatsoever, due to the nature of services provided by us.
+                    <br>
+                    <br>
+                    The User specifically understand and agree that the services provided by Thriive are of such nature that the monies once paid by the User or anyone using the services provided by us or the service provider or the wellness service provider and/or practitioner or any other therapist, shall not be refunded or returned either in full or part.
+                </p>
+                
+            </section>
+
+
+                            <p style="font-size:1.1vw;color:#323232;line-height:170%;">
+                                We do not entertain Return, Refund and Cancellation in any Circumstances.
+                                
+                                <span id="closebutton2" onclick="closeTermsAndConditions();"> Close </span>
+                            </p>
+                    </section>
+
+                    </section>
+                </section>
+            </section>
+        </section>
+    </body>
+
+    </html>

@@ -1,0 +1,237 @@
+   .text {
+    font-size: 1.5vw;
+    color: #323232;
+    line-height: 170%;
+    margin-top: -3%;
+    text-align: justify;
+    font-family: 'Lato', sans-serif;
+}
+
+.linkText {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1vw;
+    color: #000;
+    font-weight: bold;
+}
+
+.linkText:hover {
+    font-size: 1.1vw;
+    color: #4e0475;
+}
+
+.Heading {
+    font-family: 'Amatic SC', cursive;
+    color: #4e0475;
+    font-size: 3vw;
+    font-weight: 900;
+    text-transform: lowercase;
+}
+
+.higletText {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1vw;
+    color: #4e0475;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 170%
+}
+
+.mainsection {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-top: 0%;
+    padding-right: 0%;
+}
+
+#termsIframe {
+    width: 70%;
+    height: 85%;
+    margin-left: 15%;
+    border: none;
+    margin-top: 5%
+}
+
+#terms_link {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+    z-index: 1000;
+}
+
+.termsmenu {
+    margin: 8% 0% 4% 0%;
+    font-size: 2.1vw;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    color: #4E0475;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    /*    padding-top: 4%;*/
+    padding-bottom: 4%;
+}
+
+.terms_menu {
+    background-color: #4E0475;
+    color: #fff;
+    display: block;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    list-style: none;
+    font-size: 2.1vw;
+    /*    padding-top: 4%;*/
+    padding-bottom: 4%;
+    /*    line-height: 100%;*/
+    vertical-align: middle;
+    font-weight: bold;
+    width: 80%;
+}
+
+.termshover:hover {
+    background-color: #4E0475;
+    color: #fff;
+    display: block;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    list-style: none;
+    font-size: 2.1vw;
+    /*    padding-top: 4%;*/
+    padding-bottom: 4%;
+    /*    line-height: 100%;*/
+    vertical-align: middle;
+    font-weight: bold;
+    width: 80%;
+}
+
+.termsclose {
+    color: #e3e3e3;
+    font-size: 3vw;
+    font-weight: bold;
+    margin-right: 5%;
+    margin-top: 2%;
+    float: right
+}
+
+.termsclose:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu_terms {
+    position: fixed;
+    width: 20%;
+    padding-top: 0%;
+    background-color: white;
+    border-right: 0.1px solid grey;
+    height: 100%;
+    margin-top: 0;
+}
+
+
+/*  MARGIN FOR BODY */
+
+.termsBodySection {
+    width: 74%;
+    float: right;
+    overflow-y: auto;
+    background-color: #fff;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: justify;
+    height: 100%;
+    top: 0;
+}
+
+
+/*  MAIN HEADINGS FOR ALL SECTIONS */
+
+.MainHeading {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    color: #4e0475;
+    font-size: 3vw;
+    font-weight: 900;
+    text-transform: lowercase;
+}
+
+
+/*  REMOVE UNDERLINE FOR HYPERLINKED TEXT  */
+
+a {
+    text-decoration: none;
+    font-style: normal;
+    color: #000;
+}
+
+body {
+    margin: 0px !important;
+}
+
+/*/==================== FOR MOBILE DEVICES ====================/*/
+
+@media only screen and (max-width: 736px) {
+    .menuSection {
+        margin: 0% 10% 0% 10%
+    }
+    
+    /*  MAIN HEADINGS FOR ALL SECTIONS */
+    .MainHeading {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 6vw;
+    }
+    
+    .text {
+        font-size: 3vw;
+    }
+    
+    .termsmenu {
+        font-size: 3.5vw;
+    }
+    
+    .terms_menu {
+        font-size: 3.5vw;
+    }
+    
+    .linkText {
+        font-size: 3vw;
+    }
+    
+    .linkText:hover {
+        color: #4e0475;
+        font-size: 3vw;
+    }
+    
+    .Heading {
+        font-size: 4vw;
+    }
+    
+    .higletText {
+        font-size: 2.5vw;
+    }
+    
+    .termshover:hover {
+        font-size: 3.5vw;
+        padding-bottom: 4%;
+    }
+}
+
+
+.termsmenu: hover{
+    background-color: chocolate;
+}

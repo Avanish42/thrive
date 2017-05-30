@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/practitioners.css">  <!--styles for Grid View Page-->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | THERAPY PAGE_GRID VIEW</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script src="js/practitioners.js"> </script> 
+		
+		<script>
+			function changePage() {
+				var elem = document.getElementById('therapyOrPractitioner').value;
+				if (elem == 'therapies') {
+					window.location.assign("therapy.html");
+				}
+				else if (elem == 'practitioners') {}
+			}
+		</script>
+		
+<script>
+
+		function forGridView() {
+			if (window.innerWidth > 736) {
+				document.getElementById("practitioners_Grid_View_Desktop").style.display = "block";
+				document.getElementById("practitioners_Grid_View_Mobile").style.display = "none";
+			}
+			else {
+				document.getElementById("practitioners_Grid_View_Desktop").style.display = "none";
+				document.getElementById("practitioners_Grid_View_Mobile").style.display = "block";
+			}
+		}
+		window.onload = forGridView;
+		window.onresize = forGridView;
+</script>
+		
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu();
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+          <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+            <section>
+                
+                <div style="text-aligh:center;margin:auto; vartical-aligh:middle; padding:5% 15% 0% 15%">
+                    <img src="images/theraphy/art.png" width="100%;">
+                </div>
+                
+                <!--DROPDOWN BUTTON (it's not visable in desktop devises)-->
+                 <div class="dropdownButton">
+                    <a href="#"><img id="OurStory_dropDownButton" src="images/Down.png" alt="Down Button" width="100%"> </a>
+                </div>
+            </section>
+            
+            
+                <!----------- PRACTITIONER SECTION  ----------->
+             <section style="margin:5% 0% 15% 0%">
+                
+                            <h3 class="MainHeading">practitioner</h3>
+
+                    <!------- PRACTITIONER SECTION BUTTONS ----->
+                
+                    <div class="div_displayTable" style="padding: 0% 6% 0% 0%; width:100%;">
+                        
+                         <!-------------------------- PRACTITIONER SECTION BUTTONS -------------------------->
+        <div class="searchMailDiv">
+            <div class="CityDiv">
+                <input type="text" name="q" placeholder="City" />
+            </div>
+            <div class="serchDiv">
+              <input type="text" name="q" placeholder="search.. here" />
+            </div>
+        </div>
+                        
+
+						
+                    </div>
+            </section>
+            
+             <!-------------------------- SPEAKERS GALLERY SECTION -------------------------->
+            <section id="practitioners_Grid_View_Desktop" >
+                <script>
+                    display_practitioner_section_grid_desktop();
+                </script>            
+            </section>
+			
+			
+			<!-------------------------->
+			<!--LIST VIEW FOR DESKTOP-->
+			<!-------------------------->
+			
+			<!-------------------------- SPEAKERS GALLERY SECTION -------------------------->
+            <section id="practitioners_List_View_Desktop" style="margin-top:-5%">
+                <script>
+//                    display_practitioner_section_list_desktop();
+                </script>
+                
+               
+            </section>
+            
+            
+            
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <!--                                                                                  HTML CODE FOR MOBILE DEVICE                                                                      -->
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+            
+    <!-- *********  GRID FOR MOBILE ********* -->
+			
+			
+	<section id="practitioners_Grid_View_Mobile">
+        <script>
+            display_practitioner_section_grid_mobile();
+        </script>
+	</section>
+			
+<!--*****************LIST VIEW FOR MOBILE******************-->
+			
+			  
+			<section id="practitioners_List_View_Mobile">
+                <script>
+//                    display_practitioner_section_list_mobile();
+                </script>
+                <!--  PRACTITIONER IMAGE GALARY -1 -->
+<!--                <div class="div_displayTable" style="padding: 0% 6% 0% 0%; width:100%; margin-bottom:5%">-->
+                    
+<!--                   <div class="practitioner_Content_List">-->
+                            <!--  PRACTITIONER NAME & DETAILS -->
+<!--
+                            <h3 class="practitioner_Name_List">geeta bhansali</h3>
+                            <h4 class="practitioner_description_List">Reiki is that this vital energy can be channeled to support the body's natural ability to heal itself.</h4>
+-->
+                        
+                            <!--  KNOW MORE BUTTON-->
+<!--
+                            <div class="knowMore_Therapy_L">
+                                <a href="#" target="_blank">  <img src="images/theraphy/knowMore.png" width="100%"> </a>
+                            </div>
+-->
+                            
+                            
+                           <!--  RSS ICON-->
+<!--
+                            <div class="practitioner_Social_Media" style="padding-right:4%"> 
+                                <a href="#" target="_blank"> <img src="images/SocialMedia_B.png" width="100%" > </a>
+                            </div>
+-->
+                            
+                            <!--  INSTAGRAM ICON-->
+<!--
+                            <div class="practitioner_Social_Media"> 
+                                <a href="#" target="_blank"> <img src="images/SocialMedia_I.png" width="100%" > </a> 
+                            </div>
+-->
+                            
+                            <!--  TWITTER ICON-->
+<!--
+                            <div class="practitioner_Social_Media"> 
+                                <a href="#" target="_blank"> <img src="images/SocialMedia_T.png" width="100%" > </a> 
+                            </div>
+-->
+                        
+                            <!--  FACEBOOK ICON-->
+<!--
+                            <div class="practitioner_Social_Media" style="padding-left:0%"> 
+                                <a href="#" target="_blank"> <img src="images/SocialMedia_F.png" width="100%" > </a> 
+                            </div>
+-->
+<!--                    </div>-->
+                    
+                     <!--  PRACTITIONER IMAGE -->
+<!--
+                        <div class="practitioner_image_div_List_View_Mobile">
+                            <div> 
+                                <img src="images/theraphy/img.png" width="100%"> 
+                            </div>
+                        </div>
+-->
+<!--                </div>-->
+    
+     <!--  PRACTITIONER IMAGE GALARY -2 -->
+<!--                <div class="div_displayTable" style="padding: 0% 6% 0% 0%; width:100%; margin-bottom:5%">-->
+                    
+<!--                   <div class="practitioner_Content_List">-->
+                            <!--  PRACTITIONER NAME & DETAILS -->
+<!--
+                            <h3 class="practitioner_Name_List">geeta bhansali</h3>
+                            <h4 class="practitioner_description_List">Reiki is that this vital energy can be channeled to support the body's natural ability to heal itself.</h4>
+                        
+-->
+                            <!--  KNOW MORE BUTTON-->
+<!--
+                            <div class="knowMore_Therapy_L">
+                                <a href="#" target="_blank">  <img src="images/theraphy/knowMore.png" width="100%"> </a>
+                            </div>
+-->
+                            
+                            
+                            
+                           <!--  RSS ICON-->
+<!--
+                            <div class="practitioner_Social_Media" style="padding-right:4%"> 
+                                <a href="#" target="_blank"> <img src="images/SocialMedia_B.png" width="100%" > </a>
+                            </div>
+-->
+                            
+                            <!--  INSTAGRAM ICON-->
+<!--
+                            <div class="practitioner_Social_Media"> 
+                                <a href="#" target="_blank"> <img src="images/SocialMedia_I.png" width="100%" > </a> 
+                            </div>
+                            
+-->
+                            <!--  TWITTER ICON-->
+<!--
+                            <div class="practitioner_Social_Media"> 
+                                <a href="#" target="_blank"> <img src="images/SocialMedia_T.png" width="100%" > </a> 
+                            </div>
+                        
+-->
+                            <!--  FACEBOOK ICON-->
+<!--
+                            <div class="practitioner_Social_Media" style="padding-left:0%"> 
+                                <a href="#" target="_blank"> <img src="images/SocialMedia_F.png" width="100%" > </a> 
+                            </div>
+                    </div>
+                    
+-->
+                     <!--  PRACTITIONER IMAGE -->
+<!--
+                        <div class="practitioner_image_div_List_View_Mobile">
+                            <div> 
+                                <img src="images/theraphy/img.png" width="100%"> 
+                            </div>
+                        </div>
+                </div>
+-->
+            </section>
+			
+			
+			
+            
+               
+	 <!---------- TESTIMONIAL SECTION  ---------->
+			<section id="TestimonialSection_Desktop">
+				<div class="testimonial">
+					<img src="images/Testimonial.png" width="100%;" style="margin:auto">
+					<div id="thriivequotes"></div>
+				</div>
+				<script>
+				 	display_testimonial('home');
+				</script>
+            </section>
+            
+        </section>
+        
+        
+        
+        <!--FOOTER SECTION-->
+        <script>
+           display_footer();
+        </script>
+        
+        
+
+    </body>
+</html>

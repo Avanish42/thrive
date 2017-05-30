@@ -1,0 +1,1683 @@
+/*/---------  HIDE MOBILE DEVISES IN DESKTOP ---------/*/
+
+@media (min-width: 737px) {
+    
+    /*HIDE THRIIVE PILLARS IN DESKTOP */
+    #ThriivePillarsSection_Mobile {
+        display: none !important;
+    }
+    /*HIDE NEWSLETTERS IN DESKTOP */
+    #NewsLetters_Mobile {
+        display: none !important;
+    }
+    
+    #Calendar_Mobile{
+        display: none;
+    }
+}
+
+.MainHeading:hover {
+    color: #000;
+    
+}
+/****HEALERS / SEEKERS / BIGGNERS SECTION****/
+
+#HealerImage_1,
+#HealerImage_2,
+#HealerImage_3{
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+    float: center;
+    display: inline-table;
+    cursor: pointer;
+/*    mix-blend-mode: multiply;*/
+    margin-left: 5%
+    }
+
+#HealerImage_1:hover img,
+#HealerImage_2:hover img,
+#HealerImage_3:hover img{
+    filter:saturate(4);
+}
+
+
+#HealerImage_2{
+    margin: 0% 3% 0% 10%;
+    
+}
+
+/*  THRIIVE PILLARS NAVIGATION BUTTONS */
+#HealerNextButton,
+#HealerPreviousButton{
+    width: 4%;
+    vertical-align: middle;
+    display: table-cell;
+    visibility: hidden;
+}
+
+.healer_Name{
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5vw;
+    color: #4e0475;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+.healer_Name span{
+     font-family: 'Lato', sans-serif;
+    font-size: 1.3vw;
+    color: #333;
+    text-transform: none
+    
+}
+
+@media (max-width: 736px) {
+    
+.down_button img {
+    width: 5vw;
+    }
+    
+    .healer_Name{
+        font-size: 5vw;
+        margin: auto;
+    }
+    
+    #HealerImage_1,
+    #HealerImage_2,
+    #HealerImage_3{
+        width: 85%;
+        text-align: center;
+        margin-left: 8%
+    }
+    
+    #HealerImage_1 img,
+    #HealerImage_2 img,
+    #HealerImage_3 img{
+        width: 80%;
+    }
+    #HealerImage_2,
+    #HealerImage_3{
+        display: none;
+    }
+    #HealerNextButton,
+    #HealerPreviousButton{
+        width: 8%;
+        visibility: visible;
+        vertical-align: middle;
+    }
+    
+    }
+
+.VideoDiv{
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+@media (max-width: 736px) {
+    .VideoDiv{
+        width: 80%
+    }
+}
+
+
+/*--------------------------------*/
+/* ----THRIIVE PILLARS SECTION----*/
+/*--------------------------------*/
+/*HERO SECTION BELLOWN IMAGE*/
+
+#NavigateSection_Desktop {
+    text-align: center;
+    padding: 1% 6% 1% 10%;
+    margin-top: 1%
+}
+
+
+/*DOWN BUTTON*/
+
+.down_button {
+    width: 2.5vw;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+
+/*  1ST IMAGES OF THRIIVE PILLARS  */
+
+#ThriivePillarImage_1,
+#ThriivePillarImage_2,
+#ThriivePillarImage_3 {
+    width: 23%;
+    text-align: center;
+    vertical-align: middle;
+    float: center;
+    display: table-cell;
+}
+
+#ThriivePillarImage_1:hover img,
+#ThriivePillarImage_2:hover img,
+#ThriivePillarImage_3:hover img {
+    filter: contrast(110%) brightness(110%);
+}
+
+
+/*  EMPTY DIV BETWEEN THRIIVE PILLAR IMAGES  */
+
+.PillarEmptyDiv {
+    width: 6%;
+    visibility: hidden;
+    display: table-cell;
+}
+
+
+/*  THRIIVE PILLARS NAME STYLES */
+
+.ThriivePillarName {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #000;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+
+/*  THRIIVE PILLARS NAVIGATION BUTTONS */
+
+#PillarNextButton,
+#PillarPreviousButton {
+    width: 8%;
+    vertical-align: middle;
+    display: table-cell;
+    visibility: hidden;
+}
+
+.newsletter:hover{
+    filter:contrast(110%) brightness(110%);
+    filter:saturate(1.6);
+}
+
+/*/---------  THRIIVE PILLARS MOBILE ---------/*/
+
+@media (max-width: 736px) {
+    /* HIDE ALL DESKTOP DEVICES IN MOBILE VERSION*/
+    #NewsLetters_Desktop {
+        display: none !important;
+    }
+    /*  HIDE THRIIVE PILLER SECTION IN MOBILE DEVICE */
+    #ThriivePillarsSection_Desktop {
+        display: none !important;
+    }
+    
+    .ThriivePillar_Mobile_Div {
+        width: 80%;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        padding: 0% 10% 0% 10%;
+    }
+    
+    #PillarNextButton_Mobile,
+    #PillarPreviousButton_Mobile {
+        width: 8%;
+        visibility: visible;
+        vertical-align: middle;
+        display: table-cell;
+        transform: translateY(-8%)
+    }
+    /*  THRIIVE PILLARS NAME STYLES */
+    .ThriivePillarName {
+        font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+        text-align: center;
+        color: #000;
+        font-size: 6vw;
+    }
+}
+
+
+/*---------------------------------*/
+/* ----THRIIVE CALENDAR SECTION----*/
+/*---------------------------------*/
+
+
+/*  SUB HEADING TEXT STYLE */
+.EventSubHeading {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 2.2vw;
+    margin-top: -8%;
+    font-weight: bold;
+}
+
+.EC_PreviousButton,
+.EC_NextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.E_Calender_Div_1 {
+    width: 21%;
+    height: 35vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_1.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: -2%;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.E_Calender_Div_1:hover {
+    width: 21%;
+    height: 35vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_1_Back.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: -2%;
+    
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    
+}
+
+.E_Calender_Div_1:hover .EC_1_Author,
+.E_Calender_Div_1:hover .EC_1_Title,
+.E_Calender_Div_1:hover .EC_1_Time {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.E_Calender_Div_1:hover .EC_1_Date,
+.E_Calender_Div_1:hover .EC_1_City,
+.E_Calender_Div_1:hover .EC_1_Month {
+    opacity: 0;
+}
+
+.EC_1_Date {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 5vw;
+    color: #fff;
+    margin: 65% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_1_Month {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    color: #fff;
+    text-align: center;
+    margin: -8% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_1_City {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2vw;
+    color: #fff;
+    text-align: center;
+    margin: -4% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_1_Author {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -52%;
+    text-align: center;
+    -webkit-transform: rotateY(-180deg);
+    opacity: 0.0;
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    text-align: center;
+    width: 10vw;
+    margin-left: 16%;
+    font-weight: bold;
+}
+
+.EC_1_Title {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -5%;
+    opacity: 0.0;
+    -webkit-transform: rotateY(-180deg);
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    width: 11vw;
+    text-align: center;
+    margin-left: 13%;
+    font-weight: normal;
+}
+
+.EC_1_Time {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -5%;
+    opacity: 0.0;
+    -webkit-transform: rotateY(-180deg);
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    width: 11vw;
+    text-align: center;
+    margin-left: 13%;
+    font-weight: bold;
+}
+
+
+/****---EVENT-2---****/
+
+.E_Calender_Div_2 {
+    width: 21%;
+    height: 35vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_2.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 3%;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.E_Calender_Div_2:hover {
+    width: 21%;
+    height: 35vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_2_Back.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 3%;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+   
+}
+
+.E_Calender_Div_2:hover .EC_2_Author,
+.E_Calender_Div_2:hover .EC_2_Title,
+.E_Calender_Div_2:hover .EC_2_Time {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.E_Calender_Div_2:hover .EC_2_Date,
+.E_Calender_Div_2:hover .EC_2_City,
+.E_Calender_Div_2:hover .EC_2_Month {
+    opacity: 0;
+}
+
+.EC_2_Date {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 5vw;
+    color: #fff;
+    margin: 95% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_2_Month {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    color: #fff;
+    text-align: center;
+    margin: -8% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_2_City{
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2vw;
+    color: #fff;
+    text-align: center;
+    margin: -4% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_2_Author {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -50%;
+    text-align: center;
+    -webkit-transform: rotateY(-180deg);
+    opacity: 0.0;
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    text-align: center;
+    width: 10vw;
+    margin-left: 15%;
+    font-weight: bold;
+}
+
+.EC_2_Title {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -5%;
+    opacity: 0.0;
+    -webkit-transform: rotateY(-180deg);
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    width: 11vw;
+    text-align: center;
+    margin-left: 13%;
+    font-weight: normal;
+}
+
+.EC_2_Time {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -5%;
+    opacity: 0.0;
+    -webkit-transform: rotateY(-180deg);
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    width: 10vw;
+    text-align: center;
+    margin-left: 15%;
+    font-weight: bold;
+}
+
+
+/****---EVENT-3---****/
+
+.E_Calender_Div_3 {
+    width: 21%;
+    height: 35vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_3.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 3%;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.E_Calender_Div_3:hover {
+    width: 21%;
+    height: 35vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_3_Back.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 3%;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+}
+
+.E_Calender_Div_3:hover .EC_3_Author,
+.E_Calender_Div_3:hover .EC_3_Title,
+.E_Calender_Div_3:hover .EC_3_Time {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.E_Calender_Div_3:hover .EC_3_Date,
+.E_Calender_Div_3:hover .EC_3_City,
+.E_Calender_Div_3:hover .EC_3_Month {
+    opacity: 0;
+}
+
+.EC_3_Date {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 5vw;
+    color: #fff;
+    margin: 63% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_3_Month {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    color: #fff;
+    text-align: center;
+    margin: -8% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_3_City {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2vw;
+    color: #fff;
+    text-align: center;
+    margin: -4% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+
+.EC_3_Author {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -45%;
+    text-align: center;
+    -webkit-transform: rotateY(-180deg);
+    opacity: 0.0;
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    text-align: center;
+    width: 10vw;
+    margin-left: 15%;
+    font-weight: bold;
+}
+
+.EC_3_Title {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -5%;
+    opacity: 0.0;
+    -webkit-transform: rotateY(-180deg);
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    width: 12vw;
+    text-align: center;
+    margin-left: 11%;
+    font-weight: normal;
+}
+
+.EC_3_Time {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -5%;
+    opacity: 0.0;
+    -webkit-transform: rotateY(-180deg);
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    width: 11vw;
+    text-align: center;
+    margin-left: 12%;
+    font-weight: bold;
+}
+
+
+/****---EVENT-4---****/
+
+.E_Calender_Div_4 {
+    width: 21%;
+    height: 35vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_4.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 2%;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.E_Calender_Div_4:hover {
+    width: 21%;
+    width: 21%;
+    height: 35vw;
+    display: inline-table;
+    text-align: center;
+/*    background: url(../images/EC_4_Back.png) no-repeat center;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 2%;
+    -webkit-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+}
+
+.E_Calender_Div_4:hover .EC_4_Author,
+.E_Calender_Div_4:hover .EC_4_Title,
+.E_Calender_Div_4:hover .EC_4_Time {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.E_Calender_Div_4:hover .EC_4_Date,
+.E_Calender_Div_4:hover .EC_4_Month,
+.E_Calender_Div_4:hover .EC_4_City {
+    opacity: 0;
+}
+
+.EC_4_Date {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 5vw;
+    color: #fff;
+    margin: 95% 0% 0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_4_Month {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    color: #fff;
+    text-align: center;
+    margin: -8% 0% -0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_4_City {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2vw;
+    color: #fff;
+    text-align: center;
+    margin: -4% 0% 0% 0%;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -webkit-transition: all .7s ease-in-out;
+}
+
+.EC_4_Author {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -48%;
+    text-align: center;
+    -webkit-transform: rotateY(-180deg);
+    opacity: 0.0;
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    text-align: center;
+    width: 10vw;
+    margin-left: 18%;
+    font-weight: bold;
+}
+
+.EC_4_Title {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -5%;
+    opacity: 0.0;
+    -webkit-transform: rotateY(-180deg);
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    width: 11vw;
+    text-align: center;
+    margin-left: 15%;
+    font-weight: normal;
+}
+
+.EC_4_Time {
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    color: #fff;
+    margin-top: -5%;
+    opacity: 0.0;
+    -webkit-transform: rotateY(-180deg);
+    filter: alpha(opacity=0);
+    word-wrap: break-word;
+    width: 11vw;
+    text-align: center;
+    margin-left: 17%;
+    font-weight: bold;
+}
+
+.EC_fatherLeft {
+    display: inline-table;
+    width: 7%;
+    vertical-align: top;
+    padding-top: 4%;
+    opacity: 0.8;
+    margin-right: -4%;
+    margin-left: 3%
+}
+
+.EC_fatherRight {
+    display: inline-table;
+    width: 7%;
+    vertical-align: bottom;
+    padding-bottom: 10%;
+    opacity: 0.8;
+/*    margin-left: -2%;*/
+    margin-right: -5%
+}
+
+.empltyDiv_L{
+    display: table-cell;
+    width: 1%;
+    visibility: hidden    
+}
+
+.empltyDiv_R{
+    display: table-cell;
+    width: 1%;
+    visibility: hidden
+}
+
+
+/*--------------------------------------------*/
+/* ----THRIIVE CALENDAR SECTION FOR MOBILE----*/
+/*--------------------------------------------*/
+
+@media (max-width: 736px) {
+    
+    #Calendar_Desktop{
+        display: none
+    }
+    /*  EVENT CALENDAR SUB HEADING TEXT STYLE */
+    .EventSubHeading {
+        font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+        text-align: center;
+        font-size: 5vw;
+        margin-top: -7%;
+        font-weight: bold;
+    }
+    
+       
+.EC_PreviousButton,
+.EC_NextButton {
+    width: 8%;
+}
+
+
+.E_Calender_Div_1_M {
+    width: 30vw;
+    height: 70vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_1.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+      margin-left: 2%;
+}
+    
+.E_Calender_Div_2_M {
+   width: 30vw;
+    height: 70vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_2.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 4%;
+}
+    
+.E_Calender_Div_3_M {
+    width: 30vw;
+    height: 70vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_3.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 2%;
+}
+    
+.E_Calender_Div_4_M {
+   width: 30vw;
+    height: 70vw;
+    display: inline-table;
+    text-align: center;
+    background: url(../images/EC_4.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 4%;
+}
+    
+    
+.EC_1_Date_M {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 10vw;
+    color: #fff;
+    margin: 60% 0% -0% 0%;
+}
+
+.EC_1_Month_M {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 5vw;
+    color: #fff;
+    text-align: center;
+    margin: -35% 0% -0% 0%;
+}
+.EC_1_City_M {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 4vw;
+    color: #fff;
+    text-align: center;
+    margin: 10% 0% -0% 0%;
+}
+    
+        
+.EC_2_Date_M {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 10vw;
+    color: #fff;
+    margin: 95% 0% -0% 0%;
+}
+    
+.EC_2_Month_M {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 5vw;
+    color: #fff;
+    text-align: center;
+    margin: -36% 0% -0% 0%;
+}    
+.EC_2_City_M {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 4vw;
+    color: #fff;
+    text-align: center;
+    margin: 9% 0% -0% 0%;
+}
+
+}
+
+
+/*--------------------------------------------*/
+/* -----THRIIVE WORLD SECTION FOR DESKTOP-----*/
+/*--------------------------------------------*/
+
+
+
+.TW_PreviousButton,
+.TW_NextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.TW_SubHeadding {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 4%;
+    margin-top: 0%
+}
+
+.video_set{
+    width: 50%;
+    display: inline-table;
+}
+.video_div {
+    width: 15vw;
+    height: 22.5vw;
+    display: inline-table;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video1{
+    margin-left: 5%
+}
+.video2{
+    margin-left: 8%
+}
+
+.video3{
+    margin-left: 4%
+}
+
+.video4{
+    margin-left: 8%
+}
+
+.slider {
+    width: 15vw;
+    height: 22.5vw;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide1 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide2 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide3 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .BG_slide {
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1,
+.slide2,
+.slide3 {
+    width: 100%;
+    display: none;
+    cursor: pointer;
+}
+
+.BG_slide {
+    width: 100%;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1 {
+    margin-top: -22.5vw;
+    animation: fade 8s infinite;
+    -webkit-animation: fade 8s infinite;
+}
+
+.slide2 {
+    margin-top: -22.5vw;
+    animation: fade2 8s infinite;
+    -webkit-animation: fade2 8s infinite;
+}
+
+.slide3 {
+    margin-top: -22.5vw;
+    animation: fade3 8s infinite;
+    -webkit-animation: fade3 8s infinite;
+} 
+    
+@keyframes fade{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+    
+@keyframes fade2{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+    
+@keyframes fade3{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+    
+.infoText {
+     width: 100%;
+     height: 4vw;
+     background-color: #4e0475;
+     text-align: center;
+     color: #fff;
+     padding-top: 3%;
+     margin-top: 61.6%;
+     -webkit-transition: all 1s ease-in-out;
+ }
+.infoText span{
+    width: 90%;
+    margin: auto;
+}
+ 
+ .PlayButton {
+     background: url(../images/PlayButton.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     margin: auto;
+     opacity: 0;
+     position: relative;
+     margin-top: -85%;
+     cursor: pointer;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .PlayButton:hover {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .video_div:hover .PlayButton {
+     opacity: .8
+ }
+ 
+ .video_div:hover .BeforeText {
+     display: none;
+ }
+ 
+ .video_div:hover .AfterText {
+     display: block;
+ }
+ 
+ .BeforeText {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.1vw;
+     
+}
+ 
+ .AfterText {
+    display: none;
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: .8vw;
+ }
+
+/*--------------------------------------------*/
+/* -----VIDEO SECTION FOR MOBILE-----*/
+/*--------------------------------------------*/
+
+
+@media (max-width: 736px) {
+    .TW_PreviousButton,
+    .TW_NextButton {
+         width: 8%;
+         display: table-cell;
+         transform: translateY(0%)
+ }
+ 
+ .TW_SubHeadding {
+     font-size: 2.5vw;
+     font-weight: 400;
+ }
+.video_set{
+    width: 100%;
+    display: inline-table;
+    
+}
+
+    
+ .slider,
+ .video_div {
+     width: 28vw;
+     height: 43.2vw;
+     display: inline-table;
+ }
+    
+    .video_div:hover{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+        
+    }
+ 
+ .BG_slide {
+     width: 100%;
+ }
+ 
+ .slide1 {
+     margin-top: -43.2vw;
+     
+ }
+ 
+ .slide2 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .slide3 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .infoText {
+     padding-top: 8%;
+     margin-top: 48%;
+     height: 7vw;
+ }
+    
+ 
+ .PlayButton {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     opacity: 1;
+     width: 6vw;
+     height: 6vw;
+     margin-top: -75%;
+ }
+ 
+ .PlayButton:hover {
+     width: 6vw;
+     height: 6vw;
+     opacity: 1;
+ }
+    
+    .BeforeText {
+        font-size: 2.2vw;
+    }
+    
+    .AfterText {
+        font-size: 1.5vw;
+    }
+}
+    
+
+/*--------------------------------------------*/
+    /*****THRIIVE TALKS WITH CSS NEW*****/
+/*--------------------------------------------*/
+
+.ThriiveTalksDiv_1{
+    width: 29%;
+    height: 20vw;
+    display: inline-table;
+     background: url(../images/ThriveTalks_BG_1_A.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: -2%
+}
+
+.ThriiveTalksDiv_2{
+    background-color: red;
+     width: 28%;
+    height: 20vw;
+    display: inline-table;
+     background: url(../images/ThriveTalks_BG_2_A.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ThriiveTalksDiv_3{
+    background-color: red;
+     width: 23%;
+    height: 21vw;
+    padding: 0% 0% 0% 5% ;
+    display: inline-table;
+     background: url(../images/ThriveTalks_BG_3_A.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: -5%;
+    text-align: center;
+}
+
+
+.ThriiveTalksDiv_1:hover,
+.ThriiveTalksDiv_2:hover,
+.ThriiveTalksDiv_3:hover{
+    filter:contrast(110%) brightness(110%);
+}
+
+/*THRIIVE TALKS RIGHT SIDE ICON*/
+
+.TT_RightSideIcon {
+    width: 10%;
+    margin: 20% 0% 0% -1%;
+    display: inline-table;
+    vertical-align: middle
+}
+
+
+/*THRIIVE TALKS LEFT SIDE ICON*/
+
+.TT_LeftSideIcon {
+    width: 10%;
+    margin: -18% -5% 0% 8%;
+    display: inline-table;
+    vertical-align: middle
+}
+
+/*  THRIIVE TALK BLOCKS  TEXT STYLING  */
+
+.TT_1_Text_A {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    width: 16vw;
+    font-size: 2.3vw;
+    margin-top: 28%;
+    margin-left: 11%;
+    word-wrap: break-word;
+    font-weight: bold;
+    line-height: 90%
+}
+
+.TT_1_Text_B {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    margin: -6% 0% 0% 11%;
+    font-style: normal;
+    width: 16vw;
+    word-wrap: break-word;
+}
+
+.TT_2_Text_A {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    width: 15vw;
+    font-size: 2.3vw;
+    margin-top: 22%;
+    margin-left: 22%;
+    word-wrap: break-word;
+    font-weight: bold;
+    color: #fff;
+    line-height: 90%;
+}
+
+.TT_2_Text_B {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    margin: -6% 0% 0% 20%;
+    font-style: normal;
+    width: 16vw;
+    word-wrap: break-word;
+    color: #fff;
+}
+
+.TT_3_Text_A {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    width: 13vw;
+    font-size: 2.3vw;
+    margin-top: 28%;
+    margin-left: -2%;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+.TT_3_Text_B {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    margin: -10% 0% 0% -2%;
+    font-style: normal;
+    width: 13vw;
+    word-wrap: break-word;
+}
+
+/*****MOBILE TT SECTION*****/
+
+@media (max-width: 736px) {
+    
+    .ThriiveTalksDiv_1 {
+      width: 43%;
+      height: 28vw;
+      margin-left: -7%
+  }
+  
+  .ThriiveTalksDiv_2 {
+      width: 43%;
+      height: 28vw;
+      margin-left: -3%;
+  }
+  
+  .ThriiveTalksDiv_3 {
+      display: none
+  }
+  /*THRIIVE TALKS RIGHT SIDE ICON*/
+  .TT_RightSideIcon {
+      width: 15%;
+      margin: -3% 0% 0% -10%;
+      vertical-align: top
+  }
+    
+  /*THRIIVE TALKS LEFT SIDE ICON*/
+  .TT_LeftSideIcon {
+      width: 15%;
+      margin: 0% -5% 0% 8%;
+      vertical-align: bottom
+  }
+    
+  .TT_1_Text_A {
+      width: 25vw;
+      font-size: 3.5vw;
+      margin-top: 25%;
+      margin-left: 11%;
+      word-wrap: break-word;
+  }
+  
+  .TT_1_Text_B {
+      font-family: 'Lato', sans-serif;
+      font-size: 2.3vw;
+      margin: -6% 0% 0% 10%;
+      width: 25vw;
+      word-wrap: break-word;
+  }
+  
+  .TT_2_Text_A {
+      width: 22vw;
+      font-size: 3.5vw;
+      margin-top: 22%;
+      margin-left: 20%;
+      word-wrap: break-word;
+  }
+  
+  .TT_2_Text_B {
+      font-family: 'Lato', sans-serif;
+      font-size: 2.5vw;
+      margin: -8% 0% 0% 30%;
+      font-style: normal;
+      width: 21vw;
+      word-wrap: break-word;
+      color: #fff;
+  }
+}
+
+
+
+
+/***** FOR MOZILLA BROUSERS *****/
+
+@-moz-document url-prefix() {
+    
+    /*EVENT CALENDER*/
+    .E_Calender_Div_2,
+    .E_Calender_Div_3,
+    .E_Calender_Div_4 {
+        margin-left: 1.7%;
+    }
+    
+    .E_Calender_Div_2:hover,
+    .E_Calender_Div_3:hover,
+    .E_Calender_Div_4:hover {
+        margin-left: 1.7%;
+    }
+    
+    /*THRIIVE WORLD*/
+    
+ .TW_Caption{
+	width: 14.7vw;
+    }
+
+.TW_SubCaption{
+	width: 14.7vw;
+    }
+  
+
+    /*THRIIVE TALKS*/
+    .ThriiveTalksDiv_1 {
+        margin-left: -5%;
+    }
+
+    .ThriiveTalksDiv_2 {
+        margin-left: -1%;
+    }
+
+    .TT_LeftSideIcon {
+     margin: -13% -5% 0% 8%;
+    }
+
+    
+/**** MOBILE MOZILLA ****/
+
+@media (max-width: 736px) {
+    
+    /*THRIIVE WORLD*/
+.TW_Caption{
+	width: 29.5vw;
+    }
+
+.TW_SubCaption{
+	width: 29.5vw;
+    }
+    
+    
+    /*THRIIVE TALKS*/
+    
+    .ThriiveTalksDiv_1{
+        margin-left: -10%;
+    } 
+    .ThriiveTalksDiv_2{
+        margin-left: -2%;
+    }
+    
+    /*EVENT CALENDAR MOBILE*/
+    .E_Calender_Div_1_M, 
+    .E_Calender_Div_3_M {
+        width: 28vw;
+        height: 69vw;
+        margin-left: 4%
+    }    
+    
+    .E_Calender_Div_4_M,
+    .E_Calender_Div_2_M {
+        width: 28vw;
+        height: 69vw;
+}
+    
+    /*THRIIVE TALK*/
+        .ThriiveTalksDiv_1 {
+      width: 42%;
+  }
+  
+  .ThriiveTalksDiv_2 {
+      width: 42%;
+      margin-left: -4%;
+  }
+  
+  /*THRIIVE TALKS RIGHT SIDE ICON*/
+  .TT_RightSideIcon {
+      margin: -3% 0% 0% -10%;
+  }
+    
+  /*THRIIVE TALKS LEFT SIDE ICON*/
+  .TT_LeftSideIcon {
+      margin: 0% 0% 0% 6%;
+  }
+}
+}
+
+
+/***** FOR EDGE BROUSERS *****/
+
+@supports (-ms-ime-align:auto) {
+    
+
+/*Thriive Calendar*/
+.E_Calender_Div_2,
+.E_Calender_Div_3,
+.E_Calender_Div_4 {
+    margin-left: 2.1%;
+}
+
+.E_Calender_Div_2:hover,
+.E_Calender_Div_3:hover,
+.E_Calender_Div_4:hover {
+    margin-left: 2.1%;
+}
+
+
+
+
+
+/**THRIIVE TALKS**/
+
+.ThriiveTalksDiv_1 {
+    margin-left: -2%;
+}
+
+.ThriiveTalksDiv_2 {
+    margin-left: -1.5%;
+}
+
+.ThriiveTalksDiv_3 {
+    margin-left: -.5%;
+}
+
+.TT_RightSideIcon {
+    margin: 20% 0% 0% -2%;
+}
+
+
+/**TESTMONIALS**/
+
+.testimonial {
+    margin-bottom: 10%;
+}
+    
+
+
+@media (max-width: 736px) {
+    
+        /*EVENT CALENDAR MOBILE*/
+    .E_Calender_Div_1_M, 
+    .E_Calender_Div_3_M {
+        width: 28vw;
+        height: 69vw;
+        margin-left: 4%
+    }    
+    
+    .E_Calender_Div_4_M,
+    .E_Calender_Div_2_M {
+        width: 28vw;
+        height: 69vw;
+}
+    
+    #ThriiveTalks_Block1_Mobile,
+    #ThriiveTalks_Block2_Mobile {
+        width: 42%
+    }
+    .TT_RightSideIcon {
+        margin: -3% 0% 0% -13%;
+    }
+    
+    .ThriiveTalksDiv_1{
+        margin-left: -10%;
+    }
+}
+}
+
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+        
+        
+    }}
+

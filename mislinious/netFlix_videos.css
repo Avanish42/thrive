@@ -1,0 +1,155 @@
+/*******VIDEO SECTION*******/
+/*/-------------------------------/*/
+
+
+.TW_PreviousButton,
+.TW_NextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.ThriiveWorld_VideoDiv {
+    position: relative;
+    width: 15vw;
+    height: 20vw;
+    display: inline-table;
+    text-align: center;
+    margin-bottom: 18%;
+    margin-left: 3.5%;
+    cursor: pointer;
+     -webkit-transition: all 1s ease-in-out;
+}
+
+
+.PlayButton{
+     background: url(../images/PlayButton.png) no-repeat center;
+    background-size: cover;
+    width: 4vw;
+    height: 4vw;
+    margin: auto;
+    position: relative;
+    margin-top: -80%;
+    visibility: hidden;
+    -webkit-transition: all .4s ease-in-out;
+}
+
+.PlayButton:hover{
+    background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     width: 4vw;
+    height: 4vw;
+     -webkit-transition: all .4s ease-in-out;
+}
+
+.ThriiveWorld_VideoDiv:hover .PlayButton{
+    visibility:visible;
+}
+
+
+
+
+
+.Img_opacity{animation:opac 10s}
+@keyframes opac{from{opacity:.8} to{opacity:1}}
+
+.ThriiveWorld_VideoDiv:hover .videoBlog_afterHover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);   
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+
+.videoBlog_afterHover {
+     -webkit-transition: all 1s ease-in-out;
+    
+}
+
+
+.ThriiveWorld_VideoDiv:hover .vidoeInfoDiv {
+       -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);   
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 1s ease-in-out;
+    opacity: .7;
+    margin-top: 77%
+    
+}
+
+
+
+.vidoeInfoDiv{
+    width: 15vw;
+    height: 5.2vw;
+    background-color: black;
+    position: absolute;
+     opacity: .7;
+    color: #fff;
+    margin-top: 53.2%;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+
+
+
+
+.TW_Caption {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #fff;
+    font-size: 2vw;
+    font-weight: 900;
+    margin: 0
+}
+
+
+
+.TW_SubCaption {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1vw;
+    color: #000;
+    margin:0%;
+    font-weight: 400;
+    color: #fff;
+}
+
+.ThriiveWorld_VideoDiv:hover .TW_Caption,
+.ThriiveWorld_VideoDiv:hover .TW_SubCaption {
+    display: none;
+}
+.ThriiveWorld_VideoDiv:hover .TW_CaptionAfterHover,
+.ThriiveWorld_VideoDiv:hover .TW_SubCaptionAfterHover {
+    display: block;
+}
+
+.TW_CaptionAfterHover{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    margin: 0;
+     display: none;
+    
+}
+
+.TW_SubCaptionAfterHover{
+     font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.2vw;
+    margin: 0;
+    display: none;
+    
+}
+
+
+    /*--------------------------------------------*/
+    /* -----VIDEO SECTION FOR MOBILE-----*/
+    /*--------------------------------------------*/
+
+@media (max-width: 736px) {
+}
+

@@ -1,0 +1,209 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!--    INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/wsp_fallowup.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <!--    HOME PAGE TITLE  -->
+    <title>THRIIVE | TESTIMONIALS </title>
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <script src="js/app.js"></script>
+<!--    <script src="js/wspreg.js"></script>-->
+    <script src="js/wsppostregistrationprocess.js"></script>
+    <!--    INCLUDING JAVASCRIPT-->
+    <style>
+        .menu_itmes a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        #welcome_text {
+            color: #4e0475;
+        }
+        
+        label {
+            color: #4e0475;
+        }
+        
+        #adduserDiv {
+            display: block;
+        }
+    </style>
+	 <script>
+        check_authentication(" ");
+    </script>
+</head>
+
+<body class="body_Backgruond">
+    <section class="totalBodySection">
+        <section id="header">
+            <div class="maindiv">
+                <!--TOGGLE BUTTON DIV-->
+                <div class="leftDiv">
+                    <a style="cursor:pointer" class="anchorTagButton"><img src="images/menuIcon_2.png" alt="menueIcon" width="70%" onclick="menu_list()"></a>
+                </div>
+                <!--MENU-->
+                <!--LOGO DIV-->
+                <div class="MidleDiv">
+                    <a style="cursor:pointer" href="dashboard.html"><img id="logo_image" src="images/Logo.png" alt="Thriive Logo" width="75%" onclick=""></a>
+                </div>
+                <!--EMPTY DIV DIV-->
+                <div class="rightDiv">
+                    <p onclick="logout_user()" style="cursor:pointer;">logout</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="mainbar">
+        <h3 id="adduserDiv" class="pannelDiv">
+                    <ul>
+                        <a style="cursor:pointer" href="wspregistration_admin.html"><li id="addtext" class="listText">received</li></a>
+                        <a style="cursor:pointer"> <li id="listtext" class="activeText" >post follow ups</li></a>
+                    </ul>
+        </h3> </section>
+    <section id="followups">
+        <!--START PROCESS SECTION-->
+        <section class="sectionMargin" id="startProcess">
+            <div class="wsp_row">
+                <div class="sm6_l">
+                    <label class="details">W.S.P Name :</label> <span class="inputData" id="">Geeta Bansali</span> </div>
+                <div class="sm6_r">
+                    <label class="details">Membership ID :</label> <span class="inputData" id="">TRV0000001</span> </div>
+                <div class="sm6_l">
+                    <label class="details">Current Package :</label> <span class="inputData" id="">Super premium</span> </div>
+                <div class="sm6_r">
+                    <label class="details">Days Left to Renew :</label> <span class="inputData" id="">365</span> </div>
+                
+                <div class="sm6_l"><label class="details">Membership Date :</label> <span class="inputData" id="">12-04-2017</span></div>
+                    
+                    <div class="sm6_r">
+                    <label class="details">Upgrade package :</label> 
+                    <select class="DropdownList" onchange="changePaymentAmount()" id="paymentOptions">
+                        <option value="3499" selected>Basic</option>
+                        <option value="5999">Premium</option>
+                        <option value="9999">Super Premium</option>
+                    </select>
+                </div>
+                <hr>
+                    <h3 class="formSubHeading"> Event Listing </h3>
+                <div class="sm6_l"> 
+                    <label class="details">Event Name:</label> <span class="inputData" id="">BUDDHA CEO</span> <br>
+                    <label class="viewMore">View More</label> <span class="inputData" id=""></span> <br><br>
+                    <span class="yesButton" style="margin-top:-1%; width:5vw; float:right" ><p class="submitText">promote </p></span> 
+                    <span class="pramoteButton" style="margin-top:-1%; width:5vw;" onclick="openConformationEvent()"><p class="submitText">Approve</p></span> 
+                    <span style="cloear:both"></span><br>
+                </div>
+                
+<!--
+                 <div class="sm6_r"> 
+                    <label class="details">Event Name:</label> <span class="inputData" id=""></span> <br>
+                    <label class="viewMore">View More</label> <span class="inputData" id=""></span> <br><br>
+                    <span class="yesButton" style="margin-top:-1%; width:5vw; float:right" ><p class="submitText">promote </p></span> 
+                    <span class="pramoteButton" style="margin-top:-1%; width:5vw;" onclick="openConformationEvent()"><p class="submitText">Approve</p></span> 
+                    <span style="cloear:both"></span><br>
+                </div>
+               
+                
+                <div class="sm6_l"> 
+                    <label class="details">Event Name:</label> <span class="inputData" id=""></span> <br>
+                    <label class="viewMore">View More</label> <span class="inputData" id=""></span> <br><br>
+                    <span class="yesButton" style="margin-top:-1%; width:5vw; float:right" ><p class="submitText">promote </p></span> 
+                    <span class="pramoteButton" style="margin-top:-1%; width:5vw;" onclick="openConformationEvent()"><p class="submitText">Approve</p></span> 
+                    <span style="cloear:both"></span><br>
+                </div>
+                
+                 <div class="sm6_r"> 
+                    <label class="details">Event Name:</label> <span class="inputData" id=""></span> <br>
+                    <label class="viewMore">View More</label> <span class="inputData" id=""></span> <br><br>
+                    <span class="yesButton" style="margin-top:-1%; width:5vw; float:right" ><p class="submitText">promote </p></span> 
+                    <span class="pramoteButton" style="margin-top:-1%; width:5vw;" onclick="openConformationEvent()"><p class="submitText">Approve</p></span> 
+                    <span style="cloear:both"></span><br>
+                </div>
+-->
+                
+                <!--MODAL POPUP-->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span id="closeButton" class="close_model" onclick="closeModal();">&times;</span>
+                        <br>
+                        <h3> Do you want to display this event in <b>Thriive </b> Website ? </h3>
+                        <span class="yesButton">Yes</span>
+                        <span class="noButton">No</span>
+                    </div>
+                </div>
+                 <hr>
+                 <h3 class="formSubHeading"> Social Media Post </h3>
+                
+                <div class="sm6_l">
+                    <label class="details">Social Media Post-1</label> <br> 
+                    <div class="SM_Post" id=""><img src="images/05_thriive_World.png" width="60%"></div>  
+                    <span class="yesButton">Yes</span>
+                    <span class="noButton">No</span>
+                </div>
+                  <div class="sm6_r">
+                    <label class="details">Social Media Post-2</label> <br> 
+                    <div class="SM_Post" id=""><img src="images/05_thriive_World.png" width="60%"></div>  
+                    <span class="yesButton">Yes</span>
+                    <span class="noButton">No</span>
+                </div>      
+                <div class="sm6_l">
+                    <label class="details">Social Media Post-3</label> <br> 
+                    <div class="SM_Post" id=""><img src="images/05_thriive_World.png" width="60%"></div>  
+                    <span class="yesButton">Yes</span>
+                    <span class="noButton">No</span>
+                </div>
+                  <div class="sm6_r">
+                    <label class="details">Social Media Post-4</label> <br> 
+                    <div class="SM_Post" id=""><img src="images/05_thriive_World.png" width="60%"></div>  
+                    <span class="yesButton">Yes</span>
+                    <span class="noButton">No</span>
+                </div>
+                
+                <hr>
+                 <h3 class="formSubHeading"> Blog feature on WSP </h3>
+                
+                <div class="sm6_r">
+                    <label class="details">Blog feature on WSP</label> <br> 
+<!--                    <div class="SM_Post" id=""><img src="images/03_-therapists.png" width="60%"></div>  -->
+                    <span class="yesButton">Yes</span>
+                    <span class="noButton">No</span>
+                </div>
+                
+                <hr>
+                 <h3 class="formSubHeading"> Newsletter </h3>
+                
+                <div class="sm6_r">
+                    <label class="details">Newsletter</label> <br> 
+<!--                    <div class="SM_Post" id=""><img src="images/01_home.png" width="60%"></div>  -->
+                    <span class="yesButton">Yes</span>
+                    <span class="noButton">No</span>
+                </div>
+                
+                <hr>
+                 <h3 class="formSubHeading"> Account Manager </h3>
+                
+                <div class="sm6_l">
+                    <label class="details">Account Manager</label> 
+                    
+                     <select class="DropdownList"  id="">
+                        <option value="" selected>Account Manager-1</option>
+                        <option value="">Account Manager-2</option>
+                        <option value="">Account Manager-3</option>
+                    </select>
+                    
+                </div>
+            </div>
+        </section>
+        
+    </section>
+</body>
+
+</html>

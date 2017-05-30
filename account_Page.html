@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/account_Page.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | THERAPY PAGE_LIST VIEW</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+<!--        <script src="js/dashboard.js"></script>  DASHBOORD JAVA SCRIPT  -->
+        <script type="text/javascript" src="js/account_Page.js"></script> <!-- Including thriive world js file  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        <!--    CALLING JAVASCRIPT FUNCTIONS TO INVOKE RESPONSIVE DESIGN  -->
+        <script>
+            menuItemSize();
+        </script>
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("ourstory");
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+         <section class=menuSection>
+			<script>
+                display_header_2();
+                check_authentication();
+                
+            </script>
+		</section>   
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <script>
+            firebase.auth().onAuthStateChanged(user => {
+            if(user) {
+                user.providerData.forEach(function (profile) {
+                    
+                    document.getElementById('profileImage').src=profile.photoURL;
+                    document.getElementById('profileName').innerHTML=profile.displayName;
+                    document.getElementById('profileEmail').innerHTML=profile.email;
+                    
+                    //Check if User Already Exist
+                    var ref = firebase.database().ref();
+                    var userref=ref.child("users");
+
+                    userref.orderByChild("id").equalTo(profile.uid).once('value', function(snapshot){
+                        var exists = (snapshot.val() !==null);
+                        if (exists) {
+                            //DISPLAY OTHER DETAILS
+                            snapshot.forEach(function (child) {
+                                if (child.val().email==profile.email) {
+                                    //signin_user_name_Object.innerHTML = child.val().name;
+                                    document.getElementById('profileDOB').innerHTML=child.val().dob;
+                                    document.getElementById('profileCity').innerHTML=child.val().place;
+//                                    console.log(child.val().city);
+                                }
+                            });
+                        }
+                    });
+                });
+            } else {
+                window.location.assign("login.html");
+                return false;
+            }
+        });
+        </script>
+        <section class="totalBodySection">
+            
+            <section id="detailSection">
+                <div class="profile_Div">
+
+                    <div class="Img_Div">
+                        <!-- PROFILE IMAGE -->
+                        <div class="profile_pic">
+                            <img id="profileImage" width="100%">
+                        </div>
+                        <h3 class="editimage">Edit Image</h3>
+                    </div>
+
+                    <div class="profile_info_div">
+                        <!-- PROFILE NAME -->
+                        <h3 id="profileName" class="profile_name"></h3> <br>
+                        
+                        <!-- PROFILE CITY -->
+                        
+                        <h4 class="city">City : <span class="city" id="profileCity" ></span></h4><br>
+                        
+                        <!-- PROFILE EMAIL ID -->
+						<h4 class="e-mail">e-mail : 
+							<span id="profileEmail" class="e-mail_id"></span> 
+						</h4>
+                        
+                        <!-- PROFILE DATE OF BIRTH -->
+						<h4 class="Dob" >dob :  
+							<span id="profileDOB" class="e-mail_id"></span>
+						</h4>
+                    </div>
+
+                    <div class="edit_Profile_Button">
+                        <a href="editDetails.html" id="wsp-editprofile"><img src="images/editProfile.png" width="100%"></a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="userDataSection">
+                <section>
+                    <h1 class="MainHeading" style="text-align:left;margin:5% 0% 3% 8%; clera:both"> MY videos </h1>
+
+                    <div class="div_displayTable">
+
+                        <!--PREVIOUS BUTTON-->
+                        <div class="TW_PreviousButton">
+                             <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%" onclick="callcarousel(-1)">
+                        </div>
+                        <div id="thriiveworld_desktop">
+
+
+                        </div>
+                        <!--   NEXT BUTTON  -->
+                        <div class="TW_NextButton">
+                             <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" onclick="callcarousel(1)"> 
+                        </div>
+                    </div>
+                </section>
+				 <!---------- THRIIVE AUDIO FOR DESKTOP---------->
+               <section>
+                    <h1 class="MainHeading"	 style="text-align:left;margin:5% 0% 3% 8%">my audios </h1>
+                    <!-- MAIN HEADING  -->
+                    <!--SET NO-1-->
+                    <div class="div_displayTable">
+                        <!--PREVIOUS BUTTON-->
+                        <div class="audioPreviousButton">
+                            <a style="cursor:pointer"> <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%"> </a>
+                        </div>
+
+                        <!--AUDIO DIV - 1 -->
+                        <div class="audioDiv">
+                            <div class="audioBlog_1" id="audioDiv1">
+                               <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300292135&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                            </div>
+                               <h3 class="TW_Caption">  thriive music-1 </h3>
+                               <h3 class="TW_SubCaption"> Sub caption </h3>
+                        </div>
+
+
+                        <!--AUDIO DIV - 2 -->
+                        <div class="audioDiv" id="audioDiv2">
+                            <div class="audioBlog_2">
+                                <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300292135&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                            </div>
+                            <h3 class="TW_Caption">  thriive music-1 </h3>
+                            <h3 class="TW_SubCaption"> Sub caption </h3>
+                        </div>
+
+
+                        <!--AUDIO DIV - 3 -->
+                        <div class="audioDiv" id="audioDiv3">
+                            <div class="audioBlog_3">
+                                <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300292135&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                            </div>
+
+                            <h3 class="TW_Caption">  thriive music-1 </h3>
+                            <h3 class="TW_SubCaption"> Sub caption </h3>
+                        </div>
+
+                        <!--   NEXT BUTTON  -->
+                        <div class="audioNextButton">
+                            <a style="cursor:pointer"> <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" > </a>
+                        </div>
+                    </div>
+                </section>
+            
+                <!--MY EVENTS-->
+                <section style="margin-bottom:5%">
+                    <h1 class="MainHeading"	 style="text-align:left;margin:5% 0% 3% 5%">  my events</h1>
+                            
+                 <div  class="div_displayTable">
+                     
+                     <!--PREVIOUS BUTTON-->
+					<div class="eventPreviousButton">
+						<a style="cursor:pointer"> <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%"> </a>
+					</div>
+                    <!--   EVENT-1  -->
+                    <div class="my_event_Block_1">
+                        <a href="#"> <img id="#" src="images/whats_happning/Event-1.png" alt="roots to wings"  width="100%"> </a>
+                        <div class="event_Image_Info"> 21 - 22 <br> NOV </div>
+                        <h3 class="Event_Block_1_Left_Caption">roots to wings</h3>
+                        <h3 class="Event_Block_Left_SubCaption"> By Geeta Bhansali</h3>
+                    </div>
+
+                    <!--   EVENT-2  -->    
+                    <div class="my_event_Block_2">
+                        <a href="#"> <img id="#" src="images/whats_happning/Event-2.png" alt="roots to wings"  width="100%"> </a>
+                        <div class="event_Image_Info"> 24 <br> NOV </div>
+                        <h3 class="Event_Block_1_Left_Caption">dna level 2</h3>
+                        <h3 class="Event_Block_Left_SubCaption"> By Rae Chandran</h3>
+                    </div>
+                     
+                    <!--   EVENT-3  -->    
+                    <div class="my_event_Block_3">
+                        <a href="#"> <img id="#" src="images/whats_happning/Event-2.png" alt="roots to wings"  width="100%"> </a>
+                        <div class="event_Image_Info"> 24 <br> NOV </div>
+                        <h3 class="Event_Block_1_Left_Caption">dna level 2</h3>
+                        <h3 class="Event_Block_Left_SubCaption"> By Rae Chandran</h3>
+                    </div>
+                     
+                     <!--   NEXT BUTTON  -->
+					<div class="eventNextButton">
+						<a style="cursor:pointer"> <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" > </a>
+					</div>
+                </div>
+            </section>
+        </section>
+        <input type="hidden" id="wspkey">
+        <!--WSP DETAILS-->
+        <section id=wspDetails  style="display:none">
+              <div class="wsp_inforBar">
+                  <span class="wsp_main_info">Package : <span id="wsp-package"></span> </span>
+                  <span class="wsp_main_info" style="float:right; margin-right:5%">Renewal Date : <span id="wsp-renewaldate"></span> </span>
+                  <span style="clear:both"></span>
+            </div>
+            <!--PERSONAL DETAILS-->
+            <div class="div_displayTable"> 
+                <h3 class="wsp_heading">personal details</h3>
+                <div class="wsp_leftDiv">
+                    <p class="wsp_details">Name : <span id="wsp-name"> </span></p>
+                    <p class="wsp_details">city : <span id="wsp-city"></span></p>
+                    <p class="wsp_details">address : <span id="wsp-address"></span></p>
+                    <p class="wsp_details">e-mail : <span id="wsp-email"></span></p>
+                    <p class="wsp_details">website : <span id="wsp-website"></span></p>
+                    <p class="wsp_details">contact number : <span id="wsp-contact"></span></p>
+                    <p class="wsp_details">date of birth : <span id="wsp-dob"> </span></p>
+                    <p class="wsp_details">age : <span id="wsp-age"> </span></p>
+                    <p class="wsp_details">gender : <span id="wsp-gender"> </span></p>
+                </div>
+                <div class="wsp_rightDiv"> 
+                    <p class="wsp_details">facebook : <span id="wsp-facebook"></span></p>
+                    <p class="wsp_details">twitter : <span id="wsp-twitter"></span></p>
+                    <p class="wsp_details">g+ : <span id="wsp-g+"> </span></p>
+                    <p class="wsp_details">youtube : <span id="wsp-youtube"> </span></p>
+                    <p class="wsp_details">about yourself : <span id="wsp-about"> </span></p>
+                </div>
+            </div>
+            
+            <!--MODALITYS-->
+<!--
+            <h3 class="wsp_heading">your offiring modalities</h3>
+            <div class="div_displayTable">
+                <div class="modalityDiv">
+                    <div> <img src="images/theraphy/Angel.png" width="90%"></div>
+                    <div class="infDiv">
+                        <p> Angelic Healing </p>
+                        <p> 5 Years Exp </p>
+                    </div>
+                </div>
+                
+                
+            </div>
+-->
+            <section id="about_geetha_images_desktop"> 
+                
+                        <h3 class="practitionerSubpage_text" style="margin-left:5%">therapies offers</h3>
+                    <div class="div_displayTable" style="padding: 0% 0% 0% 0%; width:100%;">
+
+                        <div class="previousButton">
+                        <img src="images/Next-1B.png" width="100%">
+                        </div>
+
+                        <div id="therapiesoffer">
+
+                         </div>
+                        <div class="nextButton">
+                        <img src="images/Next-1A.png" width="100%">
+                        </div>
+                    </div> 
+                </section>
+            <div class="div_displayTable" id="addModalities">
+                <a id="linkToAddModalities" href="">Click Here To Add Moadalities</a> 
+            </div>
+            
+<!--            ADDING EVENTS-->
+            <h3 class="wsp_heading">ADD YOUR EVENTS</h3>
+            <div class="div_displayTable">
+                <div class="modalityDiv">
+                    <div> <img src="images/whats_happning/Event-1.png" width="90%"></div>
+                    <div class="infDiv">
+                        <p> Click Hear </p>
+                        <p> Add Your Event </p>
+                    </div>
+                </div>
+                
+                <div class="modalityDiv">
+                   <div> <img src="images/whats_happning/Event-2.png" width="90%"></div>
+                    <div class="infDiv">
+                        <p> Click Hear </p>
+                        <p> Add Your Event </p>
+                    </div>
+                </div>
+                
+                <div class="modalityDiv">
+                   <div> <img src="images/whats_happning/Event-3.png" width="90%"></div>
+                    <div class="infDiv">
+                         <p> Click Hear </p>
+                        <p> Add Your Event </p>
+                    </div>
+                </div> 
+                
+                <div class="modalityDiv">
+                   <div> <img src="images/whats_happning/Event-1.png" width="90%"></div>
+                    <div class="infDiv">
+                         <p> Click Hear </p>
+                        <p> Add Your Event </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <!--ADDING VIDOES-->
+            <h3 class="wsp_heading">ADD YOUR VIDEOS</h3>
+            <div class="div_displayTable">
+                <div class="modalityDiv">
+                    <div> <img src="images/videoImages/16.jpg" width="100%"></div>
+                    <div class="infDiv">
+                        <p> Click Hear </p>
+                        <p> Add Your Video </p>
+                    </div>
+                </div>
+                
+                <div class="modalityDiv">
+                   <div> <img src="images/videoImages/07.jpg" width="100%"></div>
+                    <div class="infDiv">
+                        <p> Click Hear </p>
+                        <p> Add Your Video </p>
+                    </div>
+                </div>
+                
+                <div class="modalityDiv">
+                   <div> <img src="images/videoImages/04.jpg" width="100%"></div>
+                    <div class="infDiv">
+                         <p> Click Hear </p>
+                        <p> Add Your Video </p>
+                    </div>
+                </div>  
+                <div class="modalityDiv">
+                   <div> <img src="images/videoImages/08.jpg" width="100%"></div>
+                    <div class="infDiv">
+                         <p> Click Hear </p>
+                        <p> Add Your Video </p>
+                    </div>
+                </div>
+            </div>
+            
+             <!--ADDING VIDOES-->
+            <h3 class="wsp_heading">ADD YOUR AUDIOS</h3>
+            <div class="div_displayTable">
+                <div class="modalityDiv">
+                    <div> <img src="images/AudioImg.jpg" width="100%"></div>
+                    <div class="infDiv">
+                        <p> Click Hear </p>
+                        <p> Add Your Audio </p>
+                    </div>
+                </div>
+                
+                <div class="modalityDiv">
+                   <div> <img src="images/AudioImg.jpg" width="100%"></div>
+                    <div class="infDiv">
+                        <p> Click Hear </p>
+                        <p> Add Your Audio </p>
+                    </div>
+                </div>
+                
+                <div class="modalityDiv">
+                   <div> <img src="images/AudioImg.jpg" width="100%"></div>
+                    <div class="infDiv">
+                         <p> Click Hear </p>
+                        <p> Add Your Audio </p>
+                    </div>
+                </div>  
+                <div class="modalityDiv">
+                   <div> <img src="images/AudioImg.jpg" width="100%"></div>
+                    <div class="infDiv">
+                         <p> Click Hear </p>
+                        <p> Add Your Audio </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+            
+			
+            
+           
+            
+            
+            
+            
+        </section> <!--End of Body Section-->
+        
+        
+        
+        
+            
+            
+            <!--FOOTER SECTION-->
+            <script>
+               display_footer();
+            </script>
+        
+        
+			
+    </body>
+</html>

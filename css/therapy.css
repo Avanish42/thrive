@@ -1,0 +1,671 @@
+@media (min-width: 737px) {
+	/*DROPDOWN BUTTON HIDE IN DESKTOP DEVISE*/
+	.dropdownButton {
+		text-align: center;
+		width: 4%;
+		margin: 5% 0% 0% 45%;
+		display: none;
+	}
+	/*LIST VIEW BUTTON	*/
+	#listview {
+		display: none;
+	}
+    #therapy_Grid_View_Mobile{
+        display: none;
+    }
+}
+
+
+/*common css for all pages*/
+
+.pageTitle_text {
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	font-size: 3.6vw;
+	color: #4e0475;
+	display: inline-table;
+}
+
+.headding_div {
+	width: 40%;
+	text-align: left;
+	display: inline-table;
+	float: left;
+	margin-left: 5%;
+	margin-top: -5.5%;
+}
+
+
+/*----GRID VIEW ICON ----*/
+
+.gridview {
+	width: 13vw;
+	height: 3.3vw;
+	background-image: url(../images/theraphy/grid-view.png);
+	background-repeat: no-repeat;
+	display: inline-table;
+	background-position: center;
+	background-size: 100%;
+	float: right;
+	margin-right: 7%;
+	cursor: pointer;
+}
+
+
+/*----GRID AND LIST TEXT (GRID VIEW) ----*/
+
+/*
+.gridview_text {
+	vertical-align: middle;
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	font-size: 2.5vw;
+	text-align: right;
+	margin-left: 33%;
+	transform: translateY(-80%);
+	position: relative;
+    font-weight: bold;
+}
+*/
+
+
+/*----LIST VIEW ICON ----*/
+
+.listview {
+	width: 13vw;
+	height: 3.3vw;
+	background-image: url(../images/theraphy/list-view.png);
+	background-repeat: no-repeat;
+	display: inline-table;
+	background-position: center;
+	background-size: 100%;
+	float: right;
+	margin-right: 7%;
+	cursor: pointer;
+	padding: 0;
+}
+
+
+/*----LIST VIEW TEXT ----*/
+
+/*
+.listview_text {
+	vertical-align: middle;
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	font-size: 2.5vw;
+	text-align: right;
+	margin-left: 20%;
+	padding: 0;
+	transform: translateY(-80%);
+      font-weight: bold;
+}
+*/
+
+
+/*----KEYWORD ICON (GRID & LIST VIEW) ----*/
+
+.keyword {
+	width: 12vw;
+    height: 3vw;
+	background-image: url(../images/theraphy/keyword.png);
+	background-repeat: no-repeat;
+	display: inline-table;
+	background-size: 100%;
+    padding: .5% 0% .5% 0%;
+	margin-left: 5%;
+}
+
+
+
+/*----KEYWORD ICON TEXT (GRID & LIST VIEW) ----*/
+
+.keyword_text {
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    vertical-align: middle;
+	font-size: 2.2vw;
+	text-align: center;
+	background-color: transparent;
+	width: 75%;
+	border: 0;
+    font-weight: bold;
+    padding: 0% 0% 1% 2%;
+}
+
+
+/*----CATEGORY ICON (GRID & LIST VIEW) ----*/
+
+.dropdown {
+	width: 12vw;
+    height: 3vw;
+	background-image: url(../images/theraphy/therapies.png);
+	background-repeat: no-repeat;
+	display: inline-table;
+	background-position: right;
+	background-size: 100%;
+	padding: .5% 0% .5% 0%;
+	margin-left: 8%;
+
+    
+}
+
+
+
+/*----CATEGORY ICON TEXT (GRID & LIST VIEW) ----*/
+
+.dropdown_text {
+	vertical-align: middle;
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	font-size: 2.2vw;
+	width: 85%;
+	margin-left: 5%;
+	background-color: transparent;
+	border: none;
+    text-align: left;
+    
+}
+
+#ailments_search{
+    margin-left: 9%
+}
+
+
+
+/*------------------------------------------*/
+		/*STYLES FOR MOBILE DEVISES*/
+/*------------------------------------------*/
+
+@media (max-width: 736px) {
+	/*DROPDOWN BUTTON VISABLE*/
+	.dropdownButton {
+		text-align: center;
+		width: 4%;
+		margin: auto;
+		margin-top: 4%;
+	}
+	.pageTitle_text {
+		font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+		font-size: 4vw;
+		color: #4e0475;
+		display: inline-table;
+	}
+	/*----KEYWORD ICON (GRID & LIST VIEW) ----*/
+	.keyword {
+		width: 21vw;
+        height: 6vw;
+		padding: .5% 0% .5% 0%;
+        
+	}
+	/*----KEYWORD ICON TEXT (GRID & LIST VIEW) ----*/
+	.keyword_text {
+		font-size: 4vw;
+		width: 75%;
+		margin-left: -6%;
+		margin-top: 2%;
+        display: table-cell;
+	}
+    
+	/*----CATEGORY ICON (GRID & LIST VIEW) ----*/
+	.dropdown {
+		width: 21vw;
+        height: 6vw;
+		padding: .5% 0% .5% 0%;
+	}
+	/*----CATEGORY ICON TEXT (GRID & LIST VIEW) ----*/
+	.dropdown_text {
+		font-size: 4vw;
+		width: 85%;
+        display: table-cell;
+	}
+    
+    #keyword{
+        margin-bottom: 5%
+        
+    }
+    #category_dropdown{
+          margin-left: 36%;
+        
+    }
+    #therapy_dropdown{
+        margin-left: 5%;
+        
+    }
+    #ailments_search{
+          margin-left: 36%;
+        
+    }
+}
+
+
+/* *************  GRID VIEW  DESKTOP ************* */
+
+
+/*REKI DIV STYLS*/
+
+.therapy1 {
+	width: 20%;
+	display: inline-table;
+	text-align: center;
+	margin-left: 8%;
+    margin-bottom: 2%;
+}
+
+.therapy1:hover img {
+    filter:contrast(110%) brightness(110%);
+}
+
+
+/*PRANIC DIV STYLS*/
+
+.therapy2 {
+	width: 20%;
+	display: inline-table;
+	text-align: center;
+	margin-left: 12%;
+}
+
+
+/*CRANIOSACRAL DIV STYLS*/
+
+.therapy3 {
+	width: 20%;
+	display: inline-table;
+	text-align: center;
+	margin-left: 12%;
+}
+
+
+/*ANGEL DIV STYLS*/
+
+.therapy4 {
+	width: 20%;
+	display: inline-table;
+	text-align: center;
+	margin-left: 20%;
+}
+
+
+/*PAST LIFE DIV STYLS*/
+
+.therapy5 {
+	width: 20%;
+	display: inline-table;
+	text-align: center;
+	margin-left: 15%;
+}
+
+
+/*THERAPY DIV STYLS*/
+
+.therapy_program_Name {
+	color: #8eb170;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5vw;
+	margin-top: -.2%
+}
+
+
+/* *************  LIST VIEW  DESKTOP ************* */
+
+.therapy_list_Div {
+	padding: 0% 6% 0% 0%;
+	width: 100%;
+	margin-bottom: 5%
+}
+
+
+/*THERAPY_L & PRACTITIONESRS V PAGE CONTENT DIV*/
+
+.therapy_list_Img_content_div {
+	width: 65%;
+	display: inline-table;
+	margin-left: 5%;
+	vertical-align: top;
+	padding-top: 1%;
+}
+
+
+/*THERAPY_L PAGE IMAGE DIV*/
+
+.therapy_list_Img_div {
+	width: 20%;
+	text-align: center;
+	display: inline-table;
+	margin-left: 1%;
+    padding:1.5% 1.5% 1% 1.5%;
+}
+
+.therapy_list_Img_div:hover img {
+    filter:contrast(110%) brightness(110%);
+}
+
+
+/*THERAPY_L & PRACTITIONESRS V PAGE TITLE DIV*/
+
+.therapy_Name_List {
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	font-size: 3vw;
+	color: #8eb170;
+	margin-top: -1%;
+	margin-left: 3%
+}
+
+
+/*THERAPY_L & PRACTITIONESRS V PAGE INFO DIV*/
+
+.therapy_description_List {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5vw;
+	color: #000;
+	font-style: italic;
+	margin-top: -5%;
+	margin-left: 3%;
+	padding-right: 5%;
+	text-align: justify;
+	font-weight: normal;
+	line-height: 150%;
+}
+
+
+/*THERAPY_L & PRACTITIONESRS V PAGE SOCILA MEDIA DIV*/
+
+.therapy_Social_Media {
+	width: 5%;
+	float: right;
+	display: inline-table;
+	padding: .5%;
+	margin: 0% 1% 0% 0%;
+    cursor: pointer;
+}
+
+
+.therapy_Social_Media:hover img {
+     filter:saturate(8);
+}
+
+
+
+
+/*THERAPY_L & PRACTITIONESRS V PAGE KNOWMORE DIV*/
+
+.knowMore_Therapy_L {
+	width: 25%;
+	display: inline-table;
+}
+
+.knowMore_Therapy_L:hover img {
+     filter:saturate(4);
+}
+
+
+
+
+/* ------------------------           ------------------------ */
+/*                        THERAPY MOBILE                   */
+/* ------------------------           ------------------------ */
+
+@media (max-width: 736px) {
+    
+    #therapy_Grid_View_Desktop{
+        display: none;
+    }
+	/*REKI DIV STYLS*/
+	.therapy1 {
+		width: 30%;
+		display: table-cell;
+		text-align: center;
+		padding: 3%;
+	}
+	/*PRANIC DIV STYLS*/
+/*
+	.therapy2 {
+		width: 30%;
+		display: table-cell;
+		text-align: center;
+		padding: 3%;
+	}
+*/
+	/*CRANIOSACRAL DIV STYLS*/
+/*
+	.therapy3 {
+		width: 30%;
+		display: table-cell;
+		text-align: center;
+		padding: 3%;
+	}
+*/
+	/*ANGEL DIV STYLS*/
+/*
+	.therapy4 {
+		width: 30%;
+		display: table-cell;
+		text-align: center;
+		padding: 3%;
+	}
+*/
+	/*THERAPY DIV STYLS*/
+	.therapy_program_Name {
+		color: #8eb170;
+		font-family: 'Lato', sans-serif;
+		font-size: 3vw;
+		margin-top: -.2%
+	}
+	/* ------------------------           ------------------------ */
+	/*                        LIST VIEW  MOBILE                   */
+	/* ------------------------           ------------------------ */
+	/*THERAPY_L PAGE IMAGE DIV*/
+	.therapy_List_image_div {
+		width: 25%;
+		text-align: center;
+		display: inline-table;
+		vertical-align: middle;
+		margin: 2% 0% 0% 3%
+	}
+	/*THERAPY_L & PRACTITIONESRS V PAGE CONTENT DIV*/
+	.therapy_List_image_Content_div {
+		width: 60%;
+		display: inline-table;
+		vertical-align: top;
+		padding-top: 1%;
+		margin-left: 5%;
+	}
+	/*THERAPY_L & PRACTITIONESRS V PAGE KNOWMORE DIV*/
+	.knowMore_Therapy_L {
+		width: 35%;
+		display: inline-table;
+	}
+    
+    .therapy_Social_Media{
+        width: 6%;
+    }
+}
+
+/***** FOR HEAZE BROUSERS *****/
+
+/*Thriive Calendar*/
+@supports (-ms-ime-align:auto) {
+    
+    .therapy_Social_Media img{
+        width: 100%;
+    }
+    
+    .knowMore_Therapy_L img{
+        width: 100%
+    }
+    
+    .therapy1 img,
+    .therapy2 img,
+    .therapy3 img{
+        width: 100%;
+    }
+    .therapy_List_image_div img{
+        width: 100%
+    }
+    
+     .therapy_list_Div img{
+        width: 100%
+    }
+       
+    .footerDiv{
+        margin-top: 5%
+    }
+    
+    #TestimonialSection_Desktop{
+        margin-bottom: 20%
+    }
+    
+    @media (max-width: 736px) {
+        
+    .therapy1 img,
+    .therapy2 img,
+    .therapy3 img{
+        width: 70%;
+    }
+        
+    .therapy_list_Div img{
+        width: 100%
+    }
+    }
+}
+
+
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+        
+    .therapy_Social_Media img{
+        width: 100%;
+    }
+    
+    .knowMore_Therapy_L img{
+        width: 100%
+    }
+    
+    .therapy1 img,
+    .therapy2 img,
+    .therapy3 img{
+        width: 100%;
+    }
+        
+    .therapy_List_image_div img{
+        width: 100%;
+    }
+        
+    .therapy_list_Div img{
+        width: 100%
+    }
+        
+            
+    @media (max-width: 736px) {
+        
+    .therapy1 img,
+    .therapy2 img,
+    .therapy3 img{
+        width: 70%;
+    }
+        
+    .therapy_list_Div img{
+        width: 100%
+    }
+    }
+        
+        
+ }}
+
+/******SERCH CSS******/
+.tagLine{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+}
+.searchMailDiv{
+    width:70%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    margin-left: 12.2%;
+}
+.CityDiv{
+    width: 25%;
+    display: inline-table;
+    margin-right: 3%;
+}
+.serchDiv{
+    width: 70%;
+    display: inline-table;
+}
+
+.CityDiv input{
+    width: 100%;
+    height: 2.6vw;
+    color: #333;
+    border-radius: 10px 10px;
+    padding: 0% 0% 0% 8%;
+    font-size: 1.2vw;
+    border: 2px solid lightgray;
+}
+
+
+.serchDiv input{
+    width: 100%;
+    height: 2.6vw;
+    color: #333;
+    border-radius: 10px 10px;
+    padding: 0% 10% 0% 3%;
+    font-size: 1.2vw;
+    border: 2px solid lightgray;
+    background-image: url(../images/Search_2.png);
+    background-position: center right; 
+    background-repeat: no-repeat;
+    background-size: 7%;
+}
+
+.CityDiv input:focus,
+.serchDiv input:focus{
+    border: 2px solid #4e0475;
+}
+@media (max-width: 736px) {
+    
+/******SERCH CSS******/
+    tagLine{
+        font-size: 3vw;
+    }
+.searchMailDiv{
+    margin-left: 16%;
+}
+    
+.CityDiv{
+    width: 25%;
+    display: inline-table;
+}
+    
+.serchDiv{
+    width: 70%;
+    display: inline-table;
+}
+
+.CityDiv input{
+    width: 100%;
+    height: 4vw;
+    color: #333;
+    border-radius: 5px 5px;
+    padding: 0% 0% 0% 5%;
+    font-size: 2vw;
+}
+
+
+.serchDiv input{
+    width: 100%;
+    height: 4vw;
+    color: #333;
+    border-radius: 5px 5px;
+    padding: 0% 10% 0% 3%;
+    font-size: 2vw;
+    border: 2px solid lightgray;
+    background-size: 10%;
+}
+
+    
+}

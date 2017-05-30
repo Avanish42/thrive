@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.mySlides {display:none;}
+    
+    .video_Div{
+    background: url(images/videoImages/09.jpg) no-repeat center; 
+    background-size: cover;
+    width: 15vw;
+    height: 22.5vw;
+	position: relative;
+	overflow: hidden;
+    display: inline-table;
+    cursor: pointer;
+    
+    }
+</style>
+<body>
+
+
+<h2>Automatic Slideshow</h2>
+<div class="video_Div" onmouseover="carousel();">
+  <img class="mySlides" src="images/videoImages/01.jpg" style="width:100%">
+  <img class="mySlides" src="images/videoImages/02.jpg" style="width:100%">
+  <img class="mySlides" src="images/videoImages/03.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+    
+
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 20000); // Change image every 2 seconds
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/articles.css"> <!--styles for Our Story Page-->
+        
+        <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | ARTICALS</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script src="js/article_subpage.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("ourstory");
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+         <section class=menuSection>
+            <!---------- WEBSITE HEADER  ---------->
+            <script>
+                display_header_2();
+            </script>
+        </section> <!--End of Body Section-->
+            
+        
+            
+            
+            <!----------------------------- PILLAR SECTION ------------------------------->
+            <section class="totalBodySection">
+                
+                <div class="div_displayTable">
+                <div class="leftside_articalDiv">
+                        <div class="div_displayTable" id="artical_1">
+                            <h3 class="MainHeading" id="name"></h3>
+<!--                            <h4 class="subTitle">Lecture  Ezofest 2002 Ljubljana, Slovenia</h4>-->
+                            <h3 class="SubHeading" style="text-align:center">by: <span id="author"></span></h3>
+
+<!--
+                            <div class="artical_imageDiv">
+                               <img src="images/articals/harmonising_male_and_female_energy.jpg">
+                            </div>
+-->
+
+                            <div class="artical_ContentDiv">
+                                <p class="articalContent" id="description">
+                                </p>
+                                <script>
+                                fetchdata('name');
+                                fetchdata('author');
+                                fetchdata('description');
+                                </script>
+                                    <!--  RSS ICON-->
+<!--
+                                    <div class="artical_Social_Media" style="padding-right:4%"> 
+                                        <a href="#" target="_blank"> <img src="images/SocialMedia_B.png"> </a>
+                                    </div>
+-->
+
+                                    <!--  INSTAGRAM ICON-->
+<!--
+                                    <div class="artical_Social_Media"> 
+                                        <a href="#" target="_blank"> <img src="images/SocialMedia_I.png"> </a> 
+                                    </div>
+-->
+
+                                    <!--  TWITTER ICON-->
+<!--
+                                    <div class="artical_Social_Media"> 
+                                        <a href="#" target="_blank"> <img src="images/SocialMedia_T.png"> </a> 
+                                    </div>
+-->
+
+                                    <!--  FACEBOOK ICON-->
+<!--
+                                    <div class="artical_Social_Media"> 
+                                        <a href="#" target="_blank"> <img src="images/SocialMedia_F.png"> </a> 
+                                    </div>
+-->
+                            </div>
+                        </div>
+                </div>
+                    <div class="right_articalDiv" id="otherarticles">
+                        <h3 class="other_artical_title" style="top:10%">Other articles</h3>
+                        <script>displayOtherArticles();</script>
+                    </div>
+                </div>
+                
+                
+            </section>
+            <!--FOOTER SECTION-->
+            <script>
+               display_footer();
+            </script>
+		
+    </body>
+</html>

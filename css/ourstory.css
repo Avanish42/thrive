@@ -1,0 +1,275 @@
+
+/* -------------------------- STYLES FOR DESKTOP --------------------------*/
+
+
+/* ***********  HIDE MOBILE DEVISE IN DESKTOP ***********/
+
+@media (min-width: 737px) {
+    
+    #OurStory_dropDownButton{
+        display: none!important;
+    }
+
+    #aboutThriive_Mobile{
+        display: none!important;
+    } 
+    
+    #ourStory_Mobile{
+        display: none!important;
+    } 
+    #ThriivePillarsSection_Mobile{
+        display: none!important;
+    }
+}
+
+/*    MASTER HEADDING*/
+    .headdingoforStory{
+        text-align: center;
+        font-size: 5vw;
+        font-family: 'Amatic SC',cursive !important;
+        color: #4e0475;
+        text-align: center;
+        margin: -40% 0% 30% 0% ;
+		text-transform: lowercase;
+    }
+    
+    /*ABOUT INFORMATION*/
+    .aboutInfo{
+         font-family: 'Lato', sans-serif;
+        font-size: 1.3vw;
+        text-align: left;
+        color: #414042;
+        padding: 0% 4% 0% 3%;
+        margin: -5% 6% 0% 0%;
+        line-height: 140%;
+    }
+
+    #ourStory_Desktop{
+        margin-top: -2%;
+    }
+
+     /*OUR STORY INFORMATION*/
+    .ourStory{
+        font-family: 'Lato', sans-serif;
+        font-size: 1.3vw;
+        text-align: left;
+        color: #414042;
+        padding: 0% 6% 0% 7.4%;
+        overflow: auto;
+        line-height: 140%;
+    }
+
+
+
+
+
+	.pillars_img_Div{
+		width:25%;
+		display:inline-table;
+		vertical-align: bottom
+	}
+
+     /*PILLARS INFORMATION*/
+    .pillarInfoDiv{
+        width:65%;
+        display:inline-table;
+        vertical-align: middle;
+        margin-top: -10%;
+    }
+    
+     /*PILLAR INFORMATION*/
+    .pillarInfor{
+        font-family: 'Lato', sans-serif;
+        font-size: 1.3vw;
+        text-align: left;
+        color: #414042;
+        padding: 0% 4% 0% 4%;
+        margin-top: -5%;
+        line-height: 140%;
+    }
+
+    .pillarName{
+        font-family: 'Lato', sans-serif;
+        font-size: 2vw;
+        padding: 0% 0% 2.5% 4% ;
+        color: #4e0475;
+		font-weight: normal;
+    }
+
+    .pillarWebSIte{
+        font-family: 'Lato', sans-serif;
+        font-size: 1.5vw;
+        color: #4e0475;
+        text-decoration: none;
+    }
+    /*PINKY & KAUSHI IMAGE*/
+    #pinky_Kaushik_Img{
+        width:30%;
+        float:right;
+        margin: 10% 3% 0% 0%;
+    }
+     
+    .pinky_Kaushik_Div{
+        width:88%;
+        display:inline-table;
+        padding-left:1.48%;
+        padding-right: 0%;
+        position: relative;
+        margin-bottom: 4%
+    }
+    
+    .pinky_Kaushik_Info{
+        font-family: 'Lato', sans-serif;
+        font-size: 1.3vw;
+        text-align: left;
+        color: #414042;
+        padding: 2% 5% 0% 1%;
+        margin: -6% 0% 0% 0%;
+        z-index: 999;
+        position: absolute;
+        line-height: 140%;
+    }
+
+     .team_name{
+        font-family: 'Lato', sans-serif;
+        font-size: 2vw;
+        color: #4e0475;
+        }
+    
+
+/* -------------------------- STYLES FOR MOBILE --------------------------*/
+/* ***********  HIDE DESKTOP DEVISE IN MOBILE VERSION ***********/
+
+@media (max-width: 736px) {
+    
+    #aboutThriive_Desktop{
+         display: none !important;
+    }
+    
+      #ourStory_Desktop{
+           display: none !important;
+    }
+    
+     #pillarsOfThriive{
+          display: none !important;
+    }
+     
+     #all_Pillars_Info_Desktop{
+          display: none !important;
+    }
+    
+	 /*OUR STORY INFORMATION*/
+    .outStory{
+        font-family: 'Lato', sans-serif;
+        font-size: 3vw;
+        text-align: left;
+        color: #414042;
+        padding: 0% 6% 0% 3.5%;
+        overflow: auto;
+        line-height: 125%;
+        position: absolute;
+    }
+    
+    /*THRIVE PILLAR IMAGE DIV*/
+    #ThriivePillar_Image_1_OurStory_Mobile {
+        width: 90%;
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+		margin-left: 15%;
+		margin-top: -45%
+    }
+	
+	#aboutThriive_Mobile{
+		margin-left: 7.6%;
+	}
+    
+        /*ABOUT INFORMATION*/
+    .aboutInfo{
+        font-family: 'Lato', sans-serif;
+        font-size: 3vw;
+        text-align: left;
+        color: #414042;
+		 line-height: 125%;
+        margin: -5% -3% 0% -3%;
+		padding-left: 1;
+    }
+	.pillerMobileDiv{
+		width:85%;
+	}
+	.thriiveteamDiv{
+		width:85%;
+		
+	}
+	
+	 /*PILLARS INFORMATION*/
+    .pillarInfoDiv{
+        width:100%;
+        display:inline-table;
+        padding-left:10%;
+    }
+    
+    /*PILLAR NAME*/
+    .pillarName{
+        font-family: 'Lato', sans-serif;
+        font-size: 3.5vw;
+        padding: 5% 0% 1.5% 0% ;
+        color: #4e0475;
+		font-weight: bold;
+    }
+    
+    /*PILLAR WEBSITE*/
+    .pillarWebSIte{
+        font-family: 'Lato', sans-serif;
+        font-size: 3.2vw;
+        color: #4e0475;
+        text-decoration: none;
+    }
+    
+    #PillarPreviousButton_Mobile{
+		width: 10%;
+		float: left;
+		margin-top: 20%;
+		display:inline-table;
+		transform: translateY(58%);
+		
+    }
+    #PillarNextButton_Mobile{
+      	width: 10%;
+		float: right;
+		margin-top: 20%;
+		display:inline-table;
+		transform: translateY(58%);
+    }
+    
+   
+      
+    /*THRIVE TEAM IMAGE DIV*/
+    #Team_Thriive_Image_1_OurStory_Mobile {
+        width: 90%;
+        display: inline-table;
+		margin: -45% 0% 0% 15%
+    }
+    
+    
+    }
+
+
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+        
+        .ourStory{
+            padding: 0% 6% 0% 8.8%;
+        } 
+        
+        @media (max-width: 736px) {
+            
+            #pinkyDaga,
+            #kaushikDaga{
+                margin-top: -50%;
+            }
+        
+        }
+    
+    
+    }}

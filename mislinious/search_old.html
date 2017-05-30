@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!--        ADDING FAVICON-->
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+
+    <!--    INCLUDING FIREBASE FILES -->
+<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+    <script type="application/javascript" src="js/app.js"></script>
+    
+    <!--    INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+    <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+    
+    <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+    <link rel="stylesheet" href="css/search_old.css"> <!-- MENU CSS  -->
+    
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    
+    <!--    HOME PAGE TITLE  -->
+    <title>THRIIVE | NEWS LETTERS </title>
+    
+    <!--    INCLUDING JAVASCRIPT-->
+    <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+    <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    <script src="js/search.js"> </script> <!-- SEARCH SCRIPT  -->
+</head>
+    <body class="other_Pagess_body_Backgruond">
+        
+        
+    <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu();
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+         <section class=menuSection>
+         <script>
+                display_header_2();
+            </script>
+            
+        </section>
+    
+    <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+    <section class="totalBodySection" style="margin-top:3%;">
+        
+          <div class="div_displayTable">
+              <div class="searchBarDiv">
+                 <form >
+                     <input class="serchbar" type="text" name="" placeholder="Type your search here">
+                </form>
+              </div>
+              
+              <div class="searchIcon"> 
+                  <img src="images/Search_2.png" width="100%">
+              </div>
+        </div>
+        
+    <div class="div_displayTable" id="category">
+        <h4 class="MainHeading" style="margin:0">Explore categories</h4>
+        <div class="categoryMainDiv">
+            <div class="categoryDiv" onclick="showSubMenu();">
+                <a href="">
+                    <div class="categoryIcon"> <img src="images/theraphy/Angel.png" width="90%"> </div>
+                    <h3 class="categoryName"> Therapies </h3> </a>
+            </div>
+            <div class="categoryDiv" onclick="showSubMenu();">
+                <a href="">
+                    <div class="categoryIcon"> <img src="images/theraphy/Reiki.png" width="90%"> </div>
+                    <h3 class="categoryName"> Practitioners/Masters </h3> </a>
+            </div>
+            <div class="categoryDiv" onclick="showSubMenu();">
+                <a href="">
+                    <div class="categoryIcon"> <img src="images/theraphy/Past-Life.png" width="90%"> </div>
+                    <h3 class="categoryName"> Ailments </h3> </a>
+            </div>
+            <div class="categoryDiv" onclick="showSubMenu();">
+                <a href="">
+                    <div class="categoryIcon"> <img src="images/theraphy/Reiki.png" width="90%"> </div>
+                    <h3 class="categoryName"> Workshops </h3> </a>
+            </div>
+            <div class="categoryDiv" onclick="showSubMenu();">
+                <a href="">
+                    <div class="categoryIcon"> <img src="images/theraphy/Pranic.png" width="90%"> </div>
+                    <h3 class="categoryName"> City </h3> </a>
+            </div>
+            <div class="categoryDiv" onclick="showSubMenu();">
+                <a href="">
+                    <div class="categoryIcon"> <img src="images/theraphy/Angel.png" width="90%"> </div>
+                    <h3 class="categoryName"> Audios/Videos  </h3> </a>
+            </div>
+        </div>
+    </div>
+        
+        <div id="subMenu">
+            
+            <li> All </li>
+            <li> Healing </li>
+            <li>Therapy </li>
+            <li> Regression</li>
+        
+        
+        </div>
+        
+        
+        
+        
+        </section>
+        <!----- FOOTER SECTION ----->
+        <script>
+           display_footer();
+        </script>
+		
+    </body>
+</html>

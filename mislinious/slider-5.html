@@ -1,0 +1,204 @@
+<head>
+ <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" >
+</head>
+
+<style>
+    
+.slider {
+  width: 15vw;
+    height: 22.5vw;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all 1s ease-in-out;
+    padding: 0;
+    display: inline-table;
+}
+    
+.slider:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);   
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 1s ease-in-out;        
+    }
+    
+    .slider:hover .slide1{ display: block;} 
+    .slider:hover .slide2{ display: block;} 
+    .slider:hover .slide3{ display: block;} 
+    .slider:hover .fixImg{ display: none; }
+    
+.TW_Caption{
+	font-size: 1.5vw;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-weight: 900;
+    margin: 0;
+}
+
+.TW_SubCaption{
+	font-size: 1vw;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.TW_SubHeadding {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.TW_CaptionAfterHover{
+	font-size: 1vw;
+    font-family: 'Lato', sans-serif;
+    display: none;
+    margin: 0;
+}
+
+.TW_SubCaptionAfterHover{
+	font-size: 1vw;
+    font-family: 'Lato', sans-serif;
+    display: none;
+    margin: 0;
+   
+}
+    
+.vidoeInfoDiv{
+    width: 100%;
+    background-color:blue;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    padding: 1% 0% 1% 0% ;
+    height: 3vw;
+    bottom: 0;
+    z-index: 100
+}
+    
+.slider:hover .vidoeInfoDiv{
+    margin-bottom: -6.5%;
+
+}
+        
+.PlayButton{
+    background: url(images/PlayButton.png) no-repeat center;
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    margin: auto;
+    position: absolute;
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    z-index: 100;
+    margin: auto;
+    margin-left: 45%;
+    margin-top: 65%;
+    }
+
+.PlayButton:hover{
+    background: url(images/PlayButton-2.png) no-repeat center;
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    -webkit-transition: all .5s ease-in-out;
+    z-index: 100;
+}
+        
+.slider:hover .PlayButton{
+    opacity: 1;
+    margin-top: 65%;
+    }
+        
+            
+.slider:hover .TW_Caption,
+.slider:hover .TW_SubCaption {
+    display: none;
+}
+.slider:hover .TW_CaptionAfterHover,
+.slider:hover .TW_SubCaptionAfterHover {
+    display: block;
+}
+  
+    
+    
+.slide1,.slide2,.slide3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+    
+.slide1 {
+    animation:fade 8s infinite;
+    -webkit-animation:fade 8s infinite;
+    } 
+    
+.slide2 {
+    animation:fade2 8s infinite;
+    -webkit-animation:fade2 8s infinite;
+    }
+    
+.slide3 {
+    animation:fade3 8s infinite;
+    -webkit-animation:fade3 8s infinite;
+    }
+    
+    
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+    
+</style>
+
+
+<!--
+<div class='slider'>
+    <div class="PlayButton"></div>
+    <div class="vidoeInfoDiv">
+        <p class="TW_Caption">science of meditation</p>
+        <p class="TW_SubCaption">Brahmarshi Patriji</p>
+        <p class="TW_CaptionAfterHover">LoramIpsom</p>
+        <p class="TW_SubCaptionAfterHover">LoramIpsom</p>
+     </div>
+    <div class='fixImg'><img src="images/videoImages/16.jpg"></div>
+    <div class='slide1'><img src="images/videoImages/10.jpg"></div>
+    <div class='slide2'><img src="images/videoImages/11.jpg"></div>
+    <div class='slide3'><img src="images/videoImages/12.jpg"></div>
+</div>
+-->
+
+<div class='slider'>
+    <div class="PlayButton"></div>
+    <div class="vidoeInfoDiv">
+        <p class="TW_Caption">science of meditation</p>
+        <p class="TW_SubCaption">Brahmarshi Patriji</p>
+        <p class="TW_CaptionAfterHover">LoramIpsom</p>
+        <p class="TW_SubCaptionAfterHover">LoramIpsom</p>
+     </div>
+    <div>
+        <img class='fixImg' src="images/videoImages/16.jpg">
+        <img class='slide1' src="images/videoImages/17.jpg">
+        <img class='slide2' src="images/videoImages/15.jpg">
+        <img class='slide3' src="images/videoImages/14.jpg">
+    </div>
+</div>
+

@@ -1,0 +1,50 @@
+   .body_Bg {
+       margin: 3% 5% 3% 5%;
+       font-family: 'Lato', sans-serif;
+       background-color: #fff;
+       padding: 3%;
+   }
+   
+   .logo_Div {
+       width: 8vw;
+       margin: auto;
+       margin-top: 3%;
+       cursor: pointer;
+   }
+   
+   .text {
+       font-size: 1.1vw;
+       color: #323232;
+       line-height: 170%;
+       margin-top: -3%;
+       text-align: justify;
+   }
+   
+   .linkText {
+       font-family: 'Lato', sans-serif;
+       font-size: 1.1vw;
+       color: #000;
+       font-weight: bold;
+   }   
+   .linkText:hover {
+       font-size: 1.1vw;
+       color: #4e0475;
+   }
+   
+   .Heading {
+       font-family: 'Amatic SC', cursive;
+       color: #4e0475;
+       font-size: 3vw;
+       font-weight: 900;
+       text-transform: lowercase;
+   }
+
+.higletText{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1vw;
+    color: #4e0475;
+    font-weight: bold;
+    font-style: italic;
+      line-height: 170%
+    
+}

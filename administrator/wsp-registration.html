@@ -1,0 +1,383 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!--    INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/wsp_styles.css">
+    <link rel="stylesheet" href="css/wsp_fallowup.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <!--    HOME PAGE TITLE  -->
+    <title>THRIIVE | ADMIN </title>
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <script src="js/app.js"></script>
+<!--    <script src="js/wspreg.js"></script>-->
+    <script src="js/wspregistrationprocess.js"></script>
+    <!--    INCLUDING JAVASCRIPT-->
+    <style>
+        .menu_itmes a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        #welcome_text {
+            color: #4e0475;
+        }
+        
+        label {
+            color: #4e0475;
+        }
+        
+        #adduserDiv {
+            display: block;
+        }
+    </style>
+	<script>
+        check_authentication(" ");
+    </script>
+</head>
+
+<body class="body_Backgruond">
+    <section class="totalBodySection">
+        <section id="header">
+            <div class="maindiv">
+                <!--TOGGLE BUTTON DIV-->
+                <div class="leftDiv">
+                    <a style="cursor:pointer" class="anchorTagButton"><img src="images/menuIcon_2.png" alt="menueIcon" width="70%" onclick="menu_list()"></a>
+                </div>
+                <!--MENU-->
+                <!--LOGO DIV-->
+                <div class="MidleDiv">
+                    <a style="cursor:pointer" href="dashboard.html"><img id="logo_image" src="images/Logo.png" alt="Thriive Logo" width="75%" onclick=""></a>
+                </div>
+                <!--EMPTY DIV DIV-->
+                <div class="rightDiv">
+                    <p onclick="logout_user()" style="cursor:pointer;">logout</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="mainbar">
+        <h3 id="adduserDiv" class="pannelDiv">
+                    <ul>
+                        <a style="cursor:pointer" href="wspregistration_admin.html"><li id="addtext" class="listText">received</li></a>
+                        <a style="cursor:pointer"> <li id="listtext" class="activeText" onclick="enablefollowupssection()">follow ups</li></a>
+                    </ul>
+        </h3> </section>
+    <section id="followups">
+        <h3 class="headding">wsp registration followups</h3>
+        <section style="margin:0% 10% 0% 10% ">
+            <div id="crumbs" style="width:100%;margin-top:2%">
+                <ul>
+                    <li><a href="#" id="start_bread">Start Process</a></li>
+<!--                    <li><a href="#" id="form-1_bread" >Form-1</a></li> 	-->
+                    <li><a href="#" id="interview_bread" >Interview</a></li>
+                    <li><a href="#" id="form-2_bread">Form-2</a></li>
+                    <li><a href="#" id="review_bread" >Reviews</a></li>
+                    <li><a href="#" id="document_bread">Documents</a></li>
+                    <li><a href="#" id="payment_bread">Payment</a></li>
+                    <li><a href="#" id="sign_bread">Signing Contract</a></li>
+                    <li><a href="#" id="approval_bread">Approval</a></li>
+                </ul>
+            </div>
+            <div class="Save_button">
+<!--                <p class="submitText">Save</p>-->
+				<input type="hidden" id="wsphiddenname">
+				<input type="hidden" id="wsphiddenemail">
+				<input type="hidden" id="wsphiddenplace">
+				<input type="hidden" id="wsphiddenphone">
+				<input type="hidden" id="wsphiddenaddress">
+				<input type="hidden" id="wsphiddenpackage">
+				<input type="hidden" id="wsphiddenmemid">
+            </div>
+        </section>
+        <!--START PROCESS SECTION-->
+        <section class="sectionMargin" id="startProcess">
+            <div class="wsp_row">
+                <h3 class="formSubHeading"> Start Process  </h3>
+                <!----- FIRST NAME ---->
+                <div class="sm6_l">
+                    <label class="details">Name :</label> <span class="inputData" id="wspname"></span> </div>
+                <!----- PHONE NO ---->
+                <div class="sm6_r">
+                    <label class="details">Phone Number :</label> <span class="inputData" id="wspphone"></span> </div>
+                <!----- FIRST NAME ---->
+                <div class="sm6_l">
+                    <label class="details">City :</label> <span class="inputData" id="wspcity"></span> </div>
+                <!----- PHONE NO ---->
+                <div class="sm6_r">
+                    <label class="details">E-mail :</label> <span class="inputData" id="wspemail"></span> </div>
+				<div class="sm6_l">
+                    <label class="details">Interview Date :</label> <input type="date" class="inputData" id="scheduledDate"> </div>
+				<div class="sm6_r">
+                    <label class="details">Interview Time :</label> <input type="time" class="inputData" id="scheduledTime"> 
+				</div>
+				
+				<div class="sm6_l">
+                    <label class="details">Venue :</label> <input type="text" class="inputData" id="venue"> 
+				</div>
+                <div class="button" onclick="proceedToInterview('Interview')">
+                    <p class="submitText">Send</p>
+                </div>  
+                <span style="clear:both"></span> </div>
+        </section>
+                    <a href="" id="viewmoreDetails" target="_blank">
+                    <div class="Green_button" onclick="">
+                        <p class="submitText">View More </p>
+                    </div> </a>
+                <script>
+				assignViewMoreDetails();
+				</script>
+
+        <!-- ***INTERVIEW  SECTION ***-->
+        <section class="sectionMargin" id="interview">
+            <div class="wsp_row">
+                <h3 class="formSubHeading">Interview</h3>
+                <div class="sm6_l">
+                    <label class="details">Interviewed By :</label> <input class="inputData" type="text" id="InterviewerName">
+                    <br>
+                    <br>
+                    <br>
+                    <label class="details">Interviewed On :</label> <input class="inputData" type="Date" id="interviewDate"> 
+                </div>
+                <div class="sm6_r">
+                    <label class="details">Comments :</label>
+                    <textarea class="wsp_textarea" rows="7" cols="70" name="comment" id="comments"></textarea>
+                </div>
+                <div class="Red_button" onclick="interviewReject('Rejected')">
+                    <p class="submitText">Reject</p>
+                </div>
+                <div class="Green_button" onclick="interviewApprove('interview Approved')">
+                    <p class="submitText">Approve</p>
+                </div> <span style="clear:both"></span> </div>
+        </section>
+        
+        <!--4 FORM-2  SECTION-->
+        <section class="sectionMargin" id="form-2">
+            <div class="wsp_row">
+                <h3 class="formSubHeading">Form-2</h3>
+                <!----- FIRST NAME ---->
+                <div class="sm6_l">
+                    <label class="details">Name :</label> <span class="inputData" id="wspname_form2"> WSP Name</span> </div>
+                <!----- PHONE NO ---->
+                <div class="sm6_r">
+                    <label class="details">Phone Number :</label> <span class="inputData" id="wspphone_form2"> 99999999</span> </div>
+                <!----- FIRST NAME ---->
+                <div class="sm6_l">
+                    <label class="details">City :</label> <span class="inputData" id="wspcity_form2"> Bangaluru</span> </div>
+                <!----- PHONE NO ---->
+                <div class="sm6_r">
+                    <label class="details">E-mail :</label> <span class="inputData" id="wspemail_form2"> test@thriive.in</span> </div>
+                <!----- FORM SUB DATE ---->
+                <div class="sm6_l" id="form2SentOn">
+                    <label class="details">Form-2 Sent On :</label> <span class="inputData" id="wspform_2SentDate"> Mr. Thriive Name</span> </div>
+                <!----- RESPONSE DATE ---->
+                <div class="sm6_r" id="form2ReceivedOn">
+                    <label class="details">Form-2 Received On :</label> <span class="inputData" id="wspform_2receivedDate"> dd-mm-yy </span>
+                    <br> </div>
+                <div class="button" id="form2next" onclick="proceedToNext('Reviews');">
+                    <p class="submitText">Next</p>
+                </div>
+                <div class="Green_button" id="form-2_button" onclick="sendForm2ToWsp();">
+                    <p class="submitText">Send Form-2</p>
+                </div> <span style="clear:both"></span> </div>
+        </section>
+        
+        <!--3 REVIEWS  SECTION-->
+        <section class="sectionMargin" id="reviews">
+            <div class="wsp_row">
+                <h3 class="formSubHeading">Reviews</h3>
+                <div class="sm6_l">
+                    <label class="details"><u>Review-1 </u></label>
+                    <br>
+                    <br>
+                    <br>
+                    <label class="details">Name:</label> <span class="inputData" id="review1name"></span>
+                    <br>
+                    <br>
+                    <br>
+                    <label class="details">E-mail :</label> <span class="inputData" id="review1email"></span> </div>
+                <div class="sm6_r">
+                    <label class="details">Comments :</label>
+                    <textarea class="wsp_textarea" rows="7" cols="70" name="comment" id="review1comment" readonly></textarea>
+                </div>
+                <hr>
+                <div class="sm6_l">
+                    <label class="details"><u>Review-2 </u></label>
+                    <br>
+                    <br>
+                    <br>
+                    <label class="details">Name:</label> <span class="inputData" id="review2name"></span>
+                    <br>
+                    <br>
+                    <br>
+                    <label class="details">E-mail :</label> <span class="inputData" id="review2email"></span> </div>
+                <div class="sm6_r">
+                    <label class="details">Comments :</label>
+                    <textarea class="wsp_textarea" rows="7" cols="70" name="comment" id="review2comment" readonly></textarea>
+                </div>
+                <hr>
+                <div class="sm6_l">
+                    <label class="details"><u>Review-3 </u></label>
+                    <br>
+                    <br>
+                    <br>
+                    <label class="details">Name:</label> <span class="inputData" id="review3name"></span>
+                    <br>
+                    <br>
+                    <br>
+                    <label class="details">E-mail :</label> <span class="inputData" id="review3email"></span>
+                    <br>
+                    <br>
+                    <br>
+                    </div>
+                 <div class="sm6_r">
+                    <label class="details">Comments :</label>
+                    <textarea class="wsp_textarea" rows="7" cols="70" name="comment" id="review3comment" readonly></textarea>
+                </div>
+                    <hr>
+               
+               
+                <div style="width:94%; margin-bottom:5%" id="ThriiveOverallComments">
+                    <label class="details">Thriive Overall Comments :</label>
+                    <textarea class="wsp_textarea" rows="7" cols="70" name="comment" id=""></textarea>
+                </div>
+                 <div class="sm6_l" id="reviewApprovedOn">
+                    <label class="details">Approved on :</label> <span class="inputData" id="reviewApprovedDate"></span> </div>
+                <div class="button" id="reviewNext" onclick="proceedToNext('documents')">
+                    <p class="submitText">Next</p>
+                </div>
+                <div class="Red_button" onclick="Reject();" id="rejectbutton">
+                    <p class="submitText">Reject</p>
+                </div>
+                <div class="Green_button" onclick="approveReviews()" id="approvebutton">
+                    <p class="submitText">Approve</p>
+                </div> <span style="clear:both"></span> </div>
+        </section>
+        
+        <!--5 UPLODE DOCUMENTS  SECTION-->
+        <section class="sectionMargin" id="documents">
+            <div class="wsp_row">
+                <h3 class="formSubHeading">Documents</h3>
+                <div class="sm6_l">
+                    <label class="details">Address Proof :</label> <span class="inputData"> Uploaded 
+					<a href="" id="address_proof">View</a></span> </div>
+                <div class="sm6_r">
+                    <label class="details">Identity Proof :</label> <span class="inputData"> Uploaded  
+					<a href="" id="identity_proof">View</a></span> </div>
+                <div class="sm6_l">
+                    <label class="details">Certificates :</label> <span class="inputData" id="certificatediv"> Uploaded 
+					<a href="" id="certificate_url">View</a> </span> </div>
+                <div class="sm6_r">
+                    <label class="details">Degrees :</label> <span class="inputData" id="degreediv"> Uploaded 
+					<a href="" id="degrees_proof">View</a> </span> </div>
+                <div class="button" onclick="proceedToNext('payment')">
+                    <p class="submitText">Next</p>
+                </div>
+                 </div>
+        </section>
+        
+        <!--***6 PAYMENT  SECTION***-->
+        <section class="sectionMargin" id="payment">
+            <div class="wsp_row">
+                <h3 class="formSubHeading">Payment</h3>
+<!--                --- FIRST NAME ---->
+                <div class="sm6_l">
+                    <label class="details">Name :</label> <span class="inputData" id="wspnamepayment"></span> </div>
+<!--                --- PHONE NO ---->
+                <div class="sm6_r">
+                    <label class="details">Phone Number :</label> <span class="inputData" id="wspphonepayment"></span> </div>
+                <div class="sm6_l">
+                    <label class="details">City :</label> <span class="inputData" id="wspcitypayment"></span> </div>
+                <div class="sm6_r">
+                    <label class="details">E-mail :</label> <span class="inputData" id="wspmailpayment"></span> </div>
+                <div class="sm6_l">
+                    <label class="details">Amount :</label> <span class="inputData" id="wspamountpayment">INR 4799/-</span> </div>
+                <!----- RESPONSE DATE ---->
+                <div class="sm6_r">
+                    <label class="details">Select Packages :</label>
+                    <select class="DropdownList" onchange="changePaymentAmount()" id="paymentOptions">
+                        <option value="4799" selected>Earth</option>
+                        <option value="7199">Water</option>
+                        <option value="11999">Fire</option>
+                    </select>
+                </div>
+                <div class="sm6_l" id="paymentLinkDiv">
+                    <label class="details">Link Sent on :</label> <span class="inputData" id="PaymentLinkSentOn"></span> </div>
+                <div class="sm6_r" id="PaymentReceivedDiv">
+                    <label class="details">Payment Received on :</label> <span class="inputData" id="paymentRecievedOn"></span> </div>
+                <div class="sm6_l">
+				<!--Empty Div-->
+                </div>
+                <div class="button" onclick="proceedToNext('signContract');" id="paymentNextButton">
+                    <p class="submitText">Next</p>
+                </div>
+                <div class="Green_button" onclick="sendPaymentLink()" id="paymentsentbutton">
+                    <p class="submitText">Send Pay Link</p>
+                </div> <span style="clear:both"></span> </div>
+        </section>
+        
+        <!--*** 7 SIGNIN CONTRACT SECTION***-->
+        <section class="sectionMargin" id="signContract">
+            <div class="wsp_row">
+                <h3 class="formSubHeading">Signing Contract</h3>
+                <div class="sm6_l">
+                    <label class="details">Payment INR :</label> <span class="inputData" id="wsppaymentsign">INR 4799/-</span> </div>
+                <div class="sm6_r">
+                    <label class="details">Payment Received on :</label> <span class="inputData" id="paymentRecivedDate"></span> </div>
+                <div class="sm6_l">
+                    <label class="details">Contract Signed on :</label> <span class="inputData" id="contractsignedDate"></span> </div>
+                <div class="sm6_r">
+				<!--empty Div-->
+                </div>
+                <div class="button" onclick="proceedToNext('approval')">
+                    <p class="submitText">Next</p>
+                </div>
+                <div class="Red_button" onclcik="rejectcontract()" id="contractrejectButton">
+                    <p class="submitText">Not Signed </p>
+                </div>
+                <div class="Green_button" onclick="signthecontract()" id="contractSignedButton">
+                    <p class="submitText">Signed</p>
+                </div> <span style="clear:both"></span> </div>
+        </section>
+        
+        <!--*** APPROVAL SECTION ***-->
+        <section class="sectionMargin" id="approval">
+            <div class="wsp_row">
+                <h3 class="formSubHeading">Approval</h3>
+                <div class="sm6_l">
+                    <label class="details">Contract Status :</label> <span class="inputData"> Signed </span></div>
+                <div class="sm6_r">
+                    <label class="details">Contract Signed on :</label> <span class="inputData" id="signedOn"></span> </div>
+                <div class="sm6_l">
+                    <label class="details">User ID:</label>
+                    <input class="SignupInput" type="text" id="signinmailid" placeholder="wsp@email.com" value="wsp@email.com"> </div>
+                <div class="sm6_r">
+                    <label class="details"> Password :</label>
+                    <input class="SignupInput" type="text" placeholder="" id="temppassword">
+					<br>
+					<script>
+						
+					</script>
+<!--
+                    <div class="generate" onclick="generatPassword();">
+                        <p> Generate Password </p>
+                    </div>
+-->
+                </div>
+                <div class="button" onclick="proceedToNext('approved')">
+                    <p class="submitText">Close</p>
+                </div>
+                <div class="Green_button" onclick="sendDetails()">
+                    <p class="submitText">Send Mail</p>
+                </div> <span style="clear:both"></span> </div>
+        </section>
+    </section>
+</body>
+
+</html>

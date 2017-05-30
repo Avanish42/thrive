@@ -1,0 +1,288 @@
+
+<style>
+    
+.slideshow {
+    position: relative;
+    width: 15vw;
+    height: 22.5vw;
+    display: inline-table;
+    cursor: pointer;
+    -webkit-transition: all 1s ease-in-out;
+    margin-left: 2%;
+     -webkit-transform: scale(1); /* android, safari, chrome */
+    -moz-transform: scale(1); /* old firefox */
+    -o-transform: scale(1); /* old opera */
+    -ms-transform: scale(1); /* old IE */
+    transform: scale(1); /*standard */
+    
+    
+}
+    
+.slideshow img{
+       display: none;
+}
+    
+.slideshow:hover img{
+    display: block;
+    -webkit-transform: scale(1); /* android, safari, chrome */
+    -moz-transform: scale(1); /* old firefox */
+    -o-transform: scale(1); /* old opera */
+    -ms-transform: scale(1); /* old IE */
+    transform: scale(1); /*standard */
+    }
+/*
+    
+.slideshow:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);   
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 1s ease-in-out;
+    }
+*/
+    
+  .slideshow:hover{
+    -webkit-transform: scale(1.1); /* android, safari, chrome */
+    -moz-transform: scale(1.1); /* old firefox */
+    -o-transform: scale(1.1); /* old opera */
+    -ms-transform: scale(1.1); /* old IE */
+    transform: scale(1.1); /*standard */
+    }
+    
+.slideshow figure {
+  margin: 0;
+  position: absolute;
+}
+    
+.slideshow:hover figure {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+    
+.slideshow figure:nth-child(1) {
+  -webkit-animation: fade 6s 4s infinite;
+  animation: fade 6s 4s infinite;
+}
+.slideshow figure:nth-child(2) {
+  -webkit-animation: fade 6s 2s infinite;
+  animation: fade 6s 2s infinite;
+}
+    
+.slideshow figure:nth-child(3) {
+  -webkit-animation: fade 6s 0s infinite;
+  animation: fade 6s 0s infinite;
+}
+    
+@-webkit-keyframes fade {
+  0% {opacity: 1;}
+  31.3% {opacity: 1;}
+  33.3% {opacity: 0;}
+  98% {opacity: 0;}
+  100% {opacity: 1;}
+}
+    
+@-moz-keyframe fade {
+  0% {opacity: 1;}
+  31.3% {opacity: 1;}
+  33.3% {opacity: 0;}
+  98% {opacity: 0;}
+  100% {opacity: 1;}
+}
+      
+@keyframes fade {
+  0% {opacity: 1;}
+  31.3% {opacity: 1;}
+  33.3% {opacity: 0;}
+  98% {opacity: 0;}
+  100% {opacity: 1;}
+}
+        
+-moz-keyframe  fade {
+  0% {opacity: 1;}
+  31.3% {opacity: 1;}
+  33.3% {opacity: 0;}
+  98% {opacity: 0;}
+  100% {opacity: 1;}
+}
+    
+.PlayButton{
+    background: url(../images/PlayButton.png) no-repeat center;
+    background-size: cover;
+    width: 3.5vw;
+    height: 3.5vw;
+    margin: auto;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    z-index: 100;
+    margin-top: 60%
+    }
+
+.PlayButton:hover{
+    background: url(../images/PlayButton-2.png) no-repeat center;
+    background-size: cover;
+    width: 3.5vw;
+    height: 3.5vw;
+    -webkit-transition: all .5s ease-in-out;
+    z-index: 100;
+}
+    
+.slideshow:hover .PlayButton{
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+@keyframes fade {
+  0% { opacity: 1;}
+  31.3% { opacity: 1;}
+  33.3% { opacity: 0;}
+  98%   { opacity: 0;}
+  100%  {opacity: 1;}
+}
+
+   
+-moz-keyframe  fade {
+  0% { opacity: 1;}
+  31.3% { opacity: 1;}
+  33.3% { opacity: 0;}
+  98%   { opacity: 0;}
+  100%  {opacity: 1;}
+}
+
+    
+.slideshow:hover .TW_Caption,
+.slideshow:hover .TW_SubCaption {
+    display: none;
+}
+.slideshow:hover .TW_CaptionAfterHover,
+.slideshow:hover .TW_SubCaptionAfterHover {
+    display: block;
+}
+.TW_Caption{
+	font-size: 1.5vw;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-weight: 900;
+    margin: 0;
+}
+
+.TW_SubCaption{
+	font-size: 1vw;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.TW_SubHeadding {
+       font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.TW_CaptionAfterHover{
+	font-size: 1vw;
+    font-family: 'Lato', sans-serif;
+    display: none;
+    margin: 0;
+}
+
+.TW_SubCaptionAfterHover{
+	font-size: 1vw;
+    font-family: 'Lato', sans-serif;
+    display: none;
+    margin: 0;
+   
+}
+    
+.vidoeInfoDiv{
+    width: 100%;
+    background-color:red;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    padding: 1% 0% 1% 0% ;
+    -webkit-transition: all 1s ease-in-out;
+    }
+  
+    
+</style>
+<div style="width:100%; displya:table">
+
+<div class="slideshow" style="background: url(../images/videoImages/09.jpg) no-repeat center; ">
+  <figure>
+    <img src="images/videoImages/01.jpg" width="100%">
+  </figure>
+  <figure>
+    <img src="images/videoImages/02.jpg" width="100%">
+  </figure>
+  <figure>
+   <img src="images/videoImages/03.jpg" width="100%">
+  </figure>
+    <div class="PlayButton"></div>
+    <div class="vidoeInfoDiv">
+        <p class="TW_Caption">science of meditation</p>
+        <p class="TW_SubCaption">Brahmarshi Patriji</p>
+        <p class="TW_CaptionAfterHover">LoramIpsom</p>
+        <p class="TW_SubCaptionAfterHover">LoramIpsom</p>
+     </div>
+</div>
+
+<div class="slideshow" style="background: url(../images/videoImages/09.jpg) no-repeat center; ">
+  <figure>
+    <img src="images/videoImages/01.jpg" width="100%">
+  </figure>
+  <figure>
+    <img src="images/videoImages/02.jpg" width="100%">
+  </figure>
+  <figure>
+   <img src="images/videoImages/03.jpg" width="100%">
+  </figure>
+    <div class="PlayButton"></div>
+    <div class="vidoeInfoDiv">
+        <p class="TW_Caption">science of meditation</p>
+        <p class="TW_SubCaption">Brahmarshi Patriji</p>
+        <p class="TW_CaptionAfterHover">LoramIpsom</p>
+        <p class="TW_SubCaptionAfterHover">LoramIpsom</p>
+     </div>
+</div>
+
+<div class="slideshow" style="background: url(../images/videoImages/09.jpg) no-repeat center; ">
+  <figure>
+    <img src="images/videoImages/01.jpg" width="100%">
+  </figure>
+  <figure>
+    <img src="images/videoImages/02.jpg" width="100%">
+  </figure>
+  <figure>
+   <img src="images/videoImages/03.jpg" width="100%">
+  </figure>
+    <div class="PlayButton"></div>
+    <div class="vidoeInfoDiv">
+        <p class="TW_Caption">science of meditation</p>
+        <p class="TW_SubCaption">Brahmarshi Patriji</p>
+        <p class="TW_CaptionAfterHover">LoramIpsom</p>
+        <p class="TW_SubCaptionAfterHover">LoramIpsom</p>
+     </div>
+</div>
+
+<div class="slideshow" style="background: url(../images/videoImages/09.jpg) no-repeat center; ">
+  <figure>
+    <img src="images/videoImages/01.jpg" width="100%">
+  </figure>
+  <figure>
+    <img src="images/videoImages/02.jpg" width="100%">
+  </figure>
+  <figure>
+   <img src="images/videoImages/03.jpg" width="100%">
+  </figure>
+    <div class="PlayButton"></div>
+    <div class="vidoeInfoDiv">
+        <p class="TW_Caption">science of meditation</p>
+        <p class="TW_SubCaption">Brahmarshi Patriji</p>
+        <p class="TW_CaptionAfterHover">LoramIpsom</p>
+        <p class="TW_SubCaptionAfterHover">LoramIpsom</p>
+     </div>
+</div>
+    </div>

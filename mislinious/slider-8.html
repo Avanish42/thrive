@@ -1,0 +1,249 @@
+
+<style>
+    
+    .videoDiv1,
+    .videoDiv2,
+    .videoDiv3,
+    .videoDiv4{
+        width: 15vw;
+        height: 22.5vw;
+        display: inline-table;;
+        margin-left: 2%;
+        position:relative;
+    }
+    
+    .videoDiv1:hover .BeforeText,
+    .videoDiv2:hover .BeforeText,
+    .videoDiv3:hover .BeforeText,
+    .videoDiv4:hover .BeforeText,
+    .videoDiv1:hover .slides1,
+    .videoDiv2:hover .slides2,
+    .videoDiv3:hover .slides3,
+    .videoDiv4:hover .slides4{
+        display: block;
+    }
+       
+    .videoDiv1:hover .BeforeText,
+    .videoDiv2:hover .BeforeText,
+    .videoDiv3:hover .BeforeText,
+    .videoDiv4:hover .BeforeText{
+        display: none;
+    }
+              
+    .videoDiv1:hover .AfterText,
+    .videoDiv2:hover .AfterText,
+    .videoDiv3:hover .AfterText,
+    .videoDiv4:hover .AfterText{
+        display: block;
+    }
+    
+    
+.PlayButton{
+    background: url(images/PlayButton.png) no-repeat center;
+    background-size: cover;
+    width: 3.5vw;
+    height: 3.5vw;
+    margin: auto;
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    z-index: 10;
+}
+
+.PlayButton:hover{
+    background: url(images/PlayButton-2.png) no-repeat center;
+    background-size: cover;
+    width: 3.5vw;
+    height: 3.5vw;
+    -webkit-transition: all .5s ease-in-out;
+    z-index: 10;
+    opacity: 1;
+    cursor: pointer;
+}
+    
+    .videoDiv1:hover .PlayButton,
+    .videoDiv2:hover .PlayButton,
+    .videoDiv3:hover .PlayButton,
+    .videoDiv4:hover .PlayButton{
+        opacity: .8;
+    }
+        
+    .videoDiv1:hover .slides1_bg,
+    .videoDiv2:hover .slides2_bg,
+    .videoDiv3:hover .slides3_bg,
+    .videoDiv4:hover .slides4_bg{
+        display: none;
+        }
+
+    
+    .slides1, 
+    .slides2, 
+    .slides3, 
+    .slides4{
+        width: 100%;
+        height: 22.5vw;
+        overflow: hidden;
+        display: inline-table;
+        background-color: red;
+        cursor: pointer;
+        display: none;
+    }
+        
+    .slides1_bg, 
+    .slides2_bg, 
+    .slides3_bg, 
+    .slides4_bg{
+        width: 100%;
+        height: 22.5vw;
+        overflow: hidden;
+        display: inline-table;
+        background-color: green;
+        cursor: pointer;
+    }
+    
+    .BeforeText{
+        width: 100%;
+        height: 4vw;
+        background-color: green;
+        color: #fff;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .BeforeText p,
+    .AfterText p{
+        font-size: 1.5vw;
+    }
+    
+    .AfterText{
+        width: 100%;
+         height: 4vw;
+        background-color: red;
+        color: #fff;
+        text-align: center;
+        display: none;
+        vertical-align: middle;
+        }
+        
+    
+    
+
+    .slides1 img,
+    .slides2 img,
+    .slides3 img,
+    .slides4 img{
+      position: absolute; 
+      transition: opacity 1s;
+      opacity: 0;
+    }
+
+    .slides1 img:first-child, 
+    .slides2 img:first-child,
+    .slides3 img:first-child,
+    .slides4 img:first-child {
+      z-index: 2;
+      opacity: 1;
+    }
+
+    .slides1 img:last-child,
+    .slides2 img:last-child,
+    .slides3 img:last-child,
+    .slides4 img:last-child {
+      z-index: 1;
+      opacity: 1;
+    }
+</style>
+
+<script>
+
+    function nextSlide1() {
+        if (typeof $ == "undefined") var $ = function(sel) { return document.querySelector(sel); }	
+        $(".slides1").appendChild($(".slides1 img:first-child"));
+    }
+    
+    function nextSlide2() {
+        if (typeof $ == "undefined") var $ = function(sel) { return document.querySelector(sel); }	
+        $(".slides2").appendChild($(".slides2 img:first-child"));
+    }
+    
+    function nextSlide3() {
+        if (typeof $ == "undefined") var $ = function(sel) { return document.querySelector(sel); }	
+        $(".slides3").appendChild($(".slides3 img:first-child"));
+    }
+    
+    function nextSlide4() {
+        if (typeof $ == "undefined") var $ = function(sel) { return document.querySelector(sel); }	
+        $(".slides4").appendChild($(".slides4 img:first-child"));
+    }
+    
+    
+    setInterval(nextSlide1, 3000);
+    setInterval(nextSlide2, 3000);
+    setInterval(nextSlide3, 3000);
+    setInterval(nextSlide4, 3000);
+
+</script>
+<div style="display:table; width:100%; position: absolute;"> 
+
+
+<div class="videoDiv1">
+    <div class="slides1_bg">
+        <img src="images/videoImages/17.jpg" width="100%">
+    </div>
+    <div class="slides1">
+      <img src="images/videoImages/03.jpg" width="100%">
+      <img src="images/videoImages/04.jpg" width="100%">
+      <img src="images/videoImages/05.jpg" width="100%">
+    </div>
+    
+    <div class="PlayButton"> </div>
+    <div class="BeforeText"> <p> Praksh Before</p> </div>
+    <div class="AfterText"> <p> Praksh AfterText</p> </div>
+</div>
+
+<div class="videoDiv2">
+    <div class="slides2_bg">
+        <img src="images/videoImages/17.jpg" width="100%">
+    </div>
+    <div class="slides2">
+      <img src="images/videoImages/03.jpg" width="100%">
+      <img src="images/videoImages/04.jpg" width="100%">
+      <img src="images/videoImages/05.jpg" width="100%">
+    </div>
+    
+    <div class="PlayButton"> </div>
+    <div class="BeforeText"> <p> Praksh Before</p> </div>
+    <div class="AfterText"> <p> Praksh AfterText</p> </div>
+</div>
+
+<div class="videoDiv3">
+    <div class="slides3_bg">
+        <img src="images/videoImages/17.jpg" width="100%">
+    </div>
+    <div class="slides3">
+      <img src="images/videoImages/03.jpg" width="100%">
+      <img src="images/videoImages/04.jpg" width="100%">
+      <img src="images/videoImages/05.jpg" width="100%">
+    </div>
+    
+    <div class="PlayButton"> </div>
+    <div class="BeforeText"> <p> Praksh Before</p> </div>
+    <div class="AfterText"> <p> Praksh AfterText</p> </div>
+</div>
+
+<div class="videoDiv4">
+    <div class="slides4_bg">
+        <img src="images/videoImages/17.jpg" width="100%">
+    </div>
+    <div class="slides4">
+      <img src="images/videoImages/03.jpg" width="100%">
+      <img src="images/videoImages/04.jpg" width="100%">
+      <img src="images/videoImages/05.jpg" width="100%">
+    </div>
+    
+    <div class="PlayButton"> </div>
+    <div class="BeforeText"> <p> Praksh Before</p> </div>
+    <div class="AfterText"> <p> Praksh AfterText</p> </div>
+</div>
+
+    
+</div>

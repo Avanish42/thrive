@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!--    INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/adddata.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.min.css">
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <!--    HOME PAGE TITLE  -->
+    <title>THRIIVE | THERAPIES </title>
+    <!--    FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <script src="js/app.js"></script>
+    <!--    INCLUDING JAVASCRIPT-->
+    <script src='ckeditor/ckeditor.js'></script>
+    <script src="js/therapies.js"></script>
+    <style>
+        .menu_itmes a {
+            text-decoration: none;
+            color: #fff;
+        }
+        #welcome_text{
+            color: #4e0475;
+        }
+        label{
+            color: #4e0475;
+        }
+        #adduserDiv{
+		display: block;
+	}
+    </style>
+    <script>
+        check_authentication(" ");
+    </script>
+</head>
+
+<body class="body_Backgruond">
+    <section class="totalBodySection">
+        <section id="header">
+            <div class="maindiv">
+                <!--TOGGLE BUTTON DIV-->
+                <div class="leftDiv">
+                    <a style="cursor:pointer" class="anchorTagButton"><img src="images/menuIcon_2.png" alt="menueIcon" width="70%" onclick="menu_list()"></a>
+                </div>
+                <!--MENU-->
+                <div id="menu" class="overlay">
+                    <div id="MenuDiv">
+                        <div id="LeftSideMenu">
+                            <a style="cursor:pointer">
+                                <div class="close"><img id="menu_close_Img" src="images/Close_Button.png" onclick="closemenu()"></div>
+                            </a>
+                            <br>
+                            <br>
+                            <div id="#" class="menu_itmes active" onclick="displayhome();">home</div>
+                            <div id="#" class="menu_itmes"><a href="adddata.html?id=users">users</a></div>
+                            <div id="#" class="menu_itmes" onclick="hideicons('therapy');"><a href="therapies_admin.html">therapists</a></div>
+                            <div id="#" class="menu_itmes" onclick="hideicons('calendar');"><a href="events_admin.html">event calendar</a></div>
+                            <div id="#" class="menu_itmes" onclick="hideicons('thriiveworld');"><a href="thriiveworld_admin.html">thriive world</a></div>
+                            <div id="#" class="menu_itmes" onclick="hideicons('thriivetalks');"><a href="articles_admin.html">thriive talks</a></div>
+                            <div id="#" class="menu_itmes"><a href="quotes_admin.html">quotes</a></div>
+                            <br>
+                            <div id="#" class="menu_itmes">admin user</div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                        onclick="hideicons('calendar');"
+                        onclick="hideicons('thriiveworld');"
+                        onclick="hideicons('thriivetalks');"
+                        onclick="hideicons('quotes');"
+                        onclick="hideicons('calendar');"
+                        onclick="hideicons('thriiveworld');"
+                        onclick="hideicons('thriivetalks');"
+                        onclick="hideicons('quotes');"
+                -->
+                <!--LOGO DIV-->
+                <div class="MidleDiv">
+                    <a style="cursor:pointer" href="dashboard.html"><img id="logo_image" src="images/Logo.png" alt="Thriive Logo" width="75%" onclick=""></a>
+                </div>
+                <!--EMPTY DIV DIV-->
+                <div class="rightDiv">
+                    <p onclick="logout_user()" style="cursor:pointer;">logout</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="mainbar">
+        <h3 id="adduserDiv" class="pannelDiv">
+                    <ul>
+                        <a style="cursor:pointer" ><li id="addtext" class="activeText">add</li></a>
+                        <a style="cursor:pointer"> <li id="listtext" class="listText">list</li></a>
+                    </ul>
+        </h3> 
+    </section>
+    <h3 id="welcome_text" class="heading">Therapies/Practitioners</h3>
+    <script>
+        document.getElementById("listtext").setAttribute('onclick',"displaytherapies()");
+        document.getElementById("addtext").setAttribute('onclick',"addtherapies()");
+    </script>
+    <!--FORM SECTION-->
+    <section style="margin: 2% 20% 2%  20% ">
+        <div id="addform">
+<!--            <section id="users">-->
+                <!--USER DIV-->
+<!--
+                <div id="Adduser">
+                    <form method="post">
+-->
+                        <!----- FIRST NAME ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">email</label>
+                            <br>
+                            <input id="useremail" class="inputbox" type="email" name="email" placeholder="Enter User Email"> </div>
+-->
+                        <!----- LAST NAME ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">password</label>
+                            <br>
+                            <input id="userpassword" class="inputbox" type="password" name="password" placeholder="Enter Password"> </div>
+-->
+                        <!----- user ----->
+<!--
+                        <div style="width:100%">
+                            <label class="heading">type of user</label>
+                            <br>
+                            <select class="inputbox" id="usertypeofUser">
+                                <option selected value="user">User </option>
+                                <option value='therapist'>Therapist </option>
+                                <option value='admin'>Admin</option>
+                            </select>
+                        </div>
+                        <div style="width:15%; margin:2% 10%; 2% 0%; float:right" id="button">
+                            <a style="cursor:pointer"> <img class="submit" src="images/submit-button.png" width="100%" onclick="submitvalues(this.id)"> </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section id="adminuser">
+-->
+                <!--Admin USER DIV-->
+<!--
+                <div id="addadminuser">
+                    <form>
+-->
+                        <!----- FIRST NAME ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">email</label>
+                            <br>
+                            <input id="adminemail" class="inputbox" type="email" name="email" placeholder="Enter User Email"> </div>
+-->
+                        <!----- LAST NAME ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">password</label>
+                            <br>
+                            <input id="adminpassword" class="inputbox" type="password" name="password" placeholder="Enter Password"> </div>
+-->
+                        <!----- user ----->
+<!--
+                        <div style="width:100%">
+                            <label class="heading">type of user</label>
+                            <br>
+                            <select class="inputbox" id="admintypeofUser">
+                                <option value="user">User </option>
+                                <option value='therapist'>Therapist </option>
+                                <option selected value='admin'>Admin</option>
+                            </select>
+                        </div>
+                        <div style="width:15%; margin:2% 10%; 2% 0%; float:right" id="button">
+                            <a style="cursor:pointer"> <img class="submit" src="images/submit-button.png" width="100%" onclick="submitvalues(this.id)"> </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+-->
+            <!--CALANDER DIV-->
+<!--
+            <section id="events">
+                <div id="addcalendar">
+                    <form>
+-->
+                        <!----- TITTLE ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">title</label>
+                            <br>
+                            <input id="calendartitle" class="inputbox" type="text" name="text" placeholder="Enter Title of the Event"> </div>
+-->
+                        <!----- SPEAKER NAME ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">speaker</label>
+                            <br>
+                            <input id="calendarspeaker" class="inputbox" type="text" name="speaker" placeholder="Enter Speaker Name"> </div>
+-->
+                        <!----- FROM DATE ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">from date </label>
+                            <br>
+                            <input id="fromdate" class="inputbox" type="text" name="text" placeholder="mm/dd/yyyy"> </div>
+-->
+                        <!----- TO DATE ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">to date</label>
+                            <br>
+                            <input id="todate" class="inputbox" type="text" name="date" placeholder="mm/dd/yyyy"> </div>
+-->
+                        <!-----TIMING---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">timing </label>
+                            <br>
+                            <input id="calendartime" class="inputbox" type="text" name="time" placeholder="Enter Event Time"> </div>
+-->
+                        <!----- FEE  ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">fee</label>
+                            <br>
+                            <input id="calendarfee" class="inputbox" type="text" name="fee" placeholder="Enter Amount"> </div>
+-->
+                        <!----- ABOUT THE ORG  ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">about the organization</label>
+                            <br>
+                            <textarea class="inputbox" rows="3" cols="70" name="about the org" id="calendarabouttheorg" placeholder="Enter Description about the Organization"></textarea>
+                        </div>
+-->
+                        <!----- ABOUT THE PRACTITIONER ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">about the practitioner</label>
+                            <br>
+                            <textarea class="inputbox" rows="3" cols="70" name="about the org" id="calendaraboutthpractitioner" placeholder="Enter Practitioner Description"></textarea>
+                        </div>
+-->
+                        <!----- OVER VIEW ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">over view</label>
+                            <br>
+                            <textarea class="inputbox" rows="3" cols="70" name="about the org" id="calendaroverview" placeholder="Over view About the event"></textarea>
+                        </div>
+-->
+                        <!-----VENUE---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">venue</label>
+                            <br>
+                            <input id="calendarvenue" class="inputbox" type="text" name="venue" placeholder="Enter the venue details"> </div>
+-->
+                        <!----- PROMO URL  ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">promo url</label>
+                            <br>
+                            <input id="calendarpromourl" class="inputbox" type="text" name="promourl" placeholder="Enter Promo Url(it can be either video/audio/image)"> </div>
+-->
+                        <!-----CONTACT NAME---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">contact name </label>
+                            <br>
+                            <input id="calendarcontactname" class="inputbox" type="text" name="contact name" placeholder="Provide contact person Name"> </div>
+-->
+                        <!----- CONTACT NO  ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">contact no:</label>
+                            <br>
+                            <input id="calendarcontactno" class="inputbox" type="text" name="contact no" placeholder="Provide contact Number"> </div>
+-->
+                        <!----- EMAIL  ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">contact email:</label>
+                            <br>
+                            <input id="calendaremail" class="inputbox" type="email" name="email" placeholder="Email of the Contact Person"> </div>
+                        <div style="width:15%; margin:2% 10%; 2% 0%; float:right" id="button">
+                            <a style="cursor:pointer"> <img class="submit" src="images/submit-button.png" width="100%" onclick="submitvalues(this.id)"> </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+-->
+            <!----- therapy section -------->
+            <section id="therapies">
+                <div id="addtherapy" style="width:100%">
+                    <form>
+                        <div style="width:100%">
+                            <label class="heading">Therapy/practitioner:</label>
+                            <br>
+                            <select id="selecttherapies" class="inputbox" onchange="enableinnersections();">
+                                <option value="practitioner">Practitioner</option>
+                                <option value="modalities">Therapy</option>
+                            </select>
+                            <!--							<input id="practitionername" class="inputbox" type="text" name="text" placeholder="Enter name of the practitioner">-->
+                        </div>
+                        <!--Practioner DIV-->
+                        <div id="practitioner">
+                            <div id="FormLeftSide">
+                                <!--FIRST NAME-->
+                                <div>
+                                    <label>FIRST NAME*</label>
+                                    <br>
+                                    <input class="connect_input" type="text" name="firstname" id="Firstname" placeholder="Enter your first Name">
+                                    <p id="Firstname_error" class="error"></p>
+                                </div>
+                                <!--LAST NAME -->
+                                <div>
+                                    <label>LAST NAME</label>
+                                    <br>
+                                    <input class="connect_input" type="text" name="lastname" id="Lastname" placeholder="Enter your last Name">
+                                    <p id="Lastname_error" class="error"></p>
+                                </div>
+                                <!--City: NAME -->
+                                <div>
+                                    <label> City</label>
+                                    <br>
+                                    <input class="connect_input" type="text" name="city" id="city" placeholder="Enter your City /Location">
+                                    <p id="Lastname_error" class="error"></p>
+                                </div>
+                                <!--EMAIL -->
+                                <div>
+                                    <label>E-MAIL*</label>
+                                    <br>
+                                    <input class="connect_input" type="email" name="email" id="email" placeholder="example@email.com">
+                                    <p id="Email_error" class="error"></p>
+                                </div>
+                                <!--WEBSITE -->
+                                <div>
+                                    <label>Website</label>
+                                    <br>
+                                    <input class="connect_input" type="email" name="website" id="website" placeholder="http://example.com">
+                                    <p id="Email_error" class="error"></p>
+                                </div>
+                                <!--CONTACT NUMBER -->
+                                <div>
+                                    <label>Contact Number</label>
+                                    <br>
+                                    <input class="connect_input" type="text" name="phoneNumber" id="phone" placeholder="Enter your Contact Number">
+                                    <p id="Phoneno_error" class="error"></p>
+                                </div>
+                                <!--DATE OF BIRTH-->
+                                <div>
+                                    <label>Date of Birth</label>
+                                    <br>
+                                    <input class="connect_input" type="date" name="dateofBirth" id="dob">
+                                    <p id="dateofBirth_error" class="error"></p>
+                                </div>
+                                <!--AGE-->
+                                <div>
+                                    <label>Age</label>
+                                    <br>
+                                    <input class="connect_input" type="number" name="Age" id="age">
+                                    <p id="age_error" class="error"></p>
+                                </div>
+                                <!--GENDER-->
+                                <div>
+                                    <label>gender</label>
+                                    <br>
+                                    <label>male</label> <span id="male"><img id="practitionermale" src="images/radioButton-2.png" width="100%" onclick="chnagesourceimg('practitionermale')"></span>
+                                    <label>female</label> <span id="female"><img id="practitionerfemale" src="images/radioButton.png" width="100%" onclick="chnagesourceimg('practitionerfemale')"></span>
+                                    <p id="gender_error" class="error"></p>
+                                    <input type="hidden" id="sex" value="">
+                                </div>
+                                <!-- -->
+                            </div>
+                            <!---------- FORM RIGHTSIDE SECTION  ---------->
+                            <div id="FormRightSide">
+                                <!--FACEBOOK URL -->
+                                <div>
+                                    <label>facebook</label>
+                                    <br>
+                                    <input class="connect_input" type="text" name="facebook" id="fb" placeholder="Enter Facebook Profile URL">
+                                    <p id="facebookl_error" class="error"></p>
+                                </div>
+                                <!--TWITTER URL -->
+                                <div>
+                                    <label>twitter</label>
+                                    <br>
+                                    <input class="connect_input" type="text" name="twitter" id="tw" placeholder="Enter Twitter Profile URL">
+                                    <p id="twitter_error" class="error"></p>
+                                </div>
+                                <!--G+ URL -->
+                                <div>
+                                    <label>G+</label>
+                                    <br>
+                                    <input class="connect_input" type="text" name="g+" id="gp" placeholder="Enter G+ Profile URL">
+                                    <p id="g+_error" class="error"></p>
+                                </div>
+                                <!--Youtube URL -->
+                                <div>
+                                    <label>Youtube</label>
+                                    <br>
+                                    <input class="connect_input" type="text" name="Youtube" id="yt" placeholder="Enter Youtube Chanal URL">
+                                    <p id="Youtube_error" class="error"></p>
+                                </div>
+                                <div>
+                                    <label>About Yourself*</label>
+                                    <br>
+                                    <textarea class="message-textarea" rows="28" cols="70" name="comment" id="about"></textarea>
+                                    <p id="textarea_error" class="error"></p>
+                                </div>
+                            </div>
+                            <section style="clear:both">
+                                <br>
+                                <h3 class=detailsType>About Your Work</h3>
+                                <div id="FormLeftSide">
+                                    <!--City: NAME -->
+                                    <label> Modality-1</label>
+                                    <br>
+                                    <div class="dropdown">
+                                        <select class="dropdown_text" id="m1">
+                                            <option value="0">--Select--</option>
+                                            <option value="Alternative Therapies" disabled="">Alternative Therapies</option>
+                                            <option value="Accupressure">Accupressure</option>
+                                            <option value="Accupuncture">Accupuncture</option>
+                                            <option value="Aroma Therapy">Aroma Therapy</option>
+                                            <option value="Colour Therapy">Colour Therapy</option>
+                                            <option value="Gem Therapy">Gem Therapy</option>
+                                            <option value="Salt Therapy">Salt Therapy</option>
+                                            <option value="Art Therapy" disabled="">Art Therapy</option>
+                                            <option value="Art Based Therapy">Art Based Therapy</option>
+                                            <option value="Auto Writing">Auto Writing</option>
+                                            <option value="Contact Dance Movement">Contact Dance Movement</option>
+                                            <option value="Dance Therapy">Dance Therapy</option>
+                                            <option value="Dream Catcher">Dream Catcher</option>
+                                            <option value="Interplay">Interplay</option>
+                                            <option value="Mandala">Mandala</option>
+                                            <option value="Mind Mapping">Mind Mapping</option>
+                                            <option value="Playback Theatre">Playback Theatre</option>
+                                            <option value="Sacred Geometry">Sacred Geometry</option>
+                                            <option value="Sufi Whirling">Sufi Whirling</option>
+                                            <option value="Body work" disabled="">Body work</option>
+                                            <option value="Bowen Therapy">Bowen Therapy</option>
+                                            <option value="Cranio Sacral Therapy">Cranio Sacral Therapy</option>
+                                            <option value="EFT">EFT</option>
+                                            <option value="Massage Therapy">Massage Therapy</option>
+                                            <option value="Reflexology">Reflexology</option>
+                                            <option value="Rolfing">Rolfing</option>
+                                            <option value="Rubenfeld Synergy">Rubenfeld Synergy</option>
+                                            <option value="Shiatsu">Shiatsu</option>
+                                            <option value="Taichi">Taichi</option>
+                                            <option value="Breath work">Breath work</option>
+                                            <option value="Brahmavidya">Brahmavidya</option>
+                                            <option value="Pranayama">Pranayama</option>
+                                            <option value="Rebirthing">Rebirthing</option>
+                                            <option value="Behavioural Therapy" disabled="">Behavioural Therapy</option>
+                                            <option value="Cognitive Behavioural Therapy">Cognitive Behavioural Therapy</option>
+                                            <option value="Rational Emotive Behavioural Therapy">Rational Emotive Behavioural Therapy</option>
+                                            <option value="Chanting" disabled="">Chanting</option>
+                                            <option value="Angelic Chanting">Angelic Chanting</option>
+                                            <option value="Nichren Buddhism">Nichren Buddhism</option>
+                                            <option value="Counseling &amp; Consulting" disabled="">Counseling &amp; Consulting</option>
+                                            <option value="Children’s Counselor">Children’s Counselor</option>
+                                            <option value="Conscious Parenting Counselor">Conscious Parenting Counselor</option>
+                                            <option value="Marriage Counselor">Marriage Counselor</option>
+                                            <option value="Sexuality Counselor">Sexuality Counselor</option>
+                                            <option value="Spiritual Counselor">Spiritual Counselor</option>
+                                            <option value="Therapies for Children With Special Needs">Therapies for Children With Special Needs</option>
+                                            <option value="Therapy for ADHD">Therapy for ADHD</option>
+                                            <option value="Hypnotherapy" disabled="">Hypnotherapy</option>
+                                            <option value="Hypnobirthing">Hypnobirthing</option>
+                                            <option value="Hypnotherapy">Hypnotherapy</option>
+                                            <option value="Past Life Regression">Past Life Regression</option>
+                                            <option value="Subliminal Message Therapy">Subliminal Message Therapy</option>
+                                            <option value="Meditation" disabled="">Meditation</option>
+                                            <option value="Meditation">Meditation</option>
+                                            <option value="Mindfulness">Mindfulness</option>
+                                            <option value="Osho Meditation">Osho Meditation</option>
+                                            <option value="Progressive Relaxation Technique">Progressive Relaxation Technique</option>
+                                            <option value="Transcendental meditation">Transcendental meditation</option>
+                                            <option value="Vipassyana Meditation">Vipassyana Meditation</option>
+                                            <option value="Zen Buddhism">Zen Buddhism</option>
+                                            <option value="Natural Remedies" disabled="">Natural Remedies</option>
+                                            <option value="Ayurveda">Ayurveda</option>
+                                            <option value="Bach Flower Remedies">Bach Flower Remedies</option>
+                                            <option value="Essential Oils">Essential Oils</option>
+                                            <option value="Homeopathy">Homeopathy</option>
+                                            <option value="Naturopathy">Naturopathy</option>
+                                            <option value="Panchkarma">Panchkarma</option>
+                                            <option value="Tridosha Therapy">Tridosha Therapy</option>
+                                            <option value="Quantum Energy Healing" disabled="">Quantum Energy Healing</option>
+                                            <option value="Access Bars">Access Bars</option>
+                                            <option value="Applied Kinesiology">Applied Kinesiology</option>
+                                            <option value="Crystal Healing">Crystal Healing</option>
+                                            <option value="DNA Activation">DNA Activation</option>
+                                            <option value="Feng Shui">Feng Shui</option>
+                                            <option value="Holographic Healing">Holographic Healing</option>
+                                            <option value="Kundalini Activation / Awakening">Kundalini Activation / Awakening</option>
+                                            <option value="Prana Violet Healing">Prana Violet Healing</option>
+                                            <option value="Pranic Healing">Pranic Healing</option>
+                                            <option value="Reiki">Reiki</option>
+                                            <option value="Shaktipath">Shaktipath</option>
+                                            <option value="Sujok Therapy">Sujok Therapy</option>
+                                            <option value="Theta Healing">Theta Healing</option>
+                                            <option value="Vastu">Vastu</option>
+                                            <option value="Quantum Energy Healing &amp; Medicine" disabled="">Quantum Energy Healing &amp; Medicine</option>
+                                            <option value="Air Ion Counter">Air Ion Counter</option>
+                                            <option value="ALFA HRV Analyzer ">ALFA HRV Analyzer </option>
+                                            <option value="BIOFIELD READER">BIOFIELD READER</option>
+                                            <option value="Braintap-Mind Machine">Braintap-Mind Machine</option>
+                                            <option value="COM-100: Waterproof EC / TDS / Temp Combo Meter">COM-100: Waterproof EC / TDS / Temp Combo Meter</option>
+                                            <option value="ELECTRO REFLEX ENERGIZER">ELECTRO REFLEX ENERGIZER</option>
+                                            <option value="EMOTIV Epoc+">EMOTIV Epoc+</option>
+                                            <option value="ES Complex ">ES Complex </option>
+                                            <option value="FA Infra Sauna">FA Infra Sauna</option>
+                                            <option value="Foot De – Tox">Foot De – Tox</option>
+                                            <option value="Heartmath emWave Pro">Heartmath emWave Pro</option>
+                                            <option value="I - Float">I - Float</option>
+                                            <option value="Magnetic Pulsar">Magnetic Pulsar</option>
+                                            <option value="NeuroSky Mind Wave &amp; Mind Workstation">NeuroSky Mind Wave &amp; Mind Workstation</option>
+                                            <option value="Q LASER Q1000NG">Q LASER Q1000NG</option>
+                                            <option value="Quantum Resonance Magnetic Health Analyzer">Quantum Resonance Magnetic Health Analyzer</option>
+                                            <option value="Resonant Field Imaging (RFI)">Resonant Field Imaging (RFI)</option>
+                                            <option value="SCENAR-Cosmodic Ex735Ag">SCENAR-Cosmodic Ex735Ag</option>
+                                            <option value="SE -5  1000 Scalar Energy">SE -5 1000 Scalar Energy</option>
+                                            <option value="Trifield Natural EM Meter ">Trifield Natural EM Meter </option>
+                                            <option value="Readings &amp; Analysis" disabled="">Readings &amp; Analysis</option>
+                                            <option value="Angel Reading">Angel Reading</option>
+                                            <option value="Aura Reading">Aura Reading</option>
+                                            <option value="Cosmic Astrology">Cosmic Astrology</option>
+                                            <option value="Dream Analysis">Dream Analysis</option>
+                                            <option value="Enneagram of personality">Enneagram of personality</option>
+                                            <option value="Grapho Therapy">Grapho Therapy</option>
+                                            <option value="Numerology">Numerology</option>
+                                            <option value="Runes">Runes</option>
+                                            <option value="Tarot Card Reading">Tarot Card Reading</option>
+                                            <option value="Self-Healing" disabled="">Self-Healing</option>
+                                            <option value="NLP">NLP</option>
+                                            <option value="Creative Visualization">Creative Visualization</option>
+                                            <option value="Dolphin Healing Network">Dolphin Healing Network</option>
+                                            <option value="Family Constellation">Family Constellation</option>
+                                            <option value="Gender Healing">Gender Healing</option>
+                                            <option value="Gestalt Therapy">Gestalt Therapy</option>
+                                            <option value="Heal Your Life Program by Louise Hay">Heal Your Life Program by Louise Hay</option>
+                                            <option value="Inner Child Healing">Inner Child Healing</option>
+                                            <option value="Non-Violent Communication ">Non-Violent Communication </option>
+                                            <option value="Reconnective Healing">Reconnective Healing</option>
+                                            <option value="Switch Words">Switch Words</option>
+                                            <option value="Transactional Analysis">Transactional Analysis</option>
+                                            <option value="Sound Healing" disabled="">Sound Healing</option>
+                                            <option value="Crystal Bowl">Crystal Bowl</option>
+                                            <option value="Tibetan Bowl">Tibetan Bowl</option>
+                                            <option value="Voice Movement Therapy">Voice Movement Therapy</option>
+                                            <option value="Shamanism " disabled="">Shamanism </option>
+                                            <option value="Channeling">Channeling</option>
+                                            <option value="Shamanic Ceremonies">Shamanic Ceremonies</option>
+                                            <option value="Shamanic Practices">Shamanic Practices</option>
+                                            <option value="Yoga " disabled="">Yoga </option>
+                                            <option value="Ashtanga Yoga">Ashtanga Yoga</option>
+                                            <option value="Hatha Yoga">Hatha Yoga</option>
+                                            <option value="Iyengar Yoga ">Iyengar Yoga </option>
+                                            <option value="Kriya Yoga">Kriya Yoga</option>
+                                            <option value="Kundalini Yoga">Kundalini Yoga</option>
+                                            <option value="Mudras">Mudras</option>
+                                            <option value="Shiv Yog">Shiv Yog</option>
+                                            <option value="Vinyasa Yoga">Vinyasa Yoga</option>
+                                        </select>
+                                        <p id="M1_error" class="error"></p>
+                                    </div>
+                                </div>
+                                <div id="FormRightSide">
+                                    <div>
+                                        <label>Experience(Yrs) </label>
+                                        <input class="connect_input" type="text" name="" id="m1exp" placeholder="Enter Years of Experience">
+                                        <p id="" class="error"></p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section style="clear:both">
+                                <div id="FormLeftSide">
+                                    <!--City: NAME -->
+                                    <label> Modality-2</label>
+                                    <br>
+                                    <div class="dropdown">
+                                        <select class="dropdown_text" id="m2">
+                                            <option value="0">--Select--</option>
+                                            <option value="Alternative Therapies" disabled="">Alternative Therapies</option>
+                                            <option value="Accupressure">Accupressure</option>
+                                            <option value="Accupuncture">Accupuncture</option>
+                                            <option value="Aroma Therapy">Aroma Therapy</option>
+                                            <option value="Colour Therapy">Colour Therapy</option>
+                                            <option value="Gem Therapy">Gem Therapy</option>
+                                            <option value="Salt Therapy">Salt Therapy</option>
+                                            <option value="Art Therapy" disabled="">Art Therapy</option>
+                                            <option value="Art Based Therapy">Art Based Therapy</option>
+                                            <option value="Auto Writing">Auto Writing</option>
+                                            <option value="Contact Dance Movement">Contact Dance Movement</option>
+                                            <option value="Dance Therapy">Dance Therapy</option>
+                                            <option value="Dream Catcher">Dream Catcher</option>
+                                            <option value="Interplay">Interplay</option>
+                                            <option value="Mandala">Mandala</option>
+                                            <option value="Mind Mapping">Mind Mapping</option>
+                                            <option value="Playback Theatre">Playback Theatre</option>
+                                            <option value="Sacred Geometry">Sacred Geometry</option>
+                                            <option value="Sufi Whirling">Sufi Whirling</option>
+                                            <option value="Body work" disabled="">Body work</option>
+                                            <option value="Bowen Therapy">Bowen Therapy</option>
+                                            <option value="Cranio Sacral Therapy">Cranio Sacral Therapy</option>
+                                            <option value="EFT">EFT</option>
+                                            <option value="Massage Therapy">Massage Therapy</option>
+                                            <option value="Reflexology">Reflexology</option>
+                                            <option value="Rolfing">Rolfing</option>
+                                            <option value="Rubenfeld Synergy">Rubenfeld Synergy</option>
+                                            <option value="Shiatsu">Shiatsu</option>
+                                            <option value="Taichi">Taichi</option>
+                                            <option value="Breath work">Breath work</option>
+                                            <option value="Brahmavidya">Brahmavidya</option>
+                                            <option value="Pranayama">Pranayama</option>
+                                            <option value="Rebirthing">Rebirthing</option>
+                                            <option value="Behavioural Therapy" disabled="">Behavioural Therapy</option>
+                                            <option value="Cognitive Behavioural Therapy">Cognitive Behavioural Therapy</option>
+                                            <option value="Rational Emotive Behavioural Therapy">Rational Emotive Behavioural Therapy</option>
+                                            <option value="Chanting" disabled="">Chanting</option>
+                                            <option value="Angelic Chanting">Angelic Chanting</option>
+                                            <option value="Nichren Buddhism">Nichren Buddhism</option>
+                                            <option value="Counseling &amp; Consulting" disabled="">Counseling &amp; Consulting</option>
+                                            <option value="Children’s Counselor">Children’s Counselor</option>
+                                            <option value="Conscious Parenting Counselor">Conscious Parenting Counselor</option>
+                                            <option value="Marriage Counselor">Marriage Counselor</option>
+                                            <option value="Sexuality Counselor">Sexuality Counselor</option>
+                                            <option value="Spiritual Counselor">Spiritual Counselor</option>
+                                            <option value="Therapies for Children With Special Needs">Therapies for Children With Special Needs</option>
+                                            <option value="Therapy for ADHD">Therapy for ADHD</option>
+                                            <option value="Hypnotherapy" disabled="">Hypnotherapy</option>
+                                            <option value="Hypnobirthing">Hypnobirthing</option>
+                                            <option value="Hypnotherapy">Hypnotherapy</option>
+                                            <option value="Past Life Regression">Past Life Regression</option>
+                                            <option value="Subliminal Message Therapy">Subliminal Message Therapy</option>
+                                            <option value="Meditation" disabled="">Meditation</option>
+                                            <option value="Meditation">Meditation</option>
+                                            <option value="Mindfulness">Mindfulness</option>
+                                            <option value="Osho Meditation">Osho Meditation</option>
+                                            <option value="Progressive Relaxation Technique">Progressive Relaxation Technique</option>
+                                            <option value="Transcendental meditation">Transcendental meditation</option>
+                                            <option value="Vipassyana Meditation">Vipassyana Meditation</option>
+                                            <option value="Zen Buddhism">Zen Buddhism</option>
+                                            <option value="Natural Remedies" disabled="">Natural Remedies</option>
+                                            <option value="Ayurveda">Ayurveda</option>
+                                            <option value="Bach Flower Remedies">Bach Flower Remedies</option>
+                                            <option value="Essential Oils">Essential Oils</option>
+                                            <option value="Homeopathy">Homeopathy</option>
+                                            <option value="Naturopathy">Naturopathy</option>
+                                            <option value="Panchkarma">Panchkarma</option>
+                                            <option value="Tridosha Therapy">Tridosha Therapy</option>
+                                            <option value="Quantum Energy Healing" disabled="">Quantum Energy Healing</option>
+                                            <option value="Access Bars">Access Bars</option>
+                                            <option value="Applied Kinesiology">Applied Kinesiology</option>
+                                            <option value="Crystal Healing">Crystal Healing</option>
+                                            <option value="DNA Activation">DNA Activation</option>
+                                            <option value="Feng Shui">Feng Shui</option>
+                                            <option value="Holographic Healing">Holographic Healing</option>
+                                            <option value="Kundalini Activation / Awakening">Kundalini Activation / Awakening</option>
+                                            <option value="Prana Violet Healing">Prana Violet Healing</option>
+                                            <option value="Pranic Healing">Pranic Healing</option>
+                                            <option value="Reiki">Reiki</option>
+                                            <option value="Shaktipath">Shaktipath</option>
+                                            <option value="Sujok Therapy">Sujok Therapy</option>
+                                            <option value="Theta Healing">Theta Healing</option>
+                                            <option value="Vastu">Vastu</option>
+                                            <option value="Quantum Energy Healing &amp; Medicine" disabled="">Quantum Energy Healing &amp; Medicine</option>
+                                            <option value="Air Ion Counter">Air Ion Counter</option>
+                                            <option value="ALFA HRV Analyzer ">ALFA HRV Analyzer </option>
+                                            <option value="BIOFIELD READER">BIOFIELD READER</option>
+                                            <option value="Braintap-Mind Machine">Braintap-Mind Machine</option>
+                                            <option value="COM-100: Waterproof EC / TDS / Temp Combo Meter">COM-100: Waterproof EC / TDS / Temp Combo Meter</option>
+                                            <option value="ELECTRO REFLEX ENERGIZER">ELECTRO REFLEX ENERGIZER</option>
+                                            <option value="EMOTIV Epoc+">EMOTIV Epoc+</option>
+                                            <option value="ES Complex ">ES Complex </option>
+                                            <option value="FA Infra Sauna">FA Infra Sauna</option>
+                                            <option value="Foot De – Tox">Foot De – Tox</option>
+                                            <option value="Heartmath emWave Pro">Heartmath emWave Pro</option>
+                                            <option value="I - Float">I - Float</option>
+                                            <option value="Magnetic Pulsar">Magnetic Pulsar</option>
+                                            <option value="NeuroSky Mind Wave &amp; Mind Workstation">NeuroSky Mind Wave &amp; Mind Workstation</option>
+                                            <option value="Q LASER Q1000NG">Q LASER Q1000NG</option>
+                                            <option value="Quantum Resonance Magnetic Health Analyzer">Quantum Resonance Magnetic Health Analyzer</option>
+                                            <option value="Resonant Field Imaging (RFI)">Resonant Field Imaging (RFI)</option>
+                                            <option value="SCENAR-Cosmodic Ex735Ag">SCENAR-Cosmodic Ex735Ag</option>
+                                            <option value="SE -5  1000 Scalar Energy">SE -5 1000 Scalar Energy</option>
+                                            <option value="Trifield Natural EM Meter ">Trifield Natural EM Meter </option>
+                                            <option value="Readings &amp; Analysis" disabled="">Readings &amp; Analysis</option>
+                                            <option value="Angel Reading">Angel Reading</option>
+                                            <option value="Aura Reading">Aura Reading</option>
+                                            <option value="Cosmic Astrology">Cosmic Astrology</option>
+                                            <option value="Dream Analysis">Dream Analysis</option>
+                                            <option value="Enneagram of personality">Enneagram of personality</option>
+                                            <option value="Grapho Therapy">Grapho Therapy</option>
+                                            <option value="Numerology">Numerology</option>
+                                            <option value="Runes">Runes</option>
+                                            <option value="Tarot Card Reading">Tarot Card Reading</option>
+                                            <option value="Self-Healing" disabled="">Self-Healing</option>
+                                            <option value="NLP">NLP</option>
+                                            <option value="Creative Visualization">Creative Visualization</option>
+                                            <option value="Dolphin Healing Network">Dolphin Healing Network</option>
+                                            <option value="Family Constellation">Family Constellation</option>
+                                            <option value="Gender Healing">Gender Healing</option>
+                                            <option value="Gestalt Therapy">Gestalt Therapy</option>
+                                            <option value="Heal Your Life Program by Louise Hay">Heal Your Life Program by Louise Hay</option>
+                                            <option value="Inner Child Healing">Inner Child Healing</option>
+                                            <option value="Non-Violent Communication ">Non-Violent Communication </option>
+                                            <option value="Reconnective Healing">Reconnective Healing</option>
+                                            <option value="Switch Words">Switch Words</option>
+                                            <option value="Transactional Analysis">Transactional Analysis</option>
+                                            <option value="Sound Healing" disabled="">Sound Healing</option>
+                                            <option value="Crystal Bowl">Crystal Bowl</option>
+                                            <option value="Tibetan Bowl">Tibetan Bowl</option>
+                                            <option value="Voice Movement Therapy">Voice Movement Therapy</option>
+                                            <option value="Shamanism " disabled="">Shamanism </option>
+                                            <option value="Channeling">Channeling</option>
+                                            <option value="Shamanic Ceremonies">Shamanic Ceremonies</option>
+                                            <option value="Shamanic Practices">Shamanic Practices</option>
+                                            <option value="Yoga " disabled="">Yoga </option>
+                                            <option value="Ashtanga Yoga">Ashtanga Yoga</option>
+                                            <option value="Hatha Yoga">Hatha Yoga</option>
+                                            <option value="Iyengar Yoga ">Iyengar Yoga </option>
+                                            <option value="Kriya Yoga">Kriya Yoga</option>
+                                            <option value="Kundalini Yoga">Kundalini Yoga</option>
+                                            <option value="Mudras">Mudras</option>
+                                            <option value="Shiv Yog">Shiv Yog</option>
+                                            <option value="Vinyasa Yoga">Vinyasa Yoga</option>
+                                        </select>
+                                        <p id="M2_error" class="error"></p>
+                                    </div>
+                                </div>
+                                <div id="FormRightSide">
+                                    <div>
+                                        <label>Experience(Yrs) </label>
+                                        <input class="connect_input" type="text" name="" id="m2exp" placeholder="Enter Years of Experience">
+                                        <p id="" class="error"></p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section style="clear:both">
+                                <div id="FormLeftSide">
+                                    <!--City: NAME -->
+                                    <label> Modality-3</label>
+                                    <br>
+                                    <div class="dropdown">
+                                        <select class="dropdown_text" id="m3">
+                                            <option value="0">--Select--</option>
+                                            <option value="Alternative Therapies" disabled="">Alternative Therapies</option>
+                                            <option value="Accupressure">Accupressure</option>
+                                            <option value="Accupuncture">Accupuncture</option>
+                                            <option value="Aroma Therapy">Aroma Therapy</option>
+                                            <option value="Colour Therapy">Colour Therapy</option>
+                                            <option value="Gem Therapy">Gem Therapy</option>
+                                            <option value="Salt Therapy">Salt Therapy</option>
+                                            <option value="Art Therapy" disabled="">Art Therapy</option>
+                                            <option value="Art Based Therapy">Art Based Therapy</option>
+                                            <option value="Auto Writing">Auto Writing</option>
+                                            <option value="Contact Dance Movement">Contact Dance Movement</option>
+                                            <option value="Dance Therapy">Dance Therapy</option>
+                                            <option value="Dream Catcher">Dream Catcher</option>
+                                            <option value="Interplay">Interplay</option>
+                                            <option value="Mandala">Mandala</option>
+                                            <option value="Mind Mapping">Mind Mapping</option>
+                                            <option value="Playback Theatre">Playback Theatre</option>
+                                            <option value="Sacred Geometry">Sacred Geometry</option>
+                                            <option value="Sufi Whirling">Sufi Whirling</option>
+                                            <option value="Body work" disabled="">Body work</option>
+                                            <option value="Bowen Therapy">Bowen Therapy</option>
+                                            <option value="Cranio Sacral Therapy">Cranio Sacral Therapy</option>
+                                            <option value="EFT">EFT</option>
+                                            <option value="Massage Therapy">Massage Therapy</option>
+                                            <option value="Reflexology">Reflexology</option>
+                                            <option value="Rolfing">Rolfing</option>
+                                            <option value="Rubenfeld Synergy">Rubenfeld Synergy</option>
+                                            <option value="Shiatsu">Shiatsu</option>
+                                            <option value="Taichi">Taichi</option>
+                                            <option value="Breath work">Breath work</option>
+                                            <option value="Brahmavidya">Brahmavidya</option>
+                                            <option value="Pranayama">Pranayama</option>
+                                            <option value="Rebirthing">Rebirthing</option>
+                                            <option value="Behavioural Therapy" disabled="">Behavioural Therapy</option>
+                                            <option value="Cognitive Behavioural Therapy">Cognitive Behavioural Therapy</option>
+                                            <option value="Rational Emotive Behavioural Therapy">Rational Emotive Behavioural Therapy</option>
+                                            <option value="Chanting" disabled="">Chanting</option>
+                                            <option value="Angelic Chanting">Angelic Chanting</option>
+                                            <option value="Nichren Buddhism">Nichren Buddhism</option>
+                                            <option value="Counseling &amp; Consulting" disabled="">Counseling &amp; Consulting</option>
+                                            <option value="Children’s Counselor">Children’s Counselor</option>
+                                            <option value="Conscious Parenting Counselor">Conscious Parenting Counselor</option>
+                                            <option value="Marriage Counselor">Marriage Counselor</option>
+                                            <option value="Sexuality Counselor">Sexuality Counselor</option>
+                                            <option value="Spiritual Counselor">Spiritual Counselor</option>
+                                            <option value="Therapies for Children With Special Needs">Therapies for Children With Special Needs</option>
+                                            <option value="Therapy for ADHD">Therapy for ADHD</option>
+                                            <option value="Hypnotherapy" disabled="">Hypnotherapy</option>
+                                            <option value="Hypnobirthing">Hypnobirthing</option>
+                                            <option value="Hypnotherapy">Hypnotherapy</option>
+                                            <option value="Past Life Regression">Past Life Regression</option>
+                                            <option value="Subliminal Message Therapy">Subliminal Message Therapy</option>
+                                            <option value="Meditation" disabled="">Meditation</option>
+                                            <option value="Meditation">Meditation</option>
+                                            <option value="Mindfulness">Mindfulness</option>
+                                            <option value="Osho Meditation">Osho Meditation</option>
+                                            <option value="Progressive Relaxation Technique">Progressive Relaxation Technique</option>
+                                            <option value="Transcendental meditation">Transcendental meditation</option>
+                                            <option value="Vipassyana Meditation">Vipassyana Meditation</option>
+                                            <option value="Zen Buddhism">Zen Buddhism</option>
+                                            <option value="Natural Remedies" disabled="">Natural Remedies</option>
+                                            <option value="Ayurveda">Ayurveda</option>
+                                            <option value="Bach Flower Remedies">Bach Flower Remedies</option>
+                                            <option value="Essential Oils">Essential Oils</option>
+                                            <option value="Homeopathy">Homeopathy</option>
+                                            <option value="Naturopathy">Naturopathy</option>
+                                            <option value="Panchkarma">Panchkarma</option>
+                                            <option value="Tridosha Therapy">Tridosha Therapy</option>
+                                            <option value="Quantum Energy Healing" disabled="">Quantum Energy Healing</option>
+                                            <option value="Access Bars">Access Bars</option>
+                                            <option value="Applied Kinesiology">Applied Kinesiology</option>
+                                            <option value="Crystal Healing">Crystal Healing</option>
+                                            <option value="DNA Activation">DNA Activation</option>
+                                            <option value="Feng Shui">Feng Shui</option>
+                                            <option value="Holographic Healing">Holographic Healing</option>
+                                            <option value="Kundalini Activation / Awakening">Kundalini Activation / Awakening</option>
+                                            <option value="Prana Violet Healing">Prana Violet Healing</option>
+                                            <option value="Pranic Healing">Pranic Healing</option>
+                                            <option value="Reiki">Reiki</option>
+                                            <option value="Shaktipath">Shaktipath</option>
+                                            <option value="Sujok Therapy">Sujok Therapy</option>
+                                            <option value="Theta Healing">Theta Healing</option>
+                                            <option value="Vastu">Vastu</option>
+                                            <option value="Quantum Energy Healing &amp; Medicine" disabled="">Quantum Energy Healing &amp; Medicine</option>
+                                            <option value="Air Ion Counter">Air Ion Counter</option>
+                                            <option value="ALFA HRV Analyzer ">ALFA HRV Analyzer </option>
+                                            <option value="BIOFIELD READER">BIOFIELD READER</option>
+                                            <option value="Braintap-Mind Machine">Braintap-Mind Machine</option>
+                                            <option value="COM-100: Waterproof EC / TDS / Temp Combo Meter">COM-100: Waterproof EC / TDS / Temp Combo Meter</option>
+                                            <option value="ELECTRO REFLEX ENERGIZER">ELECTRO REFLEX ENERGIZER</option>
+                                            <option value="EMOTIV Epoc+">EMOTIV Epoc+</option>
+                                            <option value="ES Complex ">ES Complex </option>
+                                            <option value="FA Infra Sauna">FA Infra Sauna</option>
+                                            <option value="Foot De – Tox">Foot De – Tox</option>
+                                            <option value="Heartmath emWave Pro">Heartmath emWave Pro</option>
+                                            <option value="I - Float">I - Float</option>
+                                            <option value="Magnetic Pulsar">Magnetic Pulsar</option>
+                                            <option value="NeuroSky Mind Wave &amp; Mind Workstation">NeuroSky Mind Wave &amp; Mind Workstation</option>
+                                            <option value="Q LASER Q1000NG">Q LASER Q1000NG</option>
+                                            <option value="Quantum Resonance Magnetic Health Analyzer">Quantum Resonance Magnetic Health Analyzer</option>
+                                            <option value="Resonant Field Imaging (RFI)">Resonant Field Imaging (RFI)</option>
+                                            <option value="SCENAR-Cosmodic Ex735Ag">SCENAR-Cosmodic Ex735Ag</option>
+                                            <option value="SE -5  1000 Scalar Energy">SE -5 1000 Scalar Energy</option>
+                                            <option value="Trifield Natural EM Meter ">Trifield Natural EM Meter </option>
+                                            <option value="Readings &amp; Analysis" disabled="">Readings &amp; Analysis</option>
+                                            <option value="Angel Reading">Angel Reading</option>
+                                            <option value="Aura Reading">Aura Reading</option>
+                                            <option value="Cosmic Astrology">Cosmic Astrology</option>
+                                            <option value="Dream Analysis">Dream Analysis</option>
+                                            <option value="Enneagram of personality">Enneagram of personality</option>
+                                            <option value="Grapho Therapy">Grapho Therapy</option>
+                                            <option value="Numerology">Numerology</option>
+                                            <option value="Runes">Runes</option>
+                                            <option value="Tarot Card Reading">Tarot Card Reading</option>
+                                            <option value="Self-Healing" disabled="">Self-Healing</option>
+                                            <option value="NLP">NLP</option>
+                                            <option value="Creative Visualization">Creative Visualization</option>
+                                            <option value="Dolphin Healing Network">Dolphin Healing Network</option>
+                                            <option value="Family Constellation">Family Constellation</option>
+                                            <option value="Gender Healing">Gender Healing</option>
+                                            <option value="Gestalt Therapy">Gestalt Therapy</option>
+                                            <option value="Heal Your Life Program by Louise Hay">Heal Your Life Program by Louise Hay</option>
+                                            <option value="Inner Child Healing">Inner Child Healing</option>
+                                            <option value="Non-Violent Communication ">Non-Violent Communication </option>
+                                            <option value="Reconnective Healing">Reconnective Healing</option>
+                                            <option value="Switch Words">Switch Words</option>
+                                            <option value="Transactional Analysis">Transactional Analysis</option>
+                                            <option value="Sound Healing" disabled="">Sound Healing</option>
+                                            <option value="Crystal Bowl">Crystal Bowl</option>
+                                            <option value="Tibetan Bowl">Tibetan Bowl</option>
+                                            <option value="Voice Movement Therapy">Voice Movement Therapy</option>
+                                            <option value="Shamanism " disabled="">Shamanism </option>
+                                            <option value="Channeling">Channeling</option>
+                                            <option value="Shamanic Ceremonies">Shamanic Ceremonies</option>
+                                            <option value="Shamanic Practices">Shamanic Practices</option>
+                                            <option value="Yoga " disabled="">Yoga </option>
+                                            <option value="Ashtanga Yoga">Ashtanga Yoga</option>
+                                            <option value="Hatha Yoga">Hatha Yoga</option>
+                                            <option value="Iyengar Yoga ">Iyengar Yoga </option>
+                                            <option value="Kriya Yoga">Kriya Yoga</option>
+                                            <option value="Kundalini Yoga">Kundalini Yoga</option>
+                                            <option value="Mudras">Mudras</option>
+                                            <option value="Shiv Yog">Shiv Yog</option>
+                                            <option value="Vinyasa Yoga">Vinyasa Yoga</option>
+                                        </select>
+                                        <p id="M3_error" class="error"></p>
+                                    </div>
+                                </div>
+                                <div id="FormRightSide">
+                                    <div>
+                                        <label>Experience(Yrs) </label>
+                                        <input class="connect_input" type="text" name="g+" id="m3exp" placeholder="Enter Years of Experience">
+                                        <p id="" class="error"></p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section style="clear:both">
+                                <div id="FormLeftSide">
+                                    <!--City: NAME -->
+                                    <label> Modality-4</label>
+                                    <br>
+                                    <div class="dropdown">
+                                        <select class="dropdown_text" id="m4">
+                                            <option value="0">--Select--</option>
+                                            <option value="Alternative Therapies" disabled="">Alternative Therapies</option>
+                                            <option value="Accupressure">Accupressure</option>
+                                            <option value="Accupuncture">Accupuncture</option>
+                                            <option value="Aroma Therapy">Aroma Therapy</option>
+                                            <option value="Colour Therapy">Colour Therapy</option>
+                                            <option value="Gem Therapy">Gem Therapy</option>
+                                            <option value="Salt Therapy">Salt Therapy</option>
+                                            <option value="Art Therapy" disabled="">Art Therapy</option>
+                                            <option value="Art Based Therapy">Art Based Therapy</option>
+                                            <option value="Auto Writing">Auto Writing</option>
+                                            <option value="Contact Dance Movement">Contact Dance Movement</option>
+                                            <option value="Dance Therapy">Dance Therapy</option>
+                                            <option value="Dream Catcher">Dream Catcher</option>
+                                            <option value="Interplay">Interplay</option>
+                                            <option value="Mandala">Mandala</option>
+                                            <option value="Mind Mapping">Mind Mapping</option>
+                                            <option value="Playback Theatre">Playback Theatre</option>
+                                            <option value="Sacred Geometry">Sacred Geometry</option>
+                                            <option value="Sufi Whirling">Sufi Whirling</option>
+                                            <option value="Body work" disabled="">Body work</option>
+                                            <option value="Bowen Therapy">Bowen Therapy</option>
+                                            <option value="Cranio Sacral Therapy">Cranio Sacral Therapy</option>
+                                            <option value="EFT">EFT</option>
+                                            <option value="Massage Therapy">Massage Therapy</option>
+                                            <option value="Reflexology">Reflexology</option>
+                                            <option value="Rolfing">Rolfing</option>
+                                            <option value="Rubenfeld Synergy">Rubenfeld Synergy</option>
+                                            <option value="Shiatsu">Shiatsu</option>
+                                            <option value="Taichi">Taichi</option>
+                                            <option value="Breath work">Breath work</option>
+                                            <option value="Brahmavidya">Brahmavidya</option>
+                                            <option value="Pranayama">Pranayama</option>
+                                            <option value="Rebirthing">Rebirthing</option>
+                                            <option value="Behavioural Therapy" disabled="">Behavioural Therapy</option>
+                                            <option value="Cognitive Behavioural Therapy">Cognitive Behavioural Therapy</option>
+                                            <option value="Rational Emotive Behavioural Therapy">Rational Emotive Behavioural Therapy</option>
+                                            <option value="Chanting" disabled="">Chanting</option>
+                                            <option value="Angelic Chanting">Angelic Chanting</option>
+                                            <option value="Nichren Buddhism">Nichren Buddhism</option>
+                                            <option value="Counseling &amp; Consulting" disabled="">Counseling &amp; Consulting</option>
+                                            <option value="Children’s Counselor">Children’s Counselor</option>
+                                            <option value="Conscious Parenting Counselor">Conscious Parenting Counselor</option>
+                                            <option value="Marriage Counselor">Marriage Counselor</option>
+                                            <option value="Sexuality Counselor">Sexuality Counselor</option>
+                                            <option value="Spiritual Counselor">Spiritual Counselor</option>
+                                            <option value="Therapies for Children With Special Needs">Therapies for Children With Special Needs</option>
+                                            <option value="Therapy for ADHD">Therapy for ADHD</option>
+                                            <option value="Hypnotherapy" disabled="">Hypnotherapy</option>
+                                            <option value="Hypnobirthing">Hypnobirthing</option>
+                                            <option value="Hypnotherapy">Hypnotherapy</option>
+                                            <option value="Past Life Regression">Past Life Regression</option>
+                                            <option value="Subliminal Message Therapy">Subliminal Message Therapy</option>
+                                            <option value="Meditation" disabled="">Meditation</option>
+                                            <option value="Meditation">Meditation</option>
+                                            <option value="Mindfulness">Mindfulness</option>
+                                            <option value="Osho Meditation">Osho Meditation</option>
+                                            <option value="Progressive Relaxation Technique">Progressive Relaxation Technique</option>
+                                            <option value="Transcendental meditation">Transcendental meditation</option>
+                                            <option value="Vipassyana Meditation">Vipassyana Meditation</option>
+                                            <option value="Zen Buddhism">Zen Buddhism</option>
+                                            <option value="Natural Remedies" disabled="">Natural Remedies</option>
+                                            <option value="Ayurveda">Ayurveda</option>
+                                            <option value="Bach Flower Remedies">Bach Flower Remedies</option>
+                                            <option value="Essential Oils">Essential Oils</option>
+                                            <option value="Homeopathy">Homeopathy</option>
+                                            <option value="Naturopathy">Naturopathy</option>
+                                            <option value="Panchkarma">Panchkarma</option>
+                                            <option value="Tridosha Therapy">Tridosha Therapy</option>
+                                            <option value="Quantum Energy Healing" disabled="">Quantum Energy Healing</option>
+                                            <option value="Access Bars">Access Bars</option>
+                                            <option value="Applied Kinesiology">Applied Kinesiology</option>
+                                            <option value="Crystal Healing">Crystal Healing</option>
+                                            <option value="DNA Activation">DNA Activation</option>
+                                            <option value="Feng Shui">Feng Shui</option>
+                                            <option value="Holographic Healing">Holographic Healing</option>
+                                            <option value="Kundalini Activation / Awakening">Kundalini Activation / Awakening</option>
+                                            <option value="Prana Violet Healing">Prana Violet Healing</option>
+                                            <option value="Pranic Healing">Pranic Healing</option>
+                                            <option value="Reiki">Reiki</option>
+                                            <option value="Shaktipath">Shaktipath</option>
+                                            <option value="Sujok Therapy">Sujok Therapy</option>
+                                            <option value="Theta Healing">Theta Healing</option>
+                                            <option value="Vastu">Vastu</option>
+                                            <option value="Quantum Energy Healing &amp; Medicine" disabled="">Quantum Energy Healing &amp; Medicine</option>
+                                            <option value="Air Ion Counter">Air Ion Counter</option>
+                                            <option value="ALFA HRV Analyzer ">ALFA HRV Analyzer </option>
+                                            <option value="BIOFIELD READER">BIOFIELD READER</option>
+                                            <option value="Braintap-Mind Machine">Braintap-Mind Machine</option>
+                                            <option value="COM-100: Waterproof EC / TDS / Temp Combo Meter">COM-100: Waterproof EC / TDS / Temp Combo Meter</option>
+                                            <option value="ELECTRO REFLEX ENERGIZER">ELECTRO REFLEX ENERGIZER</option>
+                                            <option value="EMOTIV Epoc+">EMOTIV Epoc+</option>
+                                            <option value="ES Complex ">ES Complex </option>
+                                            <option value="FA Infra Sauna">FA Infra Sauna</option>
+                                            <option value="Foot De – Tox">Foot De – Tox</option>
+                                            <option value="Heartmath emWave Pro">Heartmath emWave Pro</option>
+                                            <option value="I - Float">I - Float</option>
+                                            <option value="Magnetic Pulsar">Magnetic Pulsar</option>
+                                            <option value="NeuroSky Mind Wave &amp; Mind Workstation">NeuroSky Mind Wave &amp; Mind Workstation</option>
+                                            <option value="Q LASER Q1000NG">Q LASER Q1000NG</option>
+                                            <option value="Quantum Resonance Magnetic Health Analyzer">Quantum Resonance Magnetic Health Analyzer</option>
+                                            <option value="Resonant Field Imaging (RFI)">Resonant Field Imaging (RFI)</option>
+                                            <option value="SCENAR-Cosmodic Ex735Ag">SCENAR-Cosmodic Ex735Ag</option>
+                                            <option value="SE -5  1000 Scalar Energy">SE -5 1000 Scalar Energy</option>
+                                            <option value="Trifield Natural EM Meter ">Trifield Natural EM Meter </option>
+                                            <option value="Readings &amp; Analysis" disabled="">Readings &amp; Analysis</option>
+                                            <option value="Angel Reading">Angel Reading</option>
+                                            <option value="Aura Reading">Aura Reading</option>
+                                            <option value="Cosmic Astrology">Cosmic Astrology</option>
+                                            <option value="Dream Analysis">Dream Analysis</option>
+                                            <option value="Enneagram of personality">Enneagram of personality</option>
+                                            <option value="Grapho Therapy">Grapho Therapy</option>
+                                            <option value="Numerology">Numerology</option>
+                                            <option value="Runes">Runes</option>
+                                            <option value="Tarot Card Reading">Tarot Card Reading</option>
+                                            <option value="Self-Healing" disabled="">Self-Healing</option>
+                                            <option value="NLP">NLP</option>
+                                            <option value="Creative Visualization">Creative Visualization</option>
+                                            <option value="Dolphin Healing Network">Dolphin Healing Network</option>
+                                            <option value="Family Constellation">Family Constellation</option>
+                                            <option value="Gender Healing">Gender Healing</option>
+                                            <option value="Gestalt Therapy">Gestalt Therapy</option>
+                                            <option value="Heal Your Life Program by Louise Hay">Heal Your Life Program by Louise Hay</option>
+                                            <option value="Inner Child Healing">Inner Child Healing</option>
+                                            <option value="Non-Violent Communication ">Non-Violent Communication </option>
+                                            <option value="Reconnective Healing">Reconnective Healing</option>
+                                            <option value="Switch Words">Switch Words</option>
+                                            <option value="Transactional Analysis">Transactional Analysis</option>
+                                            <option value="Sound Healing" disabled="">Sound Healing</option>
+                                            <option value="Crystal Bowl">Crystal Bowl</option>
+                                            <option value="Tibetan Bowl">Tibetan Bowl</option>
+                                            <option value="Voice Movement Therapy">Voice Movement Therapy</option>
+                                            <option value="Shamanism " disabled="">Shamanism </option>
+                                            <option value="Channeling">Channeling</option>
+                                            <option value="Shamanic Ceremonies">Shamanic Ceremonies</option>
+                                            <option value="Shamanic Practices">Shamanic Practices</option>
+                                            <option value="Yoga " disabled="">Yoga </option>
+                                            <option value="Ashtanga Yoga">Ashtanga Yoga</option>
+                                            <option value="Hatha Yoga">Hatha Yoga</option>
+                                            <option value="Iyengar Yoga ">Iyengar Yoga </option>
+                                            <option value="Kriya Yoga">Kriya Yoga</option>
+                                            <option value="Kundalini Yoga">Kundalini Yoga</option>
+                                            <option value="Mudras">Mudras</option>
+                                            <option value="Shiv Yog">Shiv Yog</option>
+                                            <option value="Vinyasa Yoga">Vinyasa Yoga</option>
+                                        </select>
+                                        <p id="M4_error" class="error"></p>
+                                    </div>
+                                </div>
+                                <div id="FormRightSide">
+                                    <div>
+                                        <label>Experience(Yrs) </label>
+                                        <input class="connect_input" type="text" name="g+" id="m4exp" placeholder="Enter Years of Experience">
+                                        <p id="M1_error" class="error"></p>
+                                    </div>
+                                </div>
+                            </section>
+                            <div id="FormLeftSide" style="clear:both">
+                                <div>
+                                    <label>others </label>
+                                    <input class="connect_input" type="text" name="g+" id="m_others" placeholder="Enter Other Modalities you deal with">
+                                    <p id="other_error" class="error"></p>
+                                </div>
+                            </div>
+                            <div id="FormRightSide">
+                                <div>
+                                    <label>Experience(Yrs) </label>
+                                    <input class="connect_input" type="text" name="g+" id="m_otherexp" placeholder="Enter Years of Experience">
+                                    <p id="" class="error"></p>
+                                </div>
+                            </div>
+                            <section>
+                                <div id="FormLeftSide" style="clear:both">
+                                    <div>
+                                        <label>Over all years of experience as WSP </label>
+                                        <input class="connect_input" type="number" name="" id="overall_exp" placeholder="Enter years of Experience">
+                                        <p id="" class="error"></p>
+                                    </div>
+                                </div>
+                                <div id="FormRightSide">
+                                    <div>
+                                        <label>Hourly Session Charges (INR) </label>
+                                        <input class="connect_input" type="number" name="" id="hcharge" placeholder="Enter hourly session Charges">
+                                        <p id="" class="error"></p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="FormLeftSide" style="clear:both">
+                                    <div>
+                                        <label>Details of degree obtained/courses attended/undertaken and relevant certifications </label>
+                                        <textarea class="message-textarea" rows="8" cols="70" name="" id="degrees"></textarea>
+                                        <p id="" class="error"></p>
+                                    </div>
+                                </div>
+                                <div id="FormRightSide">
+                                    <div>
+                                        <label>What ailments have you seen best results in healing through the modality/s you use?</label>
+                                        <textarea class="message-textarea" rows="8" cols="70" name="" id="ailments"></textarea>
+                                        <p id="" class="error"></p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div id="FormLeftSide" style="clear:both">
+                                    <!--GENDER-->
+                                    <div>
+                                        <label>Is this your primary career?</label>
+                                        <br>
+                                        <label>yes</label> <span id="male"><img src="images/radioButton-2.png" width="100%"></span>
+                                        <label>no</label> <span id="female"><img src="images/radioButton.png" width="100%"></span>
+                                        <p id="gender_error" class="error"></p>
+                                    </div>
+                                </div>
+                                <div id="FormRightSide">
+                                    <div>
+                                        <label>If not, what else do you do?</label>
+                                        <input class="connect_input" type="text" name="" id="not_pri_career" placeholder="">
+                                        <p id="" class="error"></p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!--Practioner DIV-->
+                        <div id="modalities">
+                            <br>
+                            <!-- category -->
+                            <div style="width:100%">
+                                <label class="heading">Select category:</label>
+                                <br>
+                                <select id="categeories" class="inputbox">
+                                    <option value="-">--select--</option>
+                                    <!--
+                                <option value="category1">category1</option>
+                                <option value="category2">category2</option>
+                                <option value="category3">category3</option>
+                                <option value="category4">category4</option>
+                                <option value="category5">category5</option>
+                                <option value="category6">category6</option> 
+-->
+                                    <option value="Quantum Energy Healing">Quantum Energy Healing</option>
+                                    <option value="Yoga">Yoga</option>
+                                    <option value="Reading & Analysis">Reading &amp; Analysis</option>
+                                    <option value="Art Therapy">Art Therapy</option>
+                                    <option value="Hypnotherapy">Hypnotherapy</option>
+                                    <option value="Sound Healing">Sound Healing</option>
+                                    <option value="Natural remedies">Natural remedies</option>
+                                    <option value="Alternative Therapies">Alternative Therapies</option>
+                                    <option value="Body work">Body work</option>
+                                    <option value="Meditation">Meditation</option>
+                                    <option value="Chanting">Chanting</option>
+                                    <option value="Shamanism">Shamanism</option>
+                                    <option value="Quantun Energy Healing & Medicine">Quantun Energy Healing &amp; Medicine</option>
+                                    <option value="Breath work">Breath work</option>
+                                    <option value="Behavioural Therapy">Behavioural Therapy</option>
+                                    <option value="Self-Healing">Self-Healing</option>
+                                    <option value="Counseling & Consulting">Counseling &amp; Consulting</option>
+                                </select>
+                                <!--							<input id="modalityname" class="inputbox" type="text" name="text" placeholder="enter modality name">-->
+                            </div>
+                            <!----- TITTLE ---->
+                            <div style="width:97.7%">
+                                <label class="heading">name:</label>
+                                <br>
+                                <input id="modalityname" class="inputbox" type="text" name="text" placeholder="Enter modality name"> </div>
+                            <!----- OVER VIEW ---->
+                            <div style="width:97.7%">
+                                <label class="heading">description:</label>
+                                <br>
+                                <textarea class="inputbox" rows="3" cols="70" name="descriptionaboutmodality" id="modalitydesc" placeholder="Description about the modality"></textarea>
+                            </div>
+							<section>
+								<div class="FormLeftSide" >
+									<label class="heading">Therapy Icon:</label>
+									<br>
+								   <input id="therapyicon" class="inputbox" type="file" name="therapyIcon" placeholder="" onchange="uploadicon();">
+								</div>
+							</section>	
+                            <!----- ABOUT THE PRACTITIONER ---->
+                            <div style="width:97.7%">
+                                <label class="heading">duration:</label>
+                                <br>
+                                <input class="inputbox" name="duration" id="duration" placeholder="Enter duration"> </div>
+                            <div style="width:97.7%">
+                                <label class="heading">fee:</label>
+                                <br>
+                                <input class="inputbox" name="fees" id="fees" placeholder="Enter fees for modality"> </div>
+                            <div style="width:97.7%">
+                                <label class="heading">requirements:</label>
+                                <br>
+                                <input class="inputbox" name="requirements" id="requirements" placeholder="requirements to who can enroll"> </div>
+                        </div>
+                        <div style="width:15%; margin:2% 10%; 2% 0%; float:right" id="button">
+                            <a style="cursor:pointer"> <img class="submit" src="images/submit-button.png" width="100%" onclick="submitvalues()"> </a>
+                        </div>
+                    </form>
+                </div>
+                <div id="therapieslist"  style="display:none">
+                    <section style="margin: 2% 27% 2%  31% ">
+                        <div id="displaylist" style="display:block">
+                            <!--DISPLAY PRACTITIONERS OR THERAPIES SECTION-->
+                            <div id="displaytherapy">
+                                <select id="displaytherapies" class="inputbox" onchange="displayinnersections();">
+                                    <option value="-">--select--</option>
+                                    <option value="practitioner">Practitioner</option>
+                                    <option value="modalities">Therapy</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <!--Display Practitioner Section-->
+                        <div id="displaypractitioners" style="display:none">
+                            <table id="practitionerTable" width="80%" style="margin-left:10%;margin-right:10%">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Mobile</th>
+                                    <th>Email</th>
+                                    <th>M1</th>
+                                    <th>M2</th>
+                                    <th>M3</th>
+                                    <th>M4</th>
+                                    <th>Options</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--Display Therapies Section-->
+                        <div id="displayalltherapies" style="display:none">
+                            <table id="TherapyTable" width="80%" style="margin-left:10%;margin-right:10%">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>duration</th>
+                                    <th>fee</th>
+                                    <th>Options</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <!--THRIIVE WORLD-->
+<!--
+            <section id="media">
+                <div id="addmedia">
+                    <form>
+-->
+                        <!----- TITTLE ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">title</label>
+                            <br>
+                            <input id="thriiveWorldtitle" class="inputbox" type="text" name="text" placeholder="Enter Title of the Media"> </div>
+-->
+                        <!----- SPEAKER NAME ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">speaker</label>
+                            <br>
+                            <input id="thriiveWorldSpeaker" class="inputbox" type="text" name="speaker" placeholder="Enter the Author Name"> </div>
+-->
+                        <!----- URL ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">url </label>
+                            <br>
+                            <input id="thriiveworldurl" class="inputbox" type="text" name="text" placeholder="Enter media url"> </div>
+-->
+                        <!----- DOWNLOAD URL ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">Description</label>
+                            <br>
+                            <input id="mediadescription" class="inputbox" type="text" name="download url" placeholder="Enter Description"> </div>
+-->
+                        <!----- DOWNLOAD URL ---->
+<!--
+                        <div style="width:97.7%">
+                            <label class="heading">Image Thumbnail</label>
+                            <br>
+                            <input id="thumbnial" class="inputbox" type="text" name="thumbnail" placeholder="Enter Image url"> </div>
+-->
+                        <!----- TYPE OF FILE ----->
+<!--
+                        <div style="width:100%">
+                            <label class="heading">type of file</label>
+                            <br>
+                            <select class="inputbox" id="thriiveworldtypeofFile">
+                                <option selected value="audio">Audio</option>
+                                <option value='video'>Video</option>
+                            </select>
+                        </div>
+                        <div style="width:15%; margin:2% 10%; 2% 0%; float:right" id="button">
+                            <a style="cursor:pointer"> <img class="submit" src="images/submit-button.png" width="100%" onclick="submitvalues(this.id)"> </a>
+                        </div>
+                    </form>
+                </div>
+                <div id="displaymedia">
+-->
+<!--
+                    <section style="margin: 2% 2% 2%  2%">
+                        <div id="medialist" style="display:none">
+-->
+                            <!--DISPLAY PRACTITIONERS OR THERAPIES SECTION-->
+<!--
+                            <div id="displaymedia">
+                                <select id="displaysection" class="inputbox" onchange="displayinnersections('displaysection');">
+                                    <option value="-">--select--</option>
+                                    <option value="audio">audios</option>
+                                    <option value="video">videos</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+-->
+                        <!--Display Practitioner Section-->
+<!--
+                        <div id="displaypractitioners" style="display:none">
+                            <table id="practitionerTable" width="80%" style="margin-left:10%;margin-right:10%">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Mobile</th>
+                                    <th>Email</th>
+                                    <th>M1</th>
+                                    <th>M2</th>
+                                    <th>M3</th>
+                                    <th>M4</th>
+                                    <th>Options</th>
+                                </tr>
+                            </table>
+                        </div>
+-->
+                        <!--Display Therapies Section-->
+<!--
+                        <div id="displayalltherapies" style="display:none">
+                            <table id="TherapyTable" width="80%" style="margin-left:10%;margin-right:10%">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>duration</th>
+                                    <th>fee</th>
+                                    <th>Options</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </section>
+-->
+            <!--THRIIVE TALKS-->
+<!--
+            <section id="articles">
+                <div id="addartcile">
+                    <form>
+-->
+                        <!----- TITTLE ---->
+<!--
+                        <div style="width:100%">
+                            <label class="heading">Article/Blog</label>
+                            <br>
+                            <select class="inputbox" id="thriivearticle" onchange="changearticleblog()">
+                                <option selected value="article">Article</option>
+                                <option value='blog'>Blog</option>
+                            </select>
+                        </div>
+                        <div class="labletwodivs">
+                            <label class="heading">title</label>
+                            <br>
+                            <input id="thriivetalktitle" class="inputbox" type="text" name="text" placeholder="Enter title of the Blog"> </div>
+-->
+                        <!----- SPEAKER NAME ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">speaker</label>
+                            <br>
+                            <input id="thriivetalkSpeaker" class="inputbox" type="text" name="speaker" placeholder="Enter Blog Author"> </div>
+                        <div style="width:97.7%" id="editor">
+                            <label class="heading">Description</label>
+                            <textarea id="htmleditor" style="background-color:transparent" style="width:97.7%"></textarea>
+                            <script>
+                                CKEDITOR.replace('htmleditor');
+                            </script>
+                        </div>
+-->
+                        <!----- URL ---->
+<!--
+                        <div style="width:97.7%" id="url">
+                            <label class="heading">url </label>
+                            <br>
+                            <input id="thriiveTalksurl" class="inputbox" type="text" name="text" placeholder="Blog Url Here"> </div>
+                        <div style="width:15%; margin:2% 10%; 2% 0%; float:right" id="button">
+                            <a style="cursor:pointer"> <img class="submit" src="images/submit-button.png" width="100%" onclick="submitvalues(this.id)"> </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+-->
+            <!--QUOTES-->
+<!--
+            <section id="quotes">
+                <div id="addquotes">
+                    <form>
+-->
+                        <!----- TYPE OF QUOTES ----->
+<!--                        <div style="width:100%">-->
+<!--
+                            <label class="heading">quotes</label>
+                            <br>
+                            <select class="inputbox" id="quotepage">
+                                <option selected value='home'>Home Page</option>
+                                <option value='therapies'>Therapies Page</option>
+                                <option value='thriiveworld'>Thriive World Page</option>
+                                <option value='whatshappening'>What's Happening Page</option>
+                            </select>
+                        </div>
+                        <div style="width:97.7%">
+                            <label class="heading">quote</label>
+                            <br>
+                            <textarea class="inputbox" rows="3" cols="70" name="quote" id="quote" placeholder="Enter Quote Here"></textarea>
+                        </div>
+-->
+                        <!----- SPEAKER NAME ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">speaker</label>
+                            <br>
+                            <input id="quoteSpeaker" class="inputbox" type="text" name="speaker" placeholder="Enter Quote By"> </div>
+-->
+                        <!----- Place ---->
+<!--
+                        <div class="labletwodivs">
+                            <label class="heading">place</label>
+                            <br>
+                            <input id="quoteplace" class="inputbox" type="text" name="text" placeholder="Enter Title For the Quote"> </div>
+                        <div style="width:15%; margin:2% 10%; 2% 0%; float:right" id="button">
+                            <a style="cursor:pointer"> <img class="submit" src="images/submit-button.png" width="100%" onclick="submitvalues(this.id)"> </a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+-->
+            <!--				</form>-->
+        </div>
+        <div id="successmsg" style="display:none;color:green;text-align:center;">
+            <h1 id="successtext">Form updated succesfully</h1> </div>
+    </section>
+    <!-- Display existing data-->
+    <script>
+    </script>
+</body>
+
+</html>

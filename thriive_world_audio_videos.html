@@ -1,0 +1,229 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/thriive_world_audio_videos.css"> <!--styles for Audio Gallery Pase -->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE WORLD  |  VIDEOS</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+		<script type="text/javascript" src="js/thriive_world_audio_videos.js"></script> <!-- Including thriive world js file  -->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <style>
+        video::-internal-media-controls-download-button {
+            display:none;
+        }
+
+        video::-webkit-media-controls-enclosure {
+            overflow:hidden;
+        }
+
+        video::-webkit-media-controls-panel {
+            width: calc(100% + 30px); /* Adjust as needed */
+        }
+        video {
+          width: 100%    !important;
+/*          height: auto   !important;*/
+        }
+        </style>
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        <!--  CALLING JAVASCRIPT FUNCTIONS TO INVOKE RESPONSIVE DESIGN  -->
+        <script>
+//            allHomeScriptsForBody()
+        </script>
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu();
+            Set_Menu_HeightAndWidth();
+        </script>
+         <section class=menuSection>
+         <script>
+            display_header_2();
+//            check_authentication();
+        </script>
+        
+        </section>
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+        
+            
+            <!---------- HERO IMAGE VIDEO SECTION ---------->
+            <section>
+				<h2 class="MainHeading" style="margin:5% 0% 0% 0%" id="title"></h2>
+				<h3 class="subHeading" > <span style="color:#323232">By</span><span id="speaker"></span></h3>
+				<div class="mainVideoDivBg">
+					<video id="url" src="" controls="true" style="width:100%; height:100%" ></video>
+				</div>
+                
+                <script>
+                    fetchdata('title');
+                    fetchdata('speaker');
+                    fetchdata('url');
+                </script>
+				<div class="audioDetails">
+					<h4> lorem ipsum dolor sit lorem ipsum dolor sit.
+					lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor..</h4>
+				</div> 
+				
+				<div class="socialMediaDiv_GM" >
+                    
+					<div class="socialMediaDivIcon">
+						<a href=""> <img src="images/SocialMedia_F.png" width="100%"> </a>
+					</div>
+					<div class="socialMediaDivIcon">
+						<a href=""> <img src="images/SocialMedia_T.png" width="100%"> </a>
+					</div>
+					<div class="socialMediaDivIcon">
+						<a href=""> <img src="images/SocialMedia_I.png" width="100%"> </a>
+					</div>
+					<div class="socialMediaDivIcon">
+						<a href=""> <img src="images/SocialMedia_B.png" width="100%"> </a>
+					</div>
+					<div class="socialMediaDivIcon">
+						<a href=""> <img src="images/SocialMedia_M.png" width="100%"> </a>
+					</div>
+                   <div class="socialMediaDivIcon">
+						<a onclick="addtomydashboard()"> <img id="downloadicon" src="images/Download_Cloud.png" width="100%" alt="Add to my dashboard"> </a>
+					</div>
+				</div>
+                
+                
+            </section>
+			
+			
+             
+        <!--*** THRIIVE WORLD SECTION ***-->
+        
+        <section>
+				<h1 class="MainHeading" style="margin:5% 0% 0% 0%">other related videos  </h1>
+            
+				<div class="div_displayTable">
+                    
+					<!--PREVIOUS BUTTON-->
+					<div class="TW_PreviousButton">
+						 <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%" onclick="callcarousel(-1)">
+					</div>
+                    
+                    <div id="thriiveworld_desktop"></div>
+                    
+                    <script>
+                        displayVideos();    
+                    </script>
+                    
+					<!--   NEXT BUTTON  -->
+					<div class="TW_NextButton">
+						 <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" onclick="callcarousel(1)"> 
+					</div>
+				</div>
+			</section>
+            
+				 <!---------- THRIIVE AUDIO FOR DESKTOP---------->
+           <section>
+				<h1 class="MainHeading"	 style="text-align:left;margin:5% 0% 3% 8%"> thriive music </h1>
+				<!-- MAIN HEADING  -->
+				<!--SET NO-1-->
+				<div class="div_displayTable">
+					<!--PREVIOUS BUTTON-->
+					<div class="audioPreviousButton">
+						<a style="cursor:pointer"> <img id="twPrevButtonImg" src="images/Next-1B.png" width="100%"> </a>
+					</div>
+                    
+                    <!--AUDIO DIV - 1 -->
+                    <div class="audioDiv">
+                        <div class="audioBlog_1" id="audioDiv1">
+                           <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300292135&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                        </div>
+                           <h3 class="TW_Caption">  thriive music-1 </h3>
+                           <h3 class="TW_SubCaption"> Sub caption </h3>
+                    </div>
+                    
+                    
+                    <!--AUDIO DIV - 2 -->
+                    <div class="audioDiv" id="audioDiv2">
+                        <div class="audioBlog_2">
+                            <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300292135&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                        </div>
+                        <h3 class="TW_Caption">  thriive music-1 </h3>
+                        <h3 class="TW_SubCaption"> Sub caption </h3>
+					</div>
+                    
+                    
+                    <!--AUDIO DIV - 3 -->
+                    <div class="audioDiv" id="audioDiv3">
+                        <div class="audioBlog_3">
+                            <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300292135&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                        </div>
+                        
+                        <h3 class="TW_Caption">  thriive music-1 </h3>
+                        <h3 class="TW_SubCaption"> Sub caption </h3>
+					</div>
+					<script>
+//						displayVideos();
+					</script>
+                    
+					<!--   NEXT BUTTON  -->
+					<div class="audioNextButton">
+						<a style="cursor:pointer"> <img id="twNextButtonImg" src="images/Next-1A.png" width="100%" > </a>
+					</div>
+				</div>
+			</section>
+			
+               
+			
+			
+			<!---------- TESTIMONIAL SECTION  ---------->
+			<section id="TestimonialSection_Desktop">
+				<div class="testimonial">
+					<img src="images/Testimonial.png" width="100%;" style="margin:auto">
+					<div id="thriivequotes"></div>
+				</div>
+				<script>
+				 	display_testimonial('home');
+				</script>
+            </section>
+            
+        </section>
+        
+        <!--FOOTER SECTION-->
+        <script style="margin-top:20%">
+           	display_footer();
+//			footerItemSize();
+        </script>
+        
+<!--        <script src="js/calendarScripts.js"> </script>-->
+        
+    </body>
+</html>

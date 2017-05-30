@@ -1,0 +1,266 @@
+
+/*SIGN SECTION FOR MIDDLE ALIGN*/
+
+.signIn_section {
+	margin: 8% 0% 5% 0%;
+	display: table;
+	width: 100%;
+}
+
+
+/*USER SIGN IN*/
+
+.user_signIn {
+	display: inline-table;
+	width: 30%;
+	text-align: center;
+	margin-left: 20%;
+	border-right: .15em solid #4e0475
+}
+
+
+/*PRACTITIONER SIGN IN*/
+
+.practitioner_signIn {
+	display: inline-table;
+	width: 30%;
+	text-align: center;
+}
+
+
+/* SIGN HEADDER */
+
+.signIn_heading {
+	color: #4e0475;
+	font-family: 'Amatic SC', cursive;
+	text-align: center;
+	font-size: 2.3vw;
+}
+
+
+/*USER ICON*/
+
+.singInUserIcon {
+	width: 20%;
+	margin: auto
+}
+
+.previousButtons {
+	width: 8%;
+	display: inline-table;
+	float: left;
+	margin-top: 50%;
+	display: none;
+}
+
+.nextButtons {
+	width: 8%;
+	display: inline-table;
+	float: right;
+	margin-top: 50%;
+	display: none;
+}
+
+    /*TO CHANGE THE COLOR OF PLACE HOLDER*/
+ 
+ /* WebKit, Blink, Edge */
+ ::-webkit-input-placeholder {
+ 	color: #4e0475;
+ 	font-weight: bold;
+ }
+ 
+ /* Mozilla Firefox 4 to 18 */
+ :-moz-placeholder {
+ 	color: #4e0475;
+ 	font-weight: bold;
+ }
+ 
+ /* Mozilla Firefox 19+ */
+ ::-moz-placeholder {
+ 	color: #4e0475;
+ 	font-weight: bold;
+ }
+ 
+ /* Internet Explorer 10-11 */
+ :-ms-input-placeholder {
+ 	color: #4e0475;
+ 	font-weight: bold;
+ }
+
+/* SIGN IN INPUT*/
+.signIn_input {
+	color: #4e0475;
+	width: 80%;
+	padding: 3% 0% 3% 3%;
+	font-size: 1.2vw;
+	border: none;
+	background-color: #fff;
+	margin-top: 5%;
+	font-family: 'Lato', sans-serif;
+}
+
+#txtPasswordAsUser,
+#txtPasswordAsPractitioner {
+	width: 65%;
+	padding: 3% 15% 3% 3% !important;
+}
+
+.signIn_input_error {
+	color: RED;
+	width: 80%;
+	padding: 3% 0% 3% 0%;
+	font-size: 1.5vw;
+	border-color: RED;
+	margin-top: 5%;
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bolder;
+}
+
+.forgetPassword {
+	text-align: right;
+	margin-right: 10%;
+	font-size: 1vw;
+	margin-top: 0;
+	color: #4e0475;
+}
+
+.pw_icon {
+	float: right;
+	position: absolute;
+	width: 8%;
+	margin: 8.5% 3% 0% -12%;
+}
+
+
+/* SUBMIT MESSAGE STYLE*/
+
+#SubmitMessage {
+	text-align: center;
+	/*        display: none;*/
+	/*        color: #58595b;*/
+	font-family: 'Lato', sans-serif;
+	font-size: 1.1vw;
+	font-weight: 900;
+}
+
+.SubmitMessageSuccess {
+	color: GREEN;
+}
+
+.SubmitMessageError {
+	color: RED;
+	display: block;
+}
+
+
+/* LOG IN BUTTON STYLE */
+
+#btnLogin {
+	display: inline-table;
+	margin: auto;
+	margin: 8% 0% 2% 0%;
+	width: 35%;
+}
+
+.buttonStyles {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.notyetSingIn {
+	font-family: 'Lato', sans-serif;
+	color: #58595b;
+	font-size: 1.1vw;
+}
+
+.signUpNow a {
+	font-family: 'Lato', sans-serif;
+	color: #4e0475;
+	font-size: 1.1vw;
+}
+
+.socialMediaDiv_1 {
+	display: table;
+	width: 40%;
+	margin: auto;
+}
+
+.socialMediaIcon {
+	display: inline-table;
+	width: 30%;
+}
+
+
+/*HIDING SIGN IN AND SEARCH BUTONS*/
+.rightDiv{
+visibility: hidden;
+}
+
+
+    
+
+    /*------- STYLE FOR MOBILE DEVICE -------*/
+
+@media (max-width: 736px) {
+/* SIGN HEADDER */
+.signIn_heading {
+	font-size: 6vw;
+	font-weight: bolder;
+}
+
+.user_signIn {
+	width: 80%;
+	margin: auto;
+	border-right: none;
+	margin: 2% 0% 0% 2%;
+}
+
+.practitioner_signIn {
+	display: none;
+	width: 80%;
+	margin-left: 15%;
+}
+.notyetSingIn,
+.signUpNow {
+	font-size: 3vw;
+	line-height: 200%
+}
+
+.nextButtons {
+	width: 9%;
+	display: inline-table;
+	right: 0;
+}
+
+.previousButtons {
+	width: 9%;
+	display: inline-table;
+	left: 0;
+}
+
+/* SIGN IN INPUT*/
+.signIn_input {
+	font-size: 3.3vw;
+	width: 70%;
+}
+
+#txtPasswordAsUser,
+#txtPasswordAsPractitioner{
+	width: 55%;
+	padding: 3% 15% 3% 3% !important;
+
+}
+
+.forgetPassword{
+	margin-right:13.5%;
+	font-size:3vw;
+}
+.signUpNow a {
+font-size: 3vw;
+}
+	
+}
+
+    

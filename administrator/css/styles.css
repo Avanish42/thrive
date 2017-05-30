@@ -1,0 +1,390 @@
+/* -------------------------  BODY  ------------------------- */
+    /*  CSS FOR BODY */
+    body, html {
+        padding: 0px;
+        margin: 0px;
+			font-family: 'Amatic SC', cursive;
+    }  
+
+/*BAKGOUND FOR OTHER PAGES DESKTOP DEVISES*/
+    @media only screen and (max-width: 4560px) { 
+    .body_Backgruond {
+        padding: 0px;
+        margin: 0px;
+        background-image: url(../images/Backgorund_Other_Pages.jpg) !important;
+        background-size: 100% ;
+        background-size: 100% ;
+        background-repeat: repeat-y;
+        }  
+    }
+
+
+    /*  MARGIN FOR BODY */
+    .totalBodySection {
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+/* ---------------------------------  WEBSITE HEADER CSS  ------------------------------- */
+        
+    /*MASERT DIV OF HEADER */
+    .maindiv{
+        margin:0; 
+        padding:0;
+        width:100%; 
+        display:table; 
+        position:relative;
+        margin-top: 0%;
+    }
+
+    /* TOGGLE BUTTON */
+    .leftDiv{
+        width:4.8%; 
+        display:inline-table;
+        position:absolute;
+        left: 0;
+        top: 35%;
+        text-align: center;
+/*		visibility: hidden;*/
+    }
+
+    /*LOGO DIV */
+    .MidleDiv{
+        width:15%; 
+        margin:auto; 
+        padding:0;
+        text-align: center;
+		
+    }
+	
+    /*LOGIN & SEARCH DIV */
+    .rightDiv{
+        width:18%; 
+        position:absolute;
+        right: 0;
+        top: 20%;
+        display: table;
+		font-size: 2vw;
+		text-align: right;
+    }
+
+	/*	LOGOUT DIV*/
+	.rightDiv a{
+		text-decoration: none;
+		color: #4e0475;
+	}
+
+	#mainbar{
+		width: 100%;
+		background-color: #4e0475;
+		position: relative;
+	}
+	/*PANNEL DIV*/
+	.pannelDiv{
+		width: 86%;
+		background-color: #4e0475;
+		margin-left: 7%;
+		margin-top: -.05%;
+        display: block;
+	}
+    ul{
+        margin-left: 25%;
+    }
+	.activeText{
+		background-color: #fff;
+		color: #4e0475;
+		display: inline-table;
+		font-size:2vw;
+		padding:.70%;
+	}
+	.listText{
+		color: #fff;
+		display: inline-table;
+		font-size:2vw;
+		padding:.70%;
+	}
+	.pannelDiv ul li:hover{
+		color: #4e0475;
+		background-color: #fff;
+	}
+	#adduserDiv{
+		display: none;
+	}
+
+	#welcome_text{
+		font-family: 'Amatic SC', cursive;
+		color:#fff;
+		font-size: 2vw;
+		margin: 0%;
+		padding:.5%;
+		text-align: center;
+	}
+
+	  /*MASERT DIV OF HEADER */
+    .icon_maindiv{
+        width:100%; 
+        display:table; 
+        margin: 3% 0% 3% 0%;
+    }
+	
+	.icon_maindiv .common{
+			display: inline-table;
+			width: 20%;
+	}
+	.common a{
+		text-decoration: none;
+	}
+	.icon_left_div{
+		left: 0;
+		text-align: center;
+	}
+
+	.icon_middle_div{
+		margin: 0% 20% 0% 20%;
+        text-align: center;
+	}
+
+	.icon_right_div{
+		right: 0;
+		text-align: center;
+	}
+
+	.icon_text{
+		font-size: 1.5vw;
+		margin-top: -5%;
+		color: #4e0475;
+	}
+	.rowdiv{
+		width: 100%;
+		display: table
+	}
+	.labeldiv{
+		width: 45%;
+		display: inline-table;
+	}
+
+	.labletwodivs{
+		width:46.6%;
+		display:inline-table
+	}
+
+	.heading{
+		font-size: 2vw;
+		color: #4e0475;
+        font-weight: bold;
+	}
+	.inputbox{
+		width: 90%;
+        height:3vw;
+		padding: 0.1% 0% .5% 2% ;
+		color: gray;
+		margin: .5% 0% .5% 0%;
+		font-size: 1vw;
+        vertical-align: middle;
+	}
+    input::-webkit-input-placeholder {
+        font-size: 14px;
+        line-height: 3;
+    }
+    textarea::-webkit-input-placeholder {
+        font-size: 14px;
+        line-height: 3;
+    }
+    select{
+        height: 10%;
+        font-size:1.8vw;
+    }
+	
+	#text1{
+		vertical-align: middle;
+		text-align: center;
+		margin-bottom: 10%;
+		margin-top: -50%;
+		color: #4e0475;
+		font-size: 1vw;
+	}
+
+	#text2,
+	#text3,
+	#text4,
+	#text5,
+	#text6,
+	#text7,
+	#text8{
+		display: none;
+		vertical-align: middle;
+		text-align: center;
+		margin-bottom: 10%;
+		margin-top: -50%;
+		color: #4e0475;
+		font-size: 1vw;
+
+}
+
+	/*MENU CSS*/
+	  #MenuDiv {
+        display: table;
+        overflow: hidden;
+		width: 25%;
+		height: 100%;
+    }
+	
+   	#LeftSideMenu {
+        display: table-cell;
+        background-color: #4E0475;
+        padding-top: 10%;
+        left: 0px;
+	   	color: #fff;
+	  	font-family: 'Amatic SC', cursive;
+        -webkit-transition: all 10s ease-in-out;
+	}
+	
+	 .menu_itmes{
+        display: block;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        text-decoration: none;
+        font-family: 'Amatic SC', cursive;
+        list-style: none;
+        color: #f2f2f2;
+        font-size: 2.5vw;
+        padding-left: 10%;
+        line-height: 100%;
+        vertical-align: middle;
+    }
+	
+	 .menu_itmes{
+        display: block;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        text-decoration: none;
+        font-family: 'Amatic SC', cursive;
+        list-style: none;
+        color: #f2f2f2;
+        font-size: 2.5vw;
+        padding-left: 10%;
+        line-height: 70%;
+        vertical-align: middle;
+    }
+
+    .menu_itmes:hover{
+        background-color: #f2f2f2;
+        display: block;
+        text-decoration: none;
+        font-family: 'Amatic SC', cursive;
+        list-style: none;
+        color: #4E0475;
+        font-size: 2.5vw;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        line-height: 70%;
+        vertical-align: middle;
+    }
+	
+	 .close {
+        padding-right: 10%;
+        margin-top: 0%;
+        width: 1.8vw;
+		float: right;
+         -webkit-transition: all 1s ease-in-out;
+    }
+
+	.overlay {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		transition: 0.1s;
+	}
+		
+	 #menu_close_Img {
+          width: 100%;
+        }
+    
+	::-webkit-input-placeholder {
+	   font-family:'Lato', sans-serif;
+		font-size:0.8vw;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   font-family:'Lato', sans-serif;
+		font-size:0.8vw;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   font-family:'Lato', sans-serif;
+		font-size:0.8vw;
+	}
+
+	:-ms-input-placeholder {  
+	   font-family:'Lato', sans-serif;
+		font-size:0.8vw;
+	}
+
+th{
+    width:10%;
+}
+table, td ,th{
+    border: 1px solid black;
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+/**** WSP DETAILS****/
+
+#wspDetails{
+    margin: 2% 0% 2% 0% ;
+    
+}
+
+.wsp_heading{
+    font-family: 'Amatic SC',cursive;;
+    font-size: 3vw;
+    color: #4e0475;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+.wsp_rightDiv,
+.wsp_leftDiv{
+    width: 49%;
+    display: inline-table;
+}
+
+.wsp_details{
+    font-family: 'Amatic SC',cursive;;
+    font-size: 2vw;
+    color: #4e0475;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+.inputBodx{
+    width: 60%;
+    height: 2vw;
+    padding-left: 2%;
+    font-size: 1vw;
+    color: gray;
+    border: none;
+   float: right;
+    margin-right: 5%;
+}
+
+.textArea{
+    padding-left: 2%;
+    font-size: 1vw;
+    color: gray;
+    border: none;
+    float: right;
+    margin-right: 5%;
+    padding: 1%;
+}
+.wsp_details span{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    color: #333;
+    text-transform: none;
+}

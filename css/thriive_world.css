@@ -1,0 +1,916 @@
+
+/*/---------  HIDE MOBILE DEVISES IN DESKTOP ---------/*/
+@media (min-width: 737px) {
+    /*  HIDE THRIIVE TALKS IN DESKTOP */
+    #ThriiveTalksSection_Mobile{
+        display: none !important;
+    }    
+}
+
+
+ 
+/*--------------------------------------------*/
+/* -----THRIIVE WORLD SECTION FOR DESKTOP-----*/
+/*--------------------------------------------*/
+
+
+
+.TW_PreviousButton,
+.TW_NextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.TW_SubHeadding {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 4%;
+    margin-top: 0%;
+    
+}
+
+.video_set{
+    width: 50%;
+    display: inline-table;
+}
+.video_div {
+    width: 15vw;
+    height: 22.5vw;
+    display: inline-table;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video1{
+    margin-left: 5%
+}
+.video2{
+    margin-left: 8%
+}
+
+.video3{
+    margin-left: 4%
+}
+
+.video4{
+    margin-left: 8%
+}
+
+.slider {
+    width: 15vw;
+    height: 22.5vw;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide1 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide2 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide3 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .BG_slide {
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1,
+.slide2,
+.slide3 {
+    width: 100%;
+    display: none;
+    cursor: pointer;
+}
+
+.BG_slide {
+    width: 100%;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1 {
+    margin-top: -22.5vw;
+    animation: fade 8s infinite;
+    -webkit-animation: fade 8s infinite;
+}
+
+.slide2 {
+    margin-top: -22.5vw;
+    animation: fade2 8s infinite;
+    -webkit-animation: fade2 8s infinite;
+}
+
+.slide3 {
+    margin-top: -22.5vw;
+    animation: fade3 8s infinite;
+    -webkit-animation: fade3 8s infinite;
+} 
+    
+@keyframes fade{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+    
+@keyframes fade2{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+    
+@keyframes fade3{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+    
+.infoText {
+     width: 100%;
+     height: 4vw;
+     background-color: #4e0475;
+     text-align: center;
+     color: #fff;
+     padding-top: 3%;
+     margin-top: 61.6%;
+     -webkit-transition: all 1s ease-in-out;
+ }
+.infoText span{
+    width: 90%;
+    margin: auto;
+}
+ 
+ .PlayButton {
+     background: url(../images/PlayButton.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     margin: auto;
+     opacity: 0;
+     position: relative;
+     margin-top: -85%;
+     cursor: pointer;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .PlayButton:hover {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .video_div:hover .PlayButton {
+     opacity: .8
+ }
+ 
+ .video_div:hover .BeforeText {
+     display: none;
+ }
+ 
+ .video_div:hover .AfterText {
+     display: block;
+ }
+ 
+ .BeforeText {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.1vw;
+     
+}
+ 
+ .AfterText {
+    display: none;
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: .8vw;
+ }
+
+.tagLine{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/*--------------------------------------------*/
+/* -----VIDEO SECTION FOR MOBILE-----*/
+/*--------------------------------------------*/
+
+
+@media (max-width: 736px) {
+    
+    .tagLine{
+        font-size: 3vw;
+    }
+    
+    .TW_PreviousButton,
+    .TW_NextButton {
+         width: 8%;
+         display: table-cell;
+         transform: translateY(0%)
+ }
+ 
+ .TW_SubHeadding {
+     font-size: 2.5vw;
+     font-weight: 400;
+ }
+.video_set{
+    width: 100%;
+    display: inline-table;
+}
+
+    
+ .slider,
+ .video_div {
+     width: 28vw;
+     height: 43.2vw;
+     display: inline-table;
+ }
+    
+    .video_div:hover{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+        
+    }
+ 
+ .BG_slide {
+     width: 100%;
+ }
+ 
+ .slide1 {
+     margin-top: -43.2vw;
+     
+ }
+ 
+ .slide2 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .slide3 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .infoText {
+     padding-top: 8%;
+     margin-top: 48%;
+     height: 7vw;
+ }
+    
+ 
+ .PlayButton {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     opacity: 1;
+     width: 6vw;
+     height: 6vw;
+     margin-top: -75%;
+ }
+ 
+ .PlayButton:hover {
+     width: 6vw;
+     height: 6vw;
+     opacity: 1;
+ }
+    
+    .BeforeText {
+        font-size: 2.2vw;
+    }
+    
+    .AfterText {
+        font-size: 1.5vw;
+    }
+}
+    
+
+
+
+/*** AUDIO SECTION FOR DESKTOP ***/
+/*/-------------------------------/*/
+
+
+/*NEXT AND PREVIOUS BUTTONS*/
+
+.audioPreviousButton,
+.audioNextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    transform: translateY(-15%)
+}
+
+.audioDiv {
+    width: 30%;
+    display: inline-table;
+    text-align: center;
+    margin-left: 2.5%;
+}
+
+
+/*AUDIO BLOG-1*/
+
+.audioBlog_1 {
+    width: 21.5vw;
+    height: 14.2vw;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/W_AV_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1;
+}
+
+.audioBlog_2 {
+    width: 21.5vw;
+    height: 14.2vw;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/W_AV_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1%;
+}
+
+.audioBlog_3 {
+    width: 21.5vw;
+    height: 14.2vw;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/W_AV_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1;
+}
+
+.audioBlog_1 iframe,
+.audioBlog_2 iframe,
+.audioBlog_3 iframe {
+    width: 19vw;
+    height: 12.2vw;
+    margin-top: 5%
+}
+
+.TW_Caption {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #4e0475;
+    font-size: 2.5vw;
+    font-weight: 900;
+    margin-top: 0
+}
+
+.TW_SubCaption {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    color: #000;
+    margin-top: -11%;
+    font-weight: 400;
+}
+
+
+
+/* -----AUDIO SECTION FOR MOBILE-----*/
+/*--------------------------------------------*/
+
+@media (max-width: 736px) {
+    /*THRIIVE AUDIO SECTION FOR MOBILE          */
+    /*NEXT AND PREVIOUS BUTTONS*/
+    .audioPreviousButton,
+    .audioNextButton {
+        width: 8%;
+    }
+    #audioDiv2,
+    #audioDiv3 {
+        display: none;
+    }
+    .audioDiv {
+        width: 80%;
+        margin-left: 11%
+    }
+    /*AUDIO BLOG-1*/
+    .audioBlog_1,
+    .audioBlog_2,
+    .audioBlog_3 {
+        width: 52vw;
+        height: 36vw;
+    }
+    .audioBlog_1 iframe {
+        width: 90%;
+        height: 30vw;
+    }
+    
+    .TW_Caption {
+        font-size: 5vw;
+        }
+    
+    .TW_SubCaption {
+        font-size: 3vw;
+        
+    }
+}
+
+/*--------------------------------*/
+/* --GUIDED MEDITATION SECTION ---*/
+/*--------------------------------*/
+
+
+
+/*GUIDED MEDITATION NEXT AND PREVIOUS BUTTONS*/
+.GMPreviousButton,
+.GMNextButton{
+	width: 4%;
+	display: table-cell;
+	transform: translateY(-21.5%);
+}
+
+.GudideMeditationDiv_1,
+.GudideMeditationDiv_2,
+.GudideMeditationDiv_3 {
+	width:22%;
+	display:inline-table;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	color: #4e0475;
+	margin: auto;
+	
+}
+.videoBlog_1{
+    margin-left: 4%;
+}
+.videoBlog_2{
+    margin-left: 2%;
+}
+/*VIDEO BLOG-1*/
+.videoBlog_1,
+.videoBlog_2,
+.videoBlog_3{
+	width: 22vw;
+	display:inline-table;
+	background: url(../images/GM_BG.png) no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.videoBlog_1 iframe{
+	-webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+	position:relative;
+	width: 19.6vw;
+	height: 13vw;
+    padding: 3%;
+}
+
+.videoBlog_2 iframe{
+	-webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+	position:relative;
+	width: 19.6vw;
+	height: 13vw;
+    padding: 3%;
+}
+.videoBlog_3 iframe{
+	-webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+	position:relative;
+	width: 19.6vw;
+	height: 13vw;
+    padding: 3%;
+}
+.meditationSubject{
+	font-size: 1.5vw;
+}
+.meditationBy{
+	font-size: 1vw;
+	margin-top:-3.5%
+	
+}
+.meditationDetalis{
+	font-size: .8vw;
+	margin-top:-4.5%;
+	color: 323232;
+	
+}
+
+/*GUIDED MEDITATION FOR MOBILE*/
+
+@media (max-width: 736px) {
+    
+    .GMPreviousButton,
+    .GMNextButton{
+        width: 8%;
+        display: table-cell;
+        vertical-align: middle;
+/*	transform: translateY(-21.5%);*/
+}
+
+.GudideMeditationDiv_1,
+.GudideMeditationDiv_2,
+.GudideMeditationDiv_3 {
+	width:70%;
+	display:inline-table;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	color: #4e0475;
+	margin: auto;
+}
+   
+.GudideMeditationDiv_2,
+.GudideMeditationDiv_3{
+        display: none;
+    }
+    
+/*VIDEO BLOG-1*/
+.videoBlog_1,
+.videoBlog_2,
+.videoBlog_3{
+	width: 55vw;
+	display:inline-table;
+	background: url(../images/GM_BG.png) no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    margin-left: 10%;
+}
+
+.videoBlog_1 iframe{
+	-webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+	position:relative;
+	width: 50vw;
+	height: 33vw;
+    padding: 3%;
+    
+}
+
+.videoBlog_2 iframe{
+	-webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+	position:relative;
+    width: 50vw;
+	height: 33vw;
+    padding: 3%;
+}
+.videoBlog_3 iframe{
+	-webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+	position:relative;
+   width: 50vw;
+	height: 33vw;
+    padding: 3%;
+}
+.meditationSubject{
+	font-size: 3vw;
+    margin-left: 18%;
+}
+.meditationBy{
+	font-size: 2.5vw;
+	margin-top:-3.5%;
+    margin-left: 18%;
+	
+}
+.meditationDetalis{
+	font-size: 2vw;
+	margin-top:-2.5%;
+	color: 323232;
+    margin-left: 18%;
+	
+}
+
+    
+}
+
+
+/*--------------------------------*/
+/* ----THRIIVE TALKS SECTION -----*/
+/*--------------------------------*/
+
+
+
+.ThriiveTalksDiv_1{
+    width: 29%;
+    height: 20vw;
+    display: inline-table;
+     background: url(../images/ThriveTalks_BG_1_A.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: -2%
+}
+
+.ThriiveTalksDiv_2{
+     width: 28%;
+    height: 20vw;
+    display: inline-table;
+     background: url(../images/ThriveTalks_BG_2_A.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.ThriiveTalksDiv_3{
+     width: 23%;
+    height: 21vw;
+    padding: 0% 0% 0% 5% ;
+    display: inline-table;
+     background: url(../images/ThriveTalks_BG_3_A.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: -5%;
+    text-align: center;
+}
+.ThriiveTalksDiv_1:hover,
+.ThriiveTalksDiv_2:hover,
+.ThriiveTalksDiv_3:hover{
+    filter:contrast(110%) brightness(110%);
+}
+
+/*THRIIVE TALKS RIGHT SIDE ICON*/
+
+.TT_RightSideIcon {
+    width: 10%;
+    margin: 20% 0% 0% -1%;
+    display: inline-table;
+    vertical-align: middle
+}
+
+
+/*THRIIVE TALKS LEFT SIDE ICON*/
+
+.TT_LeftSideIcon {
+    width: 10%;
+    margin: -18% -5% 0% 8%;
+    display: inline-table;
+    vertical-align: middle
+}
+
+/*  THRIIVE TALK BLOCKS  TEXT STYLING  */
+
+.TT_1_Text_A {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    width: 16vw;
+    font-size: 2.3vw;
+    margin-top: 28%;
+    margin-left: 11%;
+    word-wrap: break-word;
+    font-weight: bold;
+    line-height: 90%
+}
+
+.TT_1_Text_B {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    margin: -6% 0% 0% 11%;
+    font-style: normal;
+    width: 16vw;
+    word-wrap: break-word;
+}
+
+.TT_2_Text_A {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    width: 15vw;
+    font-size: 2.3vw;
+    margin-top: 22%;
+    margin-left: 22%;
+    word-wrap: break-word;
+    font-weight: bold;
+    color: #fff;
+    line-height: 90%;
+}
+
+.TT_2_Text_B {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    margin: -6% 0% 0% 20%;
+    font-style: normal;
+    width: 16vw;
+    word-wrap: break-word;
+    color: #fff;
+}
+
+.TT_3_Text_A {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    width: 13vw;
+    font-size: 2.3vw;
+    margin-top: 28%;
+    margin-left: -2%;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+.TT_3_Text_B {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    margin: -10% 0% 0% -2%;
+    font-style: normal;
+    width: 13vw;
+    word-wrap: break-word;
+}
+
+/*****MOBILE TT SECTION*****/
+
+@media (max-width: 736px) {
+    
+    .ThriiveTalksDiv_1 {
+      width: 43%;
+      height: 28vw;
+      margin-left: -7%
+  }
+  
+  .ThriiveTalksDiv_2 {
+      width: 43%;
+      height: 28vw;
+      margin-left: -3%;
+  }
+  
+  .ThriiveTalksDiv_3 {
+      display: none
+  }
+  /*THRIIVE TALKS RIGHT SIDE ICON*/
+  .TT_RightSideIcon {
+      width: 15%;
+      margin: -3% 0% 0% -10%;
+      vertical-align: top
+  }
+    
+  /*THRIIVE TALKS LEFT SIDE ICON*/
+  .TT_LeftSideIcon {
+      width: 15%;
+      margin: 0% -5% 0% 8%;
+      vertical-align: bottom
+  }
+    
+  .TT_1_Text_A {
+      width: 25vw;
+      font-size: 3.5vw;
+      margin-top: 25%;
+      margin-left: 11%;
+      word-wrap: break-word;
+  }
+  
+  .TT_1_Text_B {
+      font-family: 'Lato', sans-serif;
+      font-size: 2.3vw;
+      margin: -6% 0% 0% 10%;
+      width: 25vw;
+      word-wrap: break-word;
+  }
+  
+  .TT_2_Text_A {
+      width: 22vw;
+      font-size: 3.5vw;
+      margin-top: 22%;
+      margin-left: 20%;
+      word-wrap: break-word;
+  }
+  
+  .TT_2_Text_B {
+      font-family: 'Lato', sans-serif;
+      font-size: 2.5vw;
+      margin: -8% 0% 0% 30%;
+      font-style: normal;
+      width: 21vw;
+      word-wrap: break-word;
+      color: #fff;
+  }
+}
+
+
+
+/***** FOR MOZILLA BROUSERS *****/
+
+@-moz-document url-prefix() {
+    
+    .TW_Caption_videos{
+	width: 14.7vw;
+}
+
+.TW_SubCaption_videos{
+	width: 14.7vw;
+}
+  
+    
+    
+/*THRIIVE TALKS*/
+.ThriiveTalksDiv_1{
+    width: 28%;
+    height: 20vw;
+    margin-left: -2%
+}
+
+.ThriiveTalksDiv_2{
+     width: 27%;
+    height: 20vw;
+    display: inline-table;
+}
+
+.ThriiveTalksDiv_3{
+     width: 22%;
+    height: 21vw;
+    padding: 0% 0% 0% 5% ;
+    margin-right: -5%;
+}
+    
+    /*THRIIVE TALKS RIGHT SIDE ICON*/
+
+.TT_RightSideIcon {
+    margin: 20% 0% 0% -1%;
+}
+
+/*THRIIVE TALKS LEFT SIDE ICON*/
+
+.TT_LeftSideIcon {
+    margin: -10% -5% 0% 8%;
+}
+    
+    @media (max-width: 736px) {
+        
+    .ThriiveTalksDiv_1 {
+      width: 42%;
+      height: 28vw;
+      margin-left: -8%
+  }
+  
+  .ThriiveTalksDiv_2 {
+      width: 42%;
+      height: 28vw;
+  }
+        
+        /*THRIIVE TALKS RIGHT SIDE ICON*/
+  .TT_RightSideIcon {
+      width: 15%;
+      margin: -3% -15% 0% -10%;
+  }
+  
+        
+    }
+    
+    
+}
+/***** FOR HEAZE BROUSERS *****/
+
+@supports (-ms-ime-align:auto) {
+    .footerDiv{
+        margin-top: 50%;
+    }
+    
+    @media (max-width: 736px) {
+        #ThriiveTalks_Block1_Mobile,
+        #ThriiveTalks_Block2_Mobile {
+            width: 42%
+        }
+        .TT_RightSideIcon {
+            margin: -3% 0% 0% -13%;
+        }
+        .ThriiveTalksDiv_1 {
+            margin-left: -10%;
+        }
+        .TW_PreviousButton,
+        .TW_NextButton {
+            width: 8%;
+            display: table-cell;
+            transform: translateY(37%);
+        }
+    }
+}

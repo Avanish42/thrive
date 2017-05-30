@@ -1,0 +1,200 @@
+  .row {
+      width: 100%;
+      display: table;
+  }
+  
+  .heading {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 3vw;
+      color: #4e0475;
+      float: left;
+  }
+  
+  .heading-2 {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 2.5vw;
+      color: #4e0475;
+      float: right;
+  }
+  
+  #SignupHeading {
+      font-family: 'Lato', sans-serif;
+      font-size: 2vw;
+      clear: both;
+      color: gray;
+  }
+  
+  .sm6_l {
+      width: 45%;
+      display: inline-table;
+      margin: 0% 0% 2% 0%
+  }
+  
+  .sm6_r {
+      width: 45%;
+      display: inline-table;
+      margin: 0% 0% 2% 5%
+  }
+  
+  .details {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 2.2vw;
+      color: #4e0475;
+      font-weight: bold;
+  }
+  /* SIGNUP FORM INPUT DETAILS */
+  
+  .SignupInput {
+      font-family: 'Lato', sans-serif;
+      color: grey;
+      font-size: 1.5vw;
+      padding-left: 3%;
+      padding: 2.2%;
+      width: 100%;
+      border: 0px;
+      margin-top: 1%;
+  }
+     
+  .textarea {
+      font-family: 'Lato', sans-serif;
+      color: grey;
+      font-size: 1.5vw;
+      padding-left: 3%;
+      padding: 2.2%;
+      width: 92.5%;
+      border: 0px;
+      margin-top: 1%;
+  }
+    
+/* SIGNUP FORM INPUT DETAILS */
+  
+  .DropdownList {
+     font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 1.5vw;
+      padding-left: 3%;
+      padding: 2.2%;
+      width: 100%;
+      border: 1px;
+      background-color: #fff;
+      
+  }
+  
+  .error {
+      font-family: 'Areal';
+      color: RED;
+      text-align: right;
+      font-size: 1vw;
+      padding: 3px !important;
+      line-height: 100%;
+      margin: 0px;
+  }
+  
+  .accountCreationError {
+      font-family: 'Areal';
+      color: RED;
+      text-align: center;
+      font-size: 1vw;
+      padding: 3px !important;
+      line-height: 100%;
+      margin: 0px;
+      margin-bottom: 2%;
+  }
+  
+  .success {
+      font-family: 'Areal';
+      color: GREEN;
+      text-align: center;
+      font-size: 1vw;
+      padding: 3px !important;
+      line-height: 100%;
+      margin: 0px;
+      margin-bottom: 2%;
+  }
+  /* RADIO BUTTONS */
+  
+  .spRadioButton {
+      display: none !important;
+  }
+  
+  .spRadioButton:checked + label {
+      opacity: 1;
+  }
+  
+  .label_item {
+      opacity: 0.3;
+      cursor: pointer;
+      vertical-align: middle;
+      display: inline-table;
+  }
+  
+  .gender {
+      font-family: 'Amatic SC', cursive;
+      text-transform: lowercase;
+      font-size: 2vw;
+      color: #4e0475;
+      font-weight: bold;
+      transform: translateY(20%);
+      display: inline-table
+  }
+  
+  .submitButton {
+      width: 10%;
+      cursor: pointer;
+      margin-bottom: 3%
+  }
+  
+  .g-recaptcha {
+      transform: scale(0.7);
+      transform-origin: 0;
+      -webkit-transform: scale(0.7);
+      transform: scale(0.7);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+  }
+  
+/************CSS FOR MOBILE DIVISE************/
+
+  @media (max-width: 736px) {
+      .heading {
+          font-size: 6vw
+      }
+      .heading-2 {
+          font-size: 5vw;
+      }
+      .sm6_l {
+          width: 100%
+      }
+      .sm6_r {
+          width: 100%;
+          margin-left: 0;
+      }
+      #SignupHeading {
+          font-size: 3vw;
+      }
+      .details {
+          font-size: 5vw
+      }
+      .SignupInput {
+          font-size: 3vw;
+          width: 95%
+      }
+      
+      .textarea{
+          width: 95%
+      }
+      .error,
+      .accountCreationError,
+      .success {
+          font-size: 2vw;
+      }
+      .gender {
+          font-size: 4vw;
+      }
+      .submitButton {
+          width: 20%
+      }
+  }

@@ -1,0 +1,483 @@
+
+
+/*****ACCOUNT OVER VIEW PAGE*****/
+.AccountleftDiv {
+    display: inline-table;
+    width: 55%;
+}
+
+.AccountrightDiv {
+    display: inline-table;
+    width: 45%;
+}
+
+.AccountleftDiv li,
+.AccountrightDiv li {
+    list-style: none;
+}
+
+.AccountleftDiv li,
+.AccountrightDiv li {
+    font-family: 'Amatic SC', cursive;
+    color: #4e0475;
+    font-size: 2.5vw;
+    font-weight: 900;
+    text-transform: lowercase;
+    margin-bottom: 2%
+}
+
+.AccountleftDiv span,
+.AccountrightDiv span,
+.needSupportDetails {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    color: #000;
+    font-weight: normal;
+    text-transform: none
+}
+
+.needSupport {
+    font-family: 'Amatic SC', cursive;
+    color: #4e0475;
+    font-size: 3vw;
+    font-weight: 900;
+    text-transform: lowercase;
+    margin: 0
+}
+
+.hr{
+    margin-top:-4%;
+    margin-bottom:3%;
+    width:40%;
+     background-color: #4e0475;
+    height: .1vw;
+    border: 0
+}
+
+
+/*MOBILE DEVISE*/
+@media (max-width: 736px) {
+    .AccountleftDiv,
+    .AccountrightDiv {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .AccountleftDiv li,
+    .AccountrightDiv li {
+        font-size: 4vw;
+        margin-bottom: 2%
+    }
+    .AccountleftDiv span,
+    .AccountrightDiv span,
+    .needSupportDetails {
+        font-size: 3VW
+    }
+    .needSupport {
+        font-size: 4.5vw;
+        margin: -2%;
+        margin-left: 0%
+    }
+    .hr {
+        width: 80%;
+        height: .22vw
+    }
+}
+
+/****NEWS LETTER PAGE****/
+.newsletterText {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    color: #000;
+}
+
+.radioButton {
+    width: 2.5%;
+    display: inline-table;
+    cursor: pointer;
+    margin-left: 1%;
+    transform: translateY(12%)
+}
+
+.yes-or-no {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    color: #000;
+    margin-left: 10%;
+}
+
+.dropdown {
+    width: 11.8vw;
+    height: 3vw;
+    background-image: url(../images/theraphy/therapies.png);
+    background-repeat: no-repeat;
+    display: inline-table;
+    background-size: cover;
+    padding: .5% 0% 1% 0%;
+    margin-left: 5%;
+    transform: translateY(-35%);
+}
+
+.dropdown_text {
+    vertical-align: middle;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    width: 85%;
+    margin-left: 10%;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+#submit {
+    width: 10%;
+    display: inline-table;
+    cursor: pointer;
+    margin-bottom: 5%;
+    margin-top: -10%
+}
+
+#languagediv{
+    margin-left: 22%
+}
+
+
+@media (max-width: 736px) {
+    .newsletterText {
+        font-size: 3vw;
+    }
+    .radioButton {
+        width: 5%
+    }
+    .yes-or-no {
+        font-size: 3.5vw
+    }
+    #languagediv {
+        margin-left: 34%
+    }
+    .dropdown {
+        width: 22vw;
+        height: 6vw;
+        padding: .5% 0% .5% 0%;
+        margin-left: 15%
+    }
+    .dropdown_text {
+        font-size: 4vw;
+        width: 85%;
+    }
+    
+    #submit{
+        width: 18%;
+        margin-right: 23%;
+        margin-top: -12%;
+    }
+}
+
+#click{
+     color: #4e0475;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-bottom: 15%
+}
+#texArea{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 3%
+    
+}
+#ifDelete{
+    display: none
+}
+
+/*ADDRESS PAGE*/
+
+.address_div{
+    width: 46%;
+    display: inline-table;
+    margin-bottom: 5%;
+    margin: 1.5%;
+   
+        
+}
+
+.menueBar{
+    background-color: #4e0475;
+    color: #fff;
+    width: 100%;
+    height: 4vw;
+}
+
+.menuText{
+    color: #fff;
+    font-size: 1.5vw;
+    font-family: 'Lato', sans-serif;
+    vertical-align: middle;
+    margin: 0;
+    line-height: 250%;
+    margin-left: 5%
+}
+
+.address_div li {
+    list-style: none;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    color: #4e0475;
+    font-size: 2.5vw;
+    font-weight: 900;
+    margin-left: 5%;
+    margin-bottom: 2%
+}
+
+.NewAddress{
+    color:#FFF;
+    font-family: 'Amatic SC',cursive;
+        text-transform: lowercase;
+    font-size: 2.5vw;
+    font-weight: 900;
+}
+/*
+.AddressDetailsForm{
+    text-align: left;
+    float: right;
+    margin-top: 3%;
+    margin-right: 2%;
+}
+*/
+
+/*
+.address_div input {
+    width: 60%;
+    padding: 1.5%;
+    transform: translateY(-30%);
+    font-size: 1vw
+}
+*/
+.address_div input {
+    width: 60%;
+    padding: 1.5%;
+    font-size: 1vw;
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%
+}
+.address_div span{
+     font-size: 1.5vw;
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+    font-weight: normal;
+    text-transform: none;
+    
+}
+
+.edit_Details {
+    width: 15%;
+    display: inline-table;
+    cursor: pointer;
+    margin-top: 2%;
+    float: right;
+    margin-left: 2%
+}
+
+.save {
+    width: 15%;
+    display: inline-table;
+    cursor: pointer;
+    margin-top: 2%;
+    float: right;
+}
+
+#address_div {
+    width: 15%;
+    display: inline-table;
+    cursor: pointer;
+    margin-top: 2%;
+    float: right;
+    margin: 2%
+}
+
+@media (max-width: 736px) {
+    
+    .address_div{
+        width: 100%
+    }
+    
+    .address_div li{
+        font-size: 4vw;
+    }
+    
+    .address_div input {
+        margin-left: 3%;
+        font-size: 1.5vw;
+    }
+    
+    .menuText{
+        font-size: 3.5vw;
+        line-height: 200%
+    }
+    .menueBar{
+        height: 8vw;
+    }
+    
+    
+}
+
+/*DELETE ACCOUNT*/
+
+#texArea{
+    width: 80%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    margin-top: 5%;
+}
+
+
+#delete {
+    width: 15%;
+    display: inline-table;
+    cursor: pointer;
+    margin-top: 2%;
+    float: right;
+    margin-right: 2%;
+    margin-bottom: 5%;
+}
+
+#cancle{
+    width: 15%;
+    display: inline-table;
+    cursor: pointer;
+    margin-top: 2%;
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    
+}
+
+
+/*MODAL POPUP PAGE */
+
+/* The Modal (background) */
+.modal_Delete {
+    display: none; /*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+/*    overflow: auto;  */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content_Delete {
+    margin: auto;
+    border: 1px solid #888;
+    width: 30%;
+    margin-top: 4%;
+    overflow:scroll;
+    max-height: 90%
+        
+    
+}
+
+/* The Close Button */
+.close_model_Delete {
+    color: #aaaaaa;
+    float: right;
+    font-size: 2.5vw;
+    font-weight: bold;
+    z-index: 100;
+    margin-right: 5%;
+    margin-top: 4%
+}
+
+.close_model_Delete:hover,
+.close_model_Delete:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 736px) {
+    #texArea{
+        width: 100%;
+        font-size: 2.5vw;
+    }
+    #cancle{
+        margin-right: 0%
+    }
+}
+    
+.menuPageErrorMsg {
+    font-family:lato;
+    font-weight:300;
+    font-size:1vw;
+    text-align:right;
+    margin-right:5%;
+    margin-top:0px;
+    color:red;
+}
+
+.address_div_boarder {
+    width:100%;
+    border: .2vw solid #b9b9b9;
+}
+
+/*EDIT DETAILS PAGE*/
+
+.editInputs{
+    width: 60%;
+    padding: 1.3%;
+    font-size: 1vw;
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%
+}
+
+.editInputsDisabled{
+    width: 60%;
+    padding: 1.3%;
+    font-size: 1vw;
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%;
+    background-color: transparent;
+    border: 0;
+}
+
+.editSelect{
+    width: 63.3%;
+    padding: 1.3%;
+    font-size: 1vw;
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%;
+    border-radius: 0;
+}
+.saveEditDetails {
+    width: 8%;
+    display: inline-table;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.cancleEditDetails {
+    width: 8%;
+    display: inline-table;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+/*RESET PASSWORD PAGE*/
+
+.clickhere{
+    text-decoration: none;
+    color: #4e0475;
+    font-weight: bold;
+    cursor: pointer;
+}
+.clickhere:hover{
+    color: #000;
+}
+

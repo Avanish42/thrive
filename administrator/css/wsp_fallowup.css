@@ -1,0 +1,440 @@
+.headding{
+    font-size: 3vw;
+    color: #4e0475;
+    font-weight: bold;
+    text-align: center;
+}
+
+.SNo{
+    width: 5%
+}
+.date{
+    width: 8%;
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+    font-size: 1.5vw;
+    width: 102%;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3vw;
+}
+ul.breadcrumb li {display: inline;}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #000;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    background-color: #4e0475;
+    color: #fff;
+}
+
+.sectionMargin{
+    margin: 1%  10%  1%  10%;
+}
+
+.formSubHeading{
+    font-size: 2vw;
+    color: #4e0475;
+    font-weight: bold;
+    text-transform: lowercase;
+    
+}
+  .sm6_l {
+      width: 45%;
+      display: inline-table;
+      margin: 0% 0% 2% 0%
+  }
+
+  .sm6_r {
+      width: 45%;
+      display: inline-table;
+      margin: 0% 0% 2% 5%
+  }
+
+  .details {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.3vw;
+      color: #4e0475;
+      font-weight: bold;
+  }
+
+  .viewMore {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.2vw;
+      color: #4e0475;
+      font-weight: bold;
+      font-style: italic;
+      cursor: pointer;
+      margin-right: 0;
+      float: right;
+  }
+
+  
+  .inputData {
+      font-family: 'Lato', sans-serif;
+      color: grey;
+      font-size: 1.3vw;
+      padding-left: 3%;
+      padding: 2%;
+      border: 0px;
+      margin-top: 1%;
+      color: #000;
+  }
+
+.wsp_row {
+    width: 95%;
+    display: table;
+    background-color: #f8f8f8;
+    vertical-align: middle;
+    padding: 2% 2% 2% 2% ;
+    margin: auto;
+        
+}
+
+.button{
+    width: 6vw;
+    height: 2vw;
+    border-radius: .6vw;
+    background-color: #4e0475;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    float: right;
+    margin-bottom: 1%;
+    margin-right: 3%;
+    display: inline-table;
+}
+.Green_button{
+    width: 6vw;
+    height: 2vw;
+    border-radius: .6vw;
+    background-color: #30b501;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+/*    float: right;*/
+    margin-bottom: 1%;
+    margin-left: 80%;
+    display: inline-table;
+}
+.Green_button:hover{
+    color: #a6f889
+}
+.Red_button{
+    width: 6vw;
+    height: 2vw;
+    border-radius: .6vw;
+    background-color: #db0000;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    float: right;
+    margin-bottom: 1%;
+    margin-right: 3%;
+    display: inline-table;
+}
+.Red_button:hover{
+    color: #fdd6d0
+}
+.Save_button{
+    width: 6vw;
+    height: 2vw;
+    border-radius: .6vw;
+    background-color: #009cff;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    float: right;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    display: inline-table;
+    margin-top: 1%
+}
+.Save_button:hover{
+    color: #59ffff;
+}
+
+.button:hover{
+    color: #d27dff
+}
+.submitText{
+    font-size: .9vw;
+    margin-top: 6%
+}
+
+.checkBox{
+    width: 1vw;
+    height: 1vw;
+    margin-left: 5%;
+}
+
+.uploaded{
+    color: green;
+}
+.not_uploaded{
+    color: red;
+}
+
+.wsp_textarea {
+    border: none;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    padding-left: 2%;
+    color: grey;
+    margin-top: 3%
+}
+
+.DropdownList{
+    margin-left: 5%;
+    font-size: 1.2vw;
+    width: 50%;
+}
+
+hr{
+    color: #d8d8d8;
+}
+
+  
+  .SignupInput {
+      font-family: 'Lato', sans-serif;
+      color: grey;
+      font-size: 1.5vw;
+      padding-left: 3%;
+      padding: 1%;
+      width: 50%;
+      border: 0px;
+      margin-top: 1%;
+      margin-left: 5%;
+      vertical-align: middle;
+  }
+
+.generate{
+    width: 10vw;
+    height: 1vw;
+    font-family: 'Lato', sans-serif;
+    background-color: #01b0d0;
+    text-align: center;
+    border-radius: .5vw;
+    cursor: pointer;
+    display: inline-table;
+    padding: 1%;
+    margin-left: 45%;
+    margin-top: 2%;
+        
+}
+
+.generate p{
+    font-size: 1vw;
+    color: #fff;
+    margin: 0;
+   
+}
+
+
+#crumbs ul {
+    list-style: none;
+    display: inline-table;
+    text-align: center;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    margin-left: -3%;
+   
+}
+
+#crumbs ul li {
+    display: inline;
+    display: table-cell;
+    
+}
+
+#crumbs ul li a {
+    display: block;
+    float: left;
+    height: 2%;
+    background: #4e0475;
+    text-align: center;
+    padding: .9vw 3vw 1vw 2.4vw;
+    position: relative;
+/*    margin: 0px .vw 0 0;*/
+    text-decoration: none;
+    color: #fff;
+/*    display: table-cell;*/
+    display: inline-table;
+    font-size: 1vw;
+}
+
+
+#crumbs ul li a:after {
+    content: "";
+    border-top: .9vw solid transparent;
+    border-bottom: .9vw solid transparent;
+    border-left: .9vw solid #4e0475;
+    position: absolute;
+    right: -.9vw;
+    top: 0;
+    z-index: 1;
+}
+
+#crumbs ul li a:before {
+    content: "";
+    border-top: .9vw solid transparent;
+    border-bottom: .9vw solid transparent;
+    border-left: .9vw solid white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#crumbs ul li:first-child a {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+/*    margin-left: .5vw;*/
+}
+
+#crumbs ul li:first-child a:before {
+    display: none;
+}
+
+#crumbs ul li:last-child a {
+    padding-right: 1vw;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#crumbs ul li:last-child a:after {
+    display: none;
+}
+
+#crumbs ul li .active {
+    background-color: #53ae3b;
+}
+
+#crumbs ul li .active:after {
+    border-left-color: #53ae3b;
+}
+
+/****WSP POST REGESTRATIONS****/
+
+.yesButton{
+    width: 4vw;
+    height: 2vw;
+    border-radius: .3vw;
+    background-color: #53ae3b;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    margin-top: 5%;
+    margin-left: 3%;
+    display: inline-table;
+}
+
+.yesButton:hover{
+    color: #a6f889
+}
+
+.noButton{
+    width: 4vw;
+    height: 2vw;
+    border-radius: .3vw;
+    background-color: #db0000;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    margin-top: 5%;
+    margin-left: 3%;
+    display: inline-table;
+}
+.noButton:hover{
+    color: #fdd6d0
+}
+
+
+.pramoteButton{
+    width: 4vw;
+    height: 2vw;
+    border-radius: .3vw;
+    background-color: #4e0475;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    float: right;
+    margin-bottom: 1%;
+    display: inline-table;
+}
+
+.modal {
+ display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    margin-left: 15%;
+    top: 25%;
+    width: 50%; /* Full width */
+    height: 50%; /* Full width */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* The Close Button */
+.close_model {
+    color: #aaaaaa;
+    float: right;
+    font-size: 2.5vw;
+    font-weight: bold;
+    z-index: 100;
+    margin-right: 5%;
+}
+
+.close_model:hover,
+.close_model:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    border: 1px solid #888;
+    width: 90%;
+    height: 80%;
+    margin-top: 5%;
+    background-color: #efefef;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.SM_Post{
+    width: 16vw;
+    height: 10vw;
+    background-color: #afafaf;
+    text-align: center;
+    vertical-align: middle;
+    float: right;
+    margin-right: 0;
+        
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="../../js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/index.css"> <!--styles for Connect Page-->
+
+        
+
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | WSP REVIEW</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        <style>
+            .leftDiv, .rightDiv{
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <div class="logoDiv"><img src="images/Logo_2.png" width="100%"> </div>
+        
+        <section class="totalBodySection">
+            
+            <!--    MAIN BODY SECTION TO SET THE BODY MARGIN TO 7%  -->
+            <div id="success" style="display:none;">
+                <center>
+                    <img src="images/success.png">
+                    <h3 class="MainHeading">Thank You ! We have received your submission</h3>
+                </center>
+            </div>
+            <section class="MainBodySection" id="MainBodySection">
+                <h3 class="MainHeading"> wellness service provider - review</h3>
+                <h3 class="info"> Dear  <span id="reviewername"> </span>, <br><br>
+                    Your friend,  <span id="wspName"> </span>, is registering with Thriive Art &amp; Soul as part of our global network of Wellness Service Providers. All our Wellness Service Providers are verified.  Your name was referred to us as a potential reviewer. Please do share your experiences with this Wellness Service Provider (healer/therapist). We are grateful for your time. </h3>
+                     <div id="FormLeftSide" style="clear:both">
+                        <div>
+<!--                            <label> wsp name </label>-->
+                            <input class="connect_input disabledInput" type="hidden" name="wsp_name" id="name" readonly>
+                            <input  type="hidden" name="memid" id="memid">
+                            <p id="awaken_spiritual_event_error" class="error"></p>
+                        </div>
+                    </div>  
+                
+                    <div id="FormRightSide">
+                        <div>
+<!--                            <label>wsp email id:</label>-->
+                            <input class="connect_input disabledInput" type="hidden" name="email" id="email" readonly>
+                            <p id="holistic_career_error" class="error"></p>
+                        </div>
+                    </div>
+                    <!---------- SECTION FOR FORM  ---------->
+                    <h3 class=detailsType style="float:left;width:100%;"> PLEASE PROVIDE US YOUR REVIEW ON THE ABOVE WSP</h3>
+                
+                    <section class="ConnectForm">
+                        <div id="Cws_Form">
+                           <!---------- FORM LEFTSIDE SECTION  ---------->
+							 <div id="FormLeftSide">
+                                
+                                   <!-- BRIEF DESCRIPTION -->
+                                <div>
+                                    <label>SHARE YOUR EXPERIENCE</label>
+                                    <textarea class="message-textarea" rows="7" cols="100" name="description" id="description"></textarea>
+                                     <p id="description_error" class="error"></p>
+                                </div>
+                                
+                            </div>
+                            <div id="FormLeftSide" style="width:80%">
+                                 <!--3 EXAMPLES OF HEALING SUCCESSESS -->
+                                <div>
+<!--                                    <label>REFER ANY THREE EXAMPLES OF HEALING SUCCESSES</label><br>-->
+<!--                                    <label>NAME</label><br>-->
+                                    <input class="connect_input" type="hidden" name="refName" id="refName" readonly>
+                                    <p id="refName_error" class="error"></p>
+                                </div>
+                                       
+                                 <!-- EXAMPLE - 1 EMAIL -->
+                                <div>
+<!--                                    <label>EMAIL</label><br>-->
+                                    <input class="connect_input" type="hidden" name="ref1Email" id="refEmail" readonly>
+                                    <p id="ref1Email_error" class="error"></p>
+                                </div>
+                            </div>
+
+                            <!---------- FORM RIGHTSIDE SECTION  ---------->
+<!--                            <div id="FormLeftSide">-->
+                                
+                                   <!-- BRIEF DESCRIPTION -->
+<!--
+                                <div>
+                                    <label>SHARE YOUR EXPERIENCE</label>
+                                    <textarea class="message-textarea" rows="7" cols="70" name="description" id="description"></textarea>
+                                     <p id="description_error" class="error"></p>
+                                </div>
+                                
+-->
+<!--                            </div>-->
+                                <!--  SUBMIT BUTTON  -->
+                                <div id="ConnectSubmitButtonDiv">
+                                   <img id="ConnectSubmitButton" src="images/submit-button.png" width="100%" onclick="submitWspReview()" >
+                                </div>
+                        </div>
+                    </section>
+                </section>
+        </section>
+        
+        <script>
+           fetchWspData();
+        </script>
+    </body>
+</html>

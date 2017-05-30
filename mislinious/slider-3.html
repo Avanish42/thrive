@@ -1,0 +1,49 @@
+
+<style>
+<style type="text/css">
+.rslides {
+     width: 900px;
+     height: 475px;
+     background: #000;
+     border: 1px solid #ccc;
+}
+.rslides p {
+       font: 15px 'TrebuchetMS', Verdana, sans-serif;
+       color: #bbb;
+       margin: 0;
+       padding: 0;
+       text-align: center;
+       line-height: 25px;
+       cursor:pointer;
+}
+.rslides a {
+     color: #ccc;
+     text-decoration: underline;
+  }
+.rslides a:hover {color: #FF0000}
+</style>
+
+<script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="../responsiveslides/responsiveslides.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+      $(".rslides").responsiveSlides({
+        auto: true,
+        pause: true,
+        speed: 1200,
+        timeout: 4000
+      });
+});
+</script>
+
+
+
+<ul class="rslides">
+<li><a href="#"><img src="images/videoImages/10.jpg" alt="Alt Text"></a><p>Simple Responsive Slideshow</p></li>
+<li><a href="#"><img src="images/videoImages/10.jpg" alt="Alt Text"></a><p>World's Tallest Building</p></li>
+<li><a href="#"><img src="../responsiveslides/img/a3.jpg" alt="Alt Text"></a><p>Chess Champion</p></li>
+<li><a href="#"><img src="../responsiveslides/img/a4.jpg" alt="Alt Text"></a><p>Biker in Black</p></li>
+<li><a href="#"><img src="../responsiveslides/img/a5.jpg" alt="Alt Text"></a><p>Canyon Sunset</p></li>
+<li><a href="#"><img src="../responsiveslides/img/a6.jpg" alt="Alt Text"></a><p>Sunroof</p></li>
+</ul>

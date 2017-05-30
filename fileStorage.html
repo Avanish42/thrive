@@ -1,0 +1,87 @@
+function uploadMainImgFile(){
+       var mainpic = document.getElementById("mainpic");
+       var mainPicFolder = "masters-main-pic/";
+
+    
+       ImgValidating(mainpic,mainPicFolder);
+}
+
+function ImgValidating(x,folderName)
+{
+      var file=x.files[0];
+      var filename=file.name;
+      var ext=getExt(filename);
+      var msgId ='';
+
+   
+   if(x.id=="profilepic")
+   {
+        msgId = "img";
+   }
+   else{
+        msgId = "img1";
+   } 
+        
+   //CHECK IF FILE SELECTED IS IMAGE OR NOT
+   if(ext=='JPG' || ext=='JPEG' || ext=='PNG' || ext=='jpg' || ext=='jpeg' || ext=='png')
+   {
+           
+           //CHECK IF FILE ALREADY EXIST OR NOT
+           var starsRef = firebase.storage().ref('images/'+folderName+filename);
+       
+           starsRef.getDownloadURL().then(function(url) {
+               // FILE ALREADY EXIST
+
+               document.getElementById(msgId1).innerHTML='';
+               document.getElementById(msgId).innerHTML='File already exist';
+           }).catch(function (error) 
+            {
+               document.getElementById(msgId).innerHTML='';
+               document.getElementById(msgId1).innerHTML='File is uploaded';
+            });
+
+    }
+    else if(ext!='JPG' || ext!='JPEG' || ext!='PNG' || ext!='jpg' || ext!='jpeg' || ext!='png')
+    { //IF FILE IS NOT IMAGE
+           
+           document.getElementById(msgId).innerHTML='Upload Only JPG, JPEG & PNGs';
+    }
+
+}
+
+
+
+
+
+
+
+					//FUNCTION TO CHECK FILE EXTENSIONS
+
+					function getExt(filename) {
+					   var ext = filename.split('.').pop();
+ 					   if (ext == filename) return "";
+  					   return ext;
+ 					}
+
+//FUNCTION TO UPLOAD THE IMAGE AND TO FETCH ITS URL 
+function profileImgageUploading(keyval) 
+{
+   
+     var profilepic = document.getElementById("profilepic");
+     
+    //ERROR OCCURS IF FILE DOESNT OCCURS. WE USE IT TO UPLOAD
+    var fileUpload = profilepic.files[0];
+
+    var storageRef = firebase.storage().ref('images/masters-profile-pic/' + fileUpload.name);
+    storageRef.put(fileUpload);
+    
+    var dataref = firebase.database().ref("AddMasters/");
+    storageRef.getDownloadURL().then(function(url){
+        dataref.child(keyval).update({
+            profilepicURL : url
+        });
+    });
+
+    document.getElementById('img').innerHTML = '';
+    document.getElementById('msg').innerHTML = 'File Uploaded Successfully';
+}

@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="../js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/wsp_form-1.css"> <!--styles for Connect Page-->
+
+        
+
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | WSP FORM -1</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        
+        <!--  EMAIL SCRIPT  -->
+        <script type="text/javascript" src="js/wsp_form-1.js"></script>
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <div class="logoDiv">
+            <a href="../index.html">
+            <img src="images/Logo_2.png" width="100%"></a> </div>
+        
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+            
+            <!--    MAIN BODY SECTION TO SET THE BODY MARGIN TO 7%  -->
+            <section class="MainBodySection">
+                <h3 class="MainHeading">Application Form for Wellness Service Providers (WSPs)</h3>
+                <p class="wspInfo"> Form-1 </p>
+            
+                <!---------- SECTION FOR FORM  ---------->
+                     <h3 class=mandatory>*mandatory</h3>
+                     <h3 class=detailsType>Personal details of the WSP</h3>
+                
+                <section class="ConnectForm">
+                     <div id="Connect_Form">
+                           <!---------- FORM LEFTSIDE SECTION  ---------->
+                         <form >
+                            <div id="FormLeftSide">
+                                
+                                <!--FIRST NAME-->
+                                <div>
+                                    <label>FIRST NAME*</label><br>
+                                    <input class="connect_input" type="text" name="firstname" id="name" placeholder="Enter your First Name" onblur="validateName()">
+                                    <p id="Firstname_error" class="error"></p>
+                                </div>
+                                
+                                <!--LAST NAME -->
+                                <div>
+                                    <label>LAST NAME</label><br>
+                                    <input class="connect_input" type="text" name="lastname" id="lastname"  placeholder="Enter your Last Name">
+                                    <p id="Lastname_error" class="error"></p>
+                                </div>
+                                    
+                                <!--City: NAME -->
+                                <div>
+                                    <label> City*</label><br>
+                                    <input class="connect_input" type="text" name="city" id="cityName"  placeholder="Enter your City /Location" onblur="validateCityName();">
+                                    <p id="cityName_error" class="error"></p>
+                                </div>
+                                         
+                                <!--City: NAME -->
+                                <div>
+                                    <label> Address*</label><br>
+                                    <textarea class="message-textarea" rows="4" cols="2" name="" id="address" placeholder="Enter your Address" onblur="validateAddress();"></textarea>
+                                    <p id="address_error" class="error"></p>
+                                </div>
+                                
+                                <!--EMAIL -->
+                                <div>
+                                    <label>E-MAIL*</label><br>
+                                    <input class="connect_input" type="email" name="email" id="email"  placeholder="example@email.com" onblur="validateEmail();">
+                                    <p id="email_error" class="error"></p>
+                                </div>
+                                    
+                                <!--WEBSITE -->
+                                <div>
+                                    <label>Website</label><br>
+                                    <input class="connect_input" type="text" name="website" id="website"  placeholder="www.example.com" onblur="validateWebsite();">
+                                    <p id="website_error" class="error"></p>
+                                </div>
+                                
+                                <!--CONTACT NUMBER -->
+                                <div>
+                                    <label>Contact Number</label><br>
+                                    <input class="connect_input" type="text" name="phoneNumber" id="phone"  placeholder="Enter your Contact Number" onblur="validatePhone();">
+                                    <p id="phone_error" class="error"></p>
+                                </div>
+                                
+                                  <!--DATE OF BIRTH-->
+                                <div>
+                                    <label>Date of Birth*</label><br>
+                                    <input class="connect_input" type="date" name="dateofBirth" id="dob" onblur="validateDate();">
+                                    <p id="dob_error" class="error"></p>
+                                </div>
+                                
+                                  <!--AGE-->
+                                <div>
+                                    <label>Age</label><br>
+                                    <input class="connect_input" type="number" name="Age" id="age"  placeholder="Enter your Age"  onblur="validateAge();">
+                                    <p id="age_error" class="error"></p>
+                                </div>
+                                
+                                  <!--GENDER-->
+                                <div>
+                                    <label>Gender*</label><br>
+                                     <div class="dropdown">
+                                        <select  class="dropdown_text" onblur="validateGender();" id="gender">
+                                            <option value="0">--Select-- </option>
+                                            <option value="male">Male </option>
+                                            <option value="female">Female </option>
+                                        </select>
+                                    </div>
+                                    <p id="gender_error" class="error"></p>
+                                </div> 
+                            </div>
+                             
+                            <!---------- FORM RIGHTSIDE SECTION  ---------->
+                            <div id="FormRightSide">
+                                
+                                 <!--FACEBOOK URL -->
+                                <div>
+                                    <label>facebook</label><br>
+                                    <input class="connect_input" type="text" name="facebook" id="facebook"  placeholder="Enter your Facebook profile link" onblur="validateFacebook();">
+                                    <p id="facebook_error" class="error"></p>
+                                </div>
+                                       
+                                 <!--TWITTER URL -->
+                                <div>
+                                    <label>twitter</label><br>
+                                    <input class="connect_input" type="text" name="twitter" id="twitter"  placeholder="Enter your Twitter Profile link" onblur="validateTwitter();">
+                                    <p id="twitter_error" class="error"></p>
+                                </div>
+                                
+                                 <!--G+ URL -->
+                                <div>
+                                    <label>G+</label><br>
+                                    <input class="connect_input" type="text" name="g+" id="gPlus"  placeholder="Enter G+ Profile link" onblur="validateGplus();">
+                                    <p id="Gplus_error" class="error"></p>
+                                </div>
+                                       
+                                 <!--Youtube URL -->
+                                <div>
+                                    <label>Youtube</label><br>
+                                    <input class="connect_input" type="text" name="Youtube" id="Youtube"  placeholder="Enter Youtube Channel link" onblur="validateYoutube();">
+                                    <p id="Youtube_error" class="error"></p>
+                                </div>
+                                
+                                
+                                <div>
+                                    <label>About Yourself*</label><br>
+                                    <textarea class="message-textarea" rows="39" cols="70" name="comment" id="aboutYourSelf" onblur="validateYourSelf();"></textarea>
+                                     <p id="aboutYourSelf_error" class="error"></p>
+                                </div>
+                              
+                        </div>
+                             <section style="clear:both">
+                            <hr><br>
+                                 <h3 class=detailsType>About Your Work</h3>
+                             
+                             <div id="FormLeftSide">
+                                   <!--City: NAME -->
+                                <label> Modality-1*</label> <br>
+                                <div class="dropdown">
+                                     <select class="dropdown_text" onblur="checkM1();" id="m1">
+                        <option value="0">--Select--</option>
+                        <option disabled="" value ="Energy Healing"> Energy Healing </option>
+                        <option value ="Reiki"> Reiki </option>
+                        <option value ="Pranic Healing"> Pranic Healing </option>
+                        <option value ="Theta Healing"> Theta Healing </option>
+                        <option value ="Crystal Healing"> Crystal Healing </option>
+                        <option value ="Access Bars"> Access Bars </option>
+                        <option value ="Sujok Therapy"> Sujok Therapy </option>
+                        <option value ="Shaktipath"> Shaktipath </option>
+                        <option value ="Kundalini Activation"> Kundalini Activation </option>
+                        <option value ="DNA Activation"> DNA Activation </option>
+                        <option value ="Holographic Healing"> Holographic Healing </option>
+                        <option value ="Applied kinesiology"> Applied Kinesiology </option>
+                        <option value ="Vastu Shastra"> Vastu Shastra </option>
+                        <option value ="Feng Shui"> Feng Shui </option>
+                        <option value ="Prana Violet Healing"> Prana Violet Healing </option>
+                        <option value ="Psychic Surgery"> Psychic Surgery </option>
+                        <option value ="Magnified Healing Phase"> Magnified Healing Phase </option>
+                        <option value ="Preeti Siddhi"> Preeti Siddhi </option>
+
+                        <option disabled="" value ="Yoga "> Yoga  </option>
+                        <option value ="Hatha Yoga"> Hatha Yoga </option>
+                        <option value ="Vinyasa Yoga"> Vinyasa Yoga </option>
+                        <option value ="Ashtanga Yoga"> Ashtanga Yoga </option>
+                        <option value ="Iyengar Yoga "> Iyengar Yoga  </option>
+                        <option value ="Kundalini Yoga"> Kundalini Yoga </option>
+                        <option value ="Mudras"> Mudras </option>
+                        <option value ="Tibetan Yoga"> Tibetan Yoga </option>
+                        <option value ="Kriya Yoga"> Kriya Yoga </option>
+
+                        <option disabled="" value ="Readings & Rituals"> Readings & Rituals </option>
+                        <option value ="Angel Reading"> Angel Reading </option>
+                        <option value ="Tarot Card Reading"> Tarot Card Reading </option>
+                        <option value ="Runes"> Runes </option>
+                        <option value ="Numerology"> Numerology </option>
+                        <option value ="Cosmic Astrology"> Cosmic Astrology </option>
+                        <option value ="Aura Reading"> Aura Reading </option>
+                        <option value ="Dream Analysis"> Dream Analysis </option>
+                        <option value ="Grapho Therapy"> Grapho Therapy </option>
+                        <option value ="Enneagram of Personality"> Enneagram of Personality </option>
+                        <option value ="Channeling"> Channeling </option>
+                        <option value ="Shamanism"> Shamanism </option>
+                        <option value ="Shamanic Ceremonies"> Shamanic Ceremonies </option>
+                        <option value ="Candle Magick"> Candle Magick </option>
+                        <option value ="Dowsing"> Dowsing </option>
+                        <option value ="Nadi Shastra"> Nadi Shastra </option>
+                        <option value ="Animal Communication"> Animal Communication </option>
+                        <option value ="Cartomancy"> Cartomancy </option>
+
+                        <option disabled="" value ="Art Therapy "> Art Therapy  </option>
+                        <option value ="Mandala"> Mandala </option>
+                        <option value ="Dance Therapy"> Dance Therapy </option>
+                        <option value ="Sufi Whirling"> Sufi Whirling </option>
+                        <option value ="Interplay"> Interplay </option>
+                        <option value ="Playback Theatre"> Playback Theatre </option>
+                        <option value ="Mind Mapping"> Mind Mapping </option>
+                        <option value ="Sacred Geometry"> Sacred Geometry </option>
+                        <option value ="Auto Writing"> Auto Writing </option>
+
+                        <option disabled="" value ="Hypnotherapy"> Hypnotherapy </option>
+                        <option value ="Past Life Regression"> Past Life Regression </option>
+                        <option value ="Hypnobirthing"> Hypnobirthing </option>
+                        <option value ="Hypnotherapy"> Hypnotherapy </option>
+                        <option value ="Subliminal Therapy"> Subliminal Therapy </option>
+                        <option value ="Life Between Lives"> Life Between Lives </option>
+
+                        <option disabled="" value ="Sound Healing"> Sound Healing </option>
+                        <option value ="Tibetan Bowl"> Tibetan Bowl </option>
+                        <option value ="Crystal Bowl"> Crystal Bowl </option>
+                        <option value ="Voice Movement Therapy"> Voice Movement Therapy </option>
+                        <option value ="Didgerido"> Didgerido </option>
+
+                        <option disabled="" value ="Natural Remedies"> Natural Remedies </option>
+                        <option value ="Naturopathy"> Naturopathy </option>
+                        <option value ="Ayurveda"> Ayurveda </option>
+                        <option value ="Homeopathy"> Homeopathy </option>
+                        <option value ="Bach Flower Remedies"> Bach Flower Remedies </option>
+                        <option value ="Tridosha Therapy"> Tridosha Therapy </option>
+                        <option value ="Panchkarma"> Panchkarma </option>
+                        <option value ="Chinese/Tibetan Medicine"> Chinese/Tibetan Medicine </option>
+
+                        <option disabled="" value ="Alternative Therapies"> Alternative Therapies </option>
+                        <option value ="Acupressure"> Acupressure </option>
+                        <option value ="Acupuncture"> Acupuncture </option>
+                        <option value ="Aroma Therapy"> Aroma Therapy </option>
+                        <option value ="Salt Therapy"> Salt Therapy </option>
+                        <option value ="Colour Therapy"> Colour Therapy </option>
+                        <option value ="Gem Therapy"> Gem Therapy </option>
+                        <option value ="Nambudripad's Allergy Elimination Technique"> Nambudripad's Allergy Elimination Technique </option>
+                        <option value ="Nadi Therapy"> Nadi Therapy </option>
+                        <option value ="Biogenealogy"> Biogenealogy </option>
+
+                        <option disabled="" value ="Body Work"> Body Work </option>
+                        <option value ="Reflexology"> Reflexology </option>
+                        <option value ="Cranio Sacral Therapy"> Cranio Sacral Therapy </option>
+                        <option value ="Bowen Therapy"> Bowen Therapy </option>
+                        <option value ="EFT"> EFT </option>
+                        <option value ="Taichi"> Taichi </option>
+                        <option value ="Rubenfeld Synergy"> Rubenfeld Synergy </option>
+                        <option value ="Rolfing"> Rolfing </option>
+                        <option value ="Somatic Experience"> Somatic Experience </option>
+                        <option value ="Physiotherapy"> Physiotherapy </option>
+
+                        <option disabled="" value ="Massage"> Massage </option>
+                        <option value ="Shiatsu"> Shiatsu </option>
+                        <option value ="Massage Therapy"> Massage Therapy </option>
+                        <option value ="Thai Massage"> Thai Massage </option>
+                        <option value ="Lomi Lomi"> Lomi Lomi </option>
+                        <option value ="Chi Nei Tsang"> Chi Nei Tsang </option>
+
+
+                        <option disabled="" value ="Meditation"> Meditation </option>
+                        <option value ="Ana Pana Sati Meditation"> Ana Pana Sati Meditation </option>
+                        <option value ="Mindfulness"> Mindfulness </option>
+                        <option value ="Osho Dynamic Meditation"> Osho Dynamic Meditation </option>
+                        <option value ="Meditation"> Meditation </option>
+                        <option value ="Transcendental Meditation"> Transcendental Meditation </option>
+                        <option value ="Vipassyana Meditation"> Vipassyana Meditation </option>
+                        <option value ="Zen Buddhism"> Zen Buddhism </option>
+                        <option value ="Progressive Relaxation Technique"> Progressive Relaxation Technique </option>
+
+                        <option disabled="" value ="Chanting"> Chanting </option>
+                        <option value ="Nichren Buddhism"> Nichren Buddhism </option>
+                        <option value ="Angelic Chanting"> Angelic Chanting </option>
+
+                        <option disabled="" value ="Quantum Energy Healing & Medicine"> Quantum Energy Healing & Medicine </option>
+
+                        <option disabled="" value ="Human Energetic Assessment Devices"> Human Energetic Assessment Devices </option>
+                        <option value ="ALFA HRV Analyzer "> ALFA HRV Analyzer  </option>
+                        <option value ="ES Complex "> ES Complex  </option>
+                        <option value ="BIOFIELD READER"> BIOFIELD READER </option>
+                        <option value ="Resonant Field Imaging (RFI)"> Resonant Field Imaging (RFI) </option>
+                        <option value ="Quantum Resonance Magnetic Health Analyzer"> Quantum Resonance Magnetic Health Analyzer </option>
+                        <option value ="Kirlian Photography"> Kirlian Photography </option>
+
+                        <option disabled="" value ="B. Detoxification & Energizing Devices"> B. Detoxification & Energizing Devices </option>
+
+                        <option value ="ELECTRO REFLEX ENERGIZER"> ELECTRO REFLEX ENERGIZER </option>
+                        <option value ="Foot De-tox"> Foot De-tox </option>
+                        <option value ="FA Infra Sauna"> FA Infra Sauna </option>
+                        <option value ="I - float"> I - float </option>
+                        <option value ="Bio Tuner"> Bio Tuner </option>
+                        <option value ="Silver Pulser"> Silver Pulser </option>
+
+                        <option disabled="" value ="C. Pain Management"> C. Pain Management </option>
+                        <option value ="SCENAR-Cosmodic Ex735Ag"> SCENAR-Cosmodic Ex735Ag </option>
+                        <option value ="Q LASER Q1000NG"> Q LASER Q1000NG </option>
+                        <option value ="Magnetic Pulsar"> Magnetic Pulsar </option>
+
+                        <option disabled="" value ="D. Stress Reduction"> D. Stress Reduction </option>
+                        <option value ="NeuroSky MindWave & Mind Workstation"> NeuroSky MindWave & Mind Workstation </option>
+                        <option value ="Heartmath emWave Pro"> Heartmath emWave Pro </option>
+                        <option value ="Braintap-Mind Machine"> Braintap-Mind Machine </option>
+                        <option value ="EMOTIV Epoc+"> EMOTIV Epoc+ </option>
+                        <option value ="Mindfold Relaxation Mask"> Mindfold Relaxation Mask </option>
+
+                        <option disabled="" value ="E. Energetic Analysis and Corrections"> E. Energetic Analysis and Corrections </option>
+                        <option value ="SE -5  1000 Scalar Energy"> SE -5  1000 Scalar Energy </option>
+                        <option value ="Acmos "> Acmos  </option>
+                        <option value ="Time Waver"> Time Waver </option>
+
+                        <option disabled="" value ="F. Testing Equipment for Aiding Research Activity"> F. Testing Equipment for Aiding Research Activity </option>
+                        <option value ="Air Ion Counter"> Air Ion Counter </option>
+                        <option value ="Trifield Natural EM Meter"> Trifield Natural EM Meter </option>
+                        <option value ="COM-100: Water Testing Meter"> COM-100: Water Testing Meter </option>
+
+                        <option disabled="" value ="Breathwork"> Breathwork </option>
+                        <option value ="Rebirthing"> Rebirthing </option>
+                        <option value ="Pranayama"> Pranayama </option>
+                        <option value ="Sudarshan Kriya"> Sudarshan Kriya </option>
+
+                        <option disabled="" value ="Behavioural Therapy"> Behavioural Therapy </option>
+                        <option value ="Cognitive Behavioural Therapy"> Cognitive Behavioural Therapy </option>
+                        <option value ="Rational Emotive Behavioural Therapy"> Rational Emotive Behavioural Therapy </option>
+
+                        <option disabled="" value ="Self-Healing"> Self-Healing </option>
+                        <option value ="NLP"> NLP </option>
+                        <option value ="Reconnective Healing"> Reconnective Healing </option>
+                        <option value ="Switch Words"> Switch Words </option>
+                        <option value ="Heal your Life Program by Louise Hay"> Heal your Life Program by Louise Hay </option>
+                        <option value ="Gestalt Therapy"> Gestalt Therapy </option>
+                        <option value ="Inner Child Healing"> Inner Child Healing </option>
+                        <option value ="Transactional Analysis"> Transactional Analysis </option>
+                        <option value ="Family Constellation"> Family Constellation </option>
+                        <option value ="Non-Violent Communication "> Non-Violent Communication  </option>
+                        <option value ="Creative Visualization"> Creative Visualization </option>
+                        <option value ="Dolphin Healing Network"> Dolphin Healing Network </option>
+                        <option value ="Affirmation & Visualization Therapy"> Affirmation & Visualization Therapy </option>
+                        <option value ="Sedona Method"> Sedona Method </option>
+                        <option value ="Ho'oponopono"> Ho'oponopono </option>
+
+                        <option disabled="" value ="Counseling & Consulting"> Counseling & Consulting </option>
+                        <option value ="Children’s Counselor"> Children’s Counselor </option>
+                        <option value ="Conscious Parenting Counselor"> Conscious Parenting Counselor </option>
+                        <option value ="Sex Therapist"> Sex Therapist </option>
+                        <option value ="Marriage Counselor"> Marriage Counselor </option>
+                        <option value ="Spiritual Counselor"> Spiritual Counselor </option>
+                        <option value ="Nutritionist"> Nutritionist </option>
+                                </select>
+                                </div>
+                                    <p id="m1_error" class="error"></p>
+                             
+                             </div>
+                             
+                             <div id="FormRightSide">
+                                <div>
+                                    <label>Experience(Yrs)* </label>
+                                    <input class="connect_input" type="text" name="" id="m1exp" onblur="validateM1exp();" placeholder="Enter Years of Experience">
+                                    <p id="m1exp_error" class="error"></p>
+                                </div>
+                             </div>
+                                 
+                            </section>
+                             
+                           <section  style="clear:both">
+                             
+                             <div id="FormLeftSide">
+                                   <!--City: NAME -->
+                                    <label> Modality-2</label> <br>
+                                <div class="dropdown">
+                                     <select class="dropdown_text" id="m2">
+                                        <option value="0">--Select--</option>
+                        <option disabled="" value ="Energy Healing"> Energy Healing </option>
+                        <option value ="Reiki"> Reiki </option>
+                        <option value ="Pranic Healing"> Pranic Healing </option>
+                        <option value ="Theta Healing"> Theta Healing </option>
+                        <option value ="Crystal Healing"> Crystal Healing </option>
+                        <option value ="Access bars"> Access bars </option>
+                        <option value ="Sujok Therapy"> Sujok Therapy </option>
+                        <option value ="Shaktipath"> Shaktipath </option>
+                        <option value ="Kundalini Activation"> Kundalini Activation </option>
+                        <option value ="DNA Activation"> DNA Activation </option>
+                        <option value ="Holographic Healing"> Holographic Healing </option>
+                        <option value ="Applied kinesiology"> Applied kinesiology </option>
+                        <option value ="Vastu Shastra"> Vastu Shastra </option>
+                        <option value ="Feng shui"> Feng shui </option>
+                        <option value ="Prana Violet Healing"> Prana Violet Healing </option>
+                        <option value ="Psychic Surgery"> Psychic Surgery </option>
+                        <option value ="Magnified Healing Phase"> Magnified Healing Phase </option>
+                        <option value ="Preeti Siddhi"> Preeti Siddhi </option>
+
+                        <option disabled="" value ="Yoga "> Yoga  </option>
+                        <option value ="Hatha Yoga"> Hatha Yoga </option>
+                        <option value ="Vinyasa Yoga"> Vinyasa Yoga </option>
+                        <option value ="Ashtanga Yoga"> Ashtanga Yoga </option>
+                        <option value ="Iyengar Yoga "> Iyengar Yoga  </option>
+                        <option value ="Kundalini Yoga"> Kundalini Yoga </option>
+                        <option value ="Mudras"> Mudras </option>
+                        <option value ="Tibetan Yoga"> Tibetan Yoga </option>
+                        <option value ="Kriya yoga"> Kriya yoga </option>
+
+                        <option disabled="" value ="Readings & Rituals"> Readings & Rituals </option>
+                        <option value ="Angel Reading"> Angel Reading </option>
+                        <option value ="Tarot Card Reading"> Tarot Card Reading </option>
+                        <option value ="Runes"> Runes </option>
+                        <option value ="Numerology"> Numerology </option>
+                        <option value ="Cosmic Astrology"> Cosmic Astrology </option>
+                        <option value ="Aura Reading"> Aura Reading </option>
+                        <option value ="Dream Analysis"> Dream Analysis </option>
+                        <option value ="Grapho Therapy"> Grapho Therapy </option>
+                        <option value ="Enneagram of personality"> Enneagram of personality </option>
+                        <option value ="Channeling"> Channeling </option>
+                        <option value ="Shamanism"> Shamanism </option>
+                        <option value ="Shamanic ceremonies"> Shamanic ceremonies </option>
+                        <option value ="Candle Magick"> Candle Magick </option>
+                        <option value ="Dowsing"> Dowsing </option>
+                        <option value ="Nadi Shastra"> Nadi Shastra </option>
+                        <option value ="Animal Communication"> Animal Communication </option>
+                        <option value ="Cartomancy"> Cartomancy </option>
+
+                        <option disabled="" value ="Art Therapy "> Art Therapy  </option>
+                        <option value ="Mandala"> Mandala </option>
+                        <option value ="Dance Therapy"> Dance Therapy </option>
+                        <option value ="Sufi Whirling"> Sufi Whirling </option>
+                        <option value ="Interplay"> Interplay </option>
+                        <option value ="Playback Theatre"> Playback Theatre </option>
+                        <option value ="Mind mapping"> Mind mapping </option>
+                        <option value ="Sacred Geometry"> Sacred Geometry </option>
+                        <option value ="Auto writing"> Auto writing </option>
+
+                        <option disabled="" value ="Hypnotherapy"> Hypnotherapy </option>
+                        <option value ="Past Life Regression"> Past Life Regression </option>
+                        <option value ="Hypnobirthing"> Hypnobirthing </option>
+                        <option value ="Hypnotherapy"> Hypnotherapy </option>
+                        <option value ="Subliminal therapy"> Subliminal therapy </option>
+                        <option value ="Life Between Lives"> Life Between Lives </option>
+
+                        <option disabled="" value ="Sound Healing"> Sound Healing </option>
+                        <option value ="Tibetan Bowl"> Tibetan Bowl </option>
+                        <option value ="Crystal Bowl"> Crystal Bowl </option>
+                        <option value ="Voice movement therapy"> Voice movement therapy </option>
+                        <option value ="Didgerido"> Didgerido </option>
+
+                        <option disabled="" value ="Natural Remedies"> Natural Remedies </option>
+                        <option value ="Naturopathy"> Naturopathy </option>
+                        <option value ="Ayurveda"> Ayurveda </option>
+                        <option value ="Homeopathy"> Homeopathy </option>
+                        <option value ="Bach Flower Remedies"> Bach Flower Remedies </option>
+                        <option value ="Tridosha Therapy"> Tridosha Therapy </option>
+                        <option value ="Panchkarma"> Panchkarma </option>
+                        <option value ="Chinese/ Tibetan Medicine"> Chinese/ Tibetan Medicine </option>
+
+                        <option disabled="" value ="Alternative Therapies"> Alternative Therapies </option>
+                        <option value ="Acupressure"> Acupressure </option>
+                        <option value ="Acupuncture"> Acupuncture </option>
+                        <option value ="Aroma Therapy"> Aroma Therapy </option>
+                        <option value ="Salt Therapy"> Salt Therapy </option>
+                        <option value ="Colour Therapy"> Colour Therapy </option>
+                        <option value ="Gem Therapy"> Gem Therapy </option>
+                        <option value ="Nambudripad's Allergy Elimination Technique"> Nambudripad's Allergy Elimination Technique </option>
+                        <option value ="Nadi Therapy"> Nadi Therapy </option>
+                        <option value ="Biogenealogy"> Biogenealogy </option>
+
+                        <option disabled="" value ="Body work"> Body work </option>
+                        <option value ="Reflexology"> Reflexology </option>
+                        <option value ="Cranio Sacral Therapy"> Cranio Sacral Therapy </option>
+                        <option value ="Bowen Therapy"> Bowen Therapy </option>
+                        <option value ="EFT"> EFT </option>
+                        <option value ="Taichi"> Taichi </option>
+                        <option value ="Rubenfeld Synergy"> Rubenfeld Synergy </option>
+                        <option value ="Rolfing"> Rolfing </option>
+                        <option value ="Somatic Experience"> Somatic Experience </option>
+                        <option value ="Physiotherapy"> Physiotherapy </option>
+
+                        <option disabled="" value ="Massage"> Massage </option>
+                        <option value ="Shiatsu"> Shiatsu </option>
+                        <option value ="Massage Therapy"> Massage Therapy </option>
+                        <option value ="Thai Massage"> Thai Massage </option>
+                        <option value ="Lomi Lomi"> Lomi Lomi </option>
+                        <option value ="Chi Nei Tsang"> Chi Nei Tsang </option>
+
+
+                        <option disabled="" value ="Meditation"> Meditation </option>
+                        <option value ="Ana Pana Sati Meditation"> Ana Pana Sati Meditation </option>
+                        <option value ="Mindfulness"> Mindfulness </option>
+                        <option value ="Osho Dynamic Meditation"> Osho Dynamic Meditation </option>
+                        <option value ="Meditation"> Meditation </option>
+                        <option value ="Transcendental meditation"> Transcendental meditation </option>
+                        <option value ="Vipassyana Meditation"> Vipassyana Meditation </option>
+                        <option value ="Zen Buddhism"> Zen Buddhism </option>
+                        <option value ="Progressive relaxation technique"> Progressive relaxation technique </option>
+
+                        <option disabled="" value ="Chanting"> Chanting </option>
+                        <option value ="Nichren Buddhism"> Nichren Buddhism </option>
+                        <option value ="Angelic Chanting"> Angelic Chanting </option>
+
+                        <option disabled="" value ="Quantum Energy Healing & Medicine"> Quantum Energy Healing & Medicine </option>
+
+                        <option disabled="" value ="Human Energetic Assessment Devices"> Human Energetic Assessment Devices </option>
+                        <option value ="ALFA HRV Analyzer "> ALFA HRV Analyzer  </option>
+                        <option value ="ES Complex "> ES Complex  </option>
+                        <option value ="BIOFIELD READER"> BIOFIELD READER </option>
+                        <option value ="Resonant Field Imaging (RFI)"> Resonant Field Imaging (RFI) </option>
+                        <option value ="Quantum Resonance Magnetic Health Analyzer"> Quantum Resonance Magnetic Health Analyzer </option>
+                        <option value ="Kirlian Photography"> Kirlian Photography </option>
+
+                        <option disabled="" value ="B. Detoxification & Energizing Devices"> B. Detoxification & Energizing Devices </option>
+
+                        <option value ="ELECTRO REFLEX ENERGIZER"> ELECTRO REFLEX ENERGIZER </option>
+                        <option value ="Foot De-tox"> Foot De-tox </option>
+                        <option value ="FA Infra Sauna"> FA Infra Sauna </option>
+                        <option value ="I - float"> I - float </option>
+                        <option value ="Bio Tuner"> Bio Tuner </option>
+                        <option value ="Silver Pulser"> Silver Pulser </option>
+
+                        <option disabled="" value ="C. Pain Management"> C. Pain Management </option>
+                        <option value ="SCENAR-Cosmodic Ex735Ag"> SCENAR-Cosmodic Ex735Ag </option>
+                        <option value ="Q LASER Q1000NG"> Q LASER Q1000NG </option>
+                        <option value ="Magnetic Pulsar"> Magnetic Pulsar </option>
+
+                        <option disabled="" value ="D. Stress Reduction"> D. Stress Reduction </option>
+                        <option value ="NeuroSky MindWave & Mind Workstation"> NeuroSky MindWave & Mind Workstation </option>
+                        <option value ="Heartmath emWave Pro"> Heartmath emWave Pro </option>
+                        <option value ="Braintap-Mind Machine"> Braintap-Mind Machine </option>
+                        <option value ="EMOTIV Epoc+"> EMOTIV Epoc+ </option>
+                        <option value ="Mindfold Relaxation Mask"> Mindfold Relaxation Mask </option>
+
+                        <option disabled="" value ="E. Energetic Analysis and Corrections"> E. Energetic Analysis and Corrections </option>
+                        <option value ="SE -5  1000 Scalar Energy"> SE -5  1000 Scalar Energy </option>
+                        <option value ="Acmos "> Acmos  </option>
+                        <option value ="Time Waver"> Time Waver </option>
+
+                        <option disabled="" value ="F. Testing Equipment for aiding research activity"> F. Testing Equipment for aiding research activity </option>
+                        <option value ="Air Ion Counter"> Air Ion Counter </option>
+                        <option value ="Trifield Natural EM Meter"> Trifield Natural EM Meter </option>
+                        <option value ="COM-100: Water testing Meter"> COM-100: Water testing Meter </option>
+
+                        <option disabled="" value ="Breathwork"> Breathwork </option>
+                        <option value ="Rebirthing"> Rebirthing </option>
+                        <option value ="Pranayama"> Pranayama </option>
+                        <option value ="Sudarshan Kriya"> Sudarshan Kriya </option>
+
+                        <option disabled="" value ="Behavioural Therapy"> Behavioural Therapy </option>
+                        <option value ="Cognitive Behavioural Therapy"> Cognitive Behavioural Therapy </option>
+                        <option value ="Rational Emotive Behavioural Therapy"> Rational Emotive Behavioural Therapy </option>
+
+                        <option disabled="" value ="Self-Healing"> Self-Healing </option>
+                        <option value ="NLP"> NLP </option>
+                        <option value ="Reconnective Healing"> Reconnective Healing </option>
+                        <option value ="Switch words"> Switch words </option>
+                        <option value ="Heal your life Program by Louise Hay"> Heal your life Program by Louise Hay </option>
+                        <option value ="Gestalt Therapy"> Gestalt Therapy </option>
+                        <option value ="Inner Child Healing"> Inner Child Healing </option>
+                        <option value ="Transactional Analysis"> Transactional Analysis </option>
+                        <option value ="Family Constellation"> Family Constellation </option>
+                        <option value ="Non-violent communication "> Non-violent communication  </option>
+                        <option value ="Creative Visualization"> Creative Visualization </option>
+                        <option value ="Dolphin Healing Network"> Dolphin Healing Network </option>
+                        <option value ="Affirmation & Visualization Therapy"> Affirmation & Visualization Therapy </option>
+                        <option value ="Sedona Method"> Sedona Method </option>
+                        <option value ="Ho'oponopono"> Ho'oponopono </option>
+
+                        <option disabled="" value ="Counseling & Consulting"> Counseling & Consulting </option>
+                        <option value ="Children’s Counselor"> Children’s Counselor </option>
+                        <option value ="Conscious Parenting Counselor"> Conscious Parenting Counselor </option>
+                        <option value ="Sex Therapist"> Sex Therapist </option>
+                        <option value ="Marriage counselor"> Marriage counselor </option>
+                        <option value ="Spiritual Counselor"> Spiritual Counselor </option>
+                        <option value ="Nutritionist"> Nutritionist </option>
+                                </select>
+                                    <p id="m2_error" class="error"></p>
+                                </div>
+                             
+                             </div>
+                             
+                             <div id="FormRightSide">
+                                <div>
+                                    <label>Experience(Yrs) </label>
+                                    <input class="connect_input" type="text" name="" id="m2exp"  placeholder="Enter Years of Experience">
+                                    <p id="" class="error"></p>
+                                </div>
+                             </div>
+                            </section>
+                             
+                             <section  style="clear:both">
+                             
+                             <div id="FormLeftSide">
+                                   <!--City: NAME -->
+                                    <label> Modality-3</label> <br>
+                                <div class="dropdown">
+                                     <select class="dropdown_text" id="m3">
+                                        <option value="0">--Select--</option>
+                        <option disabled="" value ="Energy Healing"> Energy Healing </option>
+                        <option value ="Reiki"> Reiki </option>
+                        <option value ="Pranic Healing"> Pranic Healing </option>
+                        <option value ="Theta Healing"> Theta Healing </option>
+                        <option value ="Crystal Healing"> Crystal Healing </option>
+                        <option value ="Access bars"> Access bars </option>
+                        <option value ="Sujok Therapy"> Sujok Therapy </option>
+                        <option value ="Shaktipath"> Shaktipath </option>
+                        <option value ="Kundalini Activation"> Kundalini Activation </option>
+                        <option value ="DNA Activation"> DNA Activation </option>
+                        <option value ="Holographic Healing"> Holographic Healing </option>
+                        <option value ="Applied kinesiology"> Applied kinesiology </option>
+                        <option value ="Vastu Shastra"> Vastu Shastra </option>
+                        <option value ="Feng shui"> Feng shui </option>
+                        <option value ="Prana Violet Healing"> Prana Violet Healing </option>
+                        <option value ="Psychic Surgery"> Psychic Surgery </option>
+                        <option value ="Magnified Healing Phase"> Magnified Healing Phase </option>
+                        <option value ="Preeti Siddhi"> Preeti Siddhi </option>
+
+                        <option disabled="" value ="Yoga "> Yoga  </option>
+                        <option value ="Hatha Yoga"> Hatha Yoga </option>
+                        <option value ="Vinyasa Yoga"> Vinyasa Yoga </option>
+                        <option value ="Ashtanga Yoga"> Ashtanga Yoga </option>
+                        <option value ="Iyengar Yoga "> Iyengar Yoga  </option>
+                        <option value ="Kundalini Yoga"> Kundalini Yoga </option>
+                        <option value ="Mudras"> Mudras </option>
+                        <option value ="Tibetan Yoga"> Tibetan Yoga </option>
+                        <option value ="Kriya yoga"> Kriya yoga </option>
+
+                        <option disabled="" value ="Readings & Rituals"> Readings & Rituals </option>
+                        <option value ="Angel Reading"> Angel Reading </option>
+                        <option value ="Tarot Card Reading"> Tarot Card Reading </option>
+                        <option value ="Runes"> Runes </option>
+                        <option value ="Numerology"> Numerology </option>
+                        <option value ="Cosmic Astrology"> Cosmic Astrology </option>
+                        <option value ="Aura Reading"> Aura Reading </option>
+                        <option value ="Dream Analysis"> Dream Analysis </option>
+                        <option value ="Grapho Therapy"> Grapho Therapy </option>
+                        <option value ="Enneagram of personality"> Enneagram of personality </option>
+                        <option value ="Channeling"> Channeling </option>
+                        <option value ="Shamanism"> Shamanism </option>
+                        <option value ="Shamanic ceremonies"> Shamanic ceremonies </option>
+                        <option value ="Candle Magick"> Candle Magick </option>
+                        <option value ="Dowsing"> Dowsing </option>
+                        <option value ="Nadi Shastra"> Nadi Shastra </option>
+                        <option value ="Animal Communication"> Animal Communication </option>
+                        <option value ="Cartomancy"> Cartomancy </option>
+
+                        <option disabled="" value ="Art Therapy "> Art Therapy  </option>
+                        <option value ="Mandala"> Mandala </option>
+                        <option value ="Dance Therapy"> Dance Therapy </option>
+                        <option value ="Sufi Whirling"> Sufi Whirling </option>
+                        <option value ="Interplay"> Interplay </option>
+                        <option value ="Playback Theatre"> Playback Theatre </option>
+                        <option value ="Mind mapping"> Mind mapping </option>
+                        <option value ="Sacred Geometry"> Sacred Geometry </option>
+                        <option value ="Auto writing"> Auto writing </option>
+
+                        <option disabled="" value ="Hypnotherapy"> Hypnotherapy </option>
+                        <option value ="Past Life Regression"> Past Life Regression </option>
+                        <option value ="Hypnobirthing"> Hypnobirthing </option>
+                        <option value ="Hypnotherapy"> Hypnotherapy </option>
+                        <option value ="Subliminal therapy"> Subliminal therapy </option>
+                        <option value ="Life Between Lives"> Life Between Lives </option>
+
+                        <option disabled="" value ="Sound Healing"> Sound Healing </option>
+                        <option value ="Tibetan Bowl"> Tibetan Bowl </option>
+                        <option value ="Crystal Bowl"> Crystal Bowl </option>
+                        <option value ="Voice movement therapy"> Voice movement therapy </option>
+                        <option value ="Didgerido"> Didgerido </option>
+
+                        <option disabled="" value ="Natural Remedies"> Natural Remedies </option>
+                        <option value ="Naturopathy"> Naturopathy </option>
+                        <option value ="Ayurveda"> Ayurveda </option>
+                        <option value ="Homeopathy"> Homeopathy </option>
+                        <option value ="Bach Flower Remedies"> Bach Flower Remedies </option>
+                        <option value ="Tridosha Therapy"> Tridosha Therapy </option>
+                        <option value ="Panchkarma"> Panchkarma </option>
+                        <option value ="Chinese/ Tibetan Medicine"> Chinese/ Tibetan Medicine </option>
+
+                        <option disabled="" value ="Alternative Therapies"> Alternative Therapies </option>
+                        <option value ="Acupressure"> Acupressure </option>
+                        <option value ="Acupuncture"> Acupuncture </option>
+                        <option value ="Aroma Therapy"> Aroma Therapy </option>
+                        <option value ="Salt Therapy"> Salt Therapy </option>
+                        <option value ="Colour Therapy"> Colour Therapy </option>
+                        <option value ="Gem Therapy"> Gem Therapy </option>
+                        <option value ="Nambudripad's Allergy Elimination Technique"> Nambudripad's Allergy Elimination Technique </option>
+                        <option value ="Nadi Therapy"> Nadi Therapy </option>
+                        <option value ="Biogenealogy"> Biogenealogy </option>
+
+                        <option disabled="" value ="Body work"> Body work </option>
+                        <option value ="Reflexology"> Reflexology </option>
+                        <option value ="Cranio Sacral Therapy"> Cranio Sacral Therapy </option>
+                        <option value ="Bowen Therapy"> Bowen Therapy </option>
+                        <option value ="EFT"> EFT </option>
+                        <option value ="Taichi"> Taichi </option>
+                        <option value ="Rubenfeld Synergy"> Rubenfeld Synergy </option>
+                        <option value ="Rolfing"> Rolfing </option>
+                        <option value ="Somatic Experience"> Somatic Experience </option>
+                        <option value ="Physiotherapy"> Physiotherapy </option>
+
+                        <option disabled="" value ="Massage"> Massage </option>
+                        <option value ="Shiatsu"> Shiatsu </option>
+                        <option value ="Massage Therapy"> Massage Therapy </option>
+                        <option value ="Thai Massage"> Thai Massage </option>
+                        <option value ="Lomi Lomi"> Lomi Lomi </option>
+                        <option value ="Chi Nei Tsang"> Chi Nei Tsang </option>
+
+
+                        <option disabled="" value ="Meditation"> Meditation </option>
+                        <option value ="Ana Pana Sati Meditation"> Ana Pana Sati Meditation </option>
+                        <option value ="Mindfulness"> Mindfulness </option>
+                        <option value ="Osho Dynamic Meditation"> Osho Dynamic Meditation </option>
+                        <option value ="Meditation"> Meditation </option>
+                        <option value ="Transcendental meditation"> Transcendental meditation </option>
+                        <option value ="Vipassyana Meditation"> Vipassyana Meditation </option>
+                        <option value ="Zen Buddhism"> Zen Buddhism </option>
+                        <option value ="Progressive relaxation technique"> Progressive relaxation technique </option>
+
+                        <option disabled="" value ="Chanting"> Chanting </option>
+                        <option value ="Nichren Buddhism"> Nichren Buddhism </option>
+                        <option value ="Angelic Chanting"> Angelic Chanting </option>
+
+                        <option disabled="" value ="Quantum Energy Healing & Medicine"> Quantum Energy Healing & Medicine </option>
+
+                        <option disabled="" value ="Human Energetic Assessment Devices"> Human Energetic Assessment Devices </option>
+                        <option value ="ALFA HRV Analyzer "> ALFA HRV Analyzer  </option>
+                        <option value ="ES Complex "> ES Complex  </option>
+                        <option value ="BIOFIELD READER"> BIOFIELD READER </option>
+                        <option value ="Resonant Field Imaging (RFI)"> Resonant Field Imaging (RFI) </option>
+                        <option value ="Quantum Resonance Magnetic Health Analyzer"> Quantum Resonance Magnetic Health Analyzer </option>
+                        <option value ="Kirlian Photography"> Kirlian Photography </option>
+
+                        <option disabled="" value ="B. Detoxification & Energizing Devices"> B. Detoxification & Energizing Devices </option>
+
+                        <option value ="ELECTRO REFLEX ENERGIZER"> ELECTRO REFLEX ENERGIZER </option>
+                        <option value ="Foot De-tox"> Foot De-tox </option>
+                        <option value ="FA Infra Sauna"> FA Infra Sauna </option>
+                        <option value ="I - float"> I - float </option>
+                        <option value ="Bio Tuner"> Bio Tuner </option>
+                        <option value ="Silver Pulser"> Silver Pulser </option>
+
+                        <option disabled="" value ="C. Pain Management"> C. Pain Management </option>
+                        <option value ="SCENAR-Cosmodic Ex735Ag"> SCENAR-Cosmodic Ex735Ag </option>
+                        <option value ="Q LASER Q1000NG"> Q LASER Q1000NG </option>
+                        <option value ="Magnetic Pulsar"> Magnetic Pulsar </option>
+
+                        <option disabled="" value ="D. Stress Reduction"> D. Stress Reduction </option>
+                        <option value ="NeuroSky MindWave & Mind Workstation"> NeuroSky MindWave & Mind Workstation </option>
+                        <option value ="Heartmath emWave Pro"> Heartmath emWave Pro </option>
+                        <option value ="Braintap-Mind Machine"> Braintap-Mind Machine </option>
+                        <option value ="EMOTIV Epoc+"> EMOTIV Epoc+ </option>
+                        <option value ="Mindfold Relaxation Mask"> Mindfold Relaxation Mask </option>
+
+                        <option disabled="" value ="E. Energetic Analysis and Corrections"> E. Energetic Analysis and Corrections </option>
+                        <option value ="SE -5  1000 Scalar Energy"> SE -5  1000 Scalar Energy </option>
+                        <option value ="Acmos "> Acmos  </option>
+                        <option value ="Time Waver"> Time Waver </option>
+
+                        <option disabled="" value ="F. Testing Equipment for aiding research activity"> F. Testing Equipment for aiding research activity </option>
+                        <option value ="Air Ion Counter"> Air Ion Counter </option>
+                        <option value ="Trifield Natural EM Meter"> Trifield Natural EM Meter </option>
+                        <option value ="COM-100: Water testing Meter"> COM-100: Water testing Meter </option>
+
+                        <option disabled="" value ="Breathwork"> Breathwork </option>
+                        <option value ="Rebirthing"> Rebirthing </option>
+                        <option value ="Pranayama"> Pranayama </option>
+                        <option value ="Sudarshan Kriya"> Sudarshan Kriya </option>
+
+                        <option disabled="" value ="Behavioural Therapy"> Behavioural Therapy </option>
+                        <option value ="Cognitive Behavioural Therapy"> Cognitive Behavioural Therapy </option>
+                        <option value ="Rational Emotive Behavioural Therapy"> Rational Emotive Behavioural Therapy </option>
+
+                        <option disabled="" value ="Self-Healing"> Self-Healing </option>
+                        <option value ="NLP"> NLP </option>
+                        <option value ="Reconnective Healing"> Reconnective Healing </option>
+                        <option value ="Switch words"> Switch words </option>
+                        <option value ="Heal your life Program by Louise Hay"> Heal your life Program by Louise Hay </option>
+                        <option value ="Gestalt Therapy"> Gestalt Therapy </option>
+                        <option value ="Inner Child Healing"> Inner Child Healing </option>
+                        <option value ="Transactional Analysis"> Transactional Analysis </option>
+                        <option value ="Family Constellation"> Family Constellation </option>
+                        <option value ="Non-violent communication "> Non-violent communication  </option>
+                        <option value ="Creative Visualization"> Creative Visualization </option>
+                        <option value ="Dolphin Healing Network"> Dolphin Healing Network </option>
+                        <option value ="Affirmation & Visualization Therapy"> Affirmation & Visualization Therapy </option>
+                        <option value ="Sedona Method"> Sedona Method </option>
+                        <option value ="Ho'oponopono"> Ho'oponopono </option>
+
+                        <option disabled="" value ="Counseling & Consulting"> Counseling & Consulting </option>
+                        <option value ="Children’s Counselor"> Children’s Counselor </option>
+                        <option value ="Conscious Parenting Counselor"> Conscious Parenting Counselor </option>
+                        <option value ="Sex Therapist"> Sex Therapist </option>
+                        <option value ="Marriage counselor"> Marriage counselor </option>
+                        <option value ="Spiritual Counselor"> Spiritual Counselor </option>
+                        <option value ="Nutritionist"> Nutritionist </option>
+                                </select>
+                                    <p id="M3_error" class="error"></p>
+                                </div>
+                             </div>
+                             
+                             <div id="FormRightSide">
+                                <div>
+                                    <label>Experience(Yrs) </label>
+                                    <input class="connect_input" type="text" name="modality3Exp" id="m3exp"  placeholder="Enter Years of Experience">
+                                    <p id="" class="error"></p>
+                                </div>
+                             </div>
+                            </section>
+                             
+                               <section  style="clear:both">
+                             
+                             <div id="FormLeftSide">
+                                   <!--City: NAME -->
+                                    <label> Modality-4</label> <br>
+                                <div class="dropdown">
+                                     <select class="dropdown_text" id="m4">
+                                        <option value="0">--Select--</option>
+                        <option disabled="" value ="Energy Healing"> Energy Healing </option>
+                        <option value ="Reiki"> Reiki </option>
+                        <option value ="Pranic Healing"> Pranic Healing </option>
+                        <option value ="Theta Healing"> Theta Healing </option>
+                        <option value ="Crystal Healing"> Crystal Healing </option>
+                        <option value ="Access bars"> Access bars </option>
+                        <option value ="Sujok Therapy"> Sujok Therapy </option>
+                        <option value ="Shaktipath"> Shaktipath </option>
+                        <option value ="Kundalini Activation"> Kundalini Activation </option>
+                        <option value ="DNA Activation"> DNA Activation </option>
+                        <option value ="Holographic Healing"> Holographic Healing </option>
+                        <option value ="Applied kinesiology"> Applied kinesiology </option>
+                        <option value ="Vastu Shastra"> Vastu Shastra </option>
+                        <option value ="Feng shui"> Feng shui </option>
+                        <option value ="Prana Violet Healing"> Prana Violet Healing </option>
+                        <option value ="Psychic Surgery"> Psychic Surgery </option>
+                        <option value ="Magnified Healing Phase"> Magnified Healing Phase </option>
+                        <option value ="Preeti Siddhi"> Preeti Siddhi </option>
+
+                        <option disabled="" value ="Yoga "> Yoga  </option>
+                        <option value ="Hatha Yoga"> Hatha Yoga </option>
+                        <option value ="Vinyasa Yoga"> Vinyasa Yoga </option>
+                        <option value ="Ashtanga Yoga"> Ashtanga Yoga </option>
+                        <option value ="Iyengar Yoga "> Iyengar Yoga  </option>
+                        <option value ="Kundalini Yoga"> Kundalini Yoga </option>
+                        <option value ="Mudras"> Mudras </option>
+                        <option value ="Tibetan Yoga"> Tibetan Yoga </option>
+                        <option value ="Kriya yoga"> Kriya yoga </option>
+
+                        <option disabled="" value ="Readings & Rituals"> Readings & Rituals </option>
+                        <option value ="Angel Reading"> Angel Reading </option>
+                        <option value ="Tarot Card Reading"> Tarot Card Reading </option>
+                        <option value ="Runes"> Runes </option>
+                        <option value ="Numerology"> Numerology </option>
+                        <option value ="Cosmic Astrology"> Cosmic Astrology </option>
+                        <option value ="Aura Reading"> Aura Reading </option>
+                        <option value ="Dream Analysis"> Dream Analysis </option>
+                        <option value ="Grapho Therapy"> Grapho Therapy </option>
+                        <option value ="Enneagram of personality"> Enneagram of personality </option>
+                        <option value ="Channeling"> Channeling </option>
+                        <option value ="Shamanism"> Shamanism </option>
+                        <option value ="Shamanic ceremonies"> Shamanic ceremonies </option>
+                        <option value ="Candle Magick"> Candle Magick </option>
+                        <option value ="Dowsing"> Dowsing </option>
+                        <option value ="Nadi Shastra"> Nadi Shastra </option>
+                        <option value ="Animal Communication"> Animal Communication </option>
+                        <option value ="Cartomancy"> Cartomancy </option>
+
+                        <option disabled="" value ="Art Therapy "> Art Therapy  </option>
+                        <option value ="Mandala"> Mandala </option>
+                        <option value ="Dance Therapy"> Dance Therapy </option>
+                        <option value ="Sufi Whirling"> Sufi Whirling </option>
+                        <option value ="Interplay"> Interplay </option>
+                        <option value ="Playback Theatre"> Playback Theatre </option>
+                        <option value ="Mind mapping"> Mind mapping </option>
+                        <option value ="Sacred Geometry"> Sacred Geometry </option>
+                        <option value ="Auto writing"> Auto writing </option>
+
+                        <option disabled="" value ="Hypnotherapy"> Hypnotherapy </option>
+                        <option value ="Past Life Regression"> Past Life Regression </option>
+                        <option value ="Hypnobirthing"> Hypnobirthing </option>
+                        <option value ="Hypnotherapy"> Hypnotherapy </option>
+                        <option value ="Subliminal therapy"> Subliminal therapy </option>
+                        <option value ="Life Between Lives"> Life Between Lives </option>
+
+                        <option disabled="" value ="Sound Healing"> Sound Healing </option>
+                        <option value ="Tibetan Bowl"> Tibetan Bowl </option>
+                        <option value ="Crystal Bowl"> Crystal Bowl </option>
+                        <option value ="Voice movement therapy"> Voice movement therapy </option>
+                        <option value ="Didgerido"> Didgerido </option>
+
+                        <option disabled="" value ="Natural Remedies"> Natural Remedies </option>
+                        <option value ="Naturopathy"> Naturopathy </option>
+                        <option value ="Ayurveda"> Ayurveda </option>
+                        <option value ="Homeopathy"> Homeopathy </option>
+                        <option value ="Bach Flower Remedies"> Bach Flower Remedies </option>
+                        <option value ="Tridosha Therapy"> Tridosha Therapy </option>
+                        <option value ="Panchkarma"> Panchkarma </option>
+                        <option value ="Chinese/ Tibetan Medicine"> Chinese/ Tibetan Medicine </option>
+
+                        <option disabled="" value ="Alternative Therapies"> Alternative Therapies </option>
+                        <option value ="Acupressure"> Acupressure </option>
+                        <option value ="Acupuncture"> Acupuncture </option>
+                        <option value ="Aroma Therapy"> Aroma Therapy </option>
+                        <option value ="Salt Therapy"> Salt Therapy </option>
+                        <option value ="Colour Therapy"> Colour Therapy </option>
+                        <option value ="Gem Therapy"> Gem Therapy </option>
+                        <option value ="Nambudripad's Allergy Elimination Technique"> Nambudripad's Allergy Elimination Technique </option>
+                        <option value ="Nadi Therapy"> Nadi Therapy </option>
+                        <option value ="Biogenealogy"> Biogenealogy </option>
+
+                        <option disabled="" value ="Body work"> Body work </option>
+                        <option value ="Reflexology"> Reflexology </option>
+                        <option value ="Cranio Sacral Therapy"> Cranio Sacral Therapy </option>
+                        <option value ="Bowen Therapy"> Bowen Therapy </option>
+                        <option value ="EFT"> EFT </option>
+                        <option value ="Taichi"> Taichi </option>
+                        <option value ="Rubenfeld Synergy"> Rubenfeld Synergy </option>
+                        <option value ="Rolfing"> Rolfing </option>
+                        <option value ="Somatic Experience"> Somatic Experience </option>
+                        <option value ="Physiotherapy"> Physiotherapy </option>
+
+                        <option disabled="" value ="Massage"> Massage </option>
+                        <option value ="Shiatsu"> Shiatsu </option>
+                        <option value ="Massage Therapy"> Massage Therapy </option>
+                        <option value ="Thai Massage"> Thai Massage </option>
+                        <option value ="Lomi Lomi"> Lomi Lomi </option>
+                        <option value ="Chi Nei Tsang"> Chi Nei Tsang </option>
+
+
+                        <option disabled="" value ="Meditation"> Meditation </option>
+                        <option value ="Ana Pana Sati Meditation"> Ana Pana Sati Meditation </option>
+                        <option value ="Mindfulness"> Mindfulness </option>
+                        <option value ="Osho Dynamic Meditation"> Osho Dynamic Meditation </option>
+                        <option value ="Meditation"> Meditation </option>
+                        <option value ="Transcendental meditation"> Transcendental meditation </option>
+                        <option value ="Vipassyana Meditation"> Vipassyana Meditation </option>
+                        <option value ="Zen Buddhism"> Zen Buddhism </option>
+                        <option value ="Progressive relaxation technique"> Progressive relaxation technique </option>
+
+                        <option disabled="" value ="Chanting"> Chanting </option>
+                        <option value ="Nichren Buddhism"> Nichren Buddhism </option>
+                        <option value ="Angelic Chanting"> Angelic Chanting </option>
+
+                        <option disabled="" value ="Quantum Energy Healing & Medicine"> Quantum Energy Healing & Medicine </option>
+
+                        <option disabled="" value ="Human Energetic Assessment Devices"> Human Energetic Assessment Devices </option>
+                        <option value ="ALFA HRV Analyzer "> ALFA HRV Analyzer  </option>
+                        <option value ="ES Complex "> ES Complex  </option>
+                        <option value ="BIOFIELD READER"> BIOFIELD READER </option>
+                        <option value ="Resonant Field Imaging (RFI)"> Resonant Field Imaging (RFI) </option>
+                        <option value ="Quantum Resonance Magnetic Health Analyzer"> Quantum Resonance Magnetic Health Analyzer </option>
+                        <option value ="Kirlian Photography"> Kirlian Photography </option>
+
+                        <option disabled="" value ="B. Detoxification & Energizing Devices"> B. Detoxification & Energizing Devices </option>
+
+                        <option value ="ELECTRO REFLEX ENERGIZER"> ELECTRO REFLEX ENERGIZER </option>
+                        <option value ="Foot De-tox"> Foot De-tox </option>
+                        <option value ="FA Infra Sauna"> FA Infra Sauna </option>
+                        <option value ="I - float"> I - float </option>
+                        <option value ="Bio Tuner"> Bio Tuner </option>
+                        <option value ="Silver Pulser"> Silver Pulser </option>
+
+                        <option disabled="" value ="C. Pain Management"> C. Pain Management </option>
+                        <option value ="SCENAR-Cosmodic Ex735Ag"> SCENAR-Cosmodic Ex735Ag </option>
+                        <option value ="Q LASER Q1000NG"> Q LASER Q1000NG </option>
+                        <option value ="Magnetic Pulsar"> Magnetic Pulsar </option>
+
+                        <option disabled="" value ="D. Stress Reduction"> D. Stress Reduction </option>
+                        <option value ="NeuroSky MindWave & Mind Workstation"> NeuroSky MindWave & Mind Workstation </option>
+                        <option value ="Heartmath emWave Pro"> Heartmath emWave Pro </option>
+                        <option value ="Braintap-Mind Machine"> Braintap-Mind Machine </option>
+                        <option value ="EMOTIV Epoc+"> EMOTIV Epoc+ </option>
+                        <option value ="Mindfold Relaxation Mask"> Mindfold Relaxation Mask </option>
+
+                        <option disabled="" value ="E. Energetic Analysis and Corrections"> E. Energetic Analysis and Corrections </option>
+                        <option value ="SE -5  1000 Scalar Energy"> SE -5  1000 Scalar Energy </option>
+                        <option value ="Acmos "> Acmos  </option>
+                        <option value ="Time Waver"> Time Waver </option>
+
+                        <option disabled="" value ="F. Testing Equipment for aiding research activity"> F. Testing Equipment for aiding research activity </option>
+                        <option value ="Air Ion Counter"> Air Ion Counter </option>
+                        <option value ="Trifield Natural EM Meter"> Trifield Natural EM Meter </option>
+                        <option value ="COM-100: Water testing Meter"> COM-100: Water testing Meter </option>
+
+                        <option disabled="" value ="Breathwork"> Breathwork </option>
+                        <option value ="Rebirthing"> Rebirthing </option>
+                        <option value ="Pranayama"> Pranayama </option>
+                        <option value ="Sudarshan Kriya"> Sudarshan Kriya </option>
+
+                        <option disabled="" value ="Behavioural Therapy"> Behavioural Therapy </option>
+                        <option value ="Cognitive Behavioural Therapy"> Cognitive Behavioural Therapy </option>
+                        <option value ="Rational Emotive Behavioural Therapy"> Rational Emotive Behavioural Therapy </option>
+
+                        <option disabled="" value ="Self-Healing"> Self-Healing </option>
+                        <option value ="NLP"> NLP </option>
+                        <option value ="Reconnective Healing"> Reconnective Healing </option>
+                        <option value ="Switch words"> Switch words </option>
+                        <option value ="Heal your life Program by Louise Hay"> Heal your life Program by Louise Hay </option>
+                        <option value ="Gestalt Therapy"> Gestalt Therapy </option>
+                        <option value ="Inner Child Healing"> Inner Child Healing </option>
+                        <option value ="Transactional Analysis"> Transactional Analysis </option>
+                        <option value ="Family Constellation"> Family Constellation </option>
+                        <option value ="Non-violent communication "> Non-violent communication  </option>
+                        <option value ="Creative Visualization"> Creative Visualization </option>
+                        <option value ="Dolphin Healing Network"> Dolphin Healing Network </option>
+                        <option value ="Affirmation & Visualization Therapy"> Affirmation & Visualization Therapy </option>
+                        <option value ="Sedona Method"> Sedona Method </option>
+                        <option value ="Ho'oponopono"> Ho'oponopono </option>
+
+                        <option disabled="" value ="Counseling & Consulting"> Counseling & Consulting </option>
+                        <option value ="Children’s Counselor"> Children’s Counselor </option>
+                        <option value ="Conscious Parenting Counselor"> Conscious Parenting Counselor </option>
+                        <option value ="Sex Therapist"> Sex Therapist </option>
+                        <option value ="Marriage counselor"> Marriage counselor </option>
+                        <option value ="Spiritual Counselor"> Spiritual Counselor </option>
+                        <option value ="Nutritionist"> Nutritionist </option>
+                                </select>
+                                    <p id="M4_error" class="error"></p>
+                                </div>
+                             
+                             </div>
+                             
+                             <div id="FormRightSide">
+                                <div>
+                                    <label>Experience(Yrs) </label>
+                                    <input class="connect_input" type="text" name="m4exp" id="m4exp"  placeholder="Enter Years of Experience">
+                                    <p id="M1_error" class="error"></p>
+                                </div>
+                             </div>
+                             </section>
+                             
+                            <div id="FormLeftSide" style="clear:both">
+                                <div>
+                                    <label>others </label>
+                                    <input class="connect_input" type="text" name="g+" id="other"  placeholder="Enter Other Modalities you deal with">
+                                    <p id="other_error" class="error"></p>
+                                </div>
+                             </div>
+                            <div id="FormRightSide">
+                                <div>
+                                    <label>Experience(Yrs) </label>
+                                    <input class="connect_input" type="text" name="othreExp" id="otherexp"  placeholder="Enter Years of Experience">
+                                    <p id="ohter_error" class="error"></p>
+                                </div>
+                             </div>
+                             
+                             <section>
+                                 <div id="FormLeftSide" style="clear:both">
+                                    <div>
+                                        <label>Over all years of experience as WSP </label>
+                                        <input class="connect_input" type="number" name="" id="overall_exp"  placeholder="Enter years of Experience" onblur="validateYearsOfExp();">
+                                        <p id="overall_exp_error" class="error"></p>
+                                    </div>
+                                 </div>
+                                <div id="FormRightSide">
+                                    <div>
+                                        <label>Hourly Session Charges (INR) </label>
+                                        <input class="connect_input" type="number" name="" id="charges"  placeholder="Enter hourly session charges" onblur="validateHourlyCharge();">
+                                        <p id="charges_error" class="error"></p>
+                                    </div>
+                                 </div>
+                             </section>
+                             
+                             <section>
+                                 <div id="FormLeftSide" style="clear:both">
+                                    <div>
+                                        <label>Details of degree obtained/courses attended/undertaken and relevant certifications </label>
+                                         <textarea class="message-textarea" rows="8" cols="70" name="" id="courseDetails" onblur="validateCourse();"></textarea>
+                                     <p id="courseDetails_error" class="error"></p>
+                                    </div>
+                                 </div>
+                                <div id="FormRightSide">
+                                    <div>
+                                        <label>What ailments have you seen best results in healing through the modality/s you use?</label>
+                                      <textarea class="message-textarea" rows="8" cols="70" name="" id="bestModality" onblur="validateAilments();"></textarea>
+                                     <p id="bestModality_error" class="error"></p>
+                                    </div>
+                                 </div>
+                             </section>
+                             
+                             <section>
+                                 <div id="FormLeftSide" style="clear:both">
+                                 <!--PRIMARY CAREER-->
+                                <div>
+                                    <label>Is this your primary career?</label><br>
+                                    <label>yes</label><img id="primaryCareer_Yes" src="images/radioButton-2.png" width="100%" onclick="primaryCareerYes();">
+                                    <label>no</label><img id="primaryCareer_No" src="images/radioButton.png" width="100%" onclick="primaryCareer();">
+                                    <input type="hidden" value="Yes" id="selectedPrimaryCareer">
+                                    <input type="hidden" value="" id="memid">
+                                    <p id="gender_error" class="error"></p>
+                                </div>
+                                </div>
+                                 
+                                   <div id="FormRightSide">
+                                    <div>
+                                        <label>If not, what else do you do?</label>
+                                         <input class="connect_input" type="text" name="g+" id="otherCareer"  placeholder="" readonly style="background-color:#e1e1e1;" > 
+                                         <p id="otherCareers_error" class="error"></p>
+                                    </div>
+                                 </div>
+                             </section>
+                             
+<!--                              onblur="validateIfnoCareer();"-->
+                             <section>
+                                 <div id="FormLeftSide" style="clear:both">
+                                 <!--PRIMARY CAREER-->
+                                <div>
+                                    <label>Do you Provide Home Visits?*</label><br>
+                                    <label>yes</label><img id="homeVisit_Yes" src="images/radioButton.png" width="100%" onclick="homeVisitYes();">
+                                    <label>no</label><img id="homeVisit_No" src="images/radioButton-2.png" width="100%" onclick="homeVisitNo();">
+<!--                                    <input type="hidden" value="Yes" id="selectedPrimaryCareer">-->
+<!--                                    <input type="hidden" value="" id="memid">-->
+                                    <p id="homeVisit_error" class="error"></p>
+                                </div>
+                                </div>
+                                 
+                             </section>
+                             <section style="clear:both">
+                             
+                               <!--  SUBMIT BUTTON  -->
+                               <div id="ConnectSubmitButtonDiv">
+                                    <img id="ConnectSubmitButton" src="images/submit-button.png" width="100%" onclick="wspValidateFields();">
+                                </div>
+                             </section>
+                        </form>
+                    </div>
+                </section>
+            </section>
+        </section>
+        
+    </body>
+</html>

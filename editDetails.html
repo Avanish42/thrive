@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/accountOverView.css"> <!--styles for Our Story Page-->
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | EDIT DETAILS</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script src="js/menuPages.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script>
+            firebase.auth().onAuthStateChanged(user => {
+            if(user) {
+                user.providerData.forEach(function (profile) {
+                    
+                    //Check if User Already Exist
+                    var ref = firebase.database().ref();
+                    var userref=ref.child("users");
+
+                    userref.orderByChild("id").equalTo(profile.uid).once('value', function(snapshot){
+                        var exists = (snapshot.val() !==null);
+                        if (exists) {
+                            //DISPLAY OTHER DETAILS
+                            snapshot.forEach(function (child) {
+                                if (child.val().email==profile.email) {
+                                    //signin_user_name_Object.innerHTML = child.val().name;
+                                    
+                                    document.getElementById('account_type').value=child.val().accounttype;
+                                    document.getElementById('username').value=child.val().email;
+                                    document.getElementById('priemail').value=child.val().email;
+                                    document.getElementById('secemail').value=child.val().secondaryemail;
+                                    document.getElementById('mobile').value=child.val().phone;
+                                    document.getElementById('signedinthrough').value=child.val().createdthrough;
+                                    document.getElementById('accountstatus').value=child.val().status;
+                                    document.getElementById('dob').value=child.val().dob;
+                                    document.getElementById('place').value=child.val().place;
+                                    if(child.val().gender == "Male"){
+                                        document.getElementById('genderMale').selected=true;
+                                    }else if(child.val().gender == "Female"){
+                                        document.getElementById('genderFemale').selected=true;
+                                    }else{
+                                        document.getElementById('genderUnSelected').selected=true;
+                                    }
+//                                    console.log(child.val().city);
+                                }
+                            });
+                        }
+                    });
+                });
+            }
+        });
+        </script>
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("");
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+         <section class="menuSection">
+            <!---------- WEBSITE HEADER  ---------->
+            <script>
+                display_header_2();
+                check_authentication();
+            </script>
+        </section> <!--End of Body Section-->
+            
+        
+            
+            
+            <!----------------------------- PILLAR SECTION ------------------------------->
+            <section class="totalBodySection">
+                
+                <h3 class="MainHeading">edit details</h3>
+                <div id="success" style="text-align:center; display:none;">
+                    <img src="images/success.png">
+                </div>
+                <div id="userAndWSP" class="div_displayTable">
+                    <div class="AccountleftDiv">
+<!--                        <h3 class="needSupport">overview:</h3>-->
+                        <li>account type : <span><input class="editInputsDisabled" id="account_type" type="text" disabled></span></li>
+                        <li>account status : <span><input class="editInputsDisabled" id="accountstatus" type="text" disabled></span></li>
+                        <li>signed in through : <span><input class="editInputsDisabled" id="signedinthrough" type="text" disabled></span></li>
+                        <li>user name : <span><input class="editInputsDisabled" id="username" type="text"></span></li>
+                        <li>primary email id : <span><input class="editInputsDisabled" id="priemail" type="text" disabled></span></li>
+                        <li>secondary email id : <span><input class="editInputs" id="secemail" type="text"></span></li>
+                        <li>mobile number : <span><input class="editInputs" id="mobile" type="text"></span></li>
+                        <li>date of birth : <span><input class="editInputs" id="dob" type="text"></span></li>
+                        <li>place : <span><input class="editInputs" id="place" type="text"></span></li>
+                        <li>gender : 
+                            <span>
+                                <select class="editSelect" id="gender" >
+                                    <option id="genderUnSelected" selected>--Select--</option>
+                                    <option id="genderMale">Male</option>
+                                    <option id="genderFemale">Female</option>
+                                </select>
+                            </span>
+                        </li>
+                    </div>
+
+                    <div class="AccountrightDiv">
+<!--                        <h3 class="needSupport">social:</h3>-->
+                        <li>website : <span>pending functionality</span></li>
+                        <li>facebook : <span>pending functionality</span></li>
+                        <li>twitter : <span>pending functionality</span></li>
+                        <li>google plus : <span>pending functionality</span></li>
+                        <li>youtube : <span>pending functionality</span></li>
+                        <li>Age : <span>pending functionality</span></li>
+                        <li>videos : <span>pending functionality</span></li>
+                    </div>
+                    <div class="cancleEditDetails">
+                        <img src="images/cancle.png" width="100%">
+                    </div>
+                    <div class="saveEditDetails" onclick="saveEditedDetails()">
+                        <img src="images/save.png" width="100%">
+                    </div>
+                <hr>
+                </div>
+                <!-- BILLING -->
+                <div id="billing" class="div_displayTable">
+<!--                    <h3 class="needSupport">billing:</h3>-->
+                    <div class="AccountrightDiv">
+                        <li>package type : <span>pending functionality</span></li>
+                        <li>Payment method : <span>pending functionality</span></li>
+                        <li>Billing Period : <span>pending functionality</span></li>
+                        <li>enrolment date : <span>pending functionality</span></li>
+                    </div>
+                </div>
+                
+                <!-- FOR SUPPORT -->
+                <div class="div_displayTable" style="text-align:center">
+                     <h3 class="needSupport">for support:</h3>
+                     <h3 class="needSupportDetails"> email: <a href="mailto:info@trhiive.in">connect@thriive.in</a></h3>
+                     <h3 class="needSupportDetails">Phone:<a href="tel:+919820389877"> +91 98203 898 77</a> </h3>
+                </div>
+                
+            </section>
+            
+            <!--FOOTER SECTION-->
+            <script>
+               display_footer();
+            </script>
+		
+    </body>
+</html>

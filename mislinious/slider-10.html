@@ -1,0 +1,243 @@
+
+<style>
+    
+    .video_div{
+        width: 15vw;
+        height: 22.5vw;
+        display: inline-table;
+        margin-left: 5%;
+        margin-top: 5%;
+        -webkit-transition: all 1s ease-in-out;
+    }
+
+.slider {
+    width: 15vw;
+    height: 22.5vw;
+    -webkit-transition: all 1s ease-in-out;
+    }
+    
+.video_div:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);   
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 1s ease-in-out;
+    }
+           
+.video_div:hover .slide1 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+    }
+       
+.video_div:hover .slide2{
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+    }
+       
+.video_div:hover .slide3 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+    }
+    
+.video_div:hover .BG_slide {
+    opacity: 1;
+     -webkit-transition: all 1s ease-in-out;
+    }
+    
+.slide1,
+.slide2,
+.slide3{
+    width: 100%;
+/*    display: none;*/
+    cursor: pointer;
+    }
+    
+    
+.BG_slide {
+    width: 100%;
+     -webkit-transition: all 1s ease-in-out;
+    }
+    
+.slide1 {
+    margin-top: -22.5vw;
+    animation:fade 8s infinite;
+    -webkit-animation:fade 8s infinite;
+
+} 
+.slide2 {
+     margin-top: -22.5vw;
+    animation:fade2 8s infinite;
+    -webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+     margin-top: -22.5vw;
+    animation:fade3 8s infinite;
+    -webkit-animation:fade3 8s infinite;
+    
+}
+    
+    
+/*
+@keyframes fade{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+    
+@keyframes fade2{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+    
+@keyframes fade3{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+*/
+    
+    .infoText{
+        width: 100%;
+        height: 3vw;
+        background-color:#4e0475;
+        text-align: center;
+        color: #fff;
+        padding-top: 3%;
+        margin-top: 61.6%;
+        -webkit-transition: all 1s ease-in-out;
+    }
+    
+    
+    
+.PlayButton{
+    background: url(../images/PlayButton.png) no-repeat center;
+    background-size: cover;
+    width: 3.5vw;
+    height: 3.5vw;
+    margin: auto;
+    opacity: 0;
+    z-index: 10;
+    position: relative;
+    margin-top: -85%;
+    cursor: pointer;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.PlayButton:hover{
+    background: url(../images/PlayButton-2.png) no-repeat center;
+    background-size: cover;
+    width: 3.5vw;
+    height: 3.5vw;
+    -webkit-transition: all .5s ease-in-out;
+}
+    
+    .video_div:hover .PlayButton {
+        opacity: .8
+    }  
+    .video_div:hover .BeforeText {
+       display: none;
+    }  
+    
+    .video_div:hover .AfterText {
+       display: block;
+    }
+    
+    .BeforeText{
+        
+    }
+    .AfterText{
+        display: none;
+    }
+    
+    @media (max-width: 736px) {
+        
+    .slider,
+    .video_div{
+        width: 30vw;
+        height:45vw;
+    }
+        
+.BG_slide {
+    width: 100%;
+    }
+    
+.slide1 {
+    margin-top: -45vw;
+
+} 
+.slide2 {
+     margin-top: -45vw;
+}
+.slide3 {
+     margin-top: -45vw;
+}
+        
+     .infoText{
+        padding-top: 3%;
+        margin-top: 65%;
+         height: 6vw;
+    }
+        
+    .PlayButton{
+        background: url(../images/PlayButton-2.png) no-repeat center;
+        background-size: cover;
+        opacity: 1;
+        width: 6vw;
+        height: 6vw;
+        
+    }       
+    .PlayButton:hover{
+        width: 6vw;
+        height: 6vw;
+        opacity: 1;
+    }
+    
+    }
+    
+</style>
+
+
+
+
+
+<div class="video_div">
+    <div class='slider'>
+      <img class='BG_slide' src="images/videoImages/05.jpg">
+      <img class='slide1' src="images/videoImages/17.jpg">
+      <img class='slide2' src="images/videoImages/16.jpg"> 
+      <img class='slide3' src="images/videoImages/15.jpg"> 
+    </div>
+      <div class='PlayButton'> </div>
+    <div class="infoText">
+        <span class="BeforeText">Before Text</span> 
+        <span class="AfterText">After Text</span> 
+    </div>
+</div>
+
+
+
+<div class="video_div">
+    <div class='slider'>
+      <img class='BG_slide' src="images/videoImages/05.jpg">
+      <img class='slide1' src="images/videoImages/17.jpg">
+      <img class='slide2' src="images/videoImages/16.jpg"> 
+      <img class='slide3' src="images/videoImages/15.jpg"> 
+    </div>
+      <div class='PlayButton'> </div>
+    <div class="infoText">
+        <span class="BeforeText">Before Text</span> 
+        <span class="AfterText">After Text</span> 
+    </div>
+</div>
+
+
+
+
+
+
+
+

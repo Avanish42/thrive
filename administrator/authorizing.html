@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        
+        <!--    SIGIN IN PAGE TITLE  -->
+        <title>THRIIVE | Admin Login</title>
+        
+        <!-- FIREBASE -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+        <script src="js/app.js"></script>
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING CSS FILES-->
+        <!--Styles for Signin Page-->
+        <link rel="stylesheet" href="css/index.css"> 
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        
+        <!--    INCLUDING JAVASCRIPT-->
+		<script>
+            var result = check_authentication("?login=failed");
+            setTimeout(function(){
+               window.location='dashboard.html';
+            }, 6000);
+        </script>
+        
+    </head>
+    
+    <body class="body_Backgruond">
+        
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+            <!---------- SECTION FOR WEBSITE HEADER  ---------->
+            <section class="signIn_section">
+                <!--Add Submitting GIF here-->
+                <center>
+                    <img src="images/pleasewait.gif">
+                </center>
+            </section>
+        </section>
+
+    </body>
+
+</html>

@@ -1,0 +1,426 @@
+/*CSS FOR DESKTOP FOOTER AND HEADDER*/
+
+ 
+/*==============  HIDE MOBILE DEVISE IN DESKTOP ==============*/
+
+    @media (min-width: 737px) {
+        
+    /*  HIDE FOOTER IN DESKTOP */
+    #FooterSection_Mobile {
+        display: none !important;
+    }
+    
+    }
+
+
+/* ---------------------------------  WEBSITE HEADER CSS  ------------------------------- */
+        
+    /*MASERT DIV OF HEADER */
+ 
+ .maindiv {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     display: table;
+     position: relative;
+     margin-top: 2%;
+ }
+
+ /* TOGGLE BUTTON */
+ .leftDiv {
+     width: 4.8%;
+     display: inline-table;
+     position: absolute;
+     left: 0;
+     top: 35%;
+     text-align: center;
+ }
+
+ /*LOGO DIV */
+ .MidleDiv {
+     width: 15.5%;
+     margin: auto;
+     padding: 0;
+     text-align: center;
+ }
+
+.MidleDiv:hover{
+    filter: contrast(115%) brightness(115%);
+}
+
+ /*LOGIN & SEARCH DIV */
+ .rightDiv {
+     width: 45%;
+     position: absolute;
+     right: 0;
+     top: 40%;
+     align-items: center;
+     vertical-align: middle;
+     font-family: 'Delius', cursive;
+     color: #686868;
+     font-size: 1.2vw;
+     display: table;
+     text-align: right;
+ }
+
+ /*HAND SYMOL FOR  */
+ .anchorTagButton {
+     cursor: pointer;
+     text-decoration: none;
+     color: #6A6A6A;
+     padding: 0% 0% 3% 0%;
+ }
+ 
+ #signIn:hover,
+ .anchorTagButton:hover {
+     color: #4e0475
+ }
+
+ /* SERCH AND SIGN ICONS STYLES */
+ .search_Login_Icons {
+     vertical-align: middle;
+     width: 100%;
+ }
+ 
+ .login_dropdown {
+     padding: 0% 0% 5% 0%;
+     z-index: 2
+ }
+
+#serchImg{
+    display: none;
+}
+
+#search input[type=text]{
+    height: 2.2vw;
+    border-radius: 10px;
+    font-size: 1vw;
+    padding-right: 6%;
+    padding-left: 1%;
+    border: 2px solid lightgray;
+    background-image: url(/images/Search_2.png);
+    background-position: center right; 
+    background-repeat: no-repeat;
+    background-size: 13%;
+    background-color: transparent;
+}
+
+#search input[type=text]:focus {
+    border: 2px solid #4e0475;
+    background-color: #fff
+}
+
+/*	SUB MENU DIV*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: right;
+    width: 35%;
+    font-weight: bold;
+    right: 0px;
+    margin-right: 21%;
+    background-color: #4e0475;
+    color: #fff;
+}
+
+.searchBeforeClick {
+    display: inline-table;
+}
+
+.searchAfterClick {
+    display: inline-table;
+    width: 6%;
+    margin-right: -10%;
+    position: relative;
+}
+
+#signin_user_name {
+    font-size: 1.2vw;
+    vertical-align: middle;
+}
+
+#signin_user_name:hover {
+    color: #460475
+}
+
+
+/*	DROPDOW CONTACT*/
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 1vw;
+    padding: 3% 8% 3% 3%;
+    color: #fff;
+}
+
+.dropdown-content a:hover {
+    color: #4e0475;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+#signAfterClick {
+    display: none;
+}
+
+.login_dropdown:hover .dropdown-content {
+    display: block;
+}
+
+  @media (max-width: 736px) {
+    /*  HIDE SIGN IN TEXT  */
+ 
+     #signIn {
+         display: none !important;
+     }
+
+     .searchBeforeClick {
+         display: inline-table;
+         width: 6.5%;
+         vertical-align: middle
+     }
+
+     #serchImg {
+         display: block;
+     }
+     /*  HIDE SEARCH TEXT  */
+
+     #search {
+         display: none;
+     }
+
+     #signin_user_name {
+         font-size: 2vw;
+     }
+
+     #line {
+         color: transparent;
+     }
+     /* SERCH AND SIGN ICONS STYLES */
+
+     .search_Login_Icons {
+         vertical-align: middle;
+         width: 180%;
+     }
+
+     .searchAfterClick {
+         width: 6%;
+         z-index: 1;
+         float: right;
+         margin-right: 0%;
+         vertical-align: middle;
+         margin-top: 3%;
+     }
+
+     .dropdown-content {
+         margin-right: 10%;
+         width: 80%
+     }
+
+     .dropdown-content a {
+         font-size: 2vw;
+         line-height: 200%;
+         padding-right: 10%
+     }
+}
+
+
+ /* ---------------------------------  TESTIMONIALS  ------------------------------- */
+    /*  TESTIMONIAL DIV  */
+    .testimonial {
+        text-align: center;
+        vertical-align: middle;
+        padding: 0% 5.5% 0% 5.5%;
+    }
+    
+    /*  TESTIMONIAL TEXT  */
+    .testimonialText-1 {
+        font-size: 1.4vw;
+        color: #000;
+        font-family: 'Lato', sans-serif;
+        font-style: italic;
+        font-weight: bold;
+		text-align: center;
+		margin-top: -68%
+    }
+    
+    /*  TESTIMONIAL TEXT (NAME OF WRITER)  */
+    .testimonialText-2 {
+        font-family: 'Amatic SC', cursive;
+        font-size: 2.5vw;
+        color: #4e0475;
+        margin-top: -5%;
+		text-align: center;
+		text-transform: lowercase;
+    }
+    
+    /*  TESTIMONIAL TEXT (PLACE/ORGANIZATION OF WRITER)  */
+    .testimonialText-3 {
+        font-family: 'Amatic SC', cursive;
+        font-size: 2.2vw;
+        color: #4e0475;
+        margin-top: -18%;
+		text-align: center;
+		text-transform: lowercase;
+    }
+
+    #TestimonialSection_Desktop {
+        width:100%;
+        display: table;
+        margin-top:5%;
+        margin-bottom:2%;
+    }
+	#thriivequotes{
+		width: 36%;
+/*		margin-left: 30%*/
+		margin: auto;
+	}
+
+
+@media (min-width: 737px) {
+	#FooterSection_Mobile {
+		display: none;
+	}
+}
+
+/* ---------------------------------  FOOTER REVISED  ------------------------------- */
+.footerDiv {
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+	background-color: #4e0475;
+	display: table;
+	padding: 0;
+	margin: 0;
+}
+
+
+.socialMediaDivIcon {
+	width: 4.5%;
+	display: inline-table;
+    text-align: center;
+	
+}
+.socialMediaDivIcon:hover img {
+    filter:saturate(5);
+}
+
+.footerButtonDiv {
+	width: 68%;
+	display: table;
+	color: #fff;
+	padding: 1% 0% 1% 0%;
+	margin: auto;
+    text-align: center;
+}
+
+.connectWithUsDiv {
+	width: 18%;
+	display: inline-table;
+}
+
+.signUpDiv,
+.caressDiv{
+	width: 12%;
+    display: inline-table;
+    margin-left: 3%
+}
+
+.connectWithUsDiv:hover img,
+.signUpDiv:hover img,
+.caressDiv:hover img{
+    filter:contrast(115%) brightness(115%);
+}
+
+
+.footerHeading {
+	color: #ffb813;
+	font-size: 1.1vw;
+     margin: 0;
+    margin-top: 3%
+    
+}
+
+.footerText {
+	color: #FFF;
+	font-weight: 400;
+	font-size: 1vw;
+     margin: 0;
+    margin-top: 1.5%;
+    margin-bottom: -1.1%
+   
+}
+
+
+/*  FOOTER COPYRIGHT  */
+
+.copyright {
+	height: 3%;
+	color: #000;
+	font-size: 1vw;
+	text-align: center;
+	background-color: transparent;
+    margin: .3% 0% .3% 0%; 
+    
+}
+
+.copyright h4{
+    margin: 0
+    
+}
+	
+
+/*================= CSS FOR MOBILE DEVISE FOOTER AND HEADDER  =================*/
+
+    @media (max-width: 736px) {
+ 	/*  HIDE FOOTER SECTION IN MOBILE DEVICE*/
+ 	
+#FooterSection_Desktop {
+    display: none !important;
+}
+
+.footerMobileBody {
+    text-align: center;
+    color: #fff;
+    margin-top: 5%
+}
+
+.contact_M {
+    width: 27%;
+    margin: auto;
+    margin-bottom: 1%;
+    display: inline-table;
+}
+
+.NL_M {
+    width: 18%;
+    margin: auto;
+    margin-bottom: 1%;
+    display: inline-table;
+    margin-left: 5%;
+}
+
+.socialMedia_Div_Mobile {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.socialMedia_Icon_mobile {
+    width: 8%;
+    display: inline-table
+}
+
+.Adress_M {
+    font-size: 2vw;
+    margin-bottom: 3%;
+}
+ 	/*  FOOTER COPYRIGHT  */
+ 	.copyright {
+ 	    text-align: center;
+ 	    color: #000;
+ 	    background-color: transparent;
+ 	    font-size: 1.8vw;
+ 	}
+}
+

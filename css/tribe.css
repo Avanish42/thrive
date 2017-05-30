@@ -1,0 +1,354 @@
+ /*   ---------TRIBE MENU IMAGE-----------------   */
+ 
+ .tribe_menu {
+	text-align: center;
+	margin-top: 5%;
+}
+
+
+/*--- GLOBAL AMBASSADORS HEADING ---*/
+
+.global_ambassadors {
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	font-size: 2.8vw;
+	color: #4e0475;
+	margin: 5% 0% 0% 8%;
+	font-weight: bolder;
+	text-transform: lowercase;
+}
+
+
+/*   --------- GLOBAL AMBASSADORS TEXT-----------------   */
+
+.global_ambassadors_text {
+	font-family: 'Lato', sans-serif;
+	color: #414042;
+	font-size: 1.3vw;
+	margin: 1% 0% 0% 8%;
+    font-weight: bold;
+}
+
+
+/*   --------- ABOUT GLOBAL AMBASSADOR SPEAKERS -----------------   */
+
+.tribe_speaker_Div,
+.tribe_friend_Div {
+	display: inline-table;
+	text-align: center;
+	width: 22%;
+	margin-top: 2%;
+    padding-bottom: 5%;
+    cursor: pointer;
+}
+
+.tribe_speaker_Div:hover{
+    filter: contrast(110%) brightness(110%);
+}
+
+.firstDiv {
+	margin-left: 5%;
+}
+
+.secondDiv {
+	margin-left: 15%;
+}
+
+.ambassador_name {
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+	color: #414042;
+	font-size: 1.5vw;
+	text-align: center;
+	text-transform: lowercase;
+	margin: 0;
+}
+
+.Vector_Smart_Object_1 {
+	width: 25%;
+	text-align: center;
+	margin: auto;
+}
+
+.vector_3 {
+	width: 15%;
+	margin: auto;
+	margin-top: -30%
+}
+
+
+.tribe_friend_Div:hover .Befor_Hover {
+	display: none;
+}
+
+.tribe_friend_Div:hover .After_Hover {
+	display: block;
+}
+
+
+.global_ambassador_speaker:first-child {
+	margin-left: 12%;
+}
+
+
+/*   --------- ABOUT GLOBAL AMBASSADOR SPEAKERS TEXT -----------------   */
+
+.about_global_ambassador_speaker {
+	display: block;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	color: #020202;
+	font-size: 0.8vw;
+	line-height: 150%;
+	width: 90%;
+	margin-left: 4%;
+}
+
+
+/*   --------- SPEAKER WEBSITE-----------------   */
+
+.knowMore {
+	font-family: 'Amatic SC', cursive;
+	color: #4e0475;
+	font-size: 1.5vw;
+	text-transform: lowercase;
+}
+
+.speaker_website {
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	color: #020202;
+	font-size: 1vw;
+    padding-bottom: 2%;
+}
+
+/*   --------- DOWN ARROW  -----------------   */
+
+.downarrow {
+	display: none;
+}
+
+
+/*   --------- PREVIOUS ICON  -----------------   */
+
+.previous {
+	display: none;
+}
+
+
+/*   --------- NEXT ICON  -----------------   */
+
+.next {
+	display: none;
+}
+
+
+/*   --------- LOGO IMAGES DESKTOP -----------------   */
+
+.PSSM_Logo {
+	width: 22%;
+    margin: 0% 2% 0% 2%;
+    display: inline-table;
+    filter: contrast(95%) brightness(95%);
+}
+
+.PVI_Logo {
+	width: 22%;
+    margin: 0% 2% 0% 1%;
+    display: inline-table;
+    filter: contrast(95%) brightness(95%);
+}
+
+.LU_logo {
+	width: 35%;
+    margin: 0% 2% 0% 2%;
+    display: inline-table;
+}
+
+.PSSM_Logo:hover,
+.PVI_Logo:hover,
+.LU_logo:hover{
+     filter: contrast(110%) brightness(110%);
+    
+}
+ 
+/*   --------- STYLES FOR MOBILE VERSION -----------------   */
+
+  @media (max-width: 736px) {
+	/*   ---------  DOWN ARROW  -----------------   */
+	.downarrow {
+		display: inline-table;
+		width: 10%;
+		margin: auto
+	}
+	/*   --------- GLOBAL AMBASSADORS  -----------------   */
+	.global_ambassadors {
+		font-size: 6vw;
+		text-align: center;
+		margin-top: 10%;
+		margin-left: 0%;
+		font-weight: bolder;
+	}
+	/*   ---------  GLOBAL AMBASSADORS TEXT  -----------------   */
+	.global_ambassadors_text {
+		font-size: 3vw;
+		line-height: 150%;
+		margin: auto;
+		width: 80%;
+		margin-top: 2%;
+        text-align: center;
+	}
+	.firstDiv {
+		margin-left: 0%;
+	}
+	.secondDiv {
+		margin-left: 0%;
+	}
+	.tribe_speaker_Div,
+	.tribe_friend_Div {
+		width: 80%;
+		margin-left: 12%
+	}
+	.ambassador_name {
+		font-size: 5vw;
+		color: #4e0475;
+	}
+	.After_Hover {
+		display: block;
+	}
+	.about_global_ambassador_speaker {
+		font-size: 2.8vw;
+	}
+	.knowMore {
+		font-size: 3.5vw;
+		margin: 0;
+		display: none;
+	}
+	.speaker_website {
+		font-size: 3vw;
+		margin: 0;
+		color: #4e0475;
+	}
+	.vector_3 {
+		margin-top: -5%;
+	
+	}
+	/*   ---------  PREVIOUS ICON MOBILE -----------------   */
+	.previous {
+		display: inline;
+		width: 10%;
+		float: left;
+		margin-top: 30%;
+        display: block;
+        cursor: pointer;
+	}
+	/*   ---------  NEXT ICON MOBILE -----------------   */
+	.next {
+		display: inline;
+		width: 10%;
+		margin-top: 30%;
+		float: right;
+         display: block;
+        cursor: pointer;
+	}
+      
+      /*   --------- LOGO IMAGES DESKTOP -----------------   */
+
+.PSSM_Logo {
+	width: 25%;
+    margin: 0% 2% 0% 2%;
+}
+
+.PVI_Logo {
+	width: 25%;
+    margin: 0% 2% 0% 1%;
+}
+
+.LU_logo {
+	width: 30%;
+    margin: 0% 2% 0% 2%;
+}
+}
+
+
+/***** FOR HEAZE BROUSERS *****/
+@supports (-ms-ime-align:auto) {
+
+    
+    @media (max-width: 736px) {
+}
+}
+    
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+        
+        @media (max-width: 736px) {
+    
+	}
+        
+	}
+	}
+
+/*****TRIBE SUB PAGE*****/
+
+.tribeImgDiv{
+    display: table-cell;
+    width: 25%;
+    padding-top: 3%
+}
+
+.tribContent{
+    display: table-cell;
+    width: 65%;
+    vertical-align: middle;
+    font-size: 1.3vw;
+    text-align: justify;
+    padding: 0% 2% 1% 5% ;
+    color: #323232;
+    font-family: 'Lato', sans-serif;
+}
+
+.speakerThumImg{
+    width: 11%;
+    display: inline-table;
+    margin:1%;
+    text-align: center;
+    color: #4e0475;
+    font-weight: bold;
+    cursor: pointer;
+    color: #4e0475;
+}
+
+.ambassador_name{
+    color: #4e0475;
+    font-family: 'Lato', sans-serif;
+    font-size: .8vw;
+    margin-bottom: 10%;
+    text-transform: uppercase;
+}
+
+.speakerThumImg:hover {
+    filter: contrast(110%) brightness(110%);
+    
+}
+
+@media (max-width: 736px) {
+    
+    .tribeImgDiv{
+        width: 70%;
+        display: table;
+        margin: auto;
+        margin-top: 5%;
+    }
+    .tribContent{
+        font-size: 3.5vw;
+    }
+    
+    .speakerThumImg{
+        width: 25%;
+        margin-left: 3.5%
+    }
+    
+}
+
+

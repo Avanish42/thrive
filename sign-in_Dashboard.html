@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--    SIGIN IN PAGE TITLE  -->
+        <title>THRIIVE | Login</title>
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css"> <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/style_for_signIn_Dashboard.css"> <!--Styles for Signin Page-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sacramento&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+        
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/JavaScriptFor_Desktop.js"> </script>
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        
+    </head>
+    
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--    CALLING JAVASCRIPT FUNCTIONS TO INVOKE RESPONSIVE DESIGN  -->
+        <script>
+            menuItemSize();
+        </script>
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("ourstory");
+            Set_Menu_HeightAndWidth();
+            firebase.auth().onAuthStateChanged(user => {
+                if(user) {
+                    window.location.assign("account_Page.html");
+                }
+            });
+        </script>
+        
+        <section class=menuSection>
+			<script>
+                display_header_2();
+            </script>
+		</section>   
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+        <section class="totalBodySection">
+      <section class="signIn_section">
+			<!--PREVIOUS BUTTON-->
+			<div class="previousButtons">
+				<a style="cursor: pointer"><img src="images/Next-1B.png" width="100%"></a>
+			</div>
+
+			<!--NEXT BUTTON-->
+			<div class="nextButtons"> 
+				<a style="cursor: pointer;"><img src="images/Next-1A.png" width="100%"></a>
+			</div>
+				
+            <!--USER SIGN IN SECTION-->    
+            <div class="user_signIn">
+			
+					<h2 class="signIn_heading">sign in as a user</h2>
+
+					<div class="singInUserIcon"> <img src="images/SignIn_User_Icon.png" width="100%"></div>
+						<div> <!--E-MAIL DIV--> 
+							<input class="signIn_input" id="txtEmailAsUser" type="email" placeholder="enter your e-mail">
+						</div> 
+
+						<div style="position: relative;"> <!--PASSWORD DIV-->
+							<input class="signIn_input"  id="txtPasswordAsUser" type="password" placeholder="password">
+							<img class="pw_icon" src="images/PW_Eye.png" onclick="showPassword('txtPasswordAsUser');">
+							<p class="forgetPassword">Forget Password ?</p>
+						</div>
+
+						 <div id="btnLogin"  class="btn btn-action">
+                                 <button class="buttonStyles" type="button" id="btnLoginAsUser">
+									<img src="images/submit-button.png" width="100%">
+							 </button>
+                        </div>
+                        <!--LOG IN-->
+
+						<div>
+							<h3 class="notyetSingIn"> Not yet signed in? <br> 
+							<span  class="signUpNow">  <a href="signup.html"> Sign Up Now </a> </span></h3>
+						</div>
+                        
+                        <!-- ERROR OR SUCCESS MESSAGE -->
+                        <div id="SubmitMessage"></div>
+                
+						<hr width="70%">
+
+					<div class="socialMediaDiv_1"> <!--SOCIAL MEDIA DIV-->
+						<div class="socialMediaIcon" style="cursor:pointer">
+                            <img id="gbtnLogin" src="images/SocialMedia_G.png" width="100%"  onclick="gLogin()">
+                        </div> <!--GOOGLE-->
+						<div class="socialMediaIcon" style="cursor:pointer">
+                            <img id="fbtnLogin" src="images/SocialMedia_F.png" width="100%">
+                        </div> <!--FACE BOOK-->
+					</div>
+            </div>
+                
+            <!--PRACTITIONER SIGN IN SECTION-->
+            <div class="practitioner_signIn">
+					<h2 class="signIn_heading">sign in as a practitioner</h2>
+
+					<div class="singInUserIcon"> <img src="images/SignIn_User_Icon.png" width="100%"></div>
+
+					<div> <!--E-MAIL DIV--> 
+						<input class="signIn_input" id="txtEmailAsPractitioner" type="email" placeholder="enter your e-mail">  
+					</div> 
+
+					<div  style="position: relative;"> <!--PASSWORD DIV-->
+						<input class="signIn_input"  id="txtPasswordAsPractitioner" type="password" placeholder="password">
+						<img class="pw_icon" src="images/PW_Eye.png" onclick="showPassword('txtPasswordAsPractitioner');">
+						<p class="forgetPassword">Forget Password ?</p>
+					</div>
+
+					<div id="btnLogin"  class="btn btn-action"> 
+                        <button class="buttonStyles" type="button" id="btnLoginAsPractitioner">
+                            <a href="#"><img src="images/submit-button.png" width="100%"></a>
+                        </button>
+                    </div> <!--LOG IN-->
+
+					<div>
+						<h3 class="notyetSingIn"> Not yet signed in? <br> 
+							<span  class="signUpNow">  <a href="signup_practitioners_2.html"> Sign Up Now </a> </span></h3>
+					</div>
+					<hr width="70%">
+
+					<div class="socialMediaDiv_1"> <!--SOCIAL MEDIA DIV-->
+						<div class="socialMediaIcon"><a style="cursor:pointer; clear:both"><img id="gbtnLogin-2" src="images/SocialMedia_G.png" width="100%"></a> </div> <!--GOOGLE-->
+						<div class="socialMediaIcon"><a href="#"><img src="images/SocialMedia_F.png" width="100%"></a> </div> <!--FACE BOOK-->
+					</div>
+            </div>
+				
+        </section>
+                
+<!--            <script src="js/app.js"></script>-->
+            <script src="js/JavaScriptFor_SignIn.js"> </script> <!-- SIGN IN VALIDATIONS JAVA SCRIPT  -->
+        </section>
+        
+        <!--FOOTER SECTION-->
+        <script>
+           display_footer();
+        </script>
+
+    </body>
+</html>

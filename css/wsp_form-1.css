@@ -1,0 +1,308 @@
+
+    /*BAKGOUND FOR OTHER PAGES DESKTOP DEVISES*/
+    @media only screen and (max-width: 4560px) { 
+    .other_Pagess_body_Backgruond {
+        padding: 0px;
+        margin: 0px;
+        background-image: url(../images/Backgorund_Other_Pages.jpg) !important;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        }  
+    }
+
+
+    @media only screen and (max-width: 736px) {
+        
+    .menuSection{
+        margin: 0% 10% 0% 10%
+    }
+    
+    /*BAKGOUND IMAGE DESKTOP DEVISES*/
+    .other_Pagess_body_Backgruond {
+        padding: 0px;
+        margin: 0px;
+        background-image: url(../images/Backgorund_For_Mobile.jpg) !important;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        }  
+}
+
+.logoDiv{
+    width: 8vw;
+    margin: auto;
+    margin-top: 2%;
+}
+
+    /*  MAIN HEADINGS FOR ALL SECTIONS */
+    .MainHeading {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 3vw;
+		font-weight: 900;
+        text-transform: lowercase;
+        margin: 0;
+    }
+
+.wspInfo{
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    font-size: 2vw;
+    text-align: center;
+    text-transform: none;
+    margin: auto;
+    margin-top: -20%;
+    clear: both;
+    transform: translateY(-200%);
+    }
+
+
+#signIcon,
+#line,
+#signIn{
+    display: none;
+}
+/*  MARGIN FOR BODY */
+.MainBodySection {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+
+
+/*------------------------------  FORM SECTION-----------------------------*/
+.wspInfo{
+       font-family: 'Lato', sans-serif;
+    color: #333;
+    margin-top: 5%;
+    font-size: 1.2vw;
+    text-align: center;
+    
+}
+/*  FORM DIV  */
+
+.ConnectForm {
+    display: table;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+#Connect_Form {
+    font-size: 3vw;
+    color: #4e0475;
+    line-height: 110%;
+    font-weight: bold;
+}
+
+label {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+}
+
+#SuccessMessageDiv {
+    display: none;
+    width: 50%;
+    margin: auto;
+}
+
+#SuccessMessage {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 3vw;
+    color: #4e0475;
+    line-height: 110%;
+    margin: 0;
+}
+
+
+/*  FORM INPUT SECTION  */
+
+.connect_input {
+    width: 100%;
+    height: 3.5vw;
+    border: 0;
+    font-family: 'Lato', sans-serif;
+    padding-left: 4%;
+    color: grey;
+    font-size: 1vw;
+}
+
+
+/*  FORM LEFTSIDE SECTION  */
+
+#FormLeftSide {
+    display: table-cell;
+    width: 45%;
+    float: left;
+    font-size: 2.5vw;
+}
+
+
+/*  FORM RIGHTSIDE SECTION  */
+
+#FormRightSide {
+    display: table-cell;
+    width: 45%;
+    float: right;
+    font-size: 2.5vw;
+}
+
+
+/*  FORM TEXTAREA SECTION  */
+
+.message-textarea {
+    border: none;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 1vw;
+    padding-left: 2%;
+    color: grey;
+    margin-top: 3%
+}
+
+
+/*  FORM SUBMIT */
+
+#ConnectSubmitButton {
+    width: 100%;
+    cursor: pointer;
+}
+#ConnectSubmitButtonDiv{
+    display: inline-table;
+    width: 12%;
+    float: right;
+}
+
+#male,
+#female,
+#primaryCareer_Yes,
+#primaryCareer_No{
+    display: inline-table;
+    width: 6%;
+    cursor: pointer;
+}
+
+.mandatory {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    color: #4e0475;
+    font-size: 2.5vw;
+    text-align: right;
+    margin-top: -2%;
+}
+
+.detailsType {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    color: #4e0475;
+    font-size: 3vw;
+    margin-top: -5%;
+}
+
+
+.dropdown {
+	width: 40vw;
+    height: 2vw;
+/*	background-image: url(../images/theraphy/category_Search.png);*/
+/*	background-repeat: no-repeat;*/
+	display: inline-table;
+	background-position:center;
+/*	background-size: 102%;*/
+/*	padding: .5% 0% .5% 0%;*/
+    background-color: #fff;
+
+    
+}
+
+/*----CATEGORY ICON TEXT (GRID & LIST VIEW) ----*/
+
+.dropdown_text {
+	vertical-align: middle;
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	font-size: 2.2vw;
+	width: 93%;
+	margin-left: 5%;
+	background-color: transparent;
+	border: none;
+    text-align: center;
+/*    margin-top: 3%*/
+    
+}
+
+.error {
+    font-family: 'Areal';
+    color: red;
+    text-align: right;
+    font-size: 1.1vw;
+    line-height: 90%;
+    font-weight: normal;
+    margin-top: 1%;
+}
+
+/*  CSS FOR MOBILE DEVICE  */
+
+@media (max-width: 736px) {
+    
+    .MainHeading {
+        font-size: 5vw;
+    }
+    
+.detailsType{
+    font-size: 4vw    
+    }
+    
+    .dropdown {
+        width: 105%;
+        margin-bottom: 5%;
+        margin-top: 2%;
+    }
+    
+    .dropdown_text{
+        font-size: 4vw;
+        margin-top: 2%;
+    }
+    
+    .connect_input{
+        height: 5vw;
+    }
+    /*  FORM LEFTSIDE  */
+    #FormLeftSide {
+        width: 100%;
+        font-size: 4vw;
+    }
+    /*  FORM RIGHTSIDE  */
+    #FormRightSide {
+        width: 100%;
+        font-size: 4vw;
+    }
+    /*  FORM INPUT SECTION  */
+    input {
+        width: 100%;
+        height: 5vw;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        
+    }
+    /*  FORM DIV SECTION  */
+    #Connect_Form {
+        font-size: 3.2vw;
+    }
+    
+    .connect_input{
+        font-size: 2.5vw;
+    }
+    /*  FORM INPUT TEXTAREA SECTION  */
+    .message-textarea {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 2vw;
+    }
+    .error {
+        font-size: 2.5vw;
+    }
+    
+    #ConnectSubmitButtonDiv{
+        width: 20%
+        }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/accountOverView.css"> <!--styles for Our Story Page-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | Newsletter Preferences</title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("");
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+         <section class="menuSection">
+            <!---------- WEBSITE HEADER  ---------->
+            <script>
+                display_header_2();
+                check_authentication();
+            </script>
+        </section> <!--End of Body Section-->
+            
+        
+            
+            
+            <!----------------------------- PILLAR SECTION ------------------------------->
+            <section class="totalBodySection">
+                
+                 <div class="div_displayTable">
+                    <h3 class="MainHeading">newsletter preferences</h3>
+                     <p class="newsletterText">Your privacy is important to us !<br> <br> Please select your preferences to receive Newsletter</p>
+                </div>
+                
+                <div class="div_displayTable">
+                    <div style="display:inline-table">
+                     <p class="needSupport">Receive Newsletters </p>
+                    </div>
+                    <span class="yes-or-no">Yes</span>
+                    
+                    <div class="radioButton">
+                        <img id="yes" src="images/attachments/radioButton-2.png" width="100%" onclick="newsletters_yes();"> 
+                    </div>  
+                  <span class="yes-or-no">No</span>
+                    <div class="radioButton">
+                        <img id="no" src="images/attachments/radioButton.png" width="100%" onclick="newsletters_no();"> 
+                    </div>
+                </div>
+                
+                <div class="div_displayTable" style="margin-bottom:10%; margin-top:5%">
+                    <div class="AccountleftDiv">
+                            <span class="needSupport">Language</span>
+                         <div id="languagediv" class="dropdown">
+                            <select class="dropdown_text">
+                               <option value="">English</option>
+<!--                               <option value="">Hindi</option>-->
+                             </select>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        
+                        <span class="needSupport">Newsletter Category</span>
+                         <div class="dropdown">
+                            <select class="dropdown_text">
+                               <option value="">option-1</option>
+                               <option value="">option-2</option>
+                               <option value="">option-3</option>
+                             </select>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                    <div id="submit"><img src="images/submit-button.png" width="100%"></div>
+                
+               
+                
+                
+            </section>
+
+            
+            
+            
+            <!--FOOTER SECTION-->
+            <script>
+               display_footer();
+            </script>
+        
+        <!--change reaio buttons-->
+        <script>
+            //TO CHANGE RAIO BUTTONS
+    function newsletters_yes(){
+
+        var yes = document.getElementById("yes");
+        var no = document.getElementById("no");
+
+        no.setAttribute("src", "images/radioButton.png");
+        yes.setAttribute("src", "images/radioButton-2.png");
+    }
+   function newsletters_no(){
+        yes.setAttribute("src", "images/radioButton.png");
+        no.setAttribute("src", "images/radioButton-2.png");
+    }
+
+        </script>
+		
+    </body>
+</html>

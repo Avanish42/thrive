@@ -1,0 +1,522 @@
+
+     /***ERO SECTION DESKTOP***/ 
+/*/-------------------------------/*/
+
+.mainVideoDivBg {
+/*    background: url(../images/audioDivBg_2.png) no-repeat center;*/
+    background: url(../images/audioDivBg_3.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 2.6% 1.5% 2.6% 1.5%;
+    height: 36.5vw;
+    width: 82.5%;
+    margin-left: 7.4%;
+}
+
+.subHeading {
+    color: #4e0475;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: -1;
+    ;
+}
+
+.audioDetails {
+    margin-left: 8.5%;
+    width: 83%;
+    font-family: 'Lato', sans-serif;
+    color: #5C5D5F;
+    font-size: 1.2vw;
+}
+
+.socialMediaDiv_GM {
+    width: 25%;
+    right: 0;
+    display: inline-table;
+    margin-left: 8.5%;
+}
+
+
+/******* HERO SECTION MOBILE *******/
+
+@media (max-width: 736px) {
+    .mainVideoDivBg {
+        width: 73vw;
+        height: 40vw;
+        padding: 1%
+            background-size: 100%;
+    }
+    .subHeading {
+        font-size: 3vw;
+    }
+    .audioDetails {
+        font-size: 2.5vw;
+        font-weight: normal;
+    }
+    .socialMediaDiv_GM {
+        width: 50%
+    }
+}
+
+
+/*--------------------------------------------*/
+/* -----THRIIVE WORLD SECTION FOR DESKTOP-----*/
+/*--------------------------------------------*/
+
+
+
+.TW_PreviousButton,
+.TW_NextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.TW_SubHeadding {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 4%;
+    margin-top: 0%
+}
+
+.video_set{
+    width: 50%;
+    display: inline-table;
+}
+.video_div {
+    width: 15vw;
+    height: 22.5vw;
+    display: inline-table;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video1{
+    margin-left: 5%
+}
+.video2{
+    margin-left: 8%
+}
+
+.video3{
+    margin-left: 4%
+}
+
+.video4{
+    margin-left: 8%
+}
+
+.slider {
+    width: 15vw;
+    height: 22.5vw;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide1 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide2 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide3 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .BG_slide {
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1,
+.slide2,
+.slide3 {
+    width: 100%;
+    display: none;
+    cursor: pointer;
+}
+
+.BG_slide {
+    width: 100%;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1 {
+    margin-top: -22.5vw;
+    animation: fade 8s infinite;
+    -webkit-animation: fade 8s infinite;
+}
+
+.slide2 {
+    margin-top: -22.5vw;
+    animation: fade2 8s infinite;
+    -webkit-animation: fade2 8s infinite;
+}
+
+.slide3 {
+    margin-top: -22.5vw;
+    animation: fade3 8s infinite;
+    -webkit-animation: fade3 8s infinite;
+} 
+    
+@keyframes fade{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+    
+@keyframes fade2{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+    
+@keyframes fade3{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+    
+.infoText {
+     width: 100%;
+     height: 4vw;
+     background-color: #4e0475;
+     text-align: center;
+     color: #fff;
+     padding-top: 3%;
+     margin-top: 61.6%;
+     -webkit-transition: all 1s ease-in-out;
+ }
+.infoText span{
+    width: 90%;
+    margin: auto;
+}
+ 
+ .PlayButton {
+     background: url(../images/PlayButton.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     margin: auto;
+     opacity: 0;
+     position: relative;
+     margin-top: -85%;
+     cursor: pointer;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .PlayButton:hover {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .video_div:hover .PlayButton {
+     opacity: .8
+ }
+ 
+ .video_div:hover .BeforeText {
+     display: none;
+ }
+ 
+ .video_div:hover .AfterText {
+     display: block;
+ }
+ 
+ .BeforeText {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.1vw;
+     
+}
+ 
+ .AfterText {
+    display: none;
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: .8vw;
+ }
+
+/*--------------------------------------------*/
+/* -----VIDEO SECTION FOR MOBILE-----*/
+/*--------------------------------------------*/
+
+
+@media (max-width: 736px) {
+    .TW_PreviousButton,
+    .TW_NextButton {
+         width: 8%;
+         display: table-cell;
+         transform: translateY(0%)
+ }
+ 
+ .TW_SubHeadding {
+     font-size: 2.5vw;
+     font-weight: 400;
+ }
+.video_set{
+    width: 100%;
+    display: inline-table;
+}
+
+    
+ .slider,
+ .video_div {
+     width: 28vw;
+     height: 43.2vw;
+     display: inline-table;
+ }
+    
+    .video_div:hover{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+        
+    }
+ 
+ .BG_slide {
+     width: 100%;
+ }
+ 
+ .slide1 {
+     margin-top: -43.2vw;
+     
+ }
+ 
+ .slide2 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .slide3 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .infoText {
+     padding-top: 8%;
+     margin-top: 48%;
+     height: 7vw;
+ }
+    
+ 
+ .PlayButton {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     opacity: 1;
+     width: 6vw;
+     height: 6vw;
+     margin-top: -75%;
+ }
+ 
+ .PlayButton:hover {
+     width: 6vw;
+     height: 6vw;
+     opacity: 1;
+ }
+    
+    .BeforeText {
+        font-size: 2.2vw;
+    }
+    
+    .AfterText {
+        font-size: 1.5vw;
+    }
+}
+    
+
+
+
+/*** AUDIO SECTION FOR DESKTOP ***/
+/*/-------------------------------/*/
+
+
+/*NEXT AND PREVIOUS BUTTONS*/
+
+.audioPreviousButton,
+.audioNextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    transform: translateY(-15%)
+}
+
+.audioDiv {
+    width: 30%;
+    display: inline-table;
+    text-align: center;
+    margin-left: 2.5%;
+}
+
+
+/*AUDIO BLOG-1*/
+
+.audioBlog_1 {
+    width: 21.5vw;
+    height: 14.2vw;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/W_AV_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1;
+}
+
+.audioBlog_2 {
+    width: 21.5vw;
+    height: 14.2vw;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/W_AV_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1%;
+}
+
+.audioBlog_3 {
+    width: 21.5vw;
+    height: 14.2vw;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/W_AV_BG.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1;
+}
+
+.audioBlog_1 iframe,
+.audioBlog_2 iframe,
+.audioBlog_3 iframe {
+    width: 19vw;
+    height: 12.2vw;
+    margin-top: 5%
+}
+
+.TW_Caption {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #4e0475;
+    font-size: 2.5vw;
+    font-weight: 900;
+    margin-top: 0
+}
+
+.TW_SubCaption {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    color: #000;
+    margin-top: -11%;
+    font-weight: 400;
+}
+
+
+
+/* -----AUDIO SECTION FOR MOBILE-----*/
+/*--------------------------------------------*/
+@media (max-width: 736px) {
+    
+    .audioPreviousButton,
+    .audioNextButton {
+        width: 8%;
+    }
+    #audioDiv2,
+    #audioDiv3 {
+        display: none;
+    }
+    .audioDiv {
+        width: 80%;
+        margin-left: 11%
+    }
+    /*AUDIO BLOG-1*/
+    .audioBlog_1,
+    .audioBlog_2,
+    .audioBlog_3 {
+        width: 52vw;
+        height: 36vw;
+    }
+    .audioBlog_1 iframe {
+        width: 90%;
+        height: 30vw;
+    }
+}
+
+/***** FOR MOZILLA BROUSERS *****/
+
+@-moz-document url-prefix() {
+    
+.TW_Caption_videos{
+	width: 14.7vw;
+}
+
+.TW_SubCaption_videos{
+	width: 14.7vw;
+}
+    
+    
+
+/*THRIIVE TALKS*/
+
+.ThriiveTalksDiv_1 {
+    width: 28%;
+    height: 20vw;
+    margin-left: -2%
+}
+
+.ThriiveTalksDiv_2 {
+    width: 27%;
+    height: 20vw;
+    display: inline-table;
+}
+
+.ThriiveTalksDiv_3 {
+    width: 22%;
+    height: 21vw;
+    padding: 0% 0% 0% 5%;
+    margin-right: -5%;
+}
+
+}
+
+/***** FOR HEAZE BROUSERS *****/
+
+@supports (-ms-ime-align:auto) {
+    
+    
+.TW_PreviousButton,
+.TW_NextButton {
+    transform: translateY(35%);
+}
+    
+}

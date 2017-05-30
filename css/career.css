@@ -1,0 +1,255 @@
+/**************************************/
+    /*CONNECT PAGE STYLES*/
+/**************************************/
+
+
+/*  MARGIN FOR BODY */
+
+.MainBodySection {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.row {
+    width: 100%;
+    display: table;
+}
+
+.Vacancy_left {
+    width: 48%;
+    display: inline-table;
+}
+
+.Vacancy_Right {
+    width: 48%;
+    display: inline-table;
+    margin-left: 4%
+}
+
+
+/*  CAREER PAGE HEADING  */
+.career-heading {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2.5vw;
+    color: #4e0475;
+    text-align: justify;
+    font-weight: bold;
+    margin-bottom: -1%;
+}
+
+
+/*  CAREER PAGE PARAGRAPH  */
+.career-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3vw;
+    text-align: justify;
+    color: #58595b;
+}
+
+
+/*  FORM SAMPLE HEADING  */
+.sample-heading {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2.5vw;
+    color: #4e0475;
+    text-align: justify;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+
+/*  FORM SAMPLE PARAGRAPH  */
+
+.sample-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3vw;
+    text-align: justify;
+    color: #58595b;
+    margin-top: 0;
+}
+
+#SuccessMessageDiv {
+    display: none;
+    width: 50%;
+    margin: auto;
+}
+
+#SuccessMessage {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3vw;
+    color: #4e0475;
+    line-height: 110%;
+    margin: 0;
+}
+
+
+/*------------------------------  FORM SECTION-----------------------------*/
+
+
+/*  FORM DIV  */
+
+.CareerForm {
+    display: table;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+label {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2.5vw;
+    color: #4e0475;
+    line-height: 110%;
+    font-weight: bold;
+}
+
+
+/*  FORM INPUT SECTION  */
+
+.Career_input {
+    border: 0;
+    height: 3vw;
+    font-family: 'Lato', sans-serif;
+    padding-left: 4%;
+    color: grey;
+    font-size: 1.5vw;
+    width: 100%;
+}
+
+
+/*  FORM LEFTSIDE SECTION  */
+
+#Career_FormLeftSide {
+    display: inline-table;
+    width: 45%;
+    font-size: 2.5vw;
+}
+
+
+/*  FORM RIGHTSIDE SECTION  */
+
+#Career_FormRightSide {
+    display: inline-table;
+    width: 46%;
+    font-size: 2.5vw;
+    margin-left: 7%;
+}
+
+
+/*  FORM TEXTAREA SECTION  */
+
+.Career-message-textarea {
+    border: none;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 2vw;
+    padding-left: 2%;
+    color: grey;
+}
+
+
+/*  FORM SUBMIT BUTTON  */
+
+#career_SubmitButton_left {
+    width: 12%;
+    display: inline-table;
+    cursor: pointer;
+}
+
+#career_SubmitButton_left img{
+    width: 100%
+}
+
+#career_SubmitButton_left:hover img{
+     filter:saturate(1.6);
+}
+
+/*  FORM ERROR MESSAGE  */
+
+.error {
+    font-family: 'Areal';
+    color: RED;
+    text-align: right;
+    font-size: 1vw;
+    margin-top: 1%
+}
+
+
+/*  CSS FOR MOBILE DEVICE  */
+
+@media (max-width: 736px) {
+    /* ------------  CONNECT  ------------ */
+    /*  FORM LEFTSIDE FOR MOBILE  */
+    #Career_FormLeftSide {
+        display: table;
+        width: 100%;
+        font-size: 5vw;
+    }
+    /*  FORM RIGHTSIDE FOR MOBILE  */
+    #Career_FormRightSide {
+        display: table;
+        width: 100%;
+        font-size: 5vw;
+        margin-left: 0;
+    }
+    /*  FORM INPUT SECTION FOR MOBILE  */
+    .Career_input {
+        width: 96%;
+        height: 5vw;
+        font-size: 2vw;
+    }
+    label {
+        font-size: 4vw;
+    }
+    .error {
+        font-family: 'Areal';
+        color: RED;
+        text-align: right;
+        font-size: 2vw;
+    }
+
+
+.career-heading {
+    font-family: 'Amatic SC', cursive;
+    font-size: 4vw;
+    color: #4e0475;
+    text-align: justify;
+}
+
+.career-description {
+    font-size: 2.5vw;
+    text-align: justify;
+}
+
+.sample-heading {
+    font-size: 4vw;
+}
+
+.sample-description {
+    font-size: 2.5vw;
+}
+
+.Vacancy_left {
+    width: 100%;
+    display: table;
+}
+
+.Vacancy_Right {
+    width: 100%;
+    display: table;
+    margin-left: 0;
+}
+
+.Career-message-textarea{
+    width: 98%
+}
+
+#career_SubmitButton_left{
+    width: 20%;
+}
+
+
+}

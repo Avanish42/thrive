@@ -1,0 +1,987 @@
+@media (min-width: 737px) {
+    #whatsHappening_Buttons_Mobile {
+        display: none;
+    }
+    #WH_Grid_Dektop {
+        display: none;
+    }
+
+}
+        
+      
+/* CALENDER HERO SECTION */
+
+#calanderHeroSection {
+    padding: 5% 0% 5% 0%;
+    width: 80%;
+    display: table-cell;
+}
+
+
+/* CALANDER HERO NAVIGATION BUTTONS */
+#whatHappeningNextButton {
+    float: right;
+    margin: 0% 0% 230% 0%
+}
+
+#whatHappeningPrevioustButton {
+    float: left;
+    margin: 0% 0% 230% 0%
+}
+
+.tagLine{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+
+/*----KEYWORD ICON (GRID & LIST VIEW) ----*/
+/*
+
+.keyword_Whathappening {
+    width: 10vw;
+    height: 3vw;
+    background-image: url(../images/theraphy/keyword.png);
+    background-repeat: no-repeat;
+    display: inline-table;
+    background-size: 100%;
+    padding: .4% 0% .4% 2%;
+    margin-left: 7.5%;
+    text-align: center;
+}
+*/
+
+
+/*----KEYWORD ICON TEXT (GRID & LIST VIEW) ----*/
+/*
+
+.keyword_text_Whathappening {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    vertical-align: middle;
+    font-size: 2.2vw;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    width: 75%;
+    border: 0;
+    margin-left: -25%;
+}
+*/
+
+
+/*----CATEGORY ICON (GRID & LIST VIEW) ----*/
+/*
+
+.dropdown_Whathappening {
+    width: 10vw;
+    height: 3vw;
+    background-image: url(../images/theraphy/therapies.png);
+    background-repeat: no-repeat;
+    display: inline-table;
+    background-size: 100%;
+    padding: .4% 0% .4% 2%;
+    margin-left: 6%;
+    text-align: center;
+}
+*/
+
+
+/*----CATEGORY ICON TEXT (GRID & LIST VIEW) ----*/
+/*
+
+.dropdown_text_Whathappening {
+    vertical-align: middle;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    text-align: center;
+    width: 85%;
+    background-color: transparent;
+    border: none;
+}
+*/
+
+
+/*----CATEGORY ICON TEXT (GRID & LIST VIEW) ----*/
+/*
+
+.whatsHappeningButtons {
+    width: 4.8%;
+    display: inline-table;
+    text-align: center;
+    vertical-align: middle;
+    margin: 1% 0% 0% 1%;
+    cursor: pointer;
+    visibility: hidden;
+}
+*/
+
+
+/******SERCH CSS******/
+
+.searchMailDiv{
+    width:70%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    margin-left: 12.2%;
+}
+.CityDiv{
+    width: 25%;
+    display: inline-table;
+    margin-right: 3%;
+}
+.serchDiv{
+    width: 70%;
+    display: inline-table;
+}
+
+.CityDiv input{
+    width: 100%;
+    height: 2.6vw;
+    color: #333;
+    border-radius: 10px 10px;
+    padding: 0% 0% 0% 8%;
+    font-size: 1.2vw;
+    border: 2px solid lightgray;
+}
+
+
+.serchDiv input{
+    width: 100%;
+    height: 2.6vw;
+    color: #333;
+    border-radius: 10px 10px;
+    padding: 0% 10% 0% 3%;
+    font-size: 1.2vw;
+    border: 2px solid lightgray;
+    background-image: url(../images/Search_2.png);
+    background-position: center right; 
+    background-repeat: no-repeat;
+    background-size: 7%;
+}
+
+.CityDiv input:focus,
+.serchDiv input:focus{
+    border: 2px solid #4e0475;
+}
+
+    
+
+/*******************************************************/
+            /*WHAT HAPPENING PAGE STYLES*/
+/*******************************************************/
+
+/* EVENT CALENDAR(After Here Section)*/
+
+#event_Calendar_Month_Section {
+    width: 100%;
+    background-color: #4a046f;
+    color: #fff;
+    text-align: center;
+    padding: 1% 0% 1% 0%;
+    margin-bottom: 3%;
+}
+
+
+/* EVENT CALENDAR PREVIOUS NEXT BUTTONS*/
+
+#event_Calendar_Month_PreviousNextButtons {
+    width: 40%;
+    display: table;
+    margin: auto;
+}
+
+
+/*EVENT MONTH AND DATE SECTION (Purple color Section)*/
+
+#current-month_desktop {
+    display: inline-table;
+    vertical-align: middle;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 4vw;
+    color: #ffb814;
+    padding: 0;
+    font-weight: 900;
+}
+
+/* NEXT & PREVIOUS BUTTONS FOR EVENT MONT*/
+
+#monthPreviousButton {
+    float: left;
+    margin: 4.5% -30% 0% 20%;
+}
+
+#monthNextButton {
+    float: right;
+    margin: 4.5% 20% 0% -35%
+}
+
+.Date_previousButton:hover,
+.Date_NextButton:hover,
+#monthPreviousButton:hover,
+#monthNextButton:hover{
+        filter:opacity(85%);
+}
+
+
+
+
+/*DATE SECTION*/
+
+#calendar {
+    width: 80%;
+    padding: 1% 0% 1% 0%;
+    display: table;
+    font-family: 'Lato', sans-serif;
+    margin: auto;
+}
+
+#calendar_mobile {
+    width: 80%;
+    padding: 1% 0% 1% 0%;
+    display: table;
+    font-family: 'Lato', sans-serif;
+    margin: auto;
+}
+
+
+    .normal_day a,
+    .event_day a,
+    .current_day a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+.next_month_day p{
+    font-size: 2vw;
+    margin:0;
+    padding:0;
+}
+
+.next_month_day {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-table;
+    margin: 1% .5% 1% .5%;
+    color: #7e439f;
+    font-weight: 500;
+}
+
+.current_day {
+    width: 3vw;
+    height: 3vw;
+    background-color: #ffb814;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-table;
+    margin: 1% .5% 1% .5%;
+    color: #4a046f;
+}
+
+.event_day {
+     width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-table;
+    margin: 1% .5% 1% .5%;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.normal_day {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-table;
+    margin: 1% .5% 1% .5%;
+    color: #fff;
+}
+
+.date {
+    font-size: 2vw;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-top: 5%;
+}
+
+[data-notifications] {
+    position: relative;
+}
+
+[data-notifications]:after {
+    content: attr(data-notifications);
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    color: #4a046f;
+    right: -10%;
+    top: -10%;
+    font-size: .7vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    width: 1vw;
+    height: 1vw;
+}
+
+.Date_previousButton {
+    display: inline-table;
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+    transform: translateY(20%);
+}
+
+.Date_NextButton {
+    display: inline-table;
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+    transform: translateY(20%);
+} 
+
+
+/****MOBILE DEVISE****/
+
+@media (max-width: 737px) {
+    
+    #current-month_mobile {
+        display: inline-table;
+        font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+        font-size: 5vw;
+        color: #ffb814;
+        font-weight: bold;
+        margin-top: 3%
+    }
+    
+    #monthPreviousButton_mobile {
+        float: left;
+        margin: 6% -30% 0% 20%;
+        width: 3.5vw;
+    }
+    
+    #monthNextButton_mobile {
+        float: right;
+        margin: 5.5% 20% 0% -35%;
+        width: 3.5vw;
+    }
+    
+    .Date_previousButton {
+        width: 2.8vw;
+        transform: translateY(20%);
+    }
+    
+    [data-notifications]:after {
+        background: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        right: -15%;
+        top: -12%;
+        font-size: 1.5vw;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        width: 2vw;
+        height: 2vw;
+    }
+    
+    .Date_NextButton {
+        width: 2.8vw;
+        transform: translateY(20%);
+    }
+    
+    .next_month_day p {
+        font-size: 4vw;
+    }
+    
+    .next_month_day {
+        width: 5.5vw;
+        height: 5.5vw;
+        margin: 1% 1.2% 1% 1.2%;
+    }
+    
+    .current_day {
+        width: 5.5vw;
+        height: 5.5vw;
+        margin: 1% 1.2% 1% 1.2%;
+    }
+    
+    .event_day {
+        width: 5.5vw;
+        height: 5.5vw;
+        margin: 1% 1.2% 1% 1.2%;
+        border: 2px solid #fff;
+    }
+    
+    .normal_day {
+        width: 5vw;
+        height: 5vw;
+        margin: 1% 1.2% 1% 1.2%;
+    }
+    
+    .date {
+        font-size: 3.8vw;
+    }
+}
+   
+
+
+
+/***********************************************/
+       /* LIST VIEW (DESKTOP )*/
+/***********************************************/
+
+   /* EVENT-1 DIV STYLES*/
+    .Event_Block_List{
+        width:20%;
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 6.8%
+    }
+
+    .Event_Block_List:hover {
+        filter:contrast(110%) brightness(110%);
+        }
+
+    /* EVENT DETAILS BLOCK*/
+    .Event_Block_Details_List{
+        width:65%;
+        display: inline-table;
+        vertical-align: middle;
+        margin-left: 2%
+    }
+
+
+    .Event_Name_List{
+       font-family: 'Amatic SC', cursive; 
+		text-transform: lowercase;
+        font-size: 3vw;
+        color: #520475;
+        margin-top: -4%;
+        margin-left: 0
+        }
+
+    .Event_description_List{
+        font-family: 'Lato', sans-serif;
+        font-size: 1.3vw;
+        color: #333333;
+        margin-top: -5%;
+        padding-right: 2.5%;
+        text-align: justify;
+		font-weight: normal;
+    }
+
+    .knowMore_Event_L{
+        width:25%;
+        display:inline-table;
+        }
+    .knowMore_Event_L:hover img{
+        filter:saturate(2);
+    }
+
+/***********We Hide the Social Media Icons***********/
+
+    .Event_Social_Media{
+        width:5%; 
+        float:right; 
+        display:inline-table;
+		padding: 0% .8% 0% .8% ;
+        cursor: pointer;
+        display: none;
+    }
+    .Event_Social_Media:hover img{
+        filter:saturate(5);
+    }
+
+    /* STYLE FOR EVENT INFO */
+    .event_Image_day_L {
+        text-align:center;
+        font-size:3vw;
+        color:#fff;
+        margin-top:-73%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+    }
+    .event_Image_month_L {
+        text-align:center;
+        font-size:2.3vw;
+        color:#fff;
+        margin-top:-18%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+
+
+
+
+/***********************************************/
+       /* GIRD VIEW (DESKTOP)*/
+/***********************************************/
+
+    
+    /* EVENT-1 DIV STYLES*/
+    .Event_Block-1{
+        width:22%;
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+        margin-left:7%;
+        margin-bottom: 5%;
+    }
+
+    /* EVENT-2 DIV STYLES*/
+    .Event_Block-2{
+       width:22%;
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0% 10% 0% 10%;
+        margin-bottom: 5%;
+    }
+
+    /* EVENT-3 DIV STYLES*/
+    .Event_Block-3{
+        width:22%;
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+        margin-bottom: 5%;
+    }
+
+.Event_Block-1:hover ,
+.Event_Block-2:hover ,
+.Event_Block-3:hover {
+filter:contrast(110%) brightness(110%);
+}
+
+    /*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+    .Event_Caption {
+       font-family: 'Amatic SC', cursive; 
+		text-transform: lowercase;
+        text-align: center;
+        color: #4e0475;
+        font-size: 2.5vw;
+    }
+    
+    /*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+    .Event_SubCaption {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size: 1.5vw;
+        color: #000;
+        margin-top: -15%;
+        font-weight: 400;
+    }
+
+    /* STYLE FOR EVENT INFO */
+    .event_Image_day{
+        text-align:center;
+        font-size:3vw;
+        color:#fff;
+        margin-top:-70%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+    }
+    .event_Image_month{
+        text-align:center;
+        font-size:2.8vw;
+        color:#fff;
+        margin-top:-18%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+     .knowMore_Event_G{
+        width:50%;
+        display:inline-table;
+        margin-top: -15%;
+    }
+.knowMore_Event_G:hover img {
+     filter:saturate(2);
+    
+}
+
+
+    /***********************************************/
+        /****** MOBIEL DEVICE******/
+
+@media (max-width: 737px) {
+    
+    #WH_Grid_Dektop {
+          display: none;
+      }
+      
+      #whatsHappening_Buttons_Desktop {
+          display: none;
+      }
+      
+      .keyword_Whathappening {
+          width: 20VW;
+          height: 6VW;
+          margin-left: 12%;
+      }
+      
+      .keyword_text_Whathappening {
+          font-size: 4vw;
+      }
+      
+      .dropdown_Whathappening {
+          width: 20vw;
+          height: 6vw;
+      }
+      
+      .dropdown_text_Whathappening {
+          font-size: 4vw;
+          font-weight: 600;
+      }
+      
+      .whatsHappeningButtons {
+          width: 6%;
+          margin: 1% 2% 1% 1%;
+      }
+      /* NEXT & PREVIOUS BUTTONS FOR EVENT MONT*/
+      
+      #monthPreviousButton {
+          float: left;
+          margin: 2% -20% 0% 20%;
+          width: 5%;
+      }
+      
+      #monthNextButton {
+          float: right;
+          margin: 2% 20% 0% -20%;
+          width: 5%;
+      }
+    
+      /* NEXT & PREVIOUS BUTTONS FOR DATE SECTION*/
+      #datePreviousButton {
+          margin: 5% 1% 1% 0%;
+          width: 150%;
+          display: inline-table;
+      }
+      
+      #dateNextButton {
+          margin: 0% 0% 1% 1%;
+          width: 150%;
+      }
+      
+      #datePreviousButton_mobile {
+          margin: 5% 1% 1% 0%;
+          width: 150%;
+          display: inline-table;
+      }
+      
+      #dateNextButton_mobile {
+          margin: 0% 0% 1% 1%;
+          width: 150%;
+      }
+    
+      /* EVENT CALENDAR PREVIOUS NEXT BUTTONS*/
+      #event_Calendar_Month_PreviousNextButtons {
+          width: 60%;
+          display: table;
+          margin: auto;
+      }
+      
+      #event_Calendar_Month_PreviousNextButtons_mobile {
+          width: 60%;
+          display: table;
+          margin: auto;
+      }
+      
+      #calendar {
+          width: 100%;
+          display: table;
+          font-family: 'Lato', sans-serif;
+          margin: auto;
+          vertical-align: middle;
+      }
+        
+        
+        
+  /*********** GRID VIEW MOBIEL DEVICE /***********  
+        
+        
+/* EVENT-1 DIV STYLES*/
+
+    .Event_Block-1 {
+     width: 38%;
+     margin-left: 9%;
+     margin-bottom: 8%;
+    }
+    
+     /* EVENT-2 DIV STYLES*/
+     .Event_Block-2 {
+         width: 38%;
+         padding: 0%;
+         margin-left: 9%;
+         margin-bottom: 8%;
+     }
+
+     /* EVENT-3 DIV STYLES*/
+     .Event_Block-3 {
+         width: 38%;
+         margin-left: 9%;
+         margin-bottom: 8%;
+     }
+    
+   
+
+     /*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+     .Event_Caption {
+         font-size: 5vw;
+         margin-top: 12%;
+         line-height: 100%;
+     }
+
+     .event_Image_day {
+         font-size: 5vw;
+         margin-top: -72%;
+     }
+
+     .event_Image_month {
+         font-size: 4.5vw
+     }
+
+     /*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+     .Event_SubCaption {
+         font-size: 2.7vw;
+         margin-top: -15%;
+     }
+
+     .knowMore_Event_G {
+         width: 60%;
+     }
+        
+
+/*********** LIST VIEW MOBIEL DEVICE /***********
+
+    
+    
+/******SERCH CSS******/
+.searchMailDiv{
+    margin-left: 16%;
+}
+    
+.CityDiv{
+    width: 25%;
+    display: inline-table;
+}
+    
+.serchDiv{
+    width: 70%;
+    display: inline-table;
+}
+
+.CityDiv input{
+    width: 100%;
+    height: 4vw;
+    color: #333;
+    border-radius: 5px 5px;
+    padding: 0% 0% 0% 5%;
+    font-size: 2vw;
+}
+
+
+.serchDiv input{
+    width: 100%;
+    height: 4vw;
+    color: #333;
+    border-radius: 5px 5px;
+    padding: 0% 10% 0% 3%;
+    font-size: 2vw;
+    border: 2px solid lightgray;
+    background-size: 10%;
+}
+    .tagLine{
+        font-size: 3vw;
+    }
+
+    /* EVENT-1 DIV STYLES*/
+    .Event_Block_List {
+        width: 28%;
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 12%
+    }
+
+    .event_Image_day_L {
+        font-size: 4.5vw;
+        margin-top: -80%;
+    }
+
+    .event_Image_month_L {
+        font-size: 3.5vw;
+    }
+
+
+    /* EVENT DETAILS BLOCK*/
+
+    .Event_Block_Details_List {
+        width: 50%;
+        display: inline-table;
+        vertical-align: middle;
+        margin-left: 2%
+    }
+
+    .Event_Name_List {
+        font-size: 4vw;
+        margin-top: 0%;
+        margin-left: 0
+    }
+
+    .Event_description_List {
+        font-size: 2.2vw;
+        margin-top: -6%;
+        padding-right: 1%;
+        text-align: justify;
+    }
+
+    .knowMore_Event_L {
+        width: 40%;
+        display: inline-table;
+    }
+
+    .Event_Social_Media {
+        width: 9%;
+        float: right;
+        display: inline-table;
+        margin: 0% .8% 0% .8%;
+    }
+
+    }
+
+/*TESTMONIAL CSS*/
+.testimonialText-3{
+    margin-top: -15%;
+}
+
+/***** FOR MOZILLA BROUSERS *****/
+@-moz-document url-prefix() {
+    .keyword_text_Whathappening {
+        margin-left: -40%
+    }
+    .dropdown_text_Whathappening {
+        width: 100%;
+        text-align: left;
+    }
+    
+@media (max-width: 737px) {
+        [data-notifications]:after {
+            right: -10%;
+            top: -2%;
+        }
+        .keyword_text_Whathappening {
+            vertical-align: top;
+        }
+        .dropdown_text_Whathappening {
+            vertical-align: top;
+        }
+    }
+}
+
+
+/***** FOR HEAZE BROUSERS *****/
+@supports (-ms-ime-align:auto) {
+    #whatHappeningNextButton {
+        margin: -270% 0% 10% 0%
+    }
+    #whatHappeningPrevioustButton {
+        margin: -270% 0% 10% 0%
+    }
+    .Event_Block_List {
+        margin-bottom: 5%;
+    }
+    .Event_Block_List img {
+        width: 100%
+    }
+    .knowMore_Event_L img {
+        width: 100%
+    }
+    .Event_Social_Media img {
+        width: 100%
+    }
+    .Event_Block-1 img,
+    .Event_Block-2 img,
+    .Event_Block-3 img {
+        width: 100%
+    }
+    .knowMore_Event_G img {
+        width: 100%
+    }
+    .footerDiv {
+        margin-top: 10%;
+    }
+    .Date_previousButton {
+        transform: translateY(110%);
+    }
+    .Date_NextButton {
+        transform: translateY(110%);
+    }
+}
+
+
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+        
+    .Event_Block_List img {
+        width: 100%
+    }
+    .knowMore_Event_L img {
+        width: 100%
+    }
+    .Event_Social_Media img {
+        width: 100%
+    }
+    .Event_Block-1 img,
+    .Event_Block-2 img,
+    .Event_Block-3 img {
+        width: 100%
+    }
+    .knowMore_Event_G img {
+        width: 100%
+    }
+        
+    .knowMore_Event_G {
+        margin-top: -2%;
+    }
+        
+    .Event_Block_List,
+    .Event_Block_Details_List{
+        margin-bottom: 5%
+    }
+        
+	}}
+
+

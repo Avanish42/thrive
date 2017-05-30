@@ -1,0 +1,389 @@
+
+/*******IMAGE GALLERY SECTION*******/
+.mainGalleryDivBg {
+	width: 89%;
+	margin-left: 5%;
+}
+
+.subHeading {
+	color: #4e0475;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5vw;
+	text-align: center;
+	margin-top: -1;
+	;
+}
+
+.galleryDetails {
+	margin-left: 5%;
+	width: 86%;
+	font-family: 'Lato', sans-serif;
+	color: #5C5D5F;
+	padding: 0% 1% 0% 1%;
+	font-size: 1.2vw;
+}
+
+.socialMediaDiv_Thriive_world {
+	width: 25%;
+	right: 0;
+	display: inline-table
+}
+
+.socialMediaDivIcon_Thriive_world {
+	width: 15%;
+	display: inline-table;
+	padding: 0%;
+	transform: translateY(-25%)
+	
+}
+
+/******THRIIVE IMAGE GALLERY SECTION******/
+.galleryDiv_1,
+.galleryDiv_2,
+.galleryDiv_3 {
+    width: 21.5vw;
+    height: 21.5vw;
+    display: inline-table;
+}
+
+.Img_backgroundDiv {
+    background: url(../images/galleryBG.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 1.2%;
+    width: 19vw;
+    height: 19vw;
+}
+
+.Gallery_img {
+    border-radius: 50%;
+    padding: 2%;
+    width: 93.5%;
+    margin-top: 1.2%;
+    margin-left: 1%;
+}
+
+.Img_Gallery_backgroundDiv {
+    background: url(../images/ThriivWorld-Background_2.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 16vw;
+    height: 16vw;
+    display: inline-table;
+}
+
+.Gallery_img_Icon {
+    border-radius: 50%;
+    padding: 1%;
+    width: 95%;
+    margin-top: 1.5%;
+    margin-left: 2%;
+}
+ /*******VIDEO SECTION*******/
+
+/*NAVIGATION BUTTONS */
+#TW_PreviousButton,
+#TW_NextButton {
+    width: 3.9%;
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 8%;
+    transform: translateY(-4%);
+}
+
+/*  THRIIVE WORLD IMAGE DIV STYLING  */
+.ThriiveWorldBlocks {
+    width: 18%;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-table;
+    margin-left: 1%;
+}
+
+/*DOWNLOAD CLOUD STYLES*/
+.Download_Cloud {
+    width: 16%;
+    margin: -18% -85% 0% 0%;
+}
+
+/*  THRIIVE WORLD STAR DIV STYLING  */
+.ThriiveWorldStars {
+    width: 4%;
+    vertical-align: middle;
+    display: inline-table;
+    padding-bottom: 12%;
+    text-align: center;
+    margin-left: 2%
+}
+
+.tw_backgroundDiv {
+    background: url(../images/ThriivWorld-Background_2.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 1%;
+    width: 19.2vw;
+    height: 19.3vw;
+}
+
+.tw_backgroundDiv iframe {
+    width: 19.2vw;
+    height: 19.3vw;
+    border-radius: 50%;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    position: relative;
+    z-index: -1;
+    border: 0;
+}
+
+
+/*CSS FOR MOZOLO BROWSER*/
+@-moz-document url-prefix() {
+    .tw_backgroundDiv {
+        padding: 1%;
+        width: 22.5vw;
+        height: 22.5vw;
+    }
+    .tw_backgrundDiv iframe {
+        width: 22vw;
+        height: 22vw;
+    }
+    /*DOWNLOAD CLOUD STYLES*/
+    .Download_Cloud {
+        width: 18%;
+        margin: -18% -100% 0% 32%;
+    }
+}
+
+.twEyeImg {
+    margin-top: -100%;
+    border-radius: 50%;
+}
+
+
+/*  VIDEO CAPTION / TITLE (TEXT UNDER IMAGE)  */
+.TW_Caption {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #4e0475;
+    font-size: 2.5vw;
+    font-weight: 900;
+}
+
+
+/* VIDEO SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+.TW_SubCaption {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    color: #000;
+    margin-top: -10%;
+    font-weight: 400;
+}
+
+
+  /******** AUDIO SECTION FOR DESKTOP ********/
+
+/*NEXT AND PREVIOUS BUTTONS*/
+.audioPreviousButton,
+.audioNextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*AUDIO BLOG-1*/
+.audioBlog_1,
+.audioBlog_2,
+.audioBlog_3 {
+    width: 28%;
+    display: inline-table;
+    vertical-align: middle;
+    background: url(../images/baground_2.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1%;
+    margin: auto;
+    margin-left: 1%;
+}
+
+/*AUDIO BLOG-2*/
+.audioBlog_2 {
+    margin: 0% 3% 0% 3%
+}
+
+/*AUDIO BLOG-3*/
+.audioBlog_3 {
+    visibility: hidden
+}
+
+
+
+
+/***************************************/
+	/*CSS FOR MOBILE VERSION */
+/***************************************/
+   
+/*/---------  HIDE DESKTOP DEVISES IN DESKTOP ---------/*/
+
+@media (max-width: 736px) {
+    
+    .galleryDetails {
+        font-size: 2.5vw;
+        font-weight: normal;
+    }
+    .socialMediaDiv_Thriive_world {
+        width: 50%
+    }
+    
+    /******THRIIVE IMAGE GALLERY SECTION******/
+.galleryDiv_1,
+.galleryDiv_2,
+.galleryDiv_3 {
+    width: 55vw;
+    height: 55vw;
+    display: inline-table;
+}
+    
+    .galleryDiv_2,
+    .galleryDiv_3{
+        display: none
+    }
+
+.Img_backgroundDiv {
+    background: url(../images/galleryBG.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 1.2%;
+    width: 50vw;
+    height: 50vw;
+    margin-left: 10%
+}
+
+.Gallery_img {
+    border-radius: 50%;
+    padding: 2%;
+    width: 93.5%;
+    margin-top: 1.2%;
+    margin-left: 1%;
+}
+
+.Img_Gallery_backgroundDiv {
+    background: url(../images/ThriivWorld-Background_2.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 16vw;
+    height: 16vw;
+    display: inline-table;
+}
+
+.Gallery_img_Icon {
+    border-radius: 50%;
+    padding: 1%;
+    width: 95%;
+    margin-top: 1.5%;
+    margin-left: 2%;
+}
+    
+    
+    
+    /*THRIIVE AUDIO SECTION FOR MOBILE          */
+    
+    /*NEXT AND PREVIOUS BUTTONS*/
+    .audioPreviousButton,
+    .audioNextButton {
+        width: 8%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    /*AUDIO BLOG-1*/
+    .audioBlog_1,
+    .audioBlog_2,
+    .audioBlog_3 {
+        width: 80%;
+        display: inline-table;
+        vertical-align: middle;
+        background: url(../images/baground_2.png) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding: 2%;
+        margin-left: 10%
+    }
+    .audioBlog_2,
+    .audioBlog_3 {
+        display: none;
+    }
+    
+     /************VIDEO SECTION FOR MOBILE*********/
+    .ThriiveWorldBlocks {
+        width: 60%;
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 11%;
+    }
+    .Download_Cloud {
+        width: 12%;
+        margin: -10% 0% 0% 75%;
+        display: none;
+    }
+    .tw_backgroundDiv {
+        background: url(../images/ThriivWorld-Background_2.png) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding: 1%;
+        margin: auto;
+        width: 50vw;
+        height: 50vw;
+    }
+    .tw_backgroundDiv iframe {
+        width: 50vw;
+        height: 50vw;
+        margin-bottom: 0%;
+        border-radius: 50%;
+        -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+        position: relative;
+        z-index: -1;
+        border: 0;
+    }
+    .twEyeImg {
+        margin-top: -100%;
+        border-radius: 50%;
+    }
+    /*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+    .TW_Caption {
+        font-size: 5.5vw;
+        margin-top: 2%;
+        font-weight: 900;
+        margin-left: 8%;
+    }
+    /*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+    .TW_SubCaption {
+        font-size: 3vw;
+        color: #000;
+    }
+    /*  THRIIVE WORLD NAVIGATION BUTTONS */
+    #TW_PreviousButton,
+    #TW_NextButton {
+        width: 8%;
+        padding-bottom: 11%;
+    }
+       
+          
+}
+

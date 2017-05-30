@@ -1,0 +1,173 @@
+.mainVideoDivBg {
+    background: url(../images/audioDivBg.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    padding: 2%;
+    height: 31.5vw;
+    width: 85%;
+    margin-left: 5%;
+}
+
+.subHeading {
+    color: #4e0475;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: -1;
+}
+
+.audioDetails {
+    margin-left: 5%;
+    width: 86%;
+    font-family: 'Lato', sans-serif;
+    color: #5C5D5F;
+    padding: 0% 1% 0% 1%;
+    font-size: 1.5vw;
+}
+
+.socialMediaDiv_GM {
+    width: 25%;
+    right: 0;
+    display: inline-table
+}
+
+
+/*GUIDED MEDITATION NEXT AND PREVIOUS BUTTONS*/
+
+.GMPreviousButton,
+.GMNextButton {
+    width: 4%;
+    display: table-cell;
+    transform: translateY(-21.5%);
+}
+
+.GudideMeditationDiv_1,
+.GudideMeditationDiv_2,
+.GudideMeditationDiv_3 {
+    width: 25%;
+    display: inline-table;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #4e0475;
+    margin-left: 2.5%
+}
+
+
+/*VIDEO BLOG-1*/
+
+.videoBlog_1,
+.videoBlog_2,
+.videoBlog_3 {
+    width: 20.5vw;
+    display: inline-table;
+    background: url(../images/baground_2.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 2.5% 1% 2.5% 1%;
+}
+
+.videoBlog_1 iframe {
+    -webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+    position: relative;
+    width: 21vw;
+    height: 13.5vw;
+    padding: 1% 1.8% 1% 1.5%;
+}
+
+.videoBlog_2 iframe {
+    -webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+    width: 21vw;
+    height: 13.5vw;
+    padding: 1% 1.5% 1% 1.5%;
+}
+
+.videoBlog_3 iframe {
+    -webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+    width: 21vw;
+    height: 13.5vw;
+    padding: 1% 1.5% 1% 1.5%;
+}
+
+.meditationSubject {
+    font-size: 1.5vw;
+}
+
+.meditationBy {
+    font-size: 1vw;
+    margin-top: -3.5%
+}
+
+.meditationDetalis {
+    font-size: .8vw;
+    margin-top: -4.5%;
+    color: 323232;
+}
+
+
+/***************************************/
+    /*CSS FOR MOBILE VERSION */
+/***************************************/
+
+
+/*/---------  HIDE DESKTOP DEVISES IN DESKTOP ---------/*/
+
+@media (max-width: 736px) {
+    .mainVideoDivBg {
+        width: 70vw;
+        height: 32vw;
+    }
+    .subHeading {
+        font-size: 3vw;
+    }
+    .audioDetails {
+        width: 90%;
+        font-size: 2.5vw;
+    }
+    .socialMediaDiv_GM {
+        width: 50%;
+    }
+    /*GUIDED MEDITATION NEXT AND PREVIOUS BUTTONS*/
+    .GMPreviousButton,
+    .GMNextButton {
+        width: 8%;
+        transform: translateY(-25%);
+    }
+    .GudideMeditationDiv_1,
+    .GudideMeditationDiv_2,
+    .GudideMeditationDiv_3 {
+        width: 50%;
+        margin-left: 11%
+    }
+    /*VIDEO BLOG-1*/
+    .videoBlog_1,
+    .videoBlog_2,
+    .videoBlog_3 {
+        width: 40vw;
+        padding: 2% 1% 2% 1%;
+    }
+    .GudideMeditationDiv_2,
+    .GudideMeditationDiv_3 {
+        display: none;
+    }
+    .videoBlog_1 iframe,
+    .videoBlog_2 iframe,
+    .videoBlog_3 iframe {
+        width: 50vw;
+        height: 33.5vw;
+        padding: 1% 1.8% 1% 1.5%;
+    }
+    .meditationSubject {
+        font-size: 2.5vw;
+    }
+    .meditationBy {
+        font-size: 2vw;
+        margin-top: -3.5%
+    }
+    .meditationDetalis {
+        font-size: 2vw;
+    }
+}

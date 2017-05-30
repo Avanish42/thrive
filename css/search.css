@@ -1,0 +1,693 @@
+.rightDiv {
+    visibility: hidden;
+}
+
+.searchBarDiv {
+    width: 70%;
+    display: inline-table;
+    vertical-align: middle;
+}
+
+.dropdownDiv {
+    width: 12vw;
+    height: 3.5vw;
+    display: inline-table;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    background-image: url(../images/theraphy/category.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100%;
+    overflow-y: scroll;
+    transform: translateY(-10%);
+    margin-left: 8%
+}
+
+.dropdown_text {
+    vertical-align: middle;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2vw;
+    text-align: center;
+    width: 85%;
+    margin-left: 5%;
+    background-color: transparent;
+    border: none;
+    padding-right: 10%;
+    transform: translateY(16%);
+}
+
+.searchIcon {
+    width: 4%;
+    display: inline-table;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: -4%;
+    vertical-align: middle;
+    padding-top: .3%;
+}
+
+.serchbar {
+    width: 330%;
+    height: 3.3vw;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 1.2vw;
+    color: gray;
+    border: 0;
+    border-radius: 0em 2em 2em 0em;
+}
+
+.categoryMainDiv,
+#subMenu {
+    width: 96%;
+    margin: auto;
+    display: table;
+    text-align: center;
+    margin: 2% 2% 5% 2%;
+    border-bottom: .2vw solid gray
+}
+
+.categoryDiv {
+    width: 15%;
+    margin: auto;
+    margin-top: 2%;
+    display: inline-table;
+    text-align: center;
+    margin: 0% 1% 2% 1%;
+}
+.categoryDiv:hover{
+    box-shadow: 0px 0px 10px;
+}
+
+.categoryIcon {
+    width: 90%;
+}
+
+#subMenu{
+    display: none;
+}
+
+li{
+    display: inline;
+    margin: 3%;
+    text-align: center;
+     font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 2vw;
+    color: #4e0475;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+li:hover{
+    text-decoration: underline;
+}
+
+/*THERAPY*/
+
+.therapy_program_Name {
+    color: #8eb170;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    margin-top: -.2%;
+}
+
+.therapy1 {
+    width: 20%;
+    display: inline-table;
+    text-align: center;
+    margin-left: 8%;
+    margin-bottom: 2%;
+}
+
+.therapy1:hover img {
+/*    box-shadow: 0px 0px 5px;*/
+    filter:contrast(115%) brightness(115%);
+}
+
+.categoryName {
+    color: #4e0475;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-size: 1.6vw;
+    font-weight: 900;
+    word-break: break-all;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.practitioner_image_div1 {
+	width: 25%;
+	border: .15vw solid black;
+	text-align: center;
+	display: inline-table;
+	padding: .5%;
+    margin-left: 3%;
+}
+.practitioner_image_div2 {
+	width: 25%;
+	border: .15vw solid black;
+	text-align: center;
+	display: inline-table;
+	padding: .5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.practitioner_image_div3 {
+	width: 25%;
+	border: .15vw solid black;
+	text-align: center;
+	display: inline-table;
+	padding: .5%;
+    margin-right: 5%;
+}
+
+
+/*----PRACTITIONER NAME (GRID VIEW)  ----*/
+
+.practitioner_Name {
+	font-family: 'Amatic SC', cursive;
+	font-size: 2.5vw;
+	color: #8eb170;
+	margin-top: -1%;
+    text-transform: lowercase;
+}
+
+
+/*----PRACTITIONER DESCRIPTION (GRID VIEW)  ----*/
+
+.practitioner_description {
+	font-family: 'Lato', sans-serif;
+	font-size: 1vw;
+	color: #000;
+	font-style: italic;
+	margin-top: -10%
+}
+
+
+/*Styles for events*/
+
+  /* EVENT-1 DIV STYLES*/
+    .Event_Block-1{
+        width:22%;
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+        margin-left:7%;
+        margin-bottom: 3%;
+    }
+
+    /* EVENT-2 DIV STYLES*/
+    .Event_Block-2{
+       width:22%;
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0% 10% 0% 10%;
+        margin-bottom: 3%;
+    }
+
+    /* EVENT-3 DIV STYLES*/
+    .Event_Block-3{
+        width:22%;
+        display: inline-table;
+        text-align: center;
+        vertical-align: middle;
+        margin-bottom: 3%;
+    }
+
+.Event_Block-1:hover,
+.Event_Block-2:hover,
+.Event_Block-3:hover{
+    filter:contrast(110%) brightness(110%);
+}
+
+    /*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+    .Event_Caption {
+       font-family: 'Amatic SC', cursive; 
+		text-transform: lowercase;
+        text-align: center;
+        color: #4e0475;
+        font-size: 2.2vw;
+        height :7vw; 
+    }
+    
+    /*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+    .Event_SubCaption {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size: 1.5vw;
+        color: #000;
+        margin-top: -15%;
+        font-weight: 400;
+    }
+
+    /* STYLE FOR EVENT INFO */
+    .event_Image_Info{
+        text-align:center;
+        font-size:2.8vw;
+        color:#fff;
+        margin-top:-68%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+    }
+
+    /* STYLE FOR EVENT INFO */
+    .event_Image_day{
+        text-align:center;
+        font-size:3vw;
+        color:#fff;
+        margin-top:-70%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+    }
+    .event_Image_month{
+        text-align:center;
+        font-size:2.5vw;
+        color:#fff;
+        margin-top:-18%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+     .knowMore_Event_G{
+        width:50%;
+        display:inline-table;
+        margin-top: -15%;
+         margin-bottom: 5%;
+    }
+    .knowMore_Event_G:hover img{
+        filter:saturate(1.6);
+    }
+
+
+.TW_PreviousButton,
+.TW_NextButton {
+    width: 4%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
++}
+
+
+.TW_SubHeadding {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin-bottom: 4%;
+    margin-top: 0%
+}
+
+.video_set{
+    width: 50%;
+    display: inline-table;
+    margin-bottom: 5%;
+}
+.video_div {
+    width: 15vw;
+    height: 22.5vw;
+    display: inline-table;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video1{
+    margin-left: 10%
+}
+.video2{
+    margin-left: 8%
+}
+
+.video3{
+    margin-left: 2%
+}
+
+.video4{
+    margin-left: 10%
+}
+
+.slider {
+    width: 15vw;
+    height: 22.5vw;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide1 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide2 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .slide3 {
+    display: block;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.video_div:hover .BG_slide {
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1,
+.slide2,
+.slide3 {
+    width: 100%;
+    display: none;
+    cursor: pointer;
+}
+
+.BG_slide {
+    width: 100%;
+    -webkit-transition: all 1s ease-in-out;
+}
+
+.slide1 {
+    margin-top: -22.5vw;
+    animation: fade 8s infinite;
+    -webkit-animation: fade 8s infinite;
+}
+
+.slide2 {
+    margin-top: -22.5vw;
+    animation: fade2 8s infinite;
+    -webkit-animation: fade2 8s infinite;
+}
+
+.slide3 {
+    margin-top: -22.5vw;
+    animation: fade3 8s infinite;
+    -webkit-animation: fade3 8s infinite;
+} 
+    
+@keyframes fade{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+    
+@keyframes fade2{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+    
+@keyframes fade3{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+    
+.infoText {
+     width: 100%;
+     height: 4vw;
+     background-color: #4e0475;
+     text-align: center;
+     color: #fff;
+     padding-top: 3%;
+     margin-top: 61.6%;
+     -webkit-transition: all 1s ease-in-out;
+ }
+.infoText span{
+    width: 90%;
+    margin: auto;
+}
+ 
+ .PlayButton {
+     background: url(../images/PlayButton.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     margin: auto;
+     opacity: 0;
+     position: relative;
+     margin-top: -85%;
+     cursor: pointer;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .PlayButton:hover {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     width: 3.5vw;
+     height: 3.5vw;
+     -webkit-transition: all .5s ease-in-out;
+ }
+ 
+ .video_div:hover .PlayButton {
+     opacity: .8
+ }
+ 
+ .video_div:hover .BeforeText {
+     display: none;
+ }
+ 
+ .video_div:hover .AfterText {
+     display: block;
+ }
+ 
+ .BeforeText {
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: 1.1vw;
+     
+}
+ 
+ .AfterText {
+    display: none;
+    font-family: Lato, sans-serif;
+    text-align: center;
+    font-size: .8vw;
+ }
+
+/*--------------------------------------------*/
+/* -----VIDEO SECTION FOR MOBILE-----*/
+/*--------------------------------------------*/
+
+
+@media (max-width: 736px) {
+    .TW_PreviousButton,
+    .TW_NextButton {
+         width: 8%;
+         display: table-cell;
+         transform: translateY(0%)
+ }
+ 
+ .TW_SubHeadding {
+     font-size: 2.5vw;
+     font-weight: 400;
+ }
+.video_set{
+    width: 100%;
+    display: inline-table;
+}
+
+    
+ .slider,
+ .video_div {
+     width: 29vw;
+     height: 45vw;
+     display: inline-table;
+ }
+    
+    .video_div:hover{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+        
+    }
+ 
+ .BG_slide {
+     width: 100%;
+ }
+ 
+ .slide1 {
+     margin-top: -43.2vw;
+     
+ }
+ 
+ .slide2 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .slide3 {
+     margin-top: -43.5vw;
+     
+ }
+ 
+ .infoText {
+     padding-top: 8%;
+     margin-top: 48%;
+     height: 7vw;
+ }
+    
+ 
+ .PlayButton {
+     background: url(../images/PlayButton-2.png) no-repeat center;
+     background-size: cover;
+     opacity: 1;
+     width: 6vw;
+     height: 6vw;
+     margin-top: -75%;
+ }
+ 
+ .PlayButton:hover {
+     width: 6vw;
+     height: 6vw;
+     opacity: 1;
+ }
+    
+    .BeforeText {
+        font-size: 2.2vw;
+    }
+    
+    .AfterText {
+        font-size: 1.5vw;
+    }
+}
+    
+
+/***** FOR HEAZE BROUSERS *****/
+@supports (-ms-ime-align:auto) {
+    #whatHappeningNextButton {
+        margin: -270% 0% 10% 0%
+    }
+    #whatHappeningPrevioustButton {
+        margin: -270% 0% 10% 0%
+    }
+    .Event_Block_List {
+        margin-bottom: 5%;
+    }
+    .Event_Block_List img {
+        width: 100%
+    }
+    .knowMore_Event_L img {
+        width: 100%
+    }
+    .Event_Social_Media img {
+        width: 100%
+    }
+    .Event_Block-1 img,
+    .Event_Block-2 img,
+    .Event_Block-3 img {
+        width: 100%
+    }
+    .knowMore_Event_G img {
+        width: 100%
+    }
+    .footerDiv {
+        margin-top: 10%;
+    }
+    .Date_previousButton {
+        transform: translateY(110%);
+    }
+    .Date_NextButton {
+        transform: translateY(110%);
+    }
+    
+    .practitioner_image_div1 img,
+    .practitioner_image_div2 img,
+    .practitioner_image_div3 img{
+        width: 100%;
+    }
+}
+
+
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+        
+    .Event_Block_List img {
+        width: 100%
+    }
+    .knowMore_Event_L img {
+        width: 100%
+    }
+    .Event_Social_Media img {
+        width: 100%
+    }
+    .Event_Block-1 img,
+    .Event_Block-2 img,
+    .Event_Block-3 img {
+        width: 100%
+    }
+    .knowMore_Event_G img {
+        width: 100%
+    }
+        
+    .knowMore_Event_G {
+        margin-top: -2%;
+    }
+        
+    .Event_Block_List,
+    .Event_Block_Details_List{
+        margin-bottom: 5%
+    }
+    
+
+    /*GUIDED MEDITATION NEXT AND PREVIOUS BUTTONS*/
+    .TW_PreviousButton,
+    .TW_NextButton {
+        width: 8%;
+        transform: translateY(-25%);
+    }
+    .ThriiveWorldDiv_1,
+    .ThriiveWorldDiv_2,
+    .ThriiveWorldDiv_3 {
+        width: 50vw;
+        margin-left: 11%;
+    }
+    /*VIDEO BLOG-1*/
+    .videoBlog_1,
+    .videoBlog_2,
+    .videoBlog_3 {
+        width: 53vw;
+        padding: 2% 1.5% 2% 1%;
+    }
+    .ThriiveWorldDiv_2,
+    .ThriiveWorldDiv_3 {
+        display: none;
+    }
+    .videoBlog_1 iframe,
+    .videoBlog_2 iframe,
+    .videoBlog_3 iframe {
+        width: 95%;
+        height: 33.5vw;
+        padding: 1% 1.5% 1% 1.5%;
+    }
+}
+
+    .practitioner_image_div1 img,
+    .practitioner_image_div2 img,
+    .practitioner_image_div3 img{
+        width: 100%;
+    }
+        
+	}}
+
+

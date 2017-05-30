@@ -1,0 +1,205 @@
+/* -------------------------  BODY  ------------------------- */
+    /*  CSS FOR BODY */
+    body, html {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /*BAKGOUND FOR HOME PAGE DESKTOP DEVISES*/
+      .homePageBackground {
+        padding: 0px;
+        margin: 0px;
+        background-image: url(../images/Backgorund_Home.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+ 
+    /*BAKGOUND FOR OTHER PAGES DESKTOP DEVISES*/
+    @media only screen and (max-width: 4560px) { 
+    .other_Pagess_body_Backgruond {
+        padding: 0px;
+        margin: 0px;
+        background-image: url(../images/Backgorund_Other_Pages.jpg) !important;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        }  
+    }
+
+
+   
+
+    /*  MARGIN FOR BODY */
+    .totalBodySection {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /*STYLE FOR MENU BAR*/
+    .menuSection{
+        margin: 0% 5% 0% 5%
+    }
+
+    /*  MAIN HEADINGS FOR ALL SECTIONS */
+    .MainHeading {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 3vw;
+		font-weight: 900;
+        text-transform: lowercase;
+    }
+    
+
+    /* ---------------------------------  CSS - GLOBALLY DEFINED  ------------------------------- */
+    /*  CSS FOR BUTTONS  */
+    .button {
+        background: none;
+        border: 0;
+        text-decoration: none;
+    }
+    
+    /*  REMOVING BLUE BORDER AROUND BUTTONS WHEN CLICKED  */
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+        outline: none;
+    }
+    /*  REMOVING DROPDOWN ICON FROM DROPDOWN BUTTONS   */
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+         font-weight: bold;
+        background-color: transparent;
+    }
+
+    /*SERCH BUTTION NOT VISABLE IN THE PAGE*/
+    .serch_Icon_Button{
+        width:20%; 
+        margin:-5% 0% 2% 5% ; 
+        padding:5%; 
+        display:inline-table; 
+        border: none;
+        background-color: transparent;
+    }
+    
+      /*  REMOVING BACKGROUND COLOR AND DISABLE THE HEAD FROM DROPDOWN BUTTONS   */
+    option.head {
+        selected:selected;
+        display:none;
+        disabled:disabled;
+        
+    }
+
+    option{
+        background: transparent !important;
+        outline: none;
+        border: none;
+        font-weight: bold;
+    }
+   
+    
+    
+    /*  REMOVE UNDERLINE FOR HYPERLINKED TEXT  */
+    a {
+       text-decoration: none;
+        font-style: normal;
+        color: #000;
+    }
+    
+    /*  OPTIMIZE DIV OF PILLARS, CALENDAR, WORLD, TALKS, FOOTER WIDTH AND DISPLAY STATUS */
+    .div_displayTable{
+        width:100%;
+        display: table;
+        table-layout: fixed;
+    }
+
+
+
+/*/==================== FOR MOBILE DEVICES ====================/*/
+
+    @media only screen and (max-width: 736px) {
+        
+    .menuSection{
+        margin: 0% 10% 0% 10%
+    }
+    
+    /*BAKGOUND IMAGE DESKTOP DEVISES*/
+    .other_Pagess_body_Backgruond {
+        padding: 0px;
+        margin: 0px;
+        background-image: url(../images/Backgorund_For_Mobile.jpg) !important;
+        background-size: 100%;
+        background-repeat: repeat-y;
+    }  
+    
+    /*  MAIN HEADINGS FOR ALL SECTIONS */
+    .MainHeading {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 7vw;
+        }
+}
+
+
+/*Animate Top*/
+.animate_top {
+    position: relative;
+    -webkit-animation: animatetop 0.4s;
+    animation: animatetop 0.4s}
+    @-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}}
+    @keyframes animatetop {
+    from {top: -300px;opacity: 0}
+    to {top: 0;opacity: 1}}
+
+.animate_left {
+    position: relative;
+    -webkit-animation: animateleft 2s;
+    animation: animateleft 2s}
+    @-webkit-keyframes animateleft {
+    from {left: -15%; opacity: 0}
+    to {left: 0; opacity: 1}}
+    @keyframes animateleft {
+    from {left: -15%;opacity: 0}
+    to {left: 0;opacity: 1}}
+
+.animate_right {
+    position: relative;
+    -webkit-animation: animateright 2s;
+    animation: animateright 2s}
+    @-webkit-keyframes animateright {
+    from {right: -15%;opacity: 0}
+    to {right: 0;opacity: 1}}
+    @keyframes animateright {
+    from {right: -15%; opacity: 0}
+    to {right: 0; opacity: 1}}
+
+.animate_bottom {
+    position: relative;
+    -webkit-animation: animatebottom 0.4s;
+    animation: animatebottom 0.4s}
+    @-webkit-keyframes animatebottom {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0px;opacity: 1}}
+    @keyframes animatebottom {
+    from {bottom: -300px;opacity: 0}
+    to {bottom: 0; opacity: 1}}
+
+.zoom {
+    -webkit-animation: animatezoom 1s;
+    animation: animatezoom 1s}
+    @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}}
+    @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}}
+
+
+
+

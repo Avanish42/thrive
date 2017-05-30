@@ -1,0 +1,388 @@
+@media (min-width: 737px) {
+
+    
+     #practitoner_Subpage_Moble{
+        display: none;
+    }
+    
+}
+   
+
+/* ------------------------           ------------------------ */
+/*                         PRACTITIONER SUB PAGE               */
+/* ------------------------           ------------------------ */
+    
+    /*PRACTITONERS QUOTE (inside GREEN color text)*/
+    .practitoner_quote{
+        font-family: 'Sacramento',cursive;
+        color:#96bb76;
+        font-size:4.55vw;
+        font-weight:200
+    }
+
+    
+    /*PRACTITONERS QUOTE (inside gray color text)*/
+    .practitoner_Sub_quote{
+        color:#333333;
+        font-family: 'Lato',sans-serif;
+        font-size:2.5vw;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    /*PRACTITONERS NAME*/
+    .practitoner_Name{
+        font-family: 'Amatic SC', cursive;
+        color:#96bb76;
+        font-size: 4vw;
+        font-weight:200;
+		text-transform: lowercase;
+    }   
+
+
+     /*BAKGOUND FOR PRACTITONERS IMAGE*/
+      .practitioner_Img_Background {
+        padding: 1.5% 2% 2% 2% ;
+        margin: auto;
+        background-size: 82% 98%;
+        background-image: url(../images/theraphy/practitioner_Bg.png);
+        background-repeat: no-repeat;
+        width:30%;
+        display:inline-table;
+        vertical-align: middle;
+        margin-top: 8%;
+        float: right;
+    }
+
+    .Practitoner_SubPage_Left_Module{
+        width:60%;
+        display:inline-table;
+        float:left
+        }
+
+    .Practitoner_SubPage_Right_Module{
+        width:30%;
+        display:table-cell;
+        float:right
+        }
+
+    /*HEADDING*/
+     .practitionerSubpage_text{
+        font-family: 'Amatic SC', cursive;
+        font-size: 3.6vw;
+        color: #4e0475;
+        margin-left: 8%;
+		 text-transform: lowercase;
+    }
+
+     /*RIGHT MODULE CONTENT*/
+    .practitioner_Subpage_content{
+        font-family: 'Lato',sans-serif;
+        font-size: 1.3vw;
+        color:#333333;
+        margin-top: -4%;
+        margin-left: 8%;
+        line-height: 180%;
+    }
+
+     /*RIGHT MODULE HEADDING (CONT & EMAIL)*/
+    .right_Module_heading{
+        font-size: 2vw;
+        font-family: 'Lato', sans-serif;
+        color: #4e0475;
+    }
+    
+    /*RIGHT MODULE INFO (CONT & EMAIL)*/
+    .right_Module_text{
+        font-size: 1.3vw;
+        font-family: 'Lato', sans-serif;
+        color: #333333;
+        text-decoration: none;
+        line-height: 180%;
+		font-weight: 800;
+    }
+
+    /*SOCILA MEDIA ICONS*/
+    .practitoners_socialMedia{
+        display:table;
+        width:100%;
+        margin-top:20%
+    }
+
+.previousButton{
+    width: 3.5%;
+    display: table-cell;
+    transform: translateY(-10%)
+}
+
+.nextButton{
+    width: 3.5%;
+    display: table-cell;
+    transform: translateY(-10%)
+}
+
+.leftNavigationabout{
+	width:8%;
+	margin-top:6.5%;
+	float:left;
+	display: inline-table;
+    cursor: pointer;
+	
+}
+
+.rightNavigationabout{
+	width:8%;
+	margin-top:6.5%;
+	float:right;
+	display: inline-table;
+    cursor: pointer;
+	
+}
+
+.therapies{
+    
+}
+    
+    /*ABOUT GEETA IMAGES*/
+    .therapy_offers_img1{
+        width:12%;
+        display:inline-table;
+        margin: 0% 1.2% 0% 1.2%;
+        text-align:center;
+        margin-left:4%
+    }
+    .therapy_offers_img2,
+    .therapy_offers_img3,
+    .therapy_offers_img4,
+    .therapy_offers_img5,
+    .therapy_offers_img6 {
+        width: 12%;
+        display: inline-table;
+        margin: 0% 2% 0% 2%;
+        text-align: center;
+    }
+
+    /*ABOUT CAPTIONS */
+    .therapy_offers_text{
+        font-family: 'Lato', sans-serif;
+        color: #8eb170;
+        font-size: 1.3vw;
+        margin-top: -1%;
+    }
+
+    
+    /*EVENT IMAGE DIV*/
+    .practitioner_subpage_image_div{
+         width:40%; 
+        text-align:center;
+        display:inline-table;
+        margin-left: 5%
+    }
+
+    /*  EVENT SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+    .Event_SubCaption_subPage {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size: 1.5vw;
+        color: #000;
+        margin-top: -15%;
+        font-weight: 400;
+    }
+
+
+    /* STYLE FOR EVENT INFO */
+    .event_Image_SubPage_Info{
+        text-align:center;
+        font-size:2.8vw;
+        color:#fff;
+        margin-top:-75%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+    }
+ .event_Image_SubPage_month{
+        text-align:center;
+        font-size:2.8vw;
+        color:#fff;
+        margin-top:-15%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .Event_Caption_SubPage {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 2.8vw;
+		text-transform: lowercase;
+        margin-top: 20%;
+    }
+
+    /***************** PRACTITONER SUB PAGE MOBILE DEVISE *****************/
+
+        
+@media (min-width: 736px) {
+        
+    #about_geetha_images_Mobile{
+            display: none;
+        } 
+    #event_Section_Mobile{
+            display: none;
+        }
+    }
+            
+@media (max-width: 736px) {
+        
+    #about_geetha_images_desktop{
+            display: none;
+        }      
+    #event_Section_desktop{
+            display: none;
+        }
+        
+    .Practitoner_SubPage_Left_Module{
+        width:90%;
+        display:inline-table;
+        float:left
+        }
+
+    .Practitoner_SubPage_Right_Module{
+        width:60%;
+        display:inline-table;
+        float:left;
+        margin-left: 6.8%;
+        }
+        
+        
+     .practitionerSubpage_text{
+        font-family: 'Amatic SC', cursive;
+        font-size: 5vw;
+        color: #4e0475;
+         margin-left: 8%;
+    }
+
+    .practitioner_Subpage_content{
+        font-family: 'Lato',sans-serif;
+        font-size: 2.05vw;
+        color:#333333;
+        margin-top: -4%;
+        margin-left: 8%;
+        line-height: 180%;
+    }
+
+    .right_Module_heading{
+        font-size: 2.35vw;
+        font-family: 'Lato', sans-serif;
+        color: #4e0475;
+    }
+    .right_Module_text{
+        font-size: 2.1vw;
+        font-family: 'Lato', sans-serif;
+        color: #333333;
+        text-decoration: none;
+        line-height: 180%
+    }
+        
+    /*SOCILA MEDIA ICONS*/
+    .practitoners_socialMedia{
+        display:table;
+        width:90%;
+        margin-top:10%
+    }
+            
+      
+    /*ABOUT GEETA IMAGES*/
+    .therapy_offers_img{
+        width:25%;
+        display:inline-table;
+        text-align:center;
+        vertical-align: top;
+    }
+            
+     /*ABOUT CAPTIONS */
+    .therapy_offers_text{
+        font-family: 'Lato', sans-serif;
+        color: #8eb170;
+        font-size: 2.5vw;
+        margin-top: -1%;
+    }
+    
+    /*  EVENT SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+    .Event_SubCaption_subPage {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size: 2.6vw;
+        color: #000;
+        margin-top: -15%;
+        font-weight: 400;
+    }
+
+
+    /* STYLE FOR EVENT INFO */
+    .event_Image_SubPage_Info{
+        text-align:center;
+        font-size:4vw;
+        color:#fff;
+        margin-top:-68%;
+        padding-bottom:20%;
+        font-family: 'Lato',
+        sans-serif;
+        font-weight: 800;
+    }
+
+    .Event_Caption_SubPage {
+        font-family: 'Amatic SC', cursive;
+        text-align: center;
+        color: #4e0475;
+        font-size: 4vw;
+        margin-top: 12%;
+    }
+    
+    /*EVENT IMAGE DIV*/
+    .practitioner_subpage_image_div{
+         width:35%; 
+        text-align:center;
+        display:inline-table;
+        margin-left: 7%
+    }
+
+    }
+
+/***** FOR HEAZE BROUSERS *****/
+
+@supports (-ms-ime-align:auto) {
+    .footerDiv{
+        margin-top: 5%;
+    }
+
+.therapy_offers_img1 img,
+.therapy_offers_img2 img,
+.therapy_offers_img3 img,
+.therapy_offers_img4 img,
+.therapy_offers_img5 img,
+.therapy_offers_img6 img {
+        width: 100%
+    }
+    
+}
+
+
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+    
+.therapy_offers_img1 img,
+.therapy_offers_img2 img,
+.therapy_offers_img3 img,
+.therapy_offers_img4 img,
+.therapy_offers_img5 img,
+.therapy_offers_img6 img {
+        width: 100%
+    }
+    
+    
+    }}
+    

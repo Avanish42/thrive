@@ -1,0 +1,428 @@
+.Event_SubPage_NextButton,
+.Event_SubPage_PreviouButton {
+    display: none;
+}
+
+
+/*LEFT MODULE STYLES*/
+
+.left_Module_WHSubpage {
+    display: inline-table;
+    width: 67%;
+}
+
+
+/*RIGHT MODULE STYLES*/
+
+.Right_Module_WHSubpage {
+    display: table-cell;
+    width: 30%;
+    float: right
+}
+
+
+/*  WHAT HAPPENING HEADDING */
+
+.Whats_Happening_Body_Heading {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    color: #4e0475;
+    font-size: 3.5vw;
+    display: inline-table;
+    margin: 0%;
+}
+
+
+/*  WHAT HAPPENING HEADDING */
+
+.Whats_Happening_Body_content {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    display: inline-table;
+    color: #333333;
+    font-weight: normal;
+}
+
+
+/*  WHAT HAPPENING SUB HEADDING */
+
+.Whats_Happening_Body_Subcontent {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    display: inline-table;
+    color: #333333;
+    line-height: 150%;
+    font-weight: bold;
+}
+
+#promourl {
+    width: 100%;
+    height: 16vw;
+    background: url(../images/baground_2.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+     -webkit-mask-image: -webkit-radial-gradient(white 100%, black 100%);
+    position: relative;
+    border: none;
+    
+}
+
+#promourl img{
+    width: 100%
+}
+
+
+
+
+/*EVENT BLOCK NEXT AND PREVIWOUS BUTTONS*/
+
+.Event_SubPage_NextPreviousButton {
+    width: 5%;
+    margin-bottom: 11%;
+    display: inline-table;
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+}
+
+#enroolButton {
+    width: 50%
+}
+
+#enroolButton img {
+    width: 100%
+}
+
+#enroolButton:hover img {
+  filter:saturate(1.6);
+}
+
+
+/* EVENT-1 DIV STYLES*/
+
+.Event_Block_1_Left {
+    width: 45%;
+    display: inline-table;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* EVENT-2 DIV STYLES*/
+
+.Event_Block_2_Left {
+    width: 45%;
+    display: inline-table;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0% 4% 0% 4%
+}
+
+.Event_Block_1_Left:hover,
+.Event_Block_2_Left:hover{
+filter:contrast(110%) brightness(110%);
+}
+    
+
+
+/* STYLE FOR EVENT INFO */
+
+.event_Image_day {
+    text-align: center;
+    font-size: 4vw;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    margin-top: -56%
+}
+
+.event_Image_month {
+    text-align: center;
+    font-size: 2.8vw;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+/*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+
+.Event_Caption {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #4e0475;
+    font-size: 3vw;
+    margin-top: 20%;
+}
+
+
+/*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+
+.Event_SubCaption {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.7vw;
+    color: #000;
+    font-weight: 400;
+    margin-top: -10%;
+}
+
+
+/*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+
+.Event_Block_1_Left_Caption {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #4e0475;
+    font-size: 3vw;
+    margin-top: 0%
+}
+
+
+/*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+
+.Event_Block_Left_SubCaption {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: -15%;
+    font-weight: 400;
+    color: #333333
+}
+
+.organisation_WebSIte {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.2vw;
+    color: #4e0475;
+    text-decoration: none;
+}
+
+
+/* FREE DOWNLOAD AUDIO DIV STYLES*/
+
+.Free_downl_audio {
+    width: 100%;
+    text-align: center;
+    /*        margin-top: 100%*/
+}
+
+
+/*FREE DOWNLOAD CAPTION / TITLE (TEXT UNDER IMAGE)  */
+
+.Free_downl_Caption {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    text-align: center;
+    color: #4e0475;
+    font-size: 2.8vw;
+    margin-top: 25%
+}
+
+.socialMedia_WHSubpage {
+    display: table;
+    width: 100%;
+    margin-top: 20%
+}
+
+.Navigations_WHPage_Desktop {
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+    margin-top: 3%
+}
+
+.Navigations_WHPage_Mobile {
+    display: none;
+}
+
+
+
+@media (max-width: 737px) {
+    
+    /*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+    .Event_Caption {
+        font-size: 5vw;
+    }
+    /*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+    .Event_SubCaption {
+        font-size: 2.7vw;
+        margin-top: -12%;
+        font-weight: 400;
+    }
+    /*LEFT MODULE STYLES*/
+    .left_Module_WHSubpage {
+        display: inline-table;
+        width: 90%;
+        margin: 0% 0% 5% 5%;
+    }
+    /*RIGHT MODULE STYLES*/
+    .Right_Module_WHSubpage {
+        display: inline-table;
+        width: 90%;
+        float: left;
+        margin-left: 5%;
+    }
+    /*  WHAT HAPPENING HEADDING */
+    .Whats_Happening_Body_Heading {
+        font-family: 'Amatic SC', cursive;
+        text-transform: lowercase;
+        color: #4e0475;
+        font-size: 5.5vw;
+        display: inline-table;
+        margin: 0%;
+    }
+    /*  WHAT HAPPENING HEADDING */
+    .Whats_Happening_Body_content {
+        font-size: 2.5vw;
+    }
+    /*ORGANISATION WEBSITE*/
+    .organisation_WebSIte {
+        font-family: 'Lato', sans-serif;
+        font-size: 2.8vw;
+        color: #4e0475;
+        text-decoration: none;
+    }
+    /*PROMO URL VIDOE*/
+    #promourl {
+        width: 100%;
+        height: 46vw;
+        text-align: center;
+        vertical-align: middle;
+}
+    /*VIDEO BLOCK HIDE IN MOBILE DEVISE*/
+    #videoBlock {
+        display: none;
+    }
+    /*  WHAT HAPPENING SUB HEADDING */
+    .Whats_Happening_Body_Subcontent {
+        font-size: 3vw;
+        line-height: 160%;
+    }
+    /*SOCIAL MEDIA MOBILE*/
+    .socialMedia_WHSubpage {
+        display: table;
+        width: 60%;
+        margin-top: 10%
+    }
+    .Navigations_WHPage_Mobile {
+        display: table;
+        vertical-align: middle;
+        width: 100%;
+        margin: 3% 0% 3% 0%;
+    }
+    .Navigations_WHPage_Desktop {
+        display: none;
+    }
+    /*EVENT BLOCK NEXT AND PREVIWOUS BUTTONS*/
+    .Event_SubPage_NextButton {
+        width: 8%;
+        display: inline-table;
+        float: right;
+        margin-top: 12%
+    }
+    .Event_SubPage_PreviouButton {
+        width: 8%;
+        display: inline-table;
+        float: left;
+        margin-top: 12%
+    }
+    /* EVENT-1 DIV STYLES*/
+    .Event_Block_1_Left {
+        width: 38%;
+        text-align: center;
+        margin-left: 3%
+    }
+    /* EVENT-2 DIV STYLES*/
+    .Event_Block_2_Left {
+        width: 38%;
+        text-align: center;
+    }
+    /*  THRIIVE WORLS CAPTION / TITLE (TEXT UNDER IMAGE)  */
+    .Event_Block_1_Left_Caption {
+        font-size: 4.5vw;
+        margin-top: 0%
+    }
+    /*  THRIIVE WORLS SUB CAPTION / SUB TITLE (2ND LINE TEXT UNDER IMAGE)  */
+    .Event_Block_Left_SubCaption {
+        font-size: 3vw;
+        margin-top: -10%;
+    }
+    .FreeDownload_Section {
+        width: 50%;
+        margin-left: 10%
+    }
+    #enroolButton {
+        width: 30%;
+    }
+    #enroolButton img {
+        width: 100%;
+    }
+    #Free_Audio {
+        width: 100%;
+        margin-top: -15%;
+    }
+}
+
+/*TESTMONIAL CSS*/
+.testimonialText-3{
+    margin-top: -15%;
+}
+
+/***** FOR MOZILLA BROUSERS *****/
+
+@-moz-document url-prefix() {
+    
+    @media (max-width: 737px) {
+        
+    }
+
+
+}
+
+/***** FOR HEAZE BROUSERS *****/
+
+@supports (-ms-ime-align:auto) {
+    
+    .Event_Block_1_Left img,
+    .Event_Block_2_Left img{
+        width: 90%
+    }
+    
+    .event_Image_day{
+        margin-top: -60%
+    }
+    
+    .Event_Caption{
+        margin-top: 25%;
+    }
+}
+
+
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+        
+    .Event_Block_1_Left img,
+    .Event_Block_2_Left img{
+        width: 90%
+    }
+        
+    .event_Image_day{
+        margin-top: -60%
+    }
+    
+    .Event_Caption{
+        margin-top: 25%;
+    }
+    
+        
+        
+    }}
+
+.fb-share-button {
+}

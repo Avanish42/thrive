@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <!--    INCLUDING FIREBASE FILES -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+    <script type="application/javascript" src="js/app.js"></script>
+    <!--    INCLUDING CSS FILES-->
+    <link rel="stylesheet" href="css/styles_global.css">
+    <!--Global Defined Styles-->
+    <link rel="stylesheet" href="css/style_for_footer_headder_tm.css">
+    <!--Styles for Footer, Headder and Testmoniels-->
+    <link rel="stylesheet" href="css/signup_practitioners.css">
+    <!--styles for Signup Devices-->
+    <link rel="stylesheet" href="css/style_menu.css">
+    <!-- MENU CSS  -->
+    <!--    INTEGRATE GOOGLE FONTS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+    <!--    HOME PAGE TITLE  -->
+    <title>THRIIVE | SIGNUP PRACTITIONERS </title>
+    <!--    INCLUDING JAVASCRIPT-->
+    <script src="js/signup_practitioners.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="js/global_modules.js">
+    </script>
+    <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+    <script src="js/script_menu.js">
+    </script>
+    <!-- MENU JAVA SCRIPT  -->
+</head>
+
+<body class="other_Pagess_body_Backgruond">
+    <!--MAIN SLIDE MENU-->
+    <script>
+        display_menu();
+        Set_Menu_HeightAndWidth();
+    </script>
+    <section class=menuSection>
+        <script>
+            display_header_2();
+        </script>
+    </section>
+    <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+    <section class="totalBodySection">
+        <div class="row">
+            <h2 class="heading">SIGN UP WITH THRIIVE</h2>
+            <h2 class="heading-2">*MANDATORY</h2>
+            <p id="SignupHeading">Free access to Thriive world & free guided meditations, music, and talks</p>
+        </div>
+        <center> <img id="submittingGif" src="images/submitting.gif" style="display:none;" width="25%"> <img id="errorPng" src="images/error.png" style="display:none;" width="25%"> <img id="successPng" src="images/success.png" style="display:none;" width="25%"> </center>
+        <p id="accountCreationError"></p>
+        <!----------------------- SIGNUP FORM SECTION -------------------------->
+        <section id="formBody">
+            <form name="form" onsubmit="return Signupvalidate();" method="get" action=''>
+                <!----------------------- SIGNUP FORM DESKTOP SECTION -------------------------->
+                <div class="row">
+                    <div class="sm6_l">
+                        <label class="details">*FIRSTNAME</label>
+                        <br>
+                        <input id="fname" class="SignupInput" type="text" name="firstname" tabindex="1">
+                        <p id="fname_error" class="error"></p>
+                    </div>
+                    <div class="sm6_r">
+                        <!----- LAST NAME ---->
+                        <label class="details">*LASTNAME</label>
+                        <br>
+                        <input id="lname" class="SignupInput" type="text" name="lastname" tabindex="2">
+                        <p id="lname_error" class="error"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sm6_l">
+                        <label class="details">*Gender</label>
+                        <div style="width:60%; vertical-align:middle">
+                            <!-- -->
+                            <input type="radio" class="spRadioButton" value="" name="gender" id="radioMale" checked>
+                            <label class="label_item" for="radioMale">
+                                <div style="width:80%; display:inline-table;"> <img src="images/attachments/radioButton-2.png" width="100%;" tabindex="3"> </div>
+                            </label> <span class="gender">&nbsp;Male &nbsp;&nbsp;</span>
+                            <input type="radio" class="spRadioButton" value="" name="gender" id="radioFemale">
+                            <label class="label_item" for="radioFemale">
+                                <div style="width:80%; display:inline-table;"> <img src="images/attachments/radioButton-2.png" width="100%;"> </div>
+                            </label> <span class="gender">&nbsp;Female</span>
+                            <br>
+                            <p id="gender_error" class="error"></p>
+                        </div>
+                    </div>
+                    <div class="sm6_r">
+                        <!----- DATE OF BIRTH ---->
+                        <label class="details">*DATE OF BIRTH</label>
+                        <br>
+                        <input id="dob" class="SignupInput" type="date" name="dateofbirth" tabindex="4">
+                        <p id="dob_error" class="error"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sm6_l">
+                        <label class="details">*PHONE NUMBER</label>
+                        <br>
+                        <input id="phone" class="SignupInput" type="text" name="phonenumber" tabindex="5">
+                        <p id="phone_error" class="error"></p>
+                    </div>
+                    <div class="sm6_r">
+                        <!----- EMAIL ---->
+                        <label class="details">EMAIL<span>*</span></label>
+                        <br>
+                        <input id="email" class="SignupInput" type="email" name="email" tabindex="6">
+                        <p id="email_error" class="error"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sm6_l">
+                        <!----- PASSWORD ----->
+                        <label class="details">*PASSWORD</label>
+                        <br>
+                        <input id="password" type="password" class="SignupInput" name="password" tabindex="7">
+                        <p id="password_error" class="error"></p>
+                    </div>
+                    <div class="sm6_r">
+                        <!----- CONFIRM PASSWORD ----->
+                        <label class="details">CONFIRM PASSWORD<span>*</span></label>
+                        <br>
+                        <input id="cpassword" class="SignupInput" type="password" name="confirmpassword" tabindex="8">
+                        <p id="cpassword_error" class="error"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sm6_l">
+                        <label class="details">CAPTCHA FIELD<span>*</span></label>
+                        <br>
+                        <div class="g-recaptcha" data-sitekey="6Lf_7RQUAAAAAA5o-uoF5Duz_6CpMFu-Oq5fZO7n"></div>
+                        <p id="recaptcha_error" class="error"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sm6_l">
+                        <!----- TERMS AND CONDITIONS FIELD ----->
+                        <input type="checkbox" class="spRadioButton" value="" name="TandC" id="checkboxTandC">
+                        <label class="label_item" for="checkboxTandC">
+                            <div style="width:80%; display:inline-table;"> <img src="images/attachments/radioButton-2.png" width="100%;" tabindex="9"> </div>
+                        </label> <span class="gender">&nbsp;I AGREE TO THE TERMS AND CONDITIONS</span>
+                        <p id="TandC_error" class="error"></p>
+                        <br> </div>
+                    <div class="sm6_r">
+                        <!----- SUBSCRIBE TO THRIIVE UPDATES ----->
+                        <input type="checkbox" class="spRadioButton" value="" name="ThriiveUpdates" id="checkboxThriiveUpdates">
+                        <label class="label_item" for="checkboxThriiveUpdates">
+                            <div style="width:80%; display:inline-table;"> <img src="images/attachments/radioButton-2.png" width="100%;"></div>
+                        </label> <span class="gender">&nbsp;SUBSCRIBE TO THRIIVE UPDATES</span>
+                        <br> </div>
+                </div>
+                <div class="row">
+                    <div class="submitButton"> <img id="SubmitButton" src="images/submit-button.png" width="100%;" tabindex="10" onclick="return Signupvalidate()"> </div>
+                </div>
+                <!----------------------- CAPTCHA FIELD DIV -------------------------->
+                <!----- CAPTCHA FIELD ----->
+                <div class="radiobutton" style="visibility:hidden">
+                    <input type="radio" name="gender" id="Radio1" value="Male" / style="display:table;float:left;">
+                    <input type="radio" name="gender" id="Radio2" value="Female" / style="display:table;float:left;"> </div>
+            </form>
+        </section>
+    </section>
+    <!----- FOOTER SECTION ----->
+    <script>
+        display_footer();
+    </script>
+</body>
+
+</html>

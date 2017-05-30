@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .fading{animation:fading 10s infinite}
+            @keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+        
+        
+.Video_Div{
+    width: 15vw;
+    height: 22.5vw;
+    position: relative;
+    overflow: hidden;
+    display: inline-table;
+    cursor: pointer;
+    -webkit-transition: all 1s ease-in-out;
+}
+.Video_Div:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);   
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 1s ease-in-out;
+}
+.vidoeInfoDiv{
+    width: 100%;
+    background-color:red;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    padding: 1% 0% 1% 0% ;
+    -webkit-transition: all 1s ease-in-out;
+    height: 3VW;
+}
+
+.TW_Caption{
+	font-size: 1.5vw;
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    font-weight: 900;
+    margin: 0;
+}
+
+.TW_SubCaption{
+	font-size: 1vw;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.TW_SubHeadding {
+       font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.TW_CaptionAfterHover{
+	font-size: 1vw;
+    font-family: 'Lato', sans-serif;
+    display: none;
+    margin: 0;
+}
+
+.TW_SubCaptionAfterHover{
+	font-size: 1vw;
+    font-family: 'Lato', sans-serif;
+    display: none;
+    margin: 0;
+   
+}
+        
+.PlayButton{
+    background: url(images/PlayButton.png) no-repeat center;
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    margin: auto;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    z-index: 100;
+    margin-top: -90%
+    }
+
+.PlayButton:hover{
+    background: url(images/PlayButton-2.png) no-repeat center;
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    -webkit-transition: all .5s ease-in-out;
+    z-index: 100;
+}
+        
+.Video_Div:hover .PlayButton{
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    }
+        
+            
+.Video_Div:hover .TW_Caption,
+.Video_Div:hover .TW_SubCaption {
+    display: none;
+}
+.Video_Div:hover .TW_CaptionAfterHover,
+.Video_Div:hover .TW_SubCaptionAfterHover {
+    display: block;
+}
+  
+        
+    </style>
+<body>
+
+<div class="Video_Div" onmouseover="enable_caurosel('image1');" onmouseout="disable_caurosel();">
+    <div id="background">
+        <img src="images/videoImages/07.jpg" style="width:100%">
+    </div>
+    <div id="carousel">
+      <img class="image1 fading" src="images/videoImages/01.jpg" style="width:100%">
+      <img class="image1 fading" src="images/videoImages/02.jpg" style="width:100%">
+      <img class="image1 fading" src="images/videoImages/03.jpg" style="width:100%">
+    </div>
+    <div class="PlayButton"></div>
+    <div class="vidoeInfoDiv">
+        <p class="TW_Caption">science of meditation</p>
+        <p class="TW_SubCaption">Brahmarshi Patriji</p>
+        <p class="TW_CaptionAfterHover">LoramIpsom</p>
+        <p class="TW_SubCaptionAfterHover">LoramIpsom</p>
+     </div>
+</div>
+
+<script>
+var myIndex = 0;
+
+disable_caurosel();
+function enable_caurosel(imgClass){
+    document.getElementById('carousel').style.display='block';
+    document.getElementById('background').style.display='none';
+    carousel(imgClass);
+}
+    
+    function disable_caurosel(){
+        document.getElementById('carousel').style.display='none';
+        document.getElementById('background').style.display='block';
+    }
+function carousel(imgClass) {
+    var i;
+    var x = document.getElementsByClassName('image1');
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+//    alert(myIndex);
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+</script>
+
+</body>
+</html>

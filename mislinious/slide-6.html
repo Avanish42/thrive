@@ -1,0 +1,63 @@
+<style>
+
+.slide,
+.slide2 {
+    position:absolute;
+}
+
+.slide:nth-child(1) {
+    -webkit-animation: fade 12s 9s infinite;
+    z-index:10;
+}
+
+.slide:nth-child(2) {
+    -webkit-animation: fade 12s 6s infinite;
+    z-index:10;
+}
+
+.slide:nth-child(3) {
+    -webkit-animation: fade 12s 3s infinite;
+    z-index:10;
+}
+
+.slide:nth-child(4) {
+    -webkit-animation: fade 12s 0s infinite; 
+    z-index:10;
+}
+
+@-webkit-keyframes fade {
+    0%{
+      opacity: 1;
+   }
+   15% {
+      opacity:1;
+   }
+   25%{
+      opacity: 0;
+   }
+   90% {
+      opacity:0;
+   }
+   100% {
+      opacity:1;
+   }
+}
+</style>
+<div style="display:table">
+
+    <div style="display:inline-table; width:20%" >
+        <img src="http://simplewishphotography.com/wp-content/uploads/2013/11/Nature-Photography-Healing-Your-Body.jpg" class="slide" alt="" />
+        <img src="http://f9vision.com/wp-content/uploads/2014/02/Beautiful-Images-of-Nature-Facebook1-300x300.jpg" class="slide" alt="" />
+        <img src="https://lh3.ggpht.com/jxaV3lR5hbep2BzH6YIRkhQC7872M4kRNfXd24csoO1CrWG7FtHaLjOOrfWpQWJb=w300" class="slide" alt="" />
+        <img src="http://www.yondaphotography.com/wp-content/uploads/2014/01/Nature-Photography-Techniques-For-Beginners.jpg" class="slide" alt="" />
+    </div>
+    
+    <div style="display:inline-table; width:20%; margin-left:20%">
+        
+         <img src="http://simplewishphotography.com/wp-content/uploads/2013/11/Nature-Photography-Healing-Your-Body.jpg" class="slide2" alt="" />
+        <img src="http://f9vision.com/wp-content/uploads/2014/02/Beautiful-Images-of-Nature-Facebook1-300x300.jpg" class="slide2" alt="" />
+        <img src="https://lh3.ggpht.com/jxaV3lR5hbep2BzH6YIRkhQC7872M4kRNfXd24csoO1CrWG7FtHaLjOOrfWpQWJb=w300" class="slide2" alt="" />
+        <img src="http://www.yondaphotography.com/wp-content/uploads/2014/01/Nature-Photography-Techniques-For-Beginners.jpg" class="slide2" alt="" />
+    </div>
+    
+</div>

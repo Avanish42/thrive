@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>Terms &amp; Condition,Disclamier,Cookies,Privacy</title> 
+    </head>
+      <body>
+          <div>
+              <a onclick="termsclick();">click here</a>
+          </div>
+          
+          <div id="terms_body">
+              <div id="terms_link" style="display:none;">
+                <span id="termsclose" class="termsclose" onclick="termsclose();">&times;</span>
+                <iframe id="termsIframe" src="TermsAndConditionIframe.html"></iframe>
+              </div>
+          </div> 
+      </body>
+</html>

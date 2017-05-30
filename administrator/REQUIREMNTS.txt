@@ -1,0 +1,60 @@
+
+
+1) USER:
+add user:
+e-mail id
+password
+type of user (droop down by default user)
+therapist or user or admin
+
+
+2) THERAPISTS:
+add user:
+e-mail id
+password
+type of user (droop down by default therapist)
+therapist or user or admin
+
+3) calander:
+title
+speaker
+fromdate --> todate
+timing - fee
+about the org
+about the practitioner
+overview
+
+venue
+promourl
+email
+name
+mobileno
+
+4) THRIIVE WORLD:
+title
+speaker
+url 
+download url
+type of file (droopdown _ byd selct)
+adudio, video, blog.
+
+5)THRIIVE TALKS
+title
+speaker
+url
+
+6) QUOTES (droopdown byd Home)
+therapy
+thriive world
+thrrive calander
+practitioner
+
+
+
+
+
+
+
+
+
+

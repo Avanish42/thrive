@@ -1,0 +1,715 @@
+@media (min-width: 737px) {
+    /*DROPDOWN BUTTON HIDE IN DESKTOP DEVISE*/
+    .dropdownButton {
+        text-align: center;
+        width: 4%;
+        margin: 5% 0% 0% 45%;
+        display: none;
+    }
+    /*LIST VIEW BUTTON	*/
+    #listview {
+        display: none;
+    }
+}
+
+ #listview {
+        display: none;
+    }
+/*common css for all pages*/
+
+.pageTitle_text {
+	font-family: 'Amatic SC', cursive;
+	font-size: 3.6vw;
+	color: #4e0475;
+	display: inline-table;
+    text-transform: lowercase;
+}
+
+.headding_div {
+	width: 40%;
+	text-align: left;
+	display: inline-table;
+	float: left;
+	margin-left: 5%;
+	margin-top: -5.5%;
+}
+
+
+/*----GRID VIEW ICON ----*/
+
+.gridview {
+	width: 13vw;
+	height: 3.5vw;
+	background-image: url(../images/theraphy/grid-view.png);
+	background-repeat: no-repeat;
+	display: inline-table;
+	background-size: 100%;
+	float: right;
+	margin-right: 5.5%;
+	cursor: pointer;
+}
+
+
+/*----GRID AND LIST TEXT (GRID VIEW) ----*/
+
+/*
+.gridview_text {
+	vertical-align: middle;
+	font-family: 'Amatic SC', cursive;
+	font-size: 2.5vw;
+	text-align: right;
+	margin-left: 33%;
+	transform: translateY(-80%);
+	position: relative;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+*/
+
+
+/*----LIST VIEW ICON ----*/
+
+.listview {
+	width: 13vw;
+	height: 3.5vw;
+	background-image: url(../images/theraphy/list-view.png);
+	background-repeat: no-repeat;
+	display: inline-table;
+	background-size: 100%;
+	float: right;
+	margin-right: 5.5%;
+	cursor: pointer;
+}
+
+
+/*----LIST VIEW TEXT ----*/
+/*
+
+.listview_text {
+	vertical-align: middle;
+	font-family: 'Amatic SC', cursive;
+	font-size: 2.5vw;
+	text-align: right;
+	margin-left: 20%;
+	padding: 0;
+	transform: translateY(-80%);
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+*/
+
+/*----KEYWORD ICON (GRID & LIST VIEW) ----*/
+
+.keyword {
+	width: 12vw;
+    height: 3vw;
+	background-image: url(../images/theraphy/keyword.png);
+	background-repeat: no-repeat;
+	display: inline-table;
+	background-size: 100%;
+    padding: .5% 0% .5% 0%;
+	margin-left: 6%;
+    text-align: center;
+}
+
+/*----KEYWORD ICON TEXT (GRID & LIST VIEW) ----*/
+
+.keyword_text {
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    vertical-align: middle;
+	font-size: 2.2vw;
+    vertical-align: middle;
+	background-color: transparent;
+	width: 75%;
+	border: 0;
+    text-transform: lowercase;
+    font-weight: bold;
+    display: table-cell;
+    text-align: left;
+}
+
+
+/*----CATEGORY ICON (GRID & LIST VIEW) ----*/
+
+.dropdown {
+	width: 12vw;
+    height: 3vw;
+	background-image: url(../images/theraphy/therapies.png);
+	background-repeat: no-repeat;
+	display: inline-table;
+	background-position: right;
+	background-size: 100%;
+	padding: .5% 0% .5% 0%;
+	margin-left: 20%;
+}
+
+
+/*----CATEGORY ICON TEXT (GRID & LIST VIEW) ----*/
+
+.dropdown_text {
+	vertical-align: middle;
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	font-size: 2.2vw;
+	text-align: center;
+	width: 85%;
+	margin-left: 5%;
+	background-color: transparent;
+	border: none;
+}
+
+/*------------------------------------------*/
+	/*COMMON STYLES FOR MOBILE DEVISES*/
+/*------------------------------------------*/
+
+@media (max-width: 736px) {
+    
+	/*DROPDOWN BUTTON VISABLE*/
+	.dropdownButton {
+		text-align: center;
+		width: 4%;
+		margin: auto;
+		margin-top: 4%;
+	}
+	/*----KEYWORD ICON (GRID & LIST VIEW) ----*/
+	.keyword {
+		width: 19vw;
+        height: 5.5vw;
+		padding: .5% 0% .5% 0%;
+	}
+	/*----KEYWORD ICON TEXT (GRID & LIST VIEW) ----*/
+	.keyword_text {
+		font-size: 4vw;
+		width: 75%;
+		margin-left: -6%;
+        display: table-cell;
+        text-align: left;
+	}
+	/*----CATEGORY ICON (GRID & LIST VIEW) ----*/
+	.dropdown {
+		width: 19vw;
+        height: 5.5vw;
+		padding: .5% 0% .5% 0%;
+		margin-left: 8%;
+	}
+	/*----CATEGORY ICON TEXT (GRID & LIST VIEW) ----*/
+	.dropdown_text {
+		font-size: 4vw;
+		width: 85%;
+        display: table-cell;
+	}
+    
+    .gridview,
+    .listview{
+        width: 20vw;
+        height: 6vw;
+        transform: translateY(-15%)
+    }
+
+	/*----GRID AND LIST TEXT (GRID VIEW) ----*/
+/*
+	.gridview_text,
+    .listview_text{
+        font-size: 2.5vw;
+        font-weight: bold;
+	}
+*/
+}
+
+@media (max-width: 450px) {
+    
+    .keyword_text{
+        vertical-align: top;
+        transform: translateY(-10%);
+    }
+    
+    .dropdown{
+        transform: translateY(-5%);
+    }
+    
+    
+    
+}
+
+
+/* ---------------------------------------- */
+	   /*GRID VIEW DESKTOP*/
+/* ---------------------------------------- */
+
+#practitioners_Grid_View_Desktop{
+	margin: -5% 0% 5% 0% ;
+}
+/*----PRACTITIONER IMAGE DIV (GRID VIEW)  ----*/
+
+.practitioner_image_div1 {
+	width: 25%;
+	border: .15vw solid black;
+	text-align: center;
+	display: inline-table;
+	padding: .5%;
+    margin-left: 3%;
+}
+.practitioner_image_div2 {
+	width: 25%;
+	border: .15vw solid black;
+	text-align: center;
+	display: inline-table;
+	padding: .5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.practitioner_image_div3 {
+	width: 25%;
+	border: .15vw solid black;
+	text-align: center;
+	display: inline-table;
+	padding: .5%;
+    margin-right: 5%;
+}
+
+
+/*----PRACTITIONER NAME (GRID VIEW)  ----*/
+
+.practitioner_Name {
+	font-family: 'Amatic SC', cursive;
+	font-size: 3vw;
+	color: #8eb170;
+	margin-top: -1%;
+    text-transform: lowercase;
+}
+
+
+/*----PRACTITIONER DESCRIPTION (GRID VIEW)  ----*/
+
+.practitioner_description {
+	font-family: 'Lato', sans-serif;
+	font-size: 1vw;
+	color: #000;
+	font-style: italic;
+	margin-top: -10%
+}
+
+/* ------------------------ */
+/*   GRID VIEW  MOBILE      */
+/* ------------------------ */
+
+@media (max-width: 736px) {
+	
+    
+    .practitioner_description{
+        font-size: 1.5vw;
+    }
+	.practitioner_image_div_Mobile_GridView1{
+		width: 40%;
+		display: inline-table;
+		margin-left: 2%;
+		border: .25vw solid black;
+		padding: 1%;
+		text-align: center;
+		
+	}
+    .practitioner_image_div_Mobile_GridView2{
+		width: 40%;
+		display: inline-table;
+		margin-left: 5%;
+		border: .25vw solid black;
+		padding: 1%;
+		text-align: center;
+		
+	}
+}
+
+
+
+/* ------------------------ */
+/*   LIST VIEW  DESKTOP      */
+/* ------------------------ */
+
+
+.practitioner_Content_List {
+		width: 65%;
+		display: inline-table;
+		vertical-align: top;
+		margin-left: 3%;
+	}
+
+/*practitioners image div*/
+
+.practitioner_image_div_List_View {
+	width: 22%;
+	border: .15vw solid black;
+	text-align: center;
+	display: inline-table;
+	vertical-align: middle;
+	padding: .5%;
+	margin-left: 6%;
+}
+
+
+/*THERAPY_L & PRACTITIONESRS V PAGE TITLE DIV*/
+
+.practitioner_Name_List {
+	font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+	font-size: 3vw;
+	color: #8eb170;
+	margin-top: -1%;
+	margin-left: 3%
+}
+
+
+/*THERAPY_L & PRACTITIONESRS V PAGE INFO DIV*/
+
+.practitioner_description_List {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5vw;
+	color: #000;
+	font-style: italic;
+	margin-top: -5%;
+	margin-left: 3%;
+	padding-right: 5%;
+	text-align: justify;
+	font-weight: normal;
+	line-height: 150%;
+}
+
+
+/*THERAPY_L & PRACTITIONESRS V PAGE SOCILA MEDIA DIV*/
+
+.practitioner_Social_Media {
+	width: 5%;
+	float: right;
+	display: inline-table;
+	padding: .5%;
+	margin-left: 1%;
+    cursor: pointer;
+}
+
+
+/*THERAPY_L & PRACTITIONESRS V PAGE KNOWMORE DIV*/
+
+.knowMore_Therapy_L {
+	width: 25%;
+	display: inline-table;
+	margin-left: 3%;
+}
+
+
+
+/* ------------------------ */
+/*   LIST VIEW  MOBILE      */
+/* ------------------------ */
+
+	@media (max-width: 736px) {
+        
+        .listview,
+        .gridview{
+            margin-top: 1%;
+        } 
+        
+    .practitioner_image_div_List_View_Mobile{
+		width:30%;
+		margin:3% 0% 2% 9%;
+		display: inline-table;
+		border: .3vw solid black;
+		padding: 1%;
+	}
+        
+	
+	/*PRACTITIONESRS CONTENT DIV*/
+	.practitioner_Content_List {
+		width: 50%;
+		display: inline-table;
+		vertical-align: top;
+		padding-top: 1%;
+	}
+	
+	/*THERAPY_L & PRACTITIONESRS V PAGE TITLE DIV*/
+	.practitioner_Name_List {
+		font-family: 'Amatic SC', cursive;
+		font-size: 4vw;
+		color: #8eb170;
+		margin-top: -1%;
+		margin-left: 3%
+	}
+	
+	/*THERAPY_L & PRACTITIONESRS V PAGE INFO DIV*/
+	.practitioner_description_List {
+		font-family: 'Lato', sans-serif;
+		font-size: 2.3vw;
+		color: #000;
+		font-style: italic;
+		margin-top: -5%;
+		margin-left: 3%;
+		padding-right: 5%;
+	}
+	
+	/*THERAPY_L & PRACTITIONESRS V PAGE KNOWMORE DIV*/
+	.knowMore_Therapy_L {
+		width: 40%;
+		display: inline-table;
+	}
+	
+	/*THERAPY_L & PRACTITIONESRS V PAGE SOCILA MEDIA DIV*/
+	.practitioner_Social_Media {
+		width: 8%;
+		float: right;
+		display: inline-table;
+	}
+}
+
+
+
+/******SERCH CSS******/
+
+.searchMailDiv{
+    width:70%;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    margin-left: 12.2%;
+}
+.CityDiv{
+    width: 25%;
+    display: inline-table;
+    margin-right: 3%;
+}
+.serchDiv{
+    width: 70%;
+    display: inline-table;
+}
+
+.CityDiv input{
+    width: 100%;
+    height: 2.6vw;
+    color: #333;
+    border-radius: 10px 10px;
+    padding: 0% 0% 0% 8%;
+    font-size: 1.2vw;
+    border: 2px solid lightgray;
+}
+
+
+.serchDiv input{
+    width: 100%;
+    height: 2.6vw;
+    color: #333;
+    border-radius: 10px 10px;
+    padding: 0% 10% 0% 3%;
+    font-size: 1.2vw;
+    border: 2px solid lightgray;
+    background-image: url(../images/Search_2.png);
+    background-position: center right; 
+    background-repeat: no-repeat;
+    background-size: 7%;
+}
+
+.CityDiv input:focus,
+.serchDiv input:focus{
+    border: 2px solid #4e0475;
+}
+@media (max-width: 736px) {
+    
+/******SERCH CSS******/
+.searchMailDiv{
+    margin-left: 16%;
+}
+    
+.CityDiv{
+    width: 25%;
+    display: inline-table;
+}
+    
+.serchDiv{
+    width: 70%;
+    display: inline-table;
+}
+
+.CityDiv input{
+    width: 100%;
+    height: 4vw;
+    color: #333;
+    border-radius: 5px 5px;
+    padding: 0% 0% 0% 5%;
+    font-size: 2vw;
+}
+
+
+.serchDiv input{
+    width: 100%;
+    height: 4vw;
+    color: #333;
+    border-radius: 5px 5px;
+    padding: 0% 10% 0% 3%;
+    font-size: 2vw;
+    border: 2px solid lightgray;
+    background-size: 10%;
+}
+
+    
+}
+
+
+
+
+/*MOZILLA BROUSER*/
+
+@-moz-document url-prefix() {
+    
+}
+
+/****HEDZE****/
+@supports (-ms-ime-align:auto) {
+    
+    
+    /*GRID VIEW FOR HEDGE DESKTOP*/
+    
+    .practitioner_image_div1 {
+        margin-left: 5.5%;
+        margin-bottom: 3%;
+        border: .1vw solid black;
+    }
+    
+    .practitioner_image_div2 {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 3%;
+        border: .1vw solid black;
+    }
+    
+    .practitioner_image_div3 {
+        width: 25%;
+        padding: .5%;
+        margin-right: 5%;
+        margin-bottom: 3%;
+        border: .1vw solid black;
+    }
+    
+    .practitioner_image_div1 img,
+    .practitioner_image_div2 img,
+    .practitioner_image_div3 img {
+        width: 100%
+    }
+    
+/****LIST VIEW FOR DESKTOP****/
+    
+  .practitioner_Content_List img {
+      width: 100%;
+  }
+  
+  .practitioner_image_div_List_View img {
+      width: 100%;
+  }
+  
+  .practitioner_Content_List,
+  .practitioner_image_div_List_View {
+      margin-bottom: 5%;
+  }
+  
+  @media (max-width: 736px) {
+      /*GRID VIEW FOR HEDGE MOBILE*/
+      .practitioner_image_div_Mobile_GridView1 {
+          width: 38%;
+          margin-bottom: 5%;
+          margin-left: 5%;
+      }
+      .practitioner_image_div_Mobile_GridView2 {
+          width: 38%;
+          margin-bottom: 5%;
+      }
+      .practitioner_image_div_Mobile_GridView1 img,
+      .practitioner_image_div_Mobile_GridView2 img {
+          width: 100%
+      }
+  }
+  
+  .practitioner_image_div_List_View_Mobile img {
+      width: 100%;
+  }
+    .footerDiv{
+        margin-top: 5%;
+    }
+}
+
+    /***** FOR SAFARI *****/
+/**** FOR SAFARI ****/
+@media not all and (min-resolution:.001dpcm) { @media{
+    
+    /*GRID VIEW FOR HEDGE DESKTOP*/
+    
+    .practitioner_image_div1 {
+        margin-left: 5.5%;
+        margin-bottom: 3%;
+        border: .1vw solid black;
+    }
+    
+    .practitioner_image_div2 {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 3%;
+        border: .1vw solid black;
+    }
+    
+    .practitioner_image_div3 {
+        width: 25%;
+        padding: .5%;
+        margin-right: 5%;
+        margin-bottom: 3%;
+        border: .1vw solid black;
+    }
+    
+    .practitioner_image_div1 img,
+    .practitioner_image_div2 img,
+    .practitioner_image_div3 img {
+        width: 100%
+    }
+        
+    .practitioner_image_div1 img,
+    .practitioner_image_div2 img,
+    .practitioner_image_div3 img {
+        width: 100%
+    }
+    
+/****LIST VIEW FOR DESKTOP****/
+    
+  .practitioner_Content_List img {
+      width: 100%;
+  }
+  
+  .practitioner_image_div_List_View img {
+      width: 100%;
+  }
+        
+    .practitioner_Content_List,
+    .practitioner_image_div_List_View {
+      margin-bottom: 5%;
+  }
+        
+    @media (max-width: 736px) {
+      /*GRID VIEW FOR HEDGE MOBILE*/
+      .practitioner_image_div_Mobile_GridView1 {
+          width: 38%;
+          margin-bottom: 5%;
+          margin-left: 5%;
+      }
+      .practitioner_image_div_Mobile_GridView2 {
+          width: 38%;
+          margin-bottom: 5%;
+      }
+      .practitioner_image_div_Mobile_GridView1 img,
+      .practitioner_image_div_Mobile_GridView2 img {
+          width: 100%
+      }
+    }
+        
+    .practitioner_image_div_List_View_Mobile img {
+      width: 100%;
+  }
+  
+  
+        
+        
+        
+    }}
+

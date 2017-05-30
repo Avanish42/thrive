@@ -1,0 +1,178 @@
+
+/****ARTICAL MAIN PAGE CSS****/
+
+.artical_ContentDiv {
+    width: 100%;
+    display: inline-table;
+    margin: 1% 0% 3% 0%;
+}
+
+.articalContent {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3vw;
+    color: #333333;
+    margin: 0;
+}
+
+.artical_title {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    color: #4e0475;
+    font-size: 2.5vw;
+    font-weight: 900;
+    margin: 0;
+    
+}
+
+.other_artical_title {
+    font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+    color: #4e0475;
+    font-size: 3vw;
+    font-weight: 900;
+    margin: 0;
+    
+}
+
+
+.SubHeading {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5vw;
+    font-weight: normal;
+    color: #4e0475;
+    margin: 0
+}
+
+.subTitle{
+     font-family: 'Amatic SC', cursive;
+    text-transform: lowercase;
+      color: #4e0475;
+    font-size:2vw;
+    text-align: center;
+    margin: 0;
+    margin-top: -8%;
+}
+
+.viewMore {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.viewMore a {
+    color: #4e0475;
+    margin: 0;
+    margin-left: 2%
+}
+
+.viewMore a:hover {
+    color: #333333
+}
+
+/****ARTICAL SUB PAGE CSS****/
+
+.leftside_articalDiv{
+    display: inline-table;
+    width: 76%;
+}
+
+.right_articalDiv{
+    display: inline-table;
+    width: 20%;
+    margin-left: 3%;
+    border-left: 1px solid gray;
+}
+
+.other_article_name {
+    font-family: 'Lato', sans-serif;
+    color: #4e0475;
+    font-size: 0.8vw;
+    margin-left: 3%
+}
+
+.other_article_name a:hover{
+ color: #4e0475;
+}
+
+.artical_imageDiv {
+    width: 60%;
+    display: table;
+    padding: 1%;
+    margin-bottom: 3%;
+    margin: auto;
+}
+
+.artical_imageDiv img {
+    width: 100%;
+}
+
+.artical_ContentDiv {
+    width: 100%;
+    display: inline-table;
+    float: right
+}
+
+.artical_Social_Media {
+    width: 3.5%;
+    float: right;
+    display: inline-table;
+    padding: .5%
+}
+
+.artical_Social_Media img {
+    width: 100%
+}
+
+
+
+/****FOR MOBILE****/
+
+@media (max-width: 736px) {
+    
+    .artical_title{
+        font-size: 6vw;
+        }
+       
+    .other_artical_title{
+        font-size: 4vw;
+        }
+    
+    .other_article_name{
+        font-size: 2.5vw;
+    }
+    
+    .subTitle{
+        font-size: 3.45vw;
+        margin-top: -10%
+    }
+    
+    .SubHeading{
+        font-size: 3.5vw;
+    }
+    .artical_ContentDiv {
+        display: table;
+        width: 80%;
+        margin: auto;
+        float: none;
+    }
+    .viewMore{
+        font-size: 3.5vw;
+    }
+
+    .artical_imageDiv,
+    .artical_ContentDiv,
+    .artical_imageDiv {
+        display: table;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 3%
+    }
+
+    .articalContent {
+        font-size: 3vw;
+    }
+
+    .artical_Social_Media {
+        width: 8%;
+    }
+}

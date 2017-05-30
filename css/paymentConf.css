@@ -1,0 +1,287 @@
+    
+ /*BAKGOUND FOR OTHER PAGES DESKTOP DEVISES*/
+    @media only screen and (max-width: 4560px) { 
+    .other_Pagess_body_Backgruond {
+        padding: 0px;
+        margin: 0px;
+        background-image: url(../images/Backgorund_Other_Pages.jpg) !important;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        }  
+    }
+
+
+    /*  MARGIN FOR BODY */
+    .totalBodySection {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+
+
+.MainBodySection {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    /*  FORM DIV  */
+    
+    .ConnectForm {
+        display: table;
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-family: 'Lato', sans-serif;
+        font-size: 2vw;
+        color: #4e0475;
+    }
+    
+    .payubizDiv {
+        display: table;
+        width: 20%;
+        margin-bottom: 5%
+    }
+    
+    .paymentDetails {
+        display: table;
+        width: 100%;
+        margin-bottom: 10%
+    }
+    
+    .paymentDiv {
+        display: table;
+        width: 100%;
+        margin: auto;
+        text-align: left;
+    }
+    
+    .submitButton {
+        width: 25%;
+        cursor: pointer;
+        display: inline-table;
+        text-align: left;
+    }
+    
+    .terms {
+        font-size: 1vw;
+        color: #58595b;
+        line-height: 160%;
+        
+    }
+
+.TermsDiv{
+    display: none;
+    top : 0%;
+    left: 0px;
+    position:fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    margin: auto;
+}
+.termsContent{
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 1% 5%;
+        width: 100%;
+        max-width: 80%;
+}
+    
+    #SuccessMessageDiv {
+        display: none;
+        width: 50%;
+        margin: auto;
+    }
+    
+    #SuccessMessage {
+        font-size: 3vw;
+        color: #4e0475;
+        line-height: 110%;
+        margin: 0;
+    }
+    
+    .inputDiv {
+        width: 100%;
+        display: table;
+        margin-bottom: 5%;
+    }
+    
+    .details_div {
+        width: 25%;
+        display: inline-table;
+    }
+    
+    .input_div {
+        width: 73%;
+        display: inline-table;
+    }
+    /*  FORM INPUT SECTION  */
+    
+    .payu_input {
+        border: 0;
+        height: 3vw;
+        padding: .001% 2% .001% 2%;
+        color: grey;
+        width: 100%;
+        font-size: 1.2vw;
+        background-color: transparent;
+    }
+    
+    .errorbox {
+        border: 1px solid red;
+        height: 3vw;
+        padding: .001% 2% .001% 2%;
+        color: grey;
+        width: 100%;
+        font-size: 1.2vw
+    }
+    /*  FORM TEXTAREA SECTION  */
+    
+    .message-textarea {
+        border: none;
+        width: 100%;
+        font-family: 'Lato', sans-serif;
+        font-size: 2vw;
+        padding-left: 2%;
+        color: grey;
+        margin-top: 3%
+    }
+    /*  FORM SUBMIT */
+    
+    .Submit-Button {
+        width: 100%;
+    }
+    
+    .error {
+        font-family: 'Areal';
+        color: RED;
+        text-align: right;
+        font-size: 1vw;
+        line-height: 90%;
+        margin: 0px;
+    }
+    
+    input[type="checkbox"] {
+        width: 1.5vw;
+        /*Desired width*/
+        height: 1.5vw;
+        /*Desired height*/
+        display: inline-table;
+        margin-bottom: 5%;
+    }
+
+.agreeDiv{
+	font-size: 1.5vw;
+	color: #58595b;
+}
+
+.agreeDiv input[type=radio] {
+    width: 1.3vw;
+    height:1.3vw;
+}
+
+.agreemet{
+	color:#4e0475;
+	font-weight:bold;
+	cursor: pointer;
+	text-decoration:none;
+}
+
+.agreemet:hover{
+	color: #333;
+}
+.text {
+   font-size: 1.1vw;
+   color: #323232;
+   line-height: 170%;
+   margin-top: -3%;
+   text-align: justify;
+}
+
+.Heading {
+   font-family: 'Amatic SC', cursive;
+   color: #4e0475;
+   font-size: 3vw;
+   text-transform: lowercase;
+    
+   }
+
+.subHeading {
+   font-size: 1.1vw;
+   font-weight: 900;
+    margin-bottom: 4%;
+    color: #323232
+   }
+
+/*
+#terms {
+    margin: 0% 5% 3% 5%;
+    font-family: 'Lato', sans-serif;
+    background-color: #fff;
+    padding: 3%;
+     z-index: 10;
+     position: absolute;
+    width: 80%;
+    height: 10vw;
+     overflow-y: scroll;
+    display: none;
+}
+*/
+
+#closebutton{
+    width: 3%;
+    float: right;
+    cursor: pointer;
+}
+
+
+    /*  CSS FOR MOBILE DEVICE  */
+    
+    @media (max-width: 736px) {
+        
+            /*BAKGOUND IMAGE DESKTOP DEVISES*/
+    .other_Pagess_body_Backgruond {
+        padding: 0px;
+        margin: 0px;
+        background-image: url(../images/Backgorund_For_Mobile.jpg) !important;
+        background-size: 100%;
+        background-repeat: repeat-y;
+    } 
+        .MainBodySection {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .ConnectForm {
+            font-size: 2.5vw;
+            font-weight: bold;
+        }
+        .payubizDiv {
+            width: 35%;
+        }
+        .input_div {
+            width: 73%;
+            font-weight: normal;
+        }
+        /*  FORM INPUT SECTION  */
+        .payu_input {
+            height: 5vw;
+            padding: .002% 2% .002% 2%;
+            font-size: 3vw
+        }
+        .submitButton {
+            width: 35%;
+        }
+        .terms {
+            font-size: 2.2vw;
+            font-weight: normal;
+        }
+    }
+#closebutton2 {
+    text-align: right;
+    font-size: 1.5vw;
+    cursor: pointer;
+    float: right;
+    color: red;
+}

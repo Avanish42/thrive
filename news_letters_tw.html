@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        
+        <!--        ADDING FAVICON-->
+        <link rel="icon" href="favicon.ico" sizes="16x16">
+        
+        <!--    INCLUDING FIREBASE FILES -->
+        <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+        <script type="application/javascript" src="js/app.js"></script>
+            <script src="js/terms.js"></script>
+        <link rel="stylesheet" href="css/terms_condition_policy.css"> <!-- Global Defined Styles -->
+        
+        <!--    INCLUDING CSS FILES-->
+        <link rel="stylesheet" href="css/styles_global.css">  <!--Global Defined Styles-->
+        <link rel="stylesheet" href="css/style_for_footer_headder_tm.css"> <!--Styles for Footer, Headder and Testmoniels-->
+        <link rel="stylesheet" href="css/news_letters_tw.css"> <!--styles for Our Story Page-->
+
+        <link rel="stylesheet" href="css/style_menu.css"> <!-- MENU CSS  -->
+        
+        <script src="js/signup-user.js"></script>
+        <script src="js/login.js"></script>
+        <link rel="stylesheet" href="css/login.css"> <!--login page css-->
+        
+        <!--    INTEGRATE GOOGLE FONTS  -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Delius|Lato:400,700|Open+Sans" rel="stylesheet">
+
+        <!--    HOME PAGE TITLE  -->
+        <title>THRIIVE | News Letters </title> 
+
+        <!--    INCLUDING JAVASCRIPT-->
+        <script src="js/global_modules.js"> </script> <!-- GLOBAL MODULES (Menu, Header, Footer) JAVA SCRIPT  -->
+        <script src="js/script_menu.js"> </script> <!-- MENU JAVA SCRIPT  -->
+        <script src="js/news_letters_tw.js"> </script> <!-- MENU JAVA SCRIPT  -->
+    </head>
+
+    <body class="other_Pagess_body_Backgruond">
+        
+        <!--MAIN SLIDE MENU-->
+        <script>
+            display_menu("");
+            Set_Menu_HeightAndWidth();
+        </script>
+        
+        <!--    MAIN SECTION TO SET THE BODY MARGIN TO 7%  -->
+         <section class="menuSection">
+            <!---------- WEBSITE HEADER  ---------->
+            <script>
+                display_header_2();
+            </script>
+        </section> <!--End of Body Section-->
+            
+        
+            
+            
+            <section class="totalBodySection">
+                
+                 <div class="div_displayTable">
+                    <h3 class="MainHeading"> News Letters </h3>
+                     
+                     <div class="Next_Previous_Button" id="Previous_button_D" ><img src="images/Next-1B.png" width="100%" onclick="desktop_showDivs_NewsLetter(-1);"></div>
+                     <div class="Next_Previous_Button" id="Next_button_D"><img src="images/Next-1A.png" width="100%" onclick="desktop_showDivs_NewsLetter(1);"></div>
+                     <div class="Next_Previous_Button_M" id="Previous_button_M"><img src="images/Next-1B.png" width="100%" onclick="show_next_newsLetter_mobile(-1);"></div>
+                     
+                     <div class="NewsLetterDesktop">
+                     <!--FIRST BLOCK-->
+                         <div class="NesLetterBlock-1 Newsletter">
+                            <div class=NewsLetterDiv><a href="images/newsLetters/Newsletter-1.pdf" target="_blank">
+                                <img src="images/newsLetters/Newsletter-1.jpg" width="100%"></a>
+                             </div>
+                             <h3 class="Newsletter_Title">Living wisdom</h3>
+                             <h3 class="Newsletter_sub_Title">Mar -2017</h3>
+                         </div>
+                     
+                         <div class="NesLetterBlock-2 Newsletter">
+                            <div class=NewsLetterDiv><a href="images/newsLetters/Newsletter-2.pdf" target="_blank">
+                                <img src="images/newsLetters/Newsletter-2.jpg" width="100%"></a>
+                             </div>
+                            <h3 class="Newsletter_Title">Living wisdom-2</h3>
+                            <h3 class="Newsletter_sub_Title">Feb -2017</h3>
+                         </div>
+                     
+                         <div class="NesLetterBlock-3 Newsletter">
+                            <div class=NewsLetterDiv><a href="images/newsLetters/Newsletter-1.pdf" target="_blank">
+                                <img src="images/newsLetters/Newsletter-3.jpg" width="100%"></a>
+                             </div>
+                             <h3 class="Newsletter_Title">Living wisdom-3</h3>
+                             <h3 class="Newsletter_sub_Title">jan -2017</h3>
+                            </div>
+                         </div>
+                     
+                     
+                     <div class="Next_Previous_Button_M" id="Next_button_M"><img src="images/Next-1A.png" width="100%" onclick="show_next_newsLetter_mobile(1);"></div>
+                     
+                </div>
+                <script>
+                    displaynewsletters();
+                </script>
+                
+                
+
+            </section>
+            
+            
+            
+            <!--FOOTER SECTION-->
+            <script>
+               display_footer();
+            </script>
+		
+    </body>
+</html>
